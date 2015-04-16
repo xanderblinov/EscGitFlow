@@ -1,0 +1,7 @@
+rootProject.name = 'Esc'
+include 'Database'
+
+include 'Evolution'
+
+include 'DataCollector'
+
