@@ -14,3 +14,7 @@ hs_err_pid*
 .gradle/*
 .idea/*
 build/*
+Esc.iml
+Database/build/resources/main/coauthors.sql
+Database/src/main/resources/coauthors.sql
+Evolution/Evolution.iml
