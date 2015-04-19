@@ -31,7 +31,7 @@ public class ArticleApiImpl implements ArticleApi
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			SqliteLog.log(e);
 		}
 	}
 
