@@ -5,9 +5,8 @@ import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
-import net.inference.database.dto.Evolution;
 import net.inference.database.dto.ClusteringType;
-import net.inference.database.dto.EvolutionSlice;
+import net.inference.database.dto.Evolution;
 
 /**
  * Date: 2/1/2015
@@ -17,8 +16,8 @@ import net.inference.database.dto.EvolutionSlice;
  */
 @DatabaseTable(tableName = Evolution.TABLE_NAME)
 public class EvolutionImpl implements Evolution
-{     
-	
+{
+
 	@DatabaseField(columnName = Column.id, generatedId = true)
 	private int mId;
 	@DatabaseField(columnName = Column.time)

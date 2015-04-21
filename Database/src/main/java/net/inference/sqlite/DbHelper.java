@@ -1,24 +1,15 @@
 package net.inference.sqlite;
 
-import java.io.File;
-import java.sql.SQLException;
-
 import com.j256.ormlite.jdbc.JdbcPooledConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import net.inference.Config;
-import net.inference.sqlite.dto.ArticleImpl;
-import net.inference.sqlite.dto.ClusterImpl;
-import net.inference.sqlite.dto.EvolutionImpl;
-import net.inference.sqlite.dto.EvolutionSliceImpl;
-import net.inference.sqlite.dto.AuthorImpl;
-import net.inference.sqlite.dto.AuthorToClusterImpl;
-import net.inference.sqlite.dto.CoAuthorshipImpl;
-import net.inference.sqlite.dto.ParameterImpl;
-import net.inference.sqlite.dto.PrimitiveAuthorImpl;
-import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
+import net.inference.sqlite.dto.*;
+
+import java.io.File;
+import java.sql.SQLException;
 
 /**
  * Date: 12/21/2014
