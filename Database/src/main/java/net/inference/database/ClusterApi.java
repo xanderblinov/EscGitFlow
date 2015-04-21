@@ -8,9 +8,7 @@ import java.util.List;
 /**
  * @author gzheyts
  */
-public interface ClusterApi {
-
-    List<ClusterImpl> findAllClusters();
+public interface ClusterApi extends BaseApi<ClusterImpl,Integer> {
 
     List<ClusterImpl> findClustersForAuthor(Author author);
 

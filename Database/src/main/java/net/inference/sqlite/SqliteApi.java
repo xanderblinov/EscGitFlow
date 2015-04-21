@@ -1,26 +1,18 @@
 package net.inference.sqlite;
 
-import java.sql.SQLException;
-import java.util.List;
-
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import net.inference.Config;
-import net.inference.database.ArticleApi;
-import net.inference.database.AuthorApi;
-import net.inference.database.ClusterApi;
-import net.inference.database.DatabaseApi;
+import net.inference.database.*;
 import net.inference.database.dto.Article;
 import net.inference.database.dto.Cluster;
 import net.inference.database.dto.Evolution;
 import net.inference.database.dto.EvolutionSlice;
-import net.inference.sqlite.dto.ArticleImpl;
-import net.inference.sqlite.dto.AuthorImpl;
-import net.inference.sqlite.dto.AuthorToClusterImpl;
-import net.inference.sqlite.dto.ClusterImpl;
-import net.inference.sqlite.dto.CoAuthorshipImpl;
-import net.inference.sqlite.dto.EvolutionImpl;
-import net.inference.sqlite.dto.EvolutionSliceImpl;
+import net.inference.sqlite.dto.*;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Date: 12/21/2014
@@ -34,6 +26,7 @@ public class SqliteApi implements DatabaseApi
 	private ArticleApi mArticleApi = new ArticleApiImpl(this);
     private AuthorApi  authorApi = new AuthorApiImpl(this);
 	private ClusterApi clusterApi = new ClusterApiImpl(this);
+	private EvolutionApi evolutionApi = new EvolutionApiImpl(this);
 
 	public SqliteApi(Config.Database database, boolean recreateDatabase)
 	{
@@ -68,6 +61,11 @@ public class SqliteApi implements DatabaseApi
 	@Override
 	public ClusterApi cluster() {
 		return clusterApi;
+	}
+
+	@Override
+	public EvolutionApi evolution() {
+		return evolutionApi;
 	}
 
 
@@ -176,6 +174,17 @@ public class SqliteApi implements DatabaseApi
 		}
 		catch (SQLException e)
 		{
+			SqliteLog.log(e);
+		}
+
+		return null;
+	}
+
+	@Override
+	public ConnectionSource getConnection() {
+		try {
+			return mDbHelper.getConnection();
+		} catch (SQLException e) {
 			SqliteLog.log(e);
 		}
 

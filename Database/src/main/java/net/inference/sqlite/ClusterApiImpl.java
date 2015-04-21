@@ -8,7 +8,6 @@ import com.j256.ormlite.stmt.SelectArg;
 import net.inference.database.ClusterApi;
 import net.inference.database.dto.Author;
 import net.inference.database.dto.AuthorToCluster;
-import net.inference.sqlite.dto.AuthorImpl;
 import net.inference.sqlite.dto.AuthorToClusterImpl;
 import net.inference.sqlite.dto.ClusterImpl;
 
@@ -18,29 +17,17 @@ import java.util.List;
 /**
  * @author gzheyts
  */
-public class ClusterApiImpl implements ClusterApi {
+public class ClusterApiImpl extends  BaseApiImpl <ClusterImpl,Integer>  implements ClusterApi {
     private static Logger logger = LoggerFactory.getLogger(ClusterApiImpl.class);
-
-
-    private SqliteApi sqliteApi;
 
     private PreparedQuery<ClusterImpl> clustersForAuthorQuery;
 
+    private SqliteApi sqliteApi;
     public ClusterApiImpl(SqliteApi sqliteApi) {
+        super(sqliteApi, ClusterImpl.class);
         this.sqliteApi = sqliteApi;
+
     }
-
-    public List<ClusterImpl> findAllClusters() {
-        try {
-            return sqliteApi.getClusterDao().queryForAll();
-        } catch (SQLException e) {
-            logger.error(e, "");
-
-        }
-
-        return null;
-    }
-
 
     public List<ClusterImpl> findClustersForAuthor(Author author) {
         try {
@@ -50,7 +37,7 @@ public class ClusterApiImpl implements ClusterApi {
 
             clustersForAuthorQuery.setArgumentHolderValue(0, author);
 
-            return sqliteApi.getClusterDao().query(clustersForAuthorQuery);
+            return getDao().query(clustersForAuthorQuery);
 
         } catch (SQLException e) {
             logger.error(e, "");

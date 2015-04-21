@@ -5,6 +5,7 @@ import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.stmt.SelectArg;
+import net.inference.database.AuthorApi;
 import net.inference.database.dto.Author;
 import net.inference.database.dto.AuthorToCluster;
 import net.inference.database.dto.Cluster;
@@ -19,13 +20,14 @@ import java.util.List;
 /**
  * @author gzheyts
  */
-public class AuthorApiImpl implements net.inference.database.AuthorApi {
+public class AuthorApiImpl extends BaseApiImpl<AuthorImpl,Integer> implements AuthorApi {
     private static Logger logger = LoggerFactory.getLogger(AuthorApiImpl.class);
     private SqliteApi sqliteApi;
     private PreparedQuery<AuthorImpl> authorForClusterQuery;
     private PreparedQuery<AuthorImpl> coauthorForAuthorQuery;
 
     public AuthorApiImpl(SqliteApi sqliteApi) {
+        super(sqliteApi, AuthorImpl.class);
         this.sqliteApi = sqliteApi;
     }
 
@@ -33,33 +35,13 @@ public class AuthorApiImpl implements net.inference.database.AuthorApi {
     @Override
     public Author addAuthor(final Author author) {
         try {
-            return sqliteApi.getInferenceAuthorDao().createIfNotExists((AuthorImpl) author);
+            return getDao().createIfNotExists((AuthorImpl) author);
         } catch (SQLException e) {
             logger.error(e, "");
         }
         return null;
     }
 
-    public AuthorImpl findById(final Integer id) {
-        try {
-            return sqliteApi.getInferenceAuthorDao().queryForId(id);
-        } catch (SQLException e) {
-            logger.error(e, "");
-        }
-        return null;
-    }
-
-    @Override
-    public List<AuthorImpl> findAllAuthors() {
-        try {
-            return sqliteApi.getInferenceAuthorDao().queryForAll();
-        } catch (SQLException ex) {
-            logger.error(ex, "");
-
-        }
-
-        return null;
-    }
 
     @Override
     public boolean addAuthorToCluster(final Author author, final Cluster cluster) {

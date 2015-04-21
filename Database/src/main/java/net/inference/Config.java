@@ -8,11 +8,11 @@ package net.inference;
  */
 public class Config
 {
-	private static final String sqLiteDatabaseExtension = ".db";
+	private static final String sqLitedatabaseExtension = ".db";
 
 	public static enum Database
 	{
-		LIVE("net_inference"),
+		LIVE("netinference"),
 		TEST("test");
 
 		private final String mName;
@@ -20,7 +20,7 @@ public class Config
 
 		Database(final String name)
 		{
-			mName = name + sqLiteDatabaseExtension;
+			mName = name + sqLitedatabaseExtension;
 		}
 
 		public String getName()
