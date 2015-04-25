@@ -18,7 +18,6 @@ public interface Article extends Entity
 		public static final String name = "name";
 		public static final String year = "year";
 		public static final String source = "source";
-        public static final String AUTHOR_ID_FIELD_NAME = "author_id";
     }
 	public String getName();
 
