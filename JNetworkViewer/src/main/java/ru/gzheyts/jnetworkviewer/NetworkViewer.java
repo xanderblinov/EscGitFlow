@@ -1,5 +1,8 @@
 package ru.gzheyts.jnetworkviewer;
 
+import javax.swing.*;
+import java.awt.*;
+
 import com.javadocking.DockingManager;
 import com.javadocking.dock.BorderDock;
 import com.javadocking.dock.CompositeLineDock;
@@ -14,9 +17,6 @@ import ru.gzheyts.jnetworkviewer.gui.NetworkMiniMap;
 import ru.gzheyts.jnetworkviewer.gui.NetworkView;
 import ru.gzheyts.jnetworkviewer.gui.menu.MenuBar;
 import ru.gzheyts.jnetworkviewer.model.Network;
-
-import javax.swing.*;
-import java.awt.*;
 
 
 /**
