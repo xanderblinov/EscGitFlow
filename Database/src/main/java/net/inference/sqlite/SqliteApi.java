@@ -1,18 +1,23 @@
 package net.inference.sqlite;
 
+import java.sql.SQLException;
+
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.support.ConnectionSource;
 import net.inference.Config;
-import net.inference.database.*;
-import net.inference.database.dto.Article;
-import net.inference.database.dto.Cluster;
-import net.inference.database.dto.Evolution;
-import net.inference.database.dto.EvolutionSlice;
-import net.inference.sqlite.dto.*;
-
-import java.sql.SQLException;
-import java.util.List;
+import net.inference.database.ArticleApi;
+import net.inference.database.AuthorApi;
+import net.inference.database.ClusterApi;
+import net.inference.database.DatabaseApi;
+import net.inference.database.EvolutionApi;
+import net.inference.sqlite.dto.ArticleImpl;
+import net.inference.sqlite.dto.AuthorImpl;
+import net.inference.sqlite.dto.AuthorToClusterImpl;
+import net.inference.sqlite.dto.ClusterImpl;
+import net.inference.sqlite.dto.CoAuthorshipImpl;
+import net.inference.sqlite.dto.EvolutionImpl;
+import net.inference.sqlite.dto.EvolutionSliceImpl;
 
 /**
  * Date: 12/21/2014
@@ -105,82 +110,7 @@ public class SqliteApi implements DatabaseApi
 	}
 
 
-	@Override
-	public Article addArticle(final Article article)
-	{
-		try
-		{
-			return getArticleDao().createIfNotExists((ArticleImpl) article);
-		}
-		catch (SQLException e)
-		{
-			SqliteLog.log(e);
-		}
-		return null;
-	}
 
-
-
-	@Override
-	public Cluster addCluster(final Cluster cluster)
-	{
-		try
-		{
-			return getClusterDao().createIfNotExists((ClusterImpl) cluster);
-		}
-		catch (SQLException e)
-		{
-			SqliteLog.log(e);
-		}
-		return null;
-	}
-
-	@Override
-	public Evolution addEvolution(final Evolution evolution)
-	{
-		try
-		{
-			return getEvolutionDao().createIfNotExists((EvolutionImpl) evolution);
-		}
-		catch (SQLException e)
-		{
-			SqliteLog.log(e);
-		}
-		return null;
-	}
-
-	@Override
-	public EvolutionSlice addEvolutionSlice(final EvolutionSlice evolutionSlice)
-	{
-		try
-		{
-			return getEvolutionSliceDao().createIfNotExists((EvolutionSliceImpl) evolutionSlice);
-		}
-		catch (SQLException e)
-		{
-			SqliteLog.log(e);
-		}
-		return null;
-	}
-
-
-	@Override
-	public List<ArticleImpl> getAllArticles()
-	{
-
-		try
-		{
-			return getArticleDao().queryForAll();
-		}
-		catch (SQLException e)
-		{
-			SqliteLog.log(e);
-		}
-
-		return null;
-	}
-
-	@Override
 	public ConnectionSource getConnection() {
 		try {
 			return mDbHelper.getConnection();
