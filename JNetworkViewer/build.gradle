@@ -24,6 +24,8 @@ dependencies {
     compile 'net.sf.jung:jung-visualization:2.0.1'
     compile 'net.sf.jung:jung-samples:2.0.1'
 
+    compile project(':CommonLib')
+    compile project(':Database')
 }
 
 
