@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.esc.datacollector.medline.MedlineCache.ClassHolder;
 import com.esc.datacollector.medline.MedlineCache.FieldHolder;
-import javafx.util.Pair;
+import com.esc.common.util.Pair;
 
 /**
  * Date: 4/18/2015
