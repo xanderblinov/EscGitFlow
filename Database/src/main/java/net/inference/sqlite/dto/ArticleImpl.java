@@ -25,21 +25,17 @@ public class ArticleImpl implements Article
 	@DatabaseField(columnName = Column.source)
 	private int mSource;
 
-    @DatabaseField(foreign = true, columnName = Column.AUTHOR_ID_FIELD_NAME)
-    private AuthorImpl author;
-
-	public ArticleImpl()
+ 	public ArticleImpl()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public ArticleImpl(AuthorImpl author, final String name, final String sourceId, final int year, final int source)
+	public ArticleImpl(final String name, final String sourceId, final int year, final int source)
 	{
 		mName = name;
 		mSourceId = sourceId;
 		mYear = year;
 		mSource = source;
-        setAuthor(author);
 	}
 
 
@@ -83,13 +79,6 @@ public class ArticleImpl implements Article
 		mSource = source;
 	}
 
-    public AuthorImpl getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(AuthorImpl author) {
-        this.author = author;
-    }
 
     @Override
     public long getId() {
@@ -107,8 +96,7 @@ public class ArticleImpl implements Article
 		if (mYear != article.mYear) return false;
 		if (mSource != article.mSource) return false;
 		if (mName != null ? !mName.equals(article.mName) : article.mName != null) return false;
-		if (mSourceId != null ? !mSourceId.equals(article.mSourceId) : article.mSourceId != null) return false;
-		return !(author != null ? !author.equals(article.author) : article.author != null);
+		return  (mSourceId != null ? !mSourceId.equals(article.mSourceId) : article.mSourceId != null);
 
 	}
 
@@ -119,7 +107,6 @@ public class ArticleImpl implements Article
 		result = 31 * result + (mSourceId != null ? mSourceId.hashCode() : 0);
 		result = 31 * result + mYear;
 		result = 31 * result + mSource;
-		result = 31 * result + (author != null ? author.hashCode() : 0);
 		return result;
 	}
 
@@ -131,7 +118,6 @@ public class ArticleImpl implements Article
 				", mSourceId='" + mSourceId + '\'' +
 				", mYear=" + mYear +
 				", mSource=" + mSource +
-				", author=" + author +
 				'}';
 	}
 }

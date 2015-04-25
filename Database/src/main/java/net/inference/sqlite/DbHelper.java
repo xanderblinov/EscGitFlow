@@ -1,15 +1,27 @@
 package net.inference.sqlite;
 
+import java.io.File;
+import java.sql.SQLException;
+
 import com.j256.ormlite.jdbc.JdbcPooledConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import net.inference.Config;
-import net.inference.sqlite.dto.*;
-
-import java.io.File;
-import java.sql.SQLException;
+import net.inference.sqlite.dto.ArticleImpl;
+import net.inference.sqlite.dto.AuthorImpl;
+import net.inference.sqlite.dto.AuthorToArticleImpl;
+import net.inference.sqlite.dto.AuthorToClusterImpl;
+import net.inference.sqlite.dto.AuthorToCompanyImpl;
+import net.inference.sqlite.dto.ClusterImpl;
+import net.inference.sqlite.dto.CoAuthorshipImpl;
+import net.inference.sqlite.dto.CompanyImpl;
+import net.inference.sqlite.dto.EvolutionImpl;
+import net.inference.sqlite.dto.EvolutionSliceImpl;
+import net.inference.sqlite.dto.ParameterImpl;
+import net.inference.sqlite.dto.PrimitiveAuthorImpl;
+import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
 
 /**
  * Date: 12/21/2014
@@ -27,16 +39,20 @@ class DbHelper
 
 	private ConnectionSource mConnectionSource;
     private static Class[] tablesClassList = new Class[]{
-            ArticleImpl.class,
+            CompanyImpl.class,
             ClusterImpl.class,
             EvolutionImpl.class,
             EvolutionSliceImpl.class,
+            ArticleImpl.class,
             AuthorImpl.class,
             AuthorToClusterImpl.class,
             CoAuthorshipImpl.class,
             ParameterImpl.class,
             PrimitiveAuthorImpl.class,
-            PrimitiveCoAuthorshipImpl.class
+            PrimitiveCoAuthorshipImpl.class,
+            AuthorToArticleImpl.class,
+            AuthorToCompanyImpl.class,
+		    CompanyImpl.class
     };
 
     private final Config.Database mDatabase;

@@ -8,14 +8,20 @@ import com.j256.ormlite.support.ConnectionSource;
 import net.inference.Config;
 import net.inference.database.ArticleApi;
 import net.inference.database.AuthorApi;
+import net.inference.database.AuthorArticleApi;
+import net.inference.database.AuthorCompanyApi;
 import net.inference.database.ClusterApi;
+import net.inference.database.CompanyApi;
 import net.inference.database.DatabaseApi;
 import net.inference.database.EvolutionApi;
 import net.inference.sqlite.dto.ArticleImpl;
 import net.inference.sqlite.dto.AuthorImpl;
+import net.inference.sqlite.dto.AuthorToArticleImpl;
 import net.inference.sqlite.dto.AuthorToClusterImpl;
+import net.inference.sqlite.dto.AuthorToCompanyImpl;
 import net.inference.sqlite.dto.ClusterImpl;
 import net.inference.sqlite.dto.CoAuthorshipImpl;
+import net.inference.sqlite.dto.CompanyImpl;
 import net.inference.sqlite.dto.EvolutionImpl;
 import net.inference.sqlite.dto.EvolutionSliceImpl;
 
@@ -32,6 +38,9 @@ public class SqliteApi implements DatabaseApi
     private AuthorApi  authorApi = new AuthorApiImpl(this);
 	private ClusterApi clusterApi = new ClusterApiImpl(this);
 	private EvolutionApi evolutionApi = new EvolutionApiImpl(this);
+	private AuthorCompanyApi authorCompanyApi = new AuthorToCompanyApiImpl(this);
+	private AuthorArticleApi authorArticleApi = new AuthorToArticleApiImpl(this);
+	private CompanyApi companyApi = new CompanyApiImpl(this);
 
 	public SqliteApi(Config.Database database, boolean recreateDatabase)
 	{
@@ -73,6 +82,24 @@ public class SqliteApi implements DatabaseApi
 		return evolutionApi;
 	}
 
+	@Override
+	public AuthorArticleApi authorArticle()
+	{
+		return authorArticleApi;
+	}
+
+	@Override
+	public AuthorCompanyApi authorCompany()
+	{
+		return authorCompanyApi;
+	}
+
+	@Override
+	public CompanyApi company()
+	{
+		return companyApi;
+	}
+
 
 	public <T> Dao<ArticleImpl, T> getArticleDao() throws SQLException
 	{
@@ -109,7 +136,20 @@ public class SqliteApi implements DatabaseApi
 		return DaoManager.createDao(mDbHelper.getConnection(), EvolutionSliceImpl.class);
 	}
 
+	<T> Dao<AuthorToArticleImpl, T> getAuthorToArticleDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), AuthorToArticleImpl.class);
+	}
 
+	<T> Dao<AuthorToCompanyImpl, T> getAuthorToCompanyDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), AuthorToCompanyImpl.class);
+	}
+
+	<T> Dao<CompanyImpl, T> getCompanyDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), CompanyImpl.class);
+	}
 
 	public ConnectionSource getConnection() {
 		try {
@@ -120,4 +160,5 @@ public class SqliteApi implements DatabaseApi
 
 		return null;
 	}
+
 }

@@ -2,6 +2,8 @@ package net.inference.database;
 
 import java.util.List;
 
+import com.j256.ormlite.dao.Dao;
+
 /**
  * @author gzheyts
  */
@@ -24,7 +26,7 @@ public interface BaseApi<T, ID> {
 
     boolean exists(ID id);
 
-
+	Dao<T, ID> getDao();
 
 
 }

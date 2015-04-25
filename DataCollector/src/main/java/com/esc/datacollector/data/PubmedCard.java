@@ -21,6 +21,12 @@ public class PubmedCard extends AbsPubmedCard
 	@MedlineField(value = FAU, multiple = true)
 	private String[] mFAU;
 
+	@MedlineField(value = AD, multiple = true)
+	private String[] mAD;
+
+	@MedlineField(value = DP)
+	private String mDP;
+
 	public String getPmid()
 	{
 		return mPmid;
@@ -34,5 +40,15 @@ public class PubmedCard extends AbsPubmedCard
 	public String[] getFAU()
 	{
 		return mFAU;
+	}
+
+	public String[] getAD()
+	{
+		return mAD;
+	}
+
+	public String getDP()
+	{
+		return mDP;
 	}
 }

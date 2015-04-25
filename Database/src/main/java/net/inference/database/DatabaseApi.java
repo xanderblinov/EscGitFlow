@@ -11,10 +11,19 @@ import com.j256.ormlite.support.ConnectionSource;
 public interface DatabaseApi
 {
 
-	 ArticleApi article();
-     AuthorApi  author();
-	 ClusterApi cluster();
-	 EvolutionApi evolution();
+	ArticleApi article();
+
+	AuthorApi author();
+
+	ClusterApi cluster();
+
+	EvolutionApi evolution();
+
+	AuthorArticleApi authorArticle();
+
+	AuthorCompanyApi authorCompany();
+
+	CompanyApi company();
 
 	/**
 	 * Init database and table
@@ -27,4 +36,5 @@ public interface DatabaseApi
 	public void onStop();
 
 	ConnectionSource getConnection();
+
 }

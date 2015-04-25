@@ -1,15 +1,15 @@
 package net.inference.sqlite;
 
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
+
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import net.inference.database.BaseApi;
 import net.inference.database.DatabaseApi;
-
-import java.sql.SQLException;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * @author gzheyts
@@ -116,7 +116,7 @@ public class BaseApiImpl<T,ID> implements BaseApi<T,ID> {
     }
 
 
-    protected Dao<T, ID> getDao() {
+    public Dao<T, ID> getDao() {
         if (dao == null) {
             try {
                 this.dao = DaoManager.createDao(databaseApi.getConnection(), clazz);

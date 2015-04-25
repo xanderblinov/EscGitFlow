@@ -1,8 +1,6 @@
 package net.inference.sqlite.dto;
 
-import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 import net.inference.database.dto.Author;
 
@@ -12,6 +10,7 @@ import net.inference.database.dto.Author;
  *
  * @author xanderblinov
  */
+//TODO add many to many relationship for articles and companies @see{https://github.com/j256/ormlite-jdbc/blob/master/src/test/java/com/j256/ormlite/examples/manytomany/ManyToManyMain.java}
 
 @DatabaseTable(tableName = Author.TABLE_NAME)
 public class AuthorImpl implements Author
@@ -28,11 +27,7 @@ public class AuthorImpl implements Author
 	@DatabaseField(columnName = Column.click)
 	private String mClick;
 
-    @ForeignCollectionField
-    private ForeignCollection<ArticleImpl> articles;
-
-
-    public AuthorImpl()
+	public AuthorImpl()
 	{
 		// ORMLite needs a no-arg constructor
 	}
@@ -78,7 +73,8 @@ public class AuthorImpl implements Author
 		mEncoding = encoding;
 	}
 
-    @Override
+
+	@Override
     public String getClick() {
         return mClick;
     }
@@ -86,10 +82,6 @@ public class AuthorImpl implements Author
     @Override
     public void setClick(String click) {
         mClick = click;
-    }
-
-    public ForeignCollection<ArticleImpl> getArticles() {
-        return articles;
     }
 
     @Override
