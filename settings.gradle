@@ -7,3 +7,5 @@ include 'DataCollector'
 
 include 'CommonLib'
 
+include 'JNetworkViewer'
+

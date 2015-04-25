@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.github.monkeysintown:jgraphx:3.1.2.1'
+    compile 'net.sf.doolin:javadocking:1.4.2'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    compile 'log4j:log4j:1.2.17'
+
+    compile 'net.sf.jung:jung-api:2.0.1'
+    compile 'net.sf.jung:jung-graph-impl:2.0.1'
+    compile 'net.sf.jung:jung-algorithms:2.0.1'
+    compile 'net.sf.jung:jung-visualization:2.0.1'
+    compile 'net.sf.jung:jung-samples:2.0.1'
+
+    compile project(':CommonLib')
+    compile project(':Database')
+}
+
+
