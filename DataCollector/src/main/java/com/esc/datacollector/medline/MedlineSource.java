@@ -3,7 +3,7 @@ package com.esc.datacollector.medline;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.util.Pair;
+import com.esc.common.util.Pair;
 
 /**
  * Date: 4/18/2015
