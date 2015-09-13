@@ -6,7 +6,6 @@ import com.esc.datacollector.medline.Medliner;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -16,6 +15,8 @@ public class PubMedParser extends AbsParserEngine
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
 
 	private LinkedBlockingQueue<PubmedCard> mPubmedCards = new LinkedBlockingQueue<>();
+
+	private IPubmedCardProcessor mPubmedCardProcessor = new PubmedCardProcessor();
 
 	@Override
 	protected ExecutorService newExecutorService()
@@ -99,9 +100,8 @@ public class PubMedParser extends AbsParserEngine
 				{
 					continue;
 				}
+				mPubmedCardProcessor.execute(pubmedCard);
 
-				//TODO add buffering
-				System.out.println(pubmedCard.getPmid() + " " + Arrays.asList(pubmedCard.getAU()) + " " + Arrays.asList(pubmedCard.getFAU()));
 			}
 		}
 	}
@@ -129,6 +129,13 @@ public class PubMedParser extends AbsParserEngine
 		}
 
 	}*/
+
+	@Override
+	protected void onPostExecute()
+	{
+		super.onPostExecute();
+		getExecutorService().shutdown();
+	}
 
 	/**
 	 * override this method to customize adding articles to list

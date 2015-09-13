@@ -25,6 +25,8 @@ public interface DatabaseApi
 
 	CompanyApi company();
 
+	PrimitiveAuthorApi primitiveAuthor();
+
 	/**
 	 * Init database and table
 	 */

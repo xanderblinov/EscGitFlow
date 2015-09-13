@@ -24,6 +24,9 @@ public class PubmedCard extends AbsPubmedCard
 	@MedlineField(value = AD, multiple = true)
 	private String[] mAD;
 
+	@MedlineField(value = OT, multiple = true)
+	private String[] mKeyWorlds;
+
 	@MedlineField(value = DP)
 	private String mDP;
 
@@ -42,7 +45,7 @@ public class PubmedCard extends AbsPubmedCard
 		return mFAU;
 	}
 
-	public String[] getAD()
+	public String[] getOrganizations()
 	{
 		return mAD;
 	}
@@ -50,5 +53,10 @@ public class PubmedCard extends AbsPubmedCard
 	public String getDP()
 	{
 		return mDP;
+	}
+
+	public String[] getKeyWorlds()
+	{
+		return mKeyWorlds;
 	}
 }

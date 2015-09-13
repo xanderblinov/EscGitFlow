@@ -2,6 +2,8 @@ package net.inference.sqlite.dto;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+
+import net.inference.database.dto.PrimitiveAuthor;
 import net.inference.database.dto.PrimitiveCoAuthorship;
 
 /**
@@ -16,42 +18,43 @@ public class PrimitiveCoAuthorshipImpl implements PrimitiveCoAuthorship
 {
 	@DatabaseField(columnName = Column.id, generatedId = true)
 	private int mId;
-	@DatabaseField(columnName = Column.author)
-	private String mAuthor;
-	@DatabaseField(columnName = Column.coauthor)
-	private String mCoauthor;
+	@DatabaseField(columnName = Column.author, foreign = true)
+	private PrimitiveAuthor mAuthor;
+	@DatabaseField(columnName = Column.coauthor, foreign = true)
+	private PrimitiveAuthor mCoauthor;
 	@DatabaseField(columnName = Column.year)
 	private int mYear;
 	@DatabaseField(columnName = Column.article_id)
 	private long mArticleId;
 
+	@SuppressWarnings("unused")
 	public PrimitiveCoAuthorshipImpl()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public PrimitiveCoAuthorshipImpl(final String author, final String coauthor)
+	public PrimitiveCoAuthorshipImpl(final PrimitiveAuthor author, final PrimitiveAuthor coauthor)
 	{
 		mAuthor = author;
 		mCoauthor = coauthor;
 	}
 
-	public String getAuthor()
+	public PrimitiveAuthor getAuthor()
 	{
 		return mAuthor;
 	}
 
-	public void setAuthor(final String author)
+	public void setAuthor(final PrimitiveAuthor author)
 	{
 		mAuthor = author;
 	}
 
-	public String getCoauthor()
+	public PrimitiveAuthor getCoauthor()
 	{
 		return mCoauthor;
 	}
 
-	public void setCoauthor(final String coauthor)
+	public void setCoauthor(final PrimitiveAuthor coauthor)
 	{
 		mCoauthor = coauthor;
 	}
@@ -76,19 +79,67 @@ public class PrimitiveCoAuthorshipImpl implements PrimitiveCoAuthorship
 		mArticleId = articleId;
 	}
 
-    @Override
-    public long getId() {
-        return mId;
-    }
+	@Override
+	public long getId()
+	{
+		return mId;
+	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "PrimitiveCoAuthorshipImpl{" +
-				"mId=" + mId +
-				", mAuthor='" + mAuthor + '\'' +
-				", mCoauthor='" + mCoauthor + '\'' +
-				", mYear=" + mYear +
-				", mArticleId=" + mArticleId +
-				'}';
+		"mId=" + mId +
+		", mAuthor='" + mAuthor + '\'' +
+		", mCoauthor='" + mCoauthor + '\'' +
+		", mYear=" + mYear +
+		", mArticleId=" + mArticleId +
+		'}';
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof PrimitiveCoAuthorshipImpl))
+		{
+			return false;
+		}
+
+		PrimitiveCoAuthorshipImpl that = (PrimitiveCoAuthorshipImpl) o;
+
+		if (getId() != that.getId())
+		{
+			return false;
+		}
+		if (getYear() != that.getYear())
+		{
+			return false;
+		}
+		if (getArticleId() != that.getArticleId())
+		{
+			return false;
+		}
+		//noinspection SimplifiableIfStatement
+		if (!getAuthor().equals(that.getAuthor()))
+		{
+			return false;
+		}
+		return getCoauthor().equals(that.getCoauthor());
+
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = (int) getId();
+		result = 31 * result + getAuthor().hashCode();
+		result = 31 * result + getCoauthor().hashCode();
+		result = 31 * result + getYear();
+		result = 31 * result + (int) (getArticleId() ^ (getArticleId() >>> 32));
+		return result;
 	}
 }

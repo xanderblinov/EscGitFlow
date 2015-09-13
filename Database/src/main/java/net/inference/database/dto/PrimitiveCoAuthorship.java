@@ -20,13 +20,13 @@ public interface PrimitiveCoAuthorship extends Entity
 		public static final String article_id  = "article_id";
 	}
 
-	public String getAuthor();
+	public PrimitiveAuthor getAuthor();
 
-	public void setAuthor(final String author);
+	public void setAuthor(final PrimitiveAuthor author);
 
-	public String getCoauthor();
+	public PrimitiveAuthor getCoauthor();
 
-	public void setCoauthor(final String coauthor);
+	public void setCoauthor(final PrimitiveAuthor coauthor);
 
 	public int getYear();
 

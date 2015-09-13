@@ -9,40 +9,40 @@ package net.inference.database.dto;
 
 public interface PrimitiveAuthor extends Entity
 {
-	public static final String TABLE_NAME = "primitive_author";
+	String TABLE_NAME = "primitive_author";
 
-	public static class Column
+	public class Column
 	{
 		public static final String id = "_id";
 		public static final String surname = "surname";
 		public static final String name = "name";
 		public static final String encoding = "encoding";
 		public static final String source = "source";
-		public static final String article_id = "article_id";
+		public static final String article = "article";
 		public static final String inference_id = "inference_id";
 	}
 
-	public String getName();
+	String getName();
 
-	public void setName(final String name);
+	void setName(final String name);
 
-	public String getSurname();
+	String getSurname();
 
-	public void setSurname(final String surname);
+	void setSurname(final String surname);
 
-	public int getArticleId();
+	Article getArticleId();
 
-	public void setArticleId(final int articleId);
+	void setArticle(final Article articleId);
 
-	public String getSource();
+	String getSource();
 
-	public void setSource(final String source);
+	void setSource(final String source);
 
-	public String getEncoding();
+	String getEncoding();
 
-	public void setEncoding(final String encoding);
+	void setEncoding(final String encoding);
 
-	public long getInferenceId();
+	long getInferenceId();
 
-	public void setInferenceId(final long inferenceId);
+	void setInferenceId(final long inferenceId);
 }

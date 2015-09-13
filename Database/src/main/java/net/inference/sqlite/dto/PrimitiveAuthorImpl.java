@@ -2,6 +2,8 @@ package net.inference.sqlite.dto;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+
+import net.inference.database.dto.Article;
 import net.inference.database.dto.PrimitiveAuthor;
 
 /**
@@ -20,8 +22,8 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 	private String mName;
 	@DatabaseField(columnName = Column.surname)
 	private String mSurname;
-	@DatabaseField(columnName = Column.article_id)
-	private int mArticleId;
+	@DatabaseField(columnName = Column.article, foreign = true)
+	private Article mArticle;
 	@DatabaseField(columnName = Column.source)
 	private String mSource;
 	@DatabaseField(columnName = Column.encoding)
@@ -29,17 +31,17 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 	@DatabaseField(columnName = Column.inference_id)
 	private long mInferenceId;
 
+	@SuppressWarnings("unused")
 	public PrimitiveAuthorImpl()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public PrimitiveAuthorImpl(final int id, final String name, final String Surname, final int articleId)
+	public PrimitiveAuthorImpl(final String name, final String surname, final ArticleImpl article)
 	{
-		mId = id;
 		mName = name;
-		mSurname = Surname;
-		mArticleId = articleId;
+		mSurname = surname;
+		mArticle = article;
 	}
 
 	public String getName()
@@ -62,14 +64,14 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 		mSurname = surname;
 	}
 
-	public int getArticleId()
+	public Article getArticleId()
 	{
-		return mArticleId;
+		return mArticle;
 	}
 
-	public void setArticleId(final int articleId)
+	public void setArticle(final Article article)
 	{
-		mArticleId = articleId;
+		mArticle = article;
 	}
 
 	public String getSource()
@@ -102,21 +104,69 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 		mInferenceId = inferenceId;
 	}
 
-    @Override
-    public long getId() {
-        return mId;
-    }
+	@Override
+	public long getId()
+	{
+		return mId;
+	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "PrimitiveAuthorImpl{" +
-				"mId=" + mId +
-				", mName='" + mName + '\'' +
-				", mSurname='" + mSurname + '\'' +
-				", mArticleId=" + mArticleId +
-				", mSource='" + mSource + '\'' +
-				", mEncoding='" + mEncoding + '\'' +
-				", mInferenceId=" + mInferenceId +
-				'}';
+		"mId=" + mId +
+		", mName='" + mName + '\'' +
+		", mSurname='" + mSurname + '\'' +
+		", mArticleId=" + (mArticle == null ? -1 : mArticle.getId()) +
+		", mSource='" + mSource + '\'' +
+		", mEncoding='" + mEncoding + '\'' +
+		", mInferenceId=" + mInferenceId +
+		'}';
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof PrimitiveAuthorImpl))
+		{
+			return false;
+		}
+
+		PrimitiveAuthorImpl that = (PrimitiveAuthorImpl) o;
+
+		if (getId() != that.getId())
+		{
+			return false;
+		}
+		if (getArticleId() != that.getArticleId())
+		{
+			return false;
+		}
+		if (!getName().equals(that.getName()))
+		{
+			return false;
+		}
+		//noinspection SimplifiableIfStatement
+		if (!getSurname().equals(that.getSurname()))
+		{
+			return false;
+		}
+		return !(getSource() != null ? !getSource().equals(that.getSource()) : that.getSource() != null);
+
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = (int) getId();
+		result = 31 * result + getName().hashCode();
+		result = 31 * result + getSurname().hashCode();
+		result = 31 * result + (int) (mArticle == null ? 0 : mArticle.getId());
+		result = 31 * result + (getSource() != null ? getSource().hashCode() : 0);
+		return result;
 	}
 }
