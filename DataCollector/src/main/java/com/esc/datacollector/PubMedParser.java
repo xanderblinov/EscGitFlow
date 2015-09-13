@@ -1,17 +1,27 @@
 package com.esc.datacollector;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.esc.datacollector.data.PubmedCard;
 import com.esc.datacollector.medline.MedlineSource;
 import com.esc.datacollector.medline.Medliner;
 
-public class PubMedParser extends AbsParserEngine<List<PubmedCard>>
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class PubMedParser extends AbsParserEngine
 {
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
+
+	private LinkedBlockingQueue<PubmedCard> mPubmedCards = new LinkedBlockingQueue<>();
+
+	@Override
+	protected ExecutorService newExecutorService()
+	{
+		return Executors.newFixedThreadPool(2);
+	}
 
 	public PubMedParser(String filename)
 	{
@@ -19,9 +29,11 @@ public class PubMedParser extends AbsParserEngine<List<PubmedCard>>
 	}
 
 	@Override
-	protected void execute(BufferedReader reader, List<PubmedCard> mList)
+	protected void execute(BufferedReader reader)
 	{
-		List<PubmedCard> cards = new ArrayList<PubmedCard>();
+
+		getExecutorService().execute(new AddPubmedCardRunnable());
+
 		String currentString;
 		StringBuilder builder = new StringBuilder();
 		MedlineSource source = null;
@@ -34,7 +46,7 @@ public class PubMedParser extends AbsParserEngine<List<PubmedCard>>
 				{
 					if (source != null)
 					{
-						cards.add(Medliner.readMedline(source, PubmedCard.class));
+						mPubmedCards.offer(Medliner.readMedline(source, PubmedCard.class));
 					}
 					source = new MedlineSource();
 					currentField = null;
@@ -61,12 +73,37 @@ public class PubMedParser extends AbsParserEngine<List<PubmedCard>>
 		{
 			e.printStackTrace();
 		}
-		for (PubmedCard pubmedCard : cards)
+
+
+	}
+
+	private class AddPubmedCardRunnable implements Runnable
+	{
+
+		@Override
+		public void run()
 		{
-			System.out.println(pubmedCard.getPmid() + " " + pubmedCard.getAU().length + " " +  pubmedCard.getFAU().length);
+			while (true)
+			{
+				if (getExecutorService().isShutdown())
+				{
+					break;
+				}
+
+				final PubmedCard pubmedCard;
+				try
+				{
+					pubmedCard = mPubmedCards.take();
+				}
+				catch (InterruptedException ignore)
+				{
+					continue;
+				}
+
+				//TODO add buffering
+				System.out.println(pubmedCard.getPmid() + " " + Arrays.asList(pubmedCard.getAU()) + " " + Arrays.asList(pubmedCard.getFAU()));
+			}
 		}
-
-
 	}
 /*
 	@SuppressWarnings("unused")

@@ -1,12 +1,13 @@
 package com.esc.datacollector.medline;
 
+import com.esc.common.util.Pair;
+import com.esc.datacollector.medline.MedlineCache.ClassHolder;
+import com.esc.datacollector.medline.MedlineCache.FieldHolder;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.esc.datacollector.medline.MedlineCache.ClassHolder;
-import com.esc.datacollector.medline.MedlineCache.FieldHolder;
-import com.esc.common.util.Pair;
+import java.util.stream.Collectors;
 
 /**
  * Date: 4/18/2015
@@ -16,6 +17,7 @@ import com.esc.common.util.Pair;
  */
 public class Medliner
 {
+	@SuppressWarnings("unused")
 	private static final String TAG = "Medliner";
 
 	private static final MedlineCache sClassCache = new MedlineCache();
@@ -42,17 +44,13 @@ public class Medliner
 			throw new IllegalArgumentException("Class cannot be null");
 		}
 
-		T result = null;
+		final T result;
 
 		try
 		{
 			result = clazz.newInstance();
 		}
-		catch (final InstantiationException e)
-		{
-			throw new IllegalArgumentException("Could not instantiate target object", e);
-		}
-		catch (final IllegalAccessException e)
+		catch (final InstantiationException | IllegalAccessException e)
 		{
 			throw new IllegalArgumentException("Could not instantiate target object", e);
 		}
@@ -71,11 +69,11 @@ public class Medliner
 		return result;
 	}
 
-	private static <T> void read(MedlineSource obj, T result, final ClassHolder holder, final FieldHolder fieldHolder)
+	private static <T> void read(MedlineSource obj, T result, @SuppressWarnings("UnusedParameters") final ClassHolder holder, final FieldHolder fieldHolder)
 	{
 		if (fieldHolder.info.multiple)
 		{
-			Class<?> arrayObjectClass = null;
+			final Class<?> arrayObjectClass;
 
 			try
 			{
@@ -92,20 +90,16 @@ public class Medliner
 			}
 
 
-			ArrayList<Object> arrayList = new ArrayList<Object>();
-			for (Pair<String, String> pair : obj.getFieldList())
-			{
-				if (fieldHolder.info.keyName.equals(pair.getKey()))
-				{
-					arrayList.add(pair.getValue());
-				}
-			}
+			ArrayList<Object> arrayList =
+			obj.getFieldList().stream().filter(pair -> fieldHolder.info.keyName.equals(pair.getKey())).map(Pair::getValue).collect(Collectors.toCollection(ArrayList::new));
 			if (!arrayList.isEmpty())
 			{
+				//noinspection unchecked
 				final T[] items = (T[]) Array.newInstance(arrayObjectClass, arrayList.size());
 
 				for (int i = 0; i < arrayList.size(); i++)
 				{
+					//noinspection unchecked
 					items[i] = (T) arrayList.get(i);
 				}
 				try

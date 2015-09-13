@@ -23,7 +23,7 @@ public class DataCollector
 
 		api.onStop();
 */
-		/*MedlineSource medlineSource = new MedlineSource();
+	/*	MedlineSource medlineSource = new MedlineSource();
 
 		medlineSource.addField("PMID- ","24d1221");
 		medlineSource.addField("b","bb");
@@ -41,10 +41,10 @@ public class DataCollector
 		String resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$1");
 		System.out.println(resultString);
 		resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$2").trim();
-		System.out.println(resultString);
+		System.out.println(resultString);*/
 
 
-		new PubMedParser("./test_pubmed.htm").parseFile();*/
+		new PubMedParser("./test_pubmed.htm").parseFile();
 
 /*
 		DatabaseApi api = new SqliteApi(Config.Database.TEST, false);

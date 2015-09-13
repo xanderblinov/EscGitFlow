@@ -6,11 +6,22 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.FutureTask;
 
-public abstract class AbsParserEngine<T>
+public abstract class AbsParserEngine
 {
 	private final String filename;
-	private final T resulT = null;
+	private ExecutorService mExecutorService = newExecutorService();
+
+	protected abstract ExecutorService newExecutorService();
+
+	protected ExecutorService getExecutorService()
+	{
+		return mExecutorService;
+	}
 
 	public AbsParserEngine(String filename)
 	{
@@ -20,9 +31,29 @@ public abstract class AbsParserEngine<T>
 	public void parseFile()
 	{
 		preExecute();
+
+		FutureTask<Void> futureTask = new FutureTask<>(new ParseFileCallable());
+		mExecutorService.execute(futureTask);
+		try
+		{
+			futureTask.get();
+		}
+		catch (InterruptedException | ExecutionException e)
+		{
+			//TODO onError
+		}
+		postExecute();
+
+
+	}
+
+	private void parseFileInternal()
+	{
+
 		File file = new File(filename);
 		try
 		{
+			//noinspection ConstantConditions
 			file = new File(ClassLoader.getSystemClassLoader().getResource(filename).toURI());
 		}
 		catch (URISyntaxException e)
@@ -34,7 +65,7 @@ public abstract class AbsParserEngine<T>
 		try
 		{
 			reader = new BufferedReader(new FileReader(file));
-			execute(reader, resulT);
+			execute(reader);
 
 		}
 		catch (FileNotFoundException e)
@@ -57,9 +88,16 @@ public abstract class AbsParserEngine<T>
 			}
 
 		}
-		postExecute(resulT);
+	}
 
-
+	private class ParseFileCallable implements Callable<Void>
+	{
+		@Override
+		public Void call() throws Exception
+		{
+			parseFileInternal();
+			return null;
+		}
 	}
 
 	protected void preExecute()
@@ -67,11 +105,11 @@ public abstract class AbsParserEngine<T>
 
 	}
 
-	protected void postExecute(T resul)
+	protected void postExecute()
 	{
 
 	}
 
-	abstract protected void execute(BufferedReader reader, T result);
+	abstract protected void execute(BufferedReader reader);
 
 }
