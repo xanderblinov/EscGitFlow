@@ -30,7 +30,7 @@ public abstract class AbsParserEngine
 
 	public void parseFile()
 	{
-		preExecute();
+		onPreExecute();
 
 		FutureTask<Void> futureTask = new FutureTask<>(new ParseFileCallable());
 		mExecutorService.execute(futureTask);
@@ -42,7 +42,7 @@ public abstract class AbsParserEngine
 		{
 			//TODO onError
 		}
-		postExecute();
+		onPostExecute();
 
 
 	}
@@ -100,12 +100,12 @@ public abstract class AbsParserEngine
 		}
 	}
 
-	protected void preExecute()
+	protected void onPreExecute()
 	{
 
 	}
 
-	protected void postExecute()
+	protected void onPostExecute()
 	{
 
 	}
