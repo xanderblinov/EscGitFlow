@@ -12,4 +12,9 @@ public class TextUtils
 	{
 		return value == null||value.equals("");
 	}
+
+	public static boolean isEmpty(CharSequence string)
+	{
+		return string == null || string.length() == 0;
+	}
 }
