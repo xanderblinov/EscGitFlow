@@ -14,6 +14,8 @@ public class PubMedParser extends AbsParserEngine
 {
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
 
+	private volatile boolean mFileReadingCompleated = false;
+
 	private LinkedBlockingQueue<PubmedCard> mPubmedCards = new LinkedBlockingQueue<>();
 
 	private IPubmedCardProcessor mPubmedCardProcessor = new PubmedCardProcessor();
@@ -69,6 +71,7 @@ public class PubMedParser extends AbsParserEngine
 					}
 				}
 			}
+			mFileReadingCompleated = true;
 		}
 		catch (IOException e)
 		{
@@ -86,9 +89,10 @@ public class PubMedParser extends AbsParserEngine
 		{
 			while (true)
 			{
-				if (getExecutorService().isShutdown())
+				if (mFileReadingCompleated && mPubmedCards.size() == 0)
 				{
-					break;
+					getExecutorService().shutdown();
+					return;
 				}
 
 				final PubmedCard pubmedCard;
@@ -134,7 +138,6 @@ public class PubMedParser extends AbsParserEngine
 	protected void onPostExecute()
 	{
 		super.onPostExecute();
-		getExecutorService().shutdown();
 	}
 
 	/**

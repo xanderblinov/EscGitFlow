@@ -13,8 +13,6 @@ public class DataCollector
 	public static void main(String[] args)
 	{
 /*
-		DatabaseApi api = DatabaseApiFactory.getDatabaseApi(DatabaseApiFactory.DatabaseType.Sqlite, Config.Database.TEST, false);
-
 		api.onStart();
 		for (Article article_id : api.article_id().getAllArticles())
 		{

@@ -1,5 +1,6 @@
 package net.inference.sqlite;
 
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.stmt.PreparedQuery;
@@ -17,6 +18,7 @@ import net.inference.sqlite.dto.PrimitiveAuthorImpl;
 import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,7 +29,7 @@ import java.util.List;
  */
 public class PrimitiveAuthorApiImpl extends BaseApiImpl<PrimitiveAuthorImpl, Integer> implements PrimitiveAuthorApi
 {
-	private static Logger logger = LoggerFactory.getLogger(AuthorApiImpl.class);
+	private static Logger logger = LoggerFactory.getLogger(PrimitiveAuthorImpl.class);
 
 	private final SqliteApi mSqliteApi;
 
@@ -54,7 +56,7 @@ public class PrimitiveAuthorApiImpl extends BaseApiImpl<PrimitiveAuthorImpl, Int
 
 
 	@Override
-	public PrimitiveCoAuthorship addCoauthor(final PrimitiveAuthor author, final PrimitiveAuthor coauthor)
+	public PrimitiveCoAuthorship addCoauthor(final PrimitiveAuthorImpl author, final PrimitiveAuthorImpl coauthor)
 	{
 		PrimitiveCoAuthorshipImpl coAuthorship = new PrimitiveCoAuthorshipImpl(author, coauthor);
 		try
@@ -78,6 +80,55 @@ public class PrimitiveAuthorApiImpl extends BaseApiImpl<PrimitiveAuthorImpl, Int
 	public List<AuthorImpl> findAuthorsForArticle(Article article)
 	{
 		return null;
+	}
+
+	@Override
+	public ArrayList<PrimitiveAuthorImpl> addAuthors(List<PrimitiveAuthorImpl> primitiveAuthors) throws Exception
+	{
+		final Dao<PrimitiveAuthorImpl, Integer> dao = getDao();
+
+		//noinspection UnnecessaryLocalVariable
+		final ArrayList<PrimitiveAuthorImpl> authors = dao.callBatchTasks(() -> {
+
+			ArrayList<PrimitiveAuthorImpl> createdAuthors = new ArrayList<>();
+
+
+			for (PrimitiveAuthorImpl author : primitiveAuthors)
+			{
+				final PrimitiveAuthorImpl primitiveAuthor = dao.createIfNotExists(author);
+				createdAuthors.add(primitiveAuthor);
+			}
+			return createdAuthors;
+		});
+		return authors;
+	}
+
+	@Override
+	public List<PrimitiveCoAuthorshipImpl> addCoauthors(List<PrimitiveAuthorImpl> primitiveAuthors) throws Exception
+	{
+		List<PrimitiveCoAuthorshipImpl> coAuthorshipList = new ArrayList<>();
+		for (PrimitiveAuthorImpl outer : primitiveAuthors)
+		{
+			for (PrimitiveAuthorImpl inner : primitiveAuthors)
+			{
+				PrimitiveCoAuthorshipImpl coAuthorship = new PrimitiveCoAuthorshipImpl(outer, inner);
+				coAuthorshipList.add(coAuthorship);
+			}
+		}
+
+		Dao<PrimitiveCoAuthorshipImpl, Integer> dao = mSqliteApi.<Integer>getPrimitiveCoAuthorshipDao();
+
+		//noinspection UnnecessaryLocalVariable
+		final List<PrimitiveCoAuthorshipImpl> primitiveCoAuthorships = dao.callBatchTasks(() -> {
+			List<PrimitiveCoAuthorshipImpl> coAuthorships = new ArrayList<>();
+			for (PrimitiveCoAuthorshipImpl coAuthorship : coAuthorshipList)
+			{
+				coAuthorships.add(dao.createIfNotExists(coAuthorship));
+			}
+			return coAuthorships;
+		});
+
+		return primitiveCoAuthorships;
 	}
 
 

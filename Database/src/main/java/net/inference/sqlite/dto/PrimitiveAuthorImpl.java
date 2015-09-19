@@ -3,7 +3,6 @@ package net.inference.sqlite.dto;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import net.inference.database.dto.Article;
 import net.inference.database.dto.PrimitiveAuthor;
 
 /**
@@ -23,7 +22,7 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 	@DatabaseField(columnName = Column.surname)
 	private String mSurname;
 	@DatabaseField(columnName = Column.article, foreign = true)
-	private Article mArticle;
+	private ArticleImpl mArticle;
 	@DatabaseField(columnName = Column.source)
 	private String mSource;
 	@DatabaseField(columnName = Column.encoding)
@@ -64,12 +63,12 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 		mSurname = surname;
 	}
 
-	public Article getArticleId()
+	public ArticleImpl getArticle()
 	{
 		return mArticle;
 	}
 
-	public void setArticle(final Article article)
+	public void setArticle(final ArticleImpl article)
 	{
 		mArticle = article;
 	}
@@ -142,7 +141,7 @@ public class PrimitiveAuthorImpl implements PrimitiveAuthor
 		{
 			return false;
 		}
-		if (getArticleId() != that.getArticleId())
+		if (getArticle() != that.getArticle())
 		{
 			return false;
 		}

@@ -7,7 +7,9 @@ import net.inference.database.dto.PrimitiveCoAuthorship;
 import net.inference.sqlite.dto.ArticleImpl;
 import net.inference.sqlite.dto.AuthorImpl;
 import net.inference.sqlite.dto.PrimitiveAuthorImpl;
+import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,11 +20,15 @@ public interface PrimitiveAuthorApi extends BaseApi<PrimitiveAuthorImpl,Integer>
     PrimitiveAuthor addAuthor(final PrimitiveAuthor author);
     List<PrimitiveAuthorImpl> findCoauthors(final PrimitiveAuthor author);
 
-    PrimitiveCoAuthorship addCoauthor(final PrimitiveAuthor author, final PrimitiveAuthor coauthor);
+    PrimitiveCoAuthorship addCoauthor(final PrimitiveAuthorImpl author, final PrimitiveAuthorImpl coauthor);
 
 	List<ArticleImpl> findArticlesForAuthor(final Author author);
 
 	List<AuthorImpl> findAuthorsForArticle(final Article article);
+
+	ArrayList<PrimitiveAuthorImpl> addAuthors(List<PrimitiveAuthorImpl> primitiveAuthors) throws Exception;
+
+	List<PrimitiveCoAuthorshipImpl> addCoauthors(List<PrimitiveAuthorImpl> primitiveAuthors) throws Exception;
 /*
     List<CompanyImpl> findCompaniesForAuthor(final Author author);
 

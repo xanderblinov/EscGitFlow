@@ -19,9 +19,9 @@ public class PrimitiveCoAuthorshipImpl implements PrimitiveCoAuthorship
 	@DatabaseField(columnName = Column.id, generatedId = true)
 	private int mId;
 	@DatabaseField(columnName = Column.author, foreign = true)
-	private PrimitiveAuthor mAuthor;
+	private PrimitiveAuthorImpl mAuthor;
 	@DatabaseField(columnName = Column.coauthor, foreign = true)
-	private PrimitiveAuthor mCoauthor;
+	private PrimitiveAuthorImpl mCoauthor;
 	@DatabaseField(columnName = Column.year)
 	private int mYear;
 	@DatabaseField(columnName = Column.article_id)
@@ -33,28 +33,28 @@ public class PrimitiveCoAuthorshipImpl implements PrimitiveCoAuthorship
 		// ORMLite needs a no-arg constructor
 	}
 
-	public PrimitiveCoAuthorshipImpl(final PrimitiveAuthor author, final PrimitiveAuthor coauthor)
+	public PrimitiveCoAuthorshipImpl(final PrimitiveAuthorImpl author, final PrimitiveAuthorImpl coauthor)
 	{
 		mAuthor = author;
 		mCoauthor = coauthor;
 	}
 
-	public PrimitiveAuthor getAuthor()
+	public PrimitiveAuthorImpl getAuthor()
 	{
 		return mAuthor;
 	}
 
-	public void setAuthor(final PrimitiveAuthor author)
+	public void setAuthor(final PrimitiveAuthorImpl author)
 	{
 		mAuthor = author;
 	}
 
-	public PrimitiveAuthor getCoauthor()
+	public PrimitiveAuthorImpl getCoauthor()
 	{
 		return mCoauthor;
 	}
 
-	public void setCoauthor(final PrimitiveAuthor coauthor)
+	public void setCoauthor(final PrimitiveAuthorImpl coauthor)
 	{
 		mCoauthor = coauthor;
 	}

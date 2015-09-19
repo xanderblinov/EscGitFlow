@@ -15,7 +15,7 @@ import net.inference.database.dto.Article;
 public class ArticleImpl implements Article
 {
 	@DatabaseField(columnName = Column.id, generatedId = true)
-	private int mId;
+	private long mId;
 	@DatabaseField(columnName = Column.name)
 	private String mName;
 	@DatabaseField(columnName = Column.sourceId)
@@ -102,7 +102,7 @@ public class ArticleImpl implements Article
 
 	@Override
 	public int hashCode() {
-		int result = mId;
+		int result = (int) mId;
 		result = 31 * result + (mName != null ? mName.hashCode() : 0);
 		result = 31 * result + (mSourceId != null ? mSourceId.hashCode() : 0);
 		result = 31 * result + mYear;

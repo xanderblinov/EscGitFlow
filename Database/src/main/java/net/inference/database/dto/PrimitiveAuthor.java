@@ -1,5 +1,7 @@
 package net.inference.database.dto;
 
+import net.inference.sqlite.dto.ArticleImpl;
+
 /**
  * Date: 12/19/2014
  * Time: 3:15 PM
@@ -30,9 +32,9 @@ public interface PrimitiveAuthor extends Entity
 
 	void setSurname(final String surname);
 
-	Article getArticleId();
+	ArticleImpl getArticle();
 
-	void setArticle(final Article articleId);
+	void setArticle(final ArticleImpl articleId);
 
 	String getSource();
 

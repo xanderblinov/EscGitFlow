@@ -1,5 +1,7 @@
 package net.inference.database.dto;
 
+import net.inference.sqlite.dto.PrimitiveAuthorImpl;
+
 /**
  * Date: 12/19/2014
  * Time: 3:15 PM
@@ -20,13 +22,13 @@ public interface PrimitiveCoAuthorship extends Entity
 		public static final String article_id  = "article_id";
 	}
 
-	public PrimitiveAuthor getAuthor();
+	public PrimitiveAuthorImpl getAuthor();
 
-	public void setAuthor(final PrimitiveAuthor author);
+	public void setAuthor(final PrimitiveAuthorImpl author);
 
-	public PrimitiveAuthor getCoauthor();
+	public PrimitiveAuthorImpl getCoauthor();
 
-	public void setCoauthor(final PrimitiveAuthor coauthor);
+	public void setCoauthor(final PrimitiveAuthorImpl coauthor);
 
 	public int getYear();
 
