@@ -35,16 +35,16 @@ public class DataCollector
 		String string = "PMID- 23656783";
 		String pattern  = "....- (.*)";
 		if(string.matches(pattern)){
-			System.out.println(pubmedCard.getPmid());
+	 		System.out.println(pubmedCard.getPmid());
 		}
 
 		String resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$1");
 		System.out.println(resultString);
 		resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$2").trim();
-		System.out.println(resultString);*/
+		System.out.println(//sultString);*/
 
 
-		new PubMedParser("./test_pubmed.htm").parseFile();
+		//new PubMedParser("./test_pubmed.htm").parseFile();
 
 		new SimpleDisambiguationResolver().start();
 

@@ -103,7 +103,7 @@ public class AuthorToCompany implements IAuthorToCompany
 	@Override
 	public String toString()
 	{
-		return "AuthorToCompanyImpl{" +
+		return "AuthorToCompany{" +
 				"id=" + id +
 				", author=" + author +
 				", company=" + company +

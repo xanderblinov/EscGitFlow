@@ -63,7 +63,7 @@ public class Parameter implements IParameter
 
 	@Override
 	public String toString() {
-		return "ParameterImpl{" +
+		return "Parameter{" +
 				"mId=" + mId +
 				", mName='" + mName + '\'' +
 				", mSurname='" + mSurname + '\'' +

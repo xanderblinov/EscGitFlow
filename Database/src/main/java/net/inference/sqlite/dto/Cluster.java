@@ -65,7 +65,7 @@ public class Cluster implements ICluster
 
 	@Override
 	public String toString() {
-		return "ClusterImpl{" +
+		return "Cluster{" +
 				"mId=" + mId +
 				", evolutionSlice=" + evolutionSlice +
 				'}';

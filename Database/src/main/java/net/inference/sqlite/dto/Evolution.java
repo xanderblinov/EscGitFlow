@@ -109,7 +109,7 @@ public class Evolution implements IEvolution
 
 	@Override
 	public String toString() {
-		return "EvolutionImpl{" +
+		return "Evolution{" +
 				"mId=" + mId +
 				", mTime='" + mTime + '\'' +
 				", mType=" + mType +

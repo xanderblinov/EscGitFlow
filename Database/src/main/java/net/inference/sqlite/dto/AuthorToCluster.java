@@ -79,7 +79,7 @@ public class AuthorToCluster implements IAuthorToCluster
 
     @Override
     public String toString() {
-        return "AuthorToClusterImpl{" +
+        return "AuthorToCluster{" +
                 "id=" + id +
                 ", author=" + author +
                 ", cluster=" + cluster +

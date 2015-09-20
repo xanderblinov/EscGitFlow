@@ -149,7 +149,7 @@ public class Article implements IArticle
 	@Override
 	public String toString()
 	{
-		return "ArticleImpl{" +
+		return "Article{" +
 		"mId=" + mId +
 		", mTitle='" + mTitle + '\'' +
 		", mIdInSource='" + mIdInSource + '\'' +

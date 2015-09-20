@@ -63,7 +63,7 @@ public class Company implements ICompany
 
 	@Override
 	public String toString() {
-		return "CompanyImpl{" +
+		return "Company{" +
 				"mId=" + mId +
 				", name=" + name +
 				'}';

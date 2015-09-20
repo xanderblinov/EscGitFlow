@@ -97,7 +97,7 @@ public class EvolutionSlice implements IEvolutionSlice
 
     @Override
     public String toString() {
-        return "EvolutionSliceImpl{" +
+        return "EvolutionSlice{" +
                 "mId=" + mId +
                 ", mYear='" + mYear + '\'' +
                 ", mTime='" + mTime + '\'' +

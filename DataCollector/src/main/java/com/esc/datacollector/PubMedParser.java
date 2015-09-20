@@ -15,7 +15,7 @@ public class PubMedParser extends AbsParserEngine
 {
 	private static final long PARSING_DELAY = TimeUnit.SECONDS.toMillis(2);
 	public static final int CARDS_BUFFER_SIZE = 200;
-	public static final int DATABASE_THREAD_COUNT = 4;
+	public static final int DATABASE_THREAD_COUNT = 1;
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
 
 	private volatile boolean mFileReadingCompleted = false;

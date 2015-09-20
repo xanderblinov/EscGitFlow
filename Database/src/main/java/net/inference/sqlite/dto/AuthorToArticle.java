@@ -102,7 +102,7 @@ public class AuthorToArticle implements IAuthorToArticle
 	@Override
 	public String toString()
 	{
-		return "AuthorToArticleImpl{" +
+		return "AuthorToArticle{" +
 				"id=" + id +
 				", author=" + author +
 				", article_id=" + article +

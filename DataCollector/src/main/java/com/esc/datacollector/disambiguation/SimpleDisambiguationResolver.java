@@ -22,7 +22,7 @@ import java.util.concurrent.Executors;
 public class SimpleDisambiguationResolver implements IDisambiguationResolver
 {
 
-	private static final int THREAD_COUNT = 8;
+	private static final int THREAD_COUNT = 1;
 
 	private final ExecutorService mExecutorService = Executors.newFixedThreadPool(THREAD_COUNT);
 
@@ -62,6 +62,7 @@ public class SimpleDisambiguationResolver implements IDisambiguationResolver
 				if (authors == null)
 				{
 					mExecutorService.shutdown();
+					return;
 				}
 
 				try

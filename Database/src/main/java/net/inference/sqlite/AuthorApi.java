@@ -27,7 +27,6 @@ import net.inference.sqlite.dto.Company;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 
 /**
  * @author gzheyts
@@ -64,7 +63,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	public List<Author> addAuthors(final List<Author> authors) throws Exception
 	{
 
-		return getDao().callBatchTasks((Callable<List<Author>>) () -> {
+		return getDao().callBatchTasks(() -> {
 
 			List<Author> outAuthors = new ArrayList<>();
 

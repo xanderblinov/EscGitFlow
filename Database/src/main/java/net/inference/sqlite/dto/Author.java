@@ -114,7 +114,7 @@ public class Author implements IAuthor
 
     @Override
     public String toString() {
-        return "AuthorImpl{" +
+        return "Author{" +
                 "mId=" + mId +
                 ", mName='" + mName + '\'' +
                 ", mSurname='" + mSurname + '\'' +

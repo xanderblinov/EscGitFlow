@@ -180,7 +180,7 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 		{
 			mNextUnprocessedArticleQuery = buildNextUnprocessedArticleQuery();
 		}
-		final Article article;
+		Article article;
 		synchronized (mNextUnassignedArticleLock)
 		{
 			article = mDatagbasseApi.getArticleDao().queryForFirst(mNextUnprocessedArticleQuery);
