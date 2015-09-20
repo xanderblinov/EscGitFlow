@@ -170,4 +170,39 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 		return null;
 	}
 
+	private PreparedQuery<Article> mNextUnprocessedArticleQuery;
+
+	private final Object mNextUnassignedArticleLock = new Object();
+
+	public List<PrimitiveAuthor> getNextUnassignedAuthors() throws SQLException
+	{
+		if (mNextUnprocessedArticleQuery == null)
+		{
+			mNextUnprocessedArticleQuery = buildNextUnprocessedArticleQuery();
+		}
+		final Article article;
+		synchronized (mNextUnassignedArticleLock)
+		{
+			article = mDatagbasseApi.getArticleDao().queryForFirst(mNextUnprocessedArticleQuery);
+			if (article != null)
+			{
+				article.setProcessed(true);
+				mDatagbasseApi.getArticleDao().update(article);
+			}
+		}
+
+		if (article == null)
+		{
+			return null;
+		}
+
+		return getDao().queryForEq(PrimitiveAuthor.Column.article, article);
+
+	}
+
+	private PreparedQuery<Article> buildNextUnprocessedArticleQuery() throws SQLException
+	{
+		return mDatagbasseApi.getArticleDao().queryBuilder().where().eq(Article.Column.processed_by_disambiguation_resolver, false).prepare();
+	}
+
 }

@@ -12,7 +12,7 @@ public interface IAuthorToArticle
 
 	public static class Column
 	{
-		public static final String author_id = "author_id";
+		public static final String author = "author";
 		public static final String article_id = "article_id";
 
 	}

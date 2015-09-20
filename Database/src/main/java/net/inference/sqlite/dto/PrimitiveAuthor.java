@@ -30,6 +30,9 @@ public class PrimitiveAuthor implements IPrimitiveAuthor
 	@DatabaseField(columnName = Column.inference_id)
 	private long mInferenceId;
 
+	@DatabaseField(columnName = Column.author, foreign = true)
+	private Author mAuthor;
+
 	@SuppressWarnings("unused")
 	public PrimitiveAuthor()
 	{
@@ -107,6 +110,16 @@ public class PrimitiveAuthor implements IPrimitiveAuthor
 	public long getId()
 	{
 		return mId;
+	}
+
+	public Author getAuthor()
+	{
+		return mAuthor;
+	}
+
+	public void setAuthor(Author author)
+	{
+		mAuthor = author;
 	}
 
 	@Override

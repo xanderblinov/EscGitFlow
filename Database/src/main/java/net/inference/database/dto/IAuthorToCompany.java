@@ -8,12 +8,12 @@ package net.inference.database.dto;
  */
 public interface IAuthorToCompany
 {
-	public static final String TABLE_NAME = "author_to_company";
+	String TABLE_NAME = "author_to_company";
 
-	public static class Column
+	class Column
 	{
-		public static final String author_id = "author_id";
-		public static final String company_id = "company_id";
+		public static final String author = "author";
+		public static final String company = "company";
 
 	}
 	long getId();

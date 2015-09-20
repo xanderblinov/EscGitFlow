@@ -18,9 +18,9 @@ public class AuthorToCluster implements IAuthorToCluster
     @DatabaseField(generatedId = true)
     private long id;
 
-	@DatabaseField(foreign = true, columnName = Column.author_id)
+	@DatabaseField(foreign = true, columnName = Column.author)
 	private Author author;
-	@DatabaseField(foreign = true, columnName = Column.cluster_id)
+	@DatabaseField(foreign = true, columnName = Column.cluster)
 	private Cluster cluster;
 
 

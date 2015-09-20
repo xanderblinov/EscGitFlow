@@ -6,6 +6,7 @@ package com.esc.datacollector.disambiguation;
  *
  * @author xanderblinov
  */
-public class IDisambiguationResolver
+public interface IDisambiguationResolver
 {
+	void start();
 }

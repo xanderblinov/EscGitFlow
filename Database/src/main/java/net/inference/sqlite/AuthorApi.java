@@ -142,9 +142,9 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		QueryBuilder<Author, Integer> authorQb;
 
 		authorClusterQb = mDatagbasseApi.<Integer>getAuthorToClusterDao().queryBuilder();
-		authorClusterQb.selectColumns(IAuthorToCluster.Column.author_id);
+		authorClusterQb.selectColumns(IAuthorToCluster.Column.author);
 		SelectArg clusterSelectArg = new SelectArg();
-		authorClusterQb.where().eq(IAuthorToCluster.Column.cluster_id, clusterSelectArg);
+		authorClusterQb.where().eq(IAuthorToCluster.Column.cluster, clusterSelectArg);
 
 
 		authorQb = mDatagbasseApi.<Integer>getInferenceAuthorDao().queryBuilder();
@@ -257,7 +257,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatagbasseApi.<Integer>getAuthorToArticleDao().queryBuilder();
 		authorArticleQb.selectColumns(AuthorToArticle.Column.article_id);
 		SelectArg authorSelectArg = new SelectArg();
-		authorArticleQb.where().eq(IAuthorToArticle.Column.author_id, authorSelectArg);
+		authorArticleQb.where().eq(IAuthorToArticle.Column.author, authorSelectArg);
 		QueryBuilder<Article, Integer> articleQb = mDatagbasseApi.<Integer>getArticleDao().queryBuilder();
 		articleQb.where().in(IArticle.Column.id, authorArticleQb);
 		return articleQb.prepare();
@@ -269,7 +269,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	private PreparedQuery<Author> makeAuthorForArticleQuery() throws SQLException
 	{
 		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatagbasseApi.<Integer>getAuthorToArticleDao().queryBuilder();
-		authorArticleQb.selectColumns(IAuthorToArticle.Column.author_id);
+		authorArticleQb.selectColumns(IAuthorToArticle.Column.author);
 		SelectArg articleSelectArg = new SelectArg();
 		authorArticleQb.where().eq(IAuthorToArticle.Column.article_id, articleSelectArg);
 		QueryBuilder<Author, Integer> authorQb = mDatagbasseApi.author().getDao().queryBuilder();
@@ -283,9 +283,9 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	private PreparedQuery<Company> makeCompanyForAuthorQuery() throws SQLException
 	{
 		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatagbasseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
-		authorCompanyQb.selectColumns(IAuthorToCompany.Column.company_id);
+		authorCompanyQb.selectColumns(IAuthorToCompany.Column.company);
 		SelectArg authorSelectArg = new SelectArg();
-		authorCompanyQb.where().eq(IAuthorToCompany.Column.author_id, authorSelectArg);
+		authorCompanyQb.where().eq(IAuthorToCompany.Column.author, authorSelectArg);
 		QueryBuilder<Company, Integer> companyQb = mDatagbasseApi.<Integer>getCompanyDao().queryBuilder();
 		companyQb.where().in(IArticle.Column.id, authorCompanyQb);
 		return companyQb.prepare();
@@ -297,9 +297,9 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	private PreparedQuery<Author> makeAuthorForCompanyQuery() throws SQLException
 	{
 		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatagbasseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
-		authorCompanyQb.selectColumns(IAuthorToArticle.Column.author_id);
+		authorCompanyQb.selectColumns(IAuthorToArticle.Column.author);
 		SelectArg companySelectArg = new SelectArg();
-		authorCompanyQb.where().eq(IAuthorToCompany.Column.company_id, companySelectArg);
+		authorCompanyQb.where().eq(IAuthorToCompany.Column.company, companySelectArg);
 		QueryBuilder<Author, Integer> authorQb = mDatagbasseApi.author().getDao().queryBuilder();
 		authorQb.where().in(ICompany.Column.id, authorCompanyQb);
 		return authorQb.prepare();

@@ -20,7 +20,7 @@ public class AuthorToArticle implements IAuthorToArticle
 	@DatabaseField(generatedId = true)
 	private long id;
 
-	@DatabaseField(foreign = true, columnName = Column.author_id)
+	@DatabaseField(foreign = true, columnName = Column.author)
 	private Author author;
 	@DatabaseField(foreign = true, columnName = Column.article_id)
 	private Article article;

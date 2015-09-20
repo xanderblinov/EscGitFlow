@@ -18,22 +18,24 @@ public class Article implements IArticle
 	private long mId;
 	@DatabaseField(columnName = Column.name)
 	private String mName;
-	@DatabaseField(columnName = Column.sourceId)
-	private String mSourceId;
+	@DatabaseField(columnName = Column.id_in_source)
+	private String mIdInSource;
 	@DatabaseField(columnName = Column.year)
 	private int mYear;
 	@DatabaseField(columnName = Column.source)
 	private int mSource;
+	@DatabaseField(columnName = Column.processed_by_disambiguation_resolver)
+	private boolean mProcessed;
 
  	public Article()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public Article(final String name, final String sourceId, final int year, final int source)
+	public Article(final String name, final String idInSource, final int year, final int source)
 	{
 		mName = name;
-		mSourceId = sourceId;
+		mIdInSource = idInSource;
 		mYear = year;
 		mSource = source;
 	}
@@ -49,14 +51,14 @@ public class Article implements IArticle
 		mName = name;
 	}
 
-	public String getSourceId()
+	public String getIdInSource()
 	{
-		return mSourceId;
+		return mIdInSource;
 	}
 
-	public void setSourceId(final String sourceId)
+	public void setIdInSource(final String idInSource)
 	{
-		mSourceId = sourceId;
+		mIdInSource = idInSource;
 	}
 
 	public int getYear()
@@ -85,6 +87,17 @@ public class Article implements IArticle
         return mId;
     }
 
+
+	public boolean isProcessed()
+	{
+		return mProcessed;
+	}
+
+	public void setProcessed(boolean processed)
+	{
+		mProcessed = processed;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -96,7 +109,7 @@ public class Article implements IArticle
 		if (mYear != article.mYear) return false;
 		if (mSource != article.mSource) return false;
 		if (mName != null ? !mName.equals(article.mName) : article.mName != null) return false;
-		return  (mSourceId != null ? !mSourceId.equals(article.mSourceId) : article.mSourceId != null);
+		return  (mIdInSource != null ? !mIdInSource.equals(article.mIdInSource) : article.mIdInSource != null);
 
 	}
 
@@ -104,7 +117,7 @@ public class Article implements IArticle
 	public int hashCode() {
 		int result = (int) mId;
 		result = 31 * result + (mName != null ? mName.hashCode() : 0);
-		result = 31 * result + (mSourceId != null ? mSourceId.hashCode() : 0);
+		result = 31 * result + (mIdInSource != null ? mIdInSource.hashCode() : 0);
 		result = 31 * result + mYear;
 		result = 31 * result + mSource;
 		return result;
@@ -115,7 +128,7 @@ public class Article implements IArticle
 		return "ArticleImpl{" +
 				"mId=" + mId +
 				", mName='" + mName + '\'' +
-				", mSourceId='" + mSourceId + '\'' +
+				", mIdInSource='" + mIdInSource + '\'' +
 				", mYear=" + mYear +
 				", mSource=" + mSource +
 				'}';

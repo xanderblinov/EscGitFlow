@@ -8,12 +8,12 @@ package net.inference.database.dto;
  */
 public interface IAuthorToCluster extends IEntity
 {
-	public static final String TABLE_NAME = "author_to_cluster";
+	String TABLE_NAME = "author_to_cluster";
 
-	public static class Column
+	class Column
 	{
-		public static final String cluster_id = "cluster_id";
-		public static final String author_id = "author_id";
+		public static final String cluster = "cluster";
+		public static final String author = "author";
 	}
 
 

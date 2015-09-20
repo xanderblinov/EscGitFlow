@@ -52,9 +52,9 @@ public class ClusterApi extends BaseApi<Cluster,Integer> implements IClusterApi
         QueryBuilder<Cluster, Integer> clusterQb;
 
         authorClusterQb = mDatagbasseApi.<Integer>getAuthorToClusterDao().queryBuilder();
-        authorClusterQb.selectColumns(IAuthorToCluster.Column.cluster_id);
+        authorClusterQb.selectColumns(IAuthorToCluster.Column.cluster);
         SelectArg authorSelectArg = new SelectArg();
-        authorClusterQb.where().eq(IAuthorToCluster.Column.author_id, authorSelectArg);
+        authorClusterQb.where().eq(IAuthorToCluster.Column.author, authorSelectArg);
 
 
         clusterQb = mDatagbasseApi.<Integer>getClusterDao().queryBuilder();

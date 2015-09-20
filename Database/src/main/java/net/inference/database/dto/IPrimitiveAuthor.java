@@ -22,6 +22,7 @@ public interface IPrimitiveAuthor extends IEntity
 		public static final String source = "source";
 		public static final String article = "article";
 		public static final String inference_id = "inference_id";
+		public static final String author = "author";
 	}
 
 	String getName();
