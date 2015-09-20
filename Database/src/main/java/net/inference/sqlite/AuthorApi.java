@@ -10,22 +10,24 @@ import net.inference.database.IAuthorApi;
 import net.inference.database.dto.IArticle;
 import net.inference.database.dto.IAuthor;
 import net.inference.database.dto.IAuthorToArticle;
+import net.inference.database.dto.IAuthorToAuthor;
 import net.inference.database.dto.IAuthorToCluster;
 import net.inference.database.dto.IAuthorToCompany;
 import net.inference.database.dto.ICluster;
-import net.inference.database.dto.IAuthorToAuthor;
 import net.inference.database.dto.ICompany;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
+import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
-import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.Company;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 /**
  * @author gzheyts
@@ -58,6 +60,22 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		return null;
 	}
 
+	@Override
+	public List<Author> addAuthors(final List<Author> authors) throws Exception
+	{
+
+		return getDao().callBatchTasks((Callable<List<Author>>) () -> {
+
+			List<Author> outAuthors = new ArrayList<>();
+
+			for (Author author : authors)
+			{
+				outAuthors.add(getDao().createIfNotExists(author));
+			}
+			return outAuthors;
+		});
+
+	}
 
 	@Override
 	public boolean addAuthorToCluster(final Author author, final Cluster cluster)
@@ -246,6 +264,21 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 			logger.error(e, "");
 		}
 		return null;
+	}
+
+	@Override
+	public List<AuthorToAuthor> addAuthorToAuthors(List<AuthorToAuthor> authorToAuthors) throws Exception
+	{
+		return mDatagbasseApi.getAuthorToAuthorDao().callBatchTasks(() -> {
+
+			List<AuthorToAuthor> outAuthorToAuthors = new ArrayList<>();
+
+			for (AuthorToAuthor authorToAuthor : authorToAuthors)
+			{
+				outAuthorToAuthors.add(mDatagbasseApi.getAuthorToAuthorDao().createIfNotExists(authorToAuthor));
+			}
+			return outAuthorToAuthors;
+		});
 	}
 
 

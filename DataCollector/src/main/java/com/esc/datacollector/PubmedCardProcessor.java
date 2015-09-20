@@ -41,7 +41,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
 
-		System.out.println(Arrays.toString(pubmedCard.getKeyWorlds()));
+		//System.out.println(Arrays.toString(pubmedCard.getKeyWorlds()));
 		try
 		{
 			if (databaseApi.article().exists(article))
@@ -60,6 +60,8 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			final String au = pubmedCard.getAU()[i];
 			final String fau = pubmedCard.getFAU()[i];
 			PrimitiveAuthor primitiveAuthor = new PrimitiveAuthor(au, fau, article);
+			//TODO calculate encoding
+			primitiveAuthor.setEncoding(fau);
 
 			primitiveAuthors.add(primitiveAuthor);
 

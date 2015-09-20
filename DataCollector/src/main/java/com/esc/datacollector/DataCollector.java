@@ -1,5 +1,7 @@
 package com.esc.datacollector;
 
+import com.esc.datacollector.disambiguation.SimpleDisambiguationResolver;
+
 /**
  * Date: 4/16/2015
  * Time: 9:05 PM
@@ -43,6 +45,8 @@ public class DataCollector
 
 
 		new PubMedParser("./test_pubmed.htm").parseFile();
+
+		new SimpleDisambiguationResolver().start();
 
 /*
 		DatabaseApi api = new SqliteApi(Config.Database.TEST, false);
