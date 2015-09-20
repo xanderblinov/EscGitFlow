@@ -9,12 +9,16 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 public class PubMedParser extends AbsParserEngine
 {
+	private static final long PARSING_DELAY = TimeUnit.SECONDS.toMillis(2);
+	public static final int CARDS_BUFFER_SIZE = 200;
+	public static final int DATABASE_THREAD_COUNT = 4;
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
 
-	private volatile boolean mFileReadingCompleated = false;
+	private volatile boolean mFileReadingCompleted = false;
 
 	private LinkedBlockingQueue<PubmedCard> mPubmedCards = new LinkedBlockingQueue<>();
 
@@ -34,8 +38,10 @@ public class PubMedParser extends AbsParserEngine
 	@Override
 	protected void execute(BufferedReader reader)
 	{
-
-		getExecutorService().execute(new AddPubmedCardRunnable());
+		for (int i = 0; i < DATABASE_THREAD_COUNT; i++)
+		{
+			getExecutorService().execute(new AddPubmedCardRunnable());
+		}
 
 		String currentString;
 		StringBuilder builder = new StringBuilder();
@@ -50,6 +56,10 @@ public class PubMedParser extends AbsParserEngine
 					if (source != null)
 					{
 						mPubmedCards.offer(Medliner.readMedline(source, PubmedCard.class));
+						if (mPubmedCards.size() > CARDS_BUFFER_SIZE)
+						{
+							Thread.sleep(PARSING_DELAY);
+						}
 					}
 					source = new MedlineSource();
 					currentField = null;
@@ -71,9 +81,9 @@ public class PubMedParser extends AbsParserEngine
 					}
 				}
 			}
-			mFileReadingCompleated = true;
+			mFileReadingCompleted = true;
 		}
-		catch (IOException e)
+		catch (IOException | InterruptedException e)
 		{
 			e.printStackTrace();
 		}
@@ -89,7 +99,7 @@ public class PubMedParser extends AbsParserEngine
 		{
 			while (true)
 			{
-				if (mFileReadingCompleated && mPubmedCards.size() == 0)
+				if (mFileReadingCompleted && mPubmedCards.size() == 0)
 				{
 					getExecutorService().shutdown();
 					return;
@@ -109,45 +119,10 @@ public class PubMedParser extends AbsParserEngine
 			}
 		}
 	}
-/*
-	@SuppressWarnings("unused")
-	private void addArticleToList(PubmedArticle pubMedArticle, List<PubmedCard> list)
-	{
-		if (pubMedArticle != null && needToAddArticle(pubMedArticle))
-		{
-			if (false)
-			{
-				list.add(pubMedArticle);
-			}
-			else if (mStorageApi != null && mConnection != null)
-			{
-				try
-				{
-					mStorageApi.addPubMedArticleToTempTable(mConnection, pubMedArticle);
-				}
-				catch (SQLException e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-
-	}*/
 
 	@Override
 	protected void onPostExecute()
 	{
 		super.onPostExecute();
-	}
-
-	/**
-	 * override this method to customize adding articles to list
-	 *
-	 * @param pubMedArticle
-	 * @return true
-	 */
-	protected boolean needToAddArticle(PubmedCard pubMedArticle)
-	{
-		return true;
 	}
 }

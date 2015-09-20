@@ -9,6 +9,7 @@ package com.esc.datacollector;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
+@Deprecated
 public class NumberFormat {
 
 	public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class NumberFormat {
 
 		// use of DecimalFormat
 		DecimalFormat decFormat = new DecimalFormat("#.00");
-		double formatDecimal = new Double(decFormat.format(decimal)).doubleValue();
+		double formatDecimal = Double.parseDouble(decFormat.format(decimal));
 		System.out.println("DecimalFormat rounded in 2nd decimal: "+formatDecimal);
 
 		System.out.println("--------------------------------------");
