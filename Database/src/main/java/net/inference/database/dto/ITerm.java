@@ -8,7 +8,7 @@ package net.inference.database.dto;
  */
 public interface ITerm
 {
-	String TABLE_NAME = "article";
+	String TABLE_NAME = "term";
 
 	class Column
 	{

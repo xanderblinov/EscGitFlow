@@ -36,7 +36,7 @@ public class ArticleApi extends BaseApi<Article, Integer> implements IArticleApi
 	public boolean exists(Article article) throws SQLException
 	{
 		return
-		getDao().queryForFirst(getDao().queryBuilder().where().eq(IArticle.Column.source, article.getSource()).and().eq(IArticle.Column.id_in_source, article.getIdInSource()).prepare()) !=
+		getDao().queryForFirst(getDao().queryBuilder().where().eq(IArticle.Column.source, article.getArticleSource()).and().eq(IArticle.Column.id_in_source, article.getIdInSource()).prepare()) !=
 		null;
 	}
 }

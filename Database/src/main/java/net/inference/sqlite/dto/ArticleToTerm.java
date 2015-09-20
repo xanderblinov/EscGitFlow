@@ -16,9 +16,9 @@ public class ArticleToTerm implements IArticleToTerm
 {
 	@DatabaseField(columnName = Column.id)
 	private long mId;
-	@DatabaseField(columnName = Column.article)
+	@DatabaseField(columnName = Column.article, foreign = true)
 	private Article mArticle;
-	@DatabaseField(columnName = Column.term)
+	@DatabaseField(columnName = Column.term, foreign = true)
 	private Term mTerm;
 
 	@SuppressWarnings("unused")

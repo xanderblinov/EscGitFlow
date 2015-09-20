@@ -1,5 +1,6 @@
 package com.esc.datacollector.data;
 
+import com.esc.common.TextUtils;
 import com.esc.datacollector.medline.MedlineField;
 import com.esc.datacollector.medline.MedlineObject;
 
@@ -30,6 +31,12 @@ public class PubmedCard extends AbsPubmedCard
 	@MedlineField(value = DP)
 	private String mDP;
 
+	@MedlineField(value = DA)
+	private String mDA;
+
+	@MedlineField(TI)
+	private String mTitle;
+
 	public String getPmid()
 	{
 		return mPmid;
@@ -58,5 +65,19 @@ public class PubmedCard extends AbsPubmedCard
 	public String[] getKeyWorlds()
 	{
 		return mKeyWorlds;
+	}
+
+	public int getYear()
+	{
+		if (TextUtils.isEmpty(mDA) || mDA.length() < 4)
+		{
+			return 0;
+		}
+		return Integer.parseInt(mDA.substring(0, 4));
+	}
+
+	public String getTitle()
+	{
+		return mTitle;
 	}
 }

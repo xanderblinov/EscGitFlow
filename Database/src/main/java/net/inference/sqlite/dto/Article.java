@@ -2,6 +2,7 @@ package net.inference.sqlite.dto;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+
 import net.inference.database.dto.IArticle;
 
 /**
@@ -16,39 +17,40 @@ public class Article implements IArticle
 {
 	@DatabaseField(columnName = Column.id, generatedId = true)
 	private long mId;
-	@DatabaseField(columnName = Column.name)
-	private String mName;
+	@DatabaseField(columnName = Column.title)
+	private String mTitle;
 	@DatabaseField(columnName = Column.id_in_source)
 	private String mIdInSource;
 	@DatabaseField(columnName = Column.year)
 	private int mYear;
 	@DatabaseField(columnName = Column.source)
-	private int mSource;
+	private ArticleSource mArticleSource;
 	@DatabaseField(columnName = Column.processed_by_disambiguation_resolver)
 	private boolean mProcessed;
 
- 	public Article()
+
+	public Article()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public Article(final String name, final String idInSource, final int year, final int source)
+	public Article(final String title, final String idInSource, final int year, ArticleSource articleSource)
 	{
-		mName = name;
+		mTitle = title;
 		mIdInSource = idInSource;
 		mYear = year;
-		mSource = source;
+		mArticleSource = articleSource;
 	}
 
 
-	public String getName()
+	public String getTitle()
 	{
-		return mName;
+		return mTitle;
 	}
 
-	public void setName(final String name)
+	public void setTitle(final String title)
 	{
-		mName = name;
+		mTitle = title;
 	}
 
 	public String getIdInSource()
@@ -71,21 +73,22 @@ public class Article implements IArticle
 		mYear = year;
 	}
 
-	public int getSource()
+
+	public ArticleSource getArticleSource()
 	{
-		return mSource;
+		return mArticleSource;
 	}
 
-	public void setSource(final int source)
+	public void setArticleSource(ArticleSource articleSource)
 	{
-		mSource = source;
+		mArticleSource = articleSource;
 	}
 
-
-    @Override
-    public long getId() {
-        return mId;
-    }
+	@Override
+	public long getId()
+	{
+		return mId;
+	}
 
 
 	public boolean isProcessed()
@@ -99,38 +102,60 @@ public class Article implements IArticle
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
 
 		Article article = (Article) o;
 
-		if (mId != article.mId) return false;
-		if (mYear != article.mYear) return false;
-		if (mSource != article.mSource) return false;
-		if (mName != null ? !mName.equals(article.mName) : article.mName != null) return false;
-		return  (mIdInSource != null ? !mIdInSource.equals(article.mIdInSource) : article.mIdInSource != null);
+		if (mId != article.mId)
+		{
+			return false;
+		}
+		if (mYear != article.mYear)
+		{
+			return false;
+		}
+		if (mArticleSource != article.mArticleSource)
+		{
+			return false;
+		}
+		if (mTitle != null ? !mTitle.equals(article.mTitle) : article.mTitle != null)
+		{
+			return false;
+		}
+		return (mIdInSource != null ? !mIdInSource.equals(article.mIdInSource) : article.mIdInSource != null);
 
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode()
+	{
 		int result = (int) mId;
-		result = 31 * result + (mName != null ? mName.hashCode() : 0);
+		result = 31 * result + (mTitle != null ? mTitle.hashCode() : 0);
 		result = 31 * result + (mIdInSource != null ? mIdInSource.hashCode() : 0);
 		result = 31 * result + mYear;
-		result = 31 * result + mSource;
+		result = 31 * result + (mArticleSource != null ? mArticleSource.ordinal() : -1);
 		return result;
 	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "ArticleImpl{" +
-				"mId=" + mId +
-				", mName='" + mName + '\'' +
-				", mIdInSource='" + mIdInSource + '\'' +
-				", mYear=" + mYear +
-				", mSource=" + mSource +
-				'}';
+		"mId=" + mId +
+		", mTitle='" + mTitle + '\'' +
+		", mIdInSource='" + mIdInSource + '\'' +
+		", mYear=" + mYear +
+		", mSource=" + mArticleSource +
+		'}';
 	}
+
 }

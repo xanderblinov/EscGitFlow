@@ -8,6 +8,7 @@ import com.j256.ormlite.table.TableUtils;
 
 import net.inference.Config;
 import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.ArticleToTerm;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
 import net.inference.sqlite.dto.AuthorToCluster;
@@ -20,6 +21,7 @@ import net.inference.sqlite.dto.EvolutionSlice;
 import net.inference.sqlite.dto.Parameter;
 import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
+import net.inference.sqlite.dto.Term;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -43,6 +45,7 @@ class DbHelper
     private static Logger logger = LoggerFactory.getLogger(DbHelper.class);
 
 	private ConnectionSource mConnectionSource;
+	/*formatter:off*/
     private static Class[] tablesClassList = new Class[]{
             Company.class,
             Cluster.class,
@@ -57,9 +60,12 @@ class DbHelper
             PrimitiveAuthorToAuthor.class,
             AuthorToArticle.class,
             AuthorToCompany.class,
-		    Company.class
-    };
+		    Company.class,
+		    Term.class,
+			ArticleToTerm.class
 
+    };
+	/*formatter:on*/
     private final Config.Database mDatabase;
 
 	public DbHelper(final Config.Database database, boolean recreateDatabase)

@@ -125,7 +125,7 @@ public class PrimitiveAuthor implements IPrimitiveAuthor
 	@Override
 	public String toString()
 	{
-		return "PrimitiveAuthorImpl{" +
+		return "PrimitiveAuthor{" +
 		"mId=" + mId +
 		", mName='" + mName + '\'' +
 		", mSurname='" + mSurname + '\'' +

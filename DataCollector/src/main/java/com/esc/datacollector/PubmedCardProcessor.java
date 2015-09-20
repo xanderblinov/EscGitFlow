@@ -6,6 +6,7 @@ import com.esc.datacollector.data.PubmedCard;
 
 import net.inference.database.IDatabaseApi;
 import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.ArticleSource;
 import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 
@@ -38,15 +39,16 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
 
-		Article article = new Article(pubmedCard.getPmid(), pubmedCard.getPmid(), 0, 0);
+		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
 
+		System.out.println(Arrays.toString(pubmedCard.getKeyWorlds()));
 		try
 		{
 			if (databaseApi.article().exists(article))
 			{
 				return false;
 			}
-			databaseApi.article().addArticle(article);
+			article = databaseApi.article().addArticle(article);
 		}
 		catch (SQLException e)
 		{
