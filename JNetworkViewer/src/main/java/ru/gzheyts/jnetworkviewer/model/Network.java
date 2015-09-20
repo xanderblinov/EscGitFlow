@@ -12,8 +12,8 @@ import com.mxgraph.util.mxEventObject;
 import com.mxgraph.util.mxEventSource;
 import com.mxgraph.view.mxGraph;
 import com.mxgraph.view.mxGraphSelectionModel;
-import net.inference.database.dto.Cluster;
-import net.inference.database.dto.Entity;
+import net.inference.database.dto.ICluster;
+import net.inference.database.dto.IEntity;
 import org.apache.log4j.Logger;
 import ru.gzheyts.jnetworkviewer.gui.ClusterView;
 import ru.gzheyts.jnetworkviewer.gui.TwinClusterView;
@@ -51,7 +51,7 @@ public class Network extends mxGraph {
 
                     Object[] clusterCells = mxGraphModel.filterCells(((mxGraphSelectionModel) sender).getCells(), new mxGraphModel.Filter() {
                         public boolean filter(Object cell) {
-                            return ((mxCell) cell).getValue() instanceof Cluster;
+                            return ((mxCell) cell).getValue() instanceof ICluster;
                         }
                     });
 
@@ -72,11 +72,11 @@ public class Network extends mxGraph {
                         return;
                     } else if (clusterCells.length == 2) {
                         previewContainer.addChildDock(new TwinClusterView(Network.empty(),
-                                (Cluster) ((mxCell) clusterCells[0]).getValue(),
-                                (Cluster) ((mxCell) clusterCells[1]).getValue())
+                                (ICluster) ((mxCell) clusterCells[0]).getValue(),
+                                (ICluster) ((mxCell) clusterCells[1]).getValue())
                                 .getDock(), new Position(0));
                     } else if (clusterCells.length == 1) {
-                        previewContainer.addChildDock(new ClusterView(Network.empty(), (Cluster) ((mxCell) clusterCells[0]).getValue()).getDock(), new Position(0));
+                        previewContainer.addChildDock(new ClusterView(Network.empty(), (ICluster) ((mxCell) clusterCells[0]).getValue()).getDock(), new Position(0));
                     }
                 }
             }
@@ -94,25 +94,25 @@ public class Network extends mxGraph {
         return super.convertValueToString(cell);
     }
 
-    public Object insertVertex(Entity node, String group) {
+    public Object insertVertex(IEntity node, String group) {
         return insertVertex(getDefaultParent(), cellId(node, group), node, 0, 0, DEFAULT_VERTEX_SIZE, DEFAULT_VERTEX_SIZE, DEFAULT_VERTEX_STYLE);
     }
 
 
-    public Object insertVertex(Entity node) {
+    public Object insertVertex(IEntity node) {
         return insertVertex(node, null);
     }
 
 
-    public Object insertVertex(Entity node, String group, int width, int height) {
+    public Object insertVertex(IEntity node, String group, int width, int height) {
         return insertVertex(getDefaultParent(), cellId(node, group), node, 0, 0, width, height, DEFAULT_VERTEX_STYLE);
     }
 
-    public Object insertVertex(Entity node, int width, int height) {
+    public Object insertVertex(IEntity node, int width, int height) {
         return insertVertex(node, null, width, height);
     }
 
-    public Object insertEdge(Object value, Entity source, Entity target, String group) {
+    public Object insertEdge(Object value, IEntity source, IEntity target, String group) {
         Object sourceCell = ((mxGraphModel) getModel()).getCell(cellId(source, group));
         Object targetCell = ((mxGraphModel) getModel()).getCell(cellId(target, group));
         if (sourceCell == null || targetCell == null) {
@@ -122,7 +122,7 @@ public class Network extends mxGraph {
     }
 
 
-    public Object insertEdge(Object value, Entity source, Entity target) {
+    public Object insertEdge(Object value, IEntity source, IEntity target) {
         return insertEdge(value, source, target, null);
     }
 
@@ -145,8 +145,8 @@ public class Network extends mxGraph {
     public static String cellId(Object obj) {
         if (obj instanceof String) {
             return CELL_ID_PREFIX + obj;
-        } else if (obj instanceof Entity) {
-            return CELL_ID_PREFIX + ((Entity) obj).getId();
+        } else if (obj instanceof IEntity) {
+            return CELL_ID_PREFIX + ((IEntity) obj).getId();
         }
         return null;
     }

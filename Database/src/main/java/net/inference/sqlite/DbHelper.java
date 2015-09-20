@@ -7,19 +7,19 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
 import net.inference.Config;
-import net.inference.sqlite.dto.ArticleImpl;
-import net.inference.sqlite.dto.AuthorImpl;
-import net.inference.sqlite.dto.AuthorToArticleImpl;
-import net.inference.sqlite.dto.AuthorToClusterImpl;
-import net.inference.sqlite.dto.AuthorToCompanyImpl;
-import net.inference.sqlite.dto.ClusterImpl;
-import net.inference.sqlite.dto.CoAuthorshipImpl;
-import net.inference.sqlite.dto.CompanyImpl;
-import net.inference.sqlite.dto.EvolutionImpl;
-import net.inference.sqlite.dto.EvolutionSliceImpl;
-import net.inference.sqlite.dto.ParameterImpl;
-import net.inference.sqlite.dto.PrimitiveAuthorImpl;
-import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
+import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.Author;
+import net.inference.sqlite.dto.AuthorToArticle;
+import net.inference.sqlite.dto.AuthorToCluster;
+import net.inference.sqlite.dto.AuthorToCompany;
+import net.inference.sqlite.dto.Cluster;
+import net.inference.sqlite.dto.AuthorToAuthor;
+import net.inference.sqlite.dto.Company;
+import net.inference.sqlite.dto.Evolution;
+import net.inference.sqlite.dto.EvolutionSlice;
+import net.inference.sqlite.dto.Parameter;
+import net.inference.sqlite.dto.PrimitiveAuthor;
+import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -44,20 +44,20 @@ class DbHelper
 
 	private ConnectionSource mConnectionSource;
     private static Class[] tablesClassList = new Class[]{
-            CompanyImpl.class,
-            ClusterImpl.class,
-            EvolutionImpl.class,
-            EvolutionSliceImpl.class,
-            ArticleImpl.class,
-            AuthorImpl.class,
-            AuthorToClusterImpl.class,
-            CoAuthorshipImpl.class,
-            ParameterImpl.class,
-            PrimitiveAuthorImpl.class,
-            PrimitiveCoAuthorshipImpl.class,
-            AuthorToArticleImpl.class,
-            AuthorToCompanyImpl.class,
-		    CompanyImpl.class
+            Company.class,
+            Cluster.class,
+            Evolution.class,
+            EvolutionSlice.class,
+            Article.class,
+            Author.class,
+            AuthorToCluster.class,
+            AuthorToAuthor.class,
+            Parameter.class,
+            PrimitiveAuthor.class,
+            PrimitiveAuthorToAuthor.class,
+            AuthorToArticle.class,
+            AuthorToCompany.class,
+		    Company.class
     };
 
     private final Config.Database mDatabase;

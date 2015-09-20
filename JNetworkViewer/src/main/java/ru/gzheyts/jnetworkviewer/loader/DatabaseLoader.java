@@ -3,12 +3,12 @@ package ru.gzheyts.jnetworkviewer.loader;
 import com.mxgraph.layout.mxGraphLayout;
 import com.mxgraph.layout.mxOrganicLayout;
 import net.inference.Config;
-import net.inference.database.DatabaseApi;
-import net.inference.database.dto.Author;
-import net.inference.database.dto.Cluster;
-import net.inference.sqlite.SqliteApi;
-import net.inference.sqlite.dto.AuthorImpl;
-import net.inference.sqlite.dto.ClusterImpl;
+import net.inference.database.IDatabaseApi;
+import net.inference.database.dto.IAuthor;
+import net.inference.database.dto.ICluster;
+import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.dto.Author;
+import net.inference.sqlite.dto.Cluster;
 import org.apache.log4j.Logger;
 import ru.gzheyts.jnetworkviewer.NetworkViewer;
 import ru.gzheyts.jnetworkviewer.model.Network;
@@ -23,11 +23,11 @@ import java.util.concurrent.ExecutionException;
  * @author gzheyts
  */
 public class DatabaseLoader {
-    private static DatabaseApi api;
+    private static IDatabaseApi api;
     private static final Logger logger = Logger.getLogger(DatabaseLoader.class);
 
     static {
-        api = new SqliteApi(Config.Database.TEST, false);
+        api = new DatagbasseApi(Config.Database.TEST, false);
     }
 
     public static void load(Network network) {
@@ -37,18 +37,18 @@ public class DatabaseLoader {
         network.getModel().beginUpdate();
 
         try {
-            List<AuthorImpl> authors = api.author().findAll();
+            List<Author> authors = api.author().findAll();
             logger.debug("found " + authors.size() + " authors");
 
-            for (Author author : authors) {
+            for (IAuthor author : authors) {
                 logger.debug("[node] --> " + "( " + Network.cellId(author) + " ) " + ToStringConverter.convert(author));
 
                 network.insertVertex(author);
             }
 
-            for (Author author : authors) {
+            for (IAuthor author : authors) {
                 api.author().findCoauthors(author);
-                for (Author coauthor : api.author().findCoauthors(author)) {
+                for (IAuthor coauthor : api.author().findCoauthors(author)) {
 
 
                     logger.debug("[edge] --> " + "( " + Network.cellId(author, coauthor) + " ) "
@@ -76,7 +76,7 @@ public class DatabaseLoader {
         network.getModel().beginUpdate();
         try {
 
-            for (Cluster cluster : api.cluster().findAll()) {
+            for (ICluster cluster : api.cluster().findAll()) {
                 logger.debug("[node] --> " + "( " + Network.cellId(cluster) + " ) " + ToStringConverter.convert(cluster));
                 network.insertVertex(cluster);
             }
@@ -89,23 +89,23 @@ public class DatabaseLoader {
 
     }
 
-    public static void loadCluster(Network network, Cluster cluster) {
+    public static void loadCluster(Network network, ICluster cluster) {
         logger.debug("load cluster .. " + ToStringConverter.convert(cluster));
         network.getModel().beginUpdate();
         String group = "cluster" + cluster.getId();
         try {
-            List<AuthorImpl> authorsForCluster = api.author().findAuthorsForCluster(cluster);
+            List<Author> authorsForCluster = api.author().findAuthorsForCluster(cluster);
             // adding author nodes
-            for (Author author : authorsForCluster) {
+            for (IAuthor author : authorsForCluster) {
                 logger.debug("[node] --> " + "( " + Network.cellId(author, group) + " ) " + author);
                 network.insertVertex(author, group);
             }
 
             // for each coauthor of retrieved author add relation if they both are in same cluster
 
-            for (Author author : authorsForCluster) {
-                for (Author coauthor : api.author().findCoauthors(author)) {
-                    List<ClusterImpl> coauthorClusters = api.cluster().findClustersForAuthor(coauthor);
+            for (IAuthor author : authorsForCluster) {
+                for (IAuthor coauthor : api.author().findCoauthors(author)) {
+                    List<Cluster> coauthorClusters = api.cluster().findClustersForAuthor(coauthor);
 
                     if (coauthorClusters.contains(cluster)) {
 
@@ -126,10 +126,10 @@ public class DatabaseLoader {
     }
 
 
-    public static void loadClusters(Network network, Cluster[] clusters) {
+    public static void loadClusters(Network network, ICluster[] clusters) {
         Network clusterNetwork = Network.empty();
 
-        for (Cluster cluster : clusters) {
+        for (ICluster cluster : clusters) {
             loadCluster(clusterNetwork, cluster);
             Object[] cells = clusterNetwork.getChildCells(clusterNetwork.getDefaultParent());
             network.addCells(cells);

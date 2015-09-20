@@ -8,7 +8,7 @@ import com.javadocking.drag.DragListener;
 import com.mxgraph.layout.mxCircleLayout;
 import com.mxgraph.swing.handler.mxRubberband;
 import com.mxgraph.swing.mxGraphComponent;
-import net.inference.database.dto.Cluster;
+import net.inference.database.dto.ICluster;
 import ru.gzheyts.jnetworkviewer.loader.DatabaseLoader;
 import ru.gzheyts.jnetworkviewer.model.Network;
 import ru.gzheyts.jnetworkviewer.model.convertеrs.ToStringConverter;
@@ -23,8 +23,8 @@ import java.awt.event.MouseWheelListener;
  */
 public class TwinClusterView extends JPanel implements DraggableContent {
 
-    private Cluster firstCluster;
-    private Cluster secondCluster;
+    private ICluster firstCluster;
+    private ICluster secondCluster;
     private mxRubberband rubberband;
 
     private mxGraphComponent graphComponent;
@@ -36,14 +36,14 @@ public class TwinClusterView extends JPanel implements DraggableContent {
 
 
 
-    public TwinClusterView(Network network, Cluster first, Cluster second) {
+    public TwinClusterView(Network network, ICluster first, ICluster second) {
 
         super(new BorderLayout());
 
         graphComponent = new mxGraphComponent(network);
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 
-        tableView = new ClusterAuthorTableView(new Cluster[]{first, second});
+        tableView = new ClusterAuthorTableView(new ICluster[]{first, second});
 
         rubberband = new mxRubberband(graphComponent);
 
@@ -95,7 +95,7 @@ public class TwinClusterView extends JPanel implements DraggableContent {
 
     public void initNetwork() {
         Network graph = (Network) graphComponent.getGraph();
-        DatabaseLoader.loadClusters(graph, new Cluster[]{firstCluster, secondCluster});
+        DatabaseLoader.loadClusters(graph, new ICluster[]{firstCluster, secondCluster});
         new mxCircleLayout(graph).execute(graph.getDefaultParent());
 
     }

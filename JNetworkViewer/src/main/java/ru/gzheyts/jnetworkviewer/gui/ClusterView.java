@@ -7,7 +7,7 @@ import com.javadocking.dockable.action.DefaultDockableStateActionFactory;
 import com.javadocking.drag.DragListener;
 import com.mxgraph.layout.mxCircleLayout;
 import com.mxgraph.swing.mxGraphComponent;
-import net.inference.database.dto.Cluster;
+import net.inference.database.dto.ICluster;
 import ru.gzheyts.jnetworkviewer.loader.DatabaseLoader;
 import ru.gzheyts.jnetworkviewer.model.Network;
 import ru.gzheyts.jnetworkviewer.model.convertеrs.ToStringConverter;
@@ -19,10 +19,10 @@ import java.awt.*;
  */
 public class ClusterView extends mxGraphComponent implements DraggableContent {
 
-    private Cluster cluster;
+    private ICluster cluster;
     private SingleDock dock;
 
-    public ClusterView(Network network, Cluster cluster) {
+    public ClusterView(Network network, ICluster cluster) {
         super(network);
         this.cluster = cluster;
         setEnabled(false);

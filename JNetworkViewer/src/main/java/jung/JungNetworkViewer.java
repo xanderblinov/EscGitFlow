@@ -15,10 +15,10 @@ import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 import edu.uci.ics.jung.visualization.renderers.DefaultEdgeLabelRenderer;
 import edu.uci.ics.jung.visualization.renderers.DefaultVertexLabelRenderer;
 import net.inference.Config;
-import net.inference.database.DatabaseApi;
-import net.inference.database.dto.Author;
-import net.inference.sqlite.SqliteApi;
-import net.inference.sqlite.dto.AuthorImpl;
+import net.inference.database.IDatabaseApi;
+import net.inference.database.dto.IAuthor;
+import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.dto.Author;
 
 import javax.swing.*;
 import java.awt.*;
@@ -81,10 +81,10 @@ public class JungNetworkViewer extends JPanel {
     }
 
     static class DatabaseLoader {
-        private static DatabaseApi api;
+        private static IDatabaseApi api;
 
         static {
-            api = new SqliteApi(Config.Database.TEST, false);
+            api = new DatagbasseApi(Config.Database.TEST, false);
         }
 
 
@@ -92,16 +92,16 @@ public class JungNetworkViewer extends JPanel {
 
             beforeLoad();
             DirectedSparseMultigraph<String, String> graph = (DirectedSparseMultigraph) network;
-            java.util.List<AuthorImpl> authors = api.author().findAll();
+            java.util.List<Author> authors = api.author().findAll();
             System.out.println("found " + authors.size() + " authors");
 
-            for (Author author : authors) {
+            for (IAuthor author : authors) {
                 graph.addVertex(String.valueOf(author.getName()));
             }
 
-            for (final Author author : authors) {
+            for (final IAuthor author : authors) {
                 api.author().findCoauthors(author);
-                for (Author coauthor : api.author().findCoauthors(author)) {
+                for (IAuthor coauthor : api.author().findCoauthors(author)) {
 
 
                     ((DirectedSparseMultigraph) network).addEdge(author.getId() + "" + coauthor.getId()

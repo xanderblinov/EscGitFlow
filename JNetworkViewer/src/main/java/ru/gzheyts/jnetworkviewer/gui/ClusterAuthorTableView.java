@@ -1,9 +1,9 @@
 package ru.gzheyts.jnetworkviewer.gui;
 
 import net.inference.Config;
-import net.inference.database.dto.Author;
-import net.inference.database.dto.Cluster;
-import net.inference.sqlite.SqliteApi;
+import net.inference.database.dto.IAuthor;
+import net.inference.database.dto.ICluster;
+import net.inference.sqlite.DatagbasseApi;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.Transformer;
 import ru.gzheyts.jnetworkviewer.model.convertеrs.ToStringConverter;
@@ -22,7 +22,7 @@ public class ClusterAuthorTableView extends JPanel {
     private JTable table;
     private JScrollPane scrollPane;
 
-    public ClusterAuthorTableView(Cluster[] clusters) {
+    public ClusterAuthorTableView(ICluster[] clusters) {
         super(new BorderLayout());
         ClusterUsersTableModel tableModel = new ClusterUsersTableModel();
 
@@ -35,7 +35,7 @@ public class ClusterAuthorTableView extends JPanel {
 
     class ClusterUsersTableModel extends AbstractTableModel {
 
-        SqliteApi api =  new SqliteApi(Config.Database.TEST, false);
+        DatagbasseApi api =  new DatagbasseApi(Config.Database.TEST, false);
 
         private ArrayList<String> columnNames = new ArrayList<String>();
         private ArrayList<Class> columnTypes = new ArrayList<Class>();
@@ -43,7 +43,7 @@ public class ClusterAuthorTableView extends JPanel {
         private ArrayList<List<String>> data;
 
 
-        public void init(Cluster[] clusters) {
+        public void init(ICluster[] clusters) {
 
             data = new ArrayList<List<String>>(clusters.length);
 
@@ -52,8 +52,8 @@ public class ClusterAuthorTableView extends JPanel {
                 columnTypes.add(String.class);
                 data.add(i, (List<String>) CollectionUtils.collect(
                         api.author().findAuthorsForCluster(clusters[i])
-                        , new Transformer<Author, String>() {
-                            public String transform(Author author) {
+                        , new Transformer<IAuthor, String>() {
+                            public String transform(IAuthor author) {
                                 return ToStringConverter.convert(author);
                             }
                         }));

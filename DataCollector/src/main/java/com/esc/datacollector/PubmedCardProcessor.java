@@ -4,10 +4,10 @@ import com.esc.common.util.Checks;
 import com.esc.datacollector.app.Application;
 import com.esc.datacollector.data.PubmedCard;
 
-import net.inference.database.DatabaseApi;
-import net.inference.sqlite.dto.ArticleImpl;
-import net.inference.sqlite.dto.PrimitiveAuthorImpl;
-import net.inference.sqlite.dto.PrimitiveCoAuthorshipImpl;
+import net.inference.database.IDatabaseApi;
+import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.PrimitiveAuthor;
+import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -31,14 +31,14 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		final DatabaseApi databaseApi = Application.getDatabaseApi();
+		final IDatabaseApi databaseApi = Application.getDatabaseApi();
 
 		final boolean hasKeywords = !Checks.isEmpty(pubmedCard.getKeyWorlds());
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
-		List<PrimitiveAuthorImpl> primitiveAuthors = new ArrayList<>();
+		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
 
-		ArticleImpl article = new ArticleImpl(pubmedCard.getPmid(), pubmedCard.getPmid(), 0, 0);
+		Article article = new Article(pubmedCard.getPmid(), pubmedCard.getPmid(), 0, 0);
 
 		try
 		{
@@ -57,7 +57,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		{
 			final String au = pubmedCard.getAU()[i];
 			final String fau = pubmedCard.getFAU()[i];
-			PrimitiveAuthorImpl primitiveAuthor = new PrimitiveAuthorImpl(au, fau, article);
+			PrimitiveAuthor primitiveAuthor = new PrimitiveAuthor(au, fau, article);
 
 			primitiveAuthors.add(primitiveAuthor);
 
@@ -68,9 +68,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		{
 			primitiveAuthors = databaseApi.primitiveAuthor().addAuthors(primitiveAuthors);
 
-			final List<PrimitiveCoAuthorshipImpl> coAuthorshipList = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
+			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
 
-			System.out.println(Arrays.toString(coAuthorshipList.toArray(new PrimitiveCoAuthorshipImpl[coAuthorshipList.size()])));
+			System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
 		}
 		catch (Exception e)
 		{

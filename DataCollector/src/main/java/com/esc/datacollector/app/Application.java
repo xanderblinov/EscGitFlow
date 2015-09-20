@@ -1,8 +1,8 @@
 package com.esc.datacollector.app;
 
 import net.inference.Config;
-import net.inference.database.DatabaseApi;
-import net.inference.sqlite.SqliteApi;
+import net.inference.database.IDatabaseApi;
+import net.inference.sqlite.DatagbasseApi;
 
 /**
  * Date: 19-Sep-15
@@ -34,18 +34,18 @@ public class Application
 
 	private Application()
 	{
-		mDatabaseApi = new SqliteApi(Config.Database.TEST, false);
+		mDatabaseApi = new DatagbasseApi(Config.Database.TEST, false);
 		mDatabaseApi.onStart();
 	}
 
-	private final DatabaseApi mDatabaseApi;
+	private final IDatabaseApi mDatabaseApi;
 
-	private DatabaseApi getDatabaseApiNonStatic()
+	private IDatabaseApi getDatabaseApiNonStatic()
 	{
 		return mDatabaseApi;
 	}
 
-	public static DatabaseApi getDatabaseApi()
+	public static IDatabaseApi getDatabaseApi()
 	{
 		return getInstance().getDatabaseApiNonStatic();
 	}
