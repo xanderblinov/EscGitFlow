@@ -17,13 +17,13 @@ import java.sql.SQLException;
  */
 public class ArticleApi extends BaseApi<Article, Integer> implements IArticleApi
 {
-	private final DatagbasseApi mDatagbasseApi;
+	private final DatabaseApi mDatabaseApi;
 	private static Logger logger = LoggerFactory.getLogger(Article.class);
 
-	public ArticleApi(final DatagbasseApi datagbasseApi)
+	public ArticleApi(final DatabaseApi databaseApi)
 	{
-		super(datagbasseApi, Article.class);
-		mDatagbasseApi = datagbasseApi;
+		super(databaseApi, Article.class);
+		mDatabaseApi = databaseApi;
 	}
 
 	@Override

@@ -23,10 +23,10 @@ public class ClusterApi extends BaseApi<Cluster,Integer> implements IClusterApi
 
     private PreparedQuery<Cluster> clustersForAuthorQuery;
 
-    private DatagbasseApi mDatagbasseApi;
-    public ClusterApi(DatagbasseApi datagbasseApi) {
-        super(datagbasseApi, Cluster.class);
-        this.mDatagbasseApi = datagbasseApi;
+    private DatabaseApi mDatabaseApi;
+    public ClusterApi(DatabaseApi databaseApi) {
+        super(databaseApi, Cluster.class);
+        this.mDatabaseApi = databaseApi;
 
     }
 
@@ -51,13 +51,13 @@ public class ClusterApi extends BaseApi<Cluster,Integer> implements IClusterApi
         QueryBuilder<AuthorToCluster,Integer> authorClusterQb;
         QueryBuilder<Cluster, Integer> clusterQb;
 
-        authorClusterQb = mDatagbasseApi.<Integer>getAuthorToClusterDao().queryBuilder();
+        authorClusterQb = mDatabaseApi.<Integer>getAuthorToClusterDao().queryBuilder();
         authorClusterQb.selectColumns(IAuthorToCluster.Column.cluster);
         SelectArg authorSelectArg = new SelectArg();
         authorClusterQb.where().eq(IAuthorToCluster.Column.author, authorSelectArg);
 
 
-        clusterQb = mDatagbasseApi.<Integer>getClusterDao().queryBuilder();
+        clusterQb = mDatabaseApi.<Integer>getClusterDao().queryBuilder();
         clusterQb.where().in(IAuthor.Column.id, authorClusterQb);
         return clusterQb.prepare();
     }

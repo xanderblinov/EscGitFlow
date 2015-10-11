@@ -11,10 +11,10 @@ import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.ArticleToTerm;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
+import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
-import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.Company;
 import net.inference.sqlite.dto.Evolution;
 import net.inference.sqlite.dto.EvolutionSlice;
@@ -40,12 +40,12 @@ class DbHelper
 
 	@SuppressWarnings("FieldCanBeLocal")
 	private static final String sBaseUrl = "jdbc:sqlite:" + new File("Database/src/main/resources/").getAbsolutePath() + File.separator;
-    private boolean mRecreateDatabase;
+	private boolean mRecreateDatabase;
 
-    private static Logger logger = LoggerFactory.getLogger(DbHelper.class);
+	private static Logger logger = LoggerFactory.getLogger(DbHelper.class);
 
 	private ConnectionSource mConnectionSource;
-	/*formatter:off*/
+	/*@formatter:off*/
     private static Class[] tablesClassList = new Class[]{
             Company.class,
             Cluster.class,
@@ -65,27 +65,29 @@ class DbHelper
 			ArticleToTerm.class
 
     };
-	/*formatter:on*/
-    private final Config.Database mDatabase;
+	/*@formatter:on*/
+	private final Config.Database mDatabase;
 
 	public DbHelper(final Config.Database database, boolean recreateDatabase)
 	{
 		mDatabase = database;
-        mRecreateDatabase = recreateDatabase;
-    }
+		mRecreateDatabase = recreateDatabase;
+	}
 
 	private String getUrl()
 	{
 		return sBaseUrl + mDatabase.getName();
 	}
 
-	ConnectionSource getConnection() throws SQLException {
-        if (mConnectionSource == null) {
-            mConnectionSource = new JdbcPooledConnectionSource(getUrl());
-        }
+	ConnectionSource getConnection() throws SQLException
+	{
+		if (mConnectionSource == null)
+		{
+			mConnectionSource = new JdbcPooledConnectionSource(getUrl());
+		}
 
-        return mConnectionSource;
-    }
+		return mConnectionSource;
+	}
 
 	/**
 	 * int tables
@@ -96,42 +98,50 @@ class DbHelper
 		try
 		{
 			ConnectionSource connectionSource = getConnection();
-            if (mRecreateDatabase) {
-                logger.info("recreating database");
-                recreateDatabase(connectionSource);
-            } else {
-                logger.info("create database");
-                createDatabase(connectionSource);
-            }
+			if (mRecreateDatabase)
+			{
+				logger.info("recreating database");
+				recreateDatabase(connectionSource);
+			}
+			else
+			{
+				logger.info("create database");
+				createDatabase(connectionSource);
+			}
 
 			//TODO add other tables
 		}
 		catch (SQLException e)
 		{
 			SqliteLog.log(e);
-            System.exit(1);
+			System.exit(1);
 		}
 	}
 
-    private void recreateDatabase(ConnectionSource connectionSource) throws SQLException {
-        clearDatabase(connectionSource);
-        createDatabase(connectionSource);
-    }
+	private void recreateDatabase(ConnectionSource connectionSource) throws SQLException
+	{
+		clearDatabase(connectionSource);
+		createDatabase(connectionSource);
+	}
 
-    private void clearDatabase(ConnectionSource connectionSource) throws SQLException{
+	private void clearDatabase(ConnectionSource connectionSource) throws SQLException
+	{
 
-        for (Class clazz : tablesClassList) {
-            TableUtils.dropTable(connectionSource, clazz, false);
-        }
-    }
+		for (Class clazz : tablesClassList)
+		{
+			TableUtils.dropTable(connectionSource, clazz, false);
+		}
+	}
 
-    private void createDatabase(ConnectionSource connectionSource) throws SQLException {
+	private void createDatabase(ConnectionSource connectionSource) throws SQLException
+	{
 
-        for (Class clazz : tablesClassList) {
-            TableUtils.createTableIfNotExists(connectionSource, clazz);
-        }
+		for (Class clazz : tablesClassList)
+		{
+			TableUtils.createTableIfNotExists(connectionSource, clazz);
+		}
 
-    }
+	}
 
 	public void onStop()
 	{

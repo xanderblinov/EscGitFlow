@@ -2,7 +2,7 @@ package com.esc.datacollector.app;
 
 import net.inference.Config;
 import net.inference.database.IDatabaseApi;
-import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.DatabaseApi;
 
 /**
  * Date: 19-Sep-15
@@ -34,7 +34,7 @@ public class Application
 
 	private Application()
 	{
-		mDatabaseApi = new DatagbasseApi(Config.Database.TEST, false);
+		mDatabaseApi = new DatabaseApi(Config.Database.TEST, false);
 		mDatabaseApi.onStart();
 	}
 

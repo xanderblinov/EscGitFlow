@@ -3,7 +3,7 @@ package ru.gzheyts.jnetworkviewer.gui;
 import net.inference.Config;
 import net.inference.database.dto.IAuthor;
 import net.inference.database.dto.ICluster;
-import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.DatabaseApi;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.Transformer;
 import ru.gzheyts.jnetworkviewer.model.convertеrs.ToStringConverter;
@@ -35,7 +35,7 @@ public class ClusterAuthorTableView extends JPanel {
 
     class ClusterUsersTableModel extends AbstractTableModel {
 
-        DatagbasseApi api =  new DatagbasseApi(Config.Database.TEST, false);
+        DatabaseApi api =  new DatabaseApi(Config.Database.TEST, false);
 
         private ArrayList<String> columnNames = new ArrayList<String>();
         private ArrayList<Class> columnTypes = new ArrayList<Class>();

@@ -8,12 +8,12 @@ import net.inference.sqlite.dto.Evolution;
  */
 public class EvolutionApi extends BaseApi<Evolution, Integer> implements IEvolutionApi
 {
-    private DatagbasseApi mDatagbasseApi;
+    private DatabaseApi mDatabaseApi;
 
 
-    public EvolutionApi(DatagbasseApi datagbasseApi) {
-        super(datagbasseApi,Evolution.class);
-        this.mDatagbasseApi = datagbasseApi;
+    public EvolutionApi(DatabaseApi databaseApi) {
+        super(databaseApi,Evolution.class);
+        this.mDatabaseApi = databaseApi;
     }
 
 }

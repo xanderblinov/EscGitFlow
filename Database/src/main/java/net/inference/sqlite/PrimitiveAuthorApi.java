@@ -31,13 +31,13 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 {
 	private static Logger logger = LoggerFactory.getLogger(PrimitiveAuthor.class);
 
-	private final DatagbasseApi mDatagbasseApi;
+	private final DatabaseApi mDatabaseApi;
 
 
-	public PrimitiveAuthorApi(DatagbasseApi datagbasseApi)
+	public PrimitiveAuthorApi(DatabaseApi databaseApi)
 	{
-		super(datagbasseApi, PrimitiveAuthor.class);
-		mDatagbasseApi = datagbasseApi;
+		super(databaseApi, PrimitiveAuthor.class);
+		mDatabaseApi = databaseApi;
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 		PrimitiveAuthorToAuthor primitiveAuthorToAuthor = new PrimitiveAuthorToAuthor(author, coauthor);
 		try
 		{
-			return mDatagbasseApi.getPrimitiveAuthorToAuthorDao().createIfNotExists(primitiveAuthorToAuthor);
+			return mDatabaseApi.getPrimitiveAuthorToAuthorDao().createIfNotExists(primitiveAuthorToAuthor);
 		}
 		catch (SQLException e)
 		{
@@ -116,7 +116,7 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 			}
 		}
 
-		Dao<PrimitiveAuthorToAuthor, Integer> dao = mDatagbasseApi.<Integer>getPrimitiveAuthorToAuthorDao();
+		Dao<PrimitiveAuthorToAuthor, Integer> dao = mDatabaseApi.<Integer>getPrimitiveAuthorToAuthorDao();
 
 		//noinspection UnnecessaryLocalVariable
 		final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthorList = dao.callBatchTasks(() -> {
@@ -136,13 +136,13 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 	{
 		QueryBuilder<PrimitiveAuthorToAuthor, Integer> coauthorsQb;
 		QueryBuilder<PrimitiveAuthor, Integer> authorQb;
-		coauthorsQb = mDatagbasseApi.<Integer>getPrimitiveAuthorToAuthorDao().queryBuilder();
+		coauthorsQb = mDatabaseApi.<Integer>getPrimitiveAuthorToAuthorDao().queryBuilder();
 		coauthorsQb.selectColumns(IPrimitiveAuthorToAuthor.Column.coauthor);
 		SelectArg authorSelectArg = new SelectArg();
 		coauthorsQb.where().eq(IPrimitiveAuthorToAuthor.Column.author, authorSelectArg);
 
 
-		authorQb = mDatagbasseApi.<Integer>getPrimitiveAuthorDao().queryBuilder();
+		authorQb = mDatabaseApi.<Integer>getPrimitiveAuthorDao().queryBuilder();
 		authorQb.where().in(IPrimitiveAuthor.Column.id, coauthorsQb);
 		return authorQb.prepare();
 	}
@@ -159,7 +159,7 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 				coauthorForAuthorQuery = buildCoauthorForAuthorQuery();
 			}
 			coauthorForAuthorQuery.setArgumentHolderValue(0, author);
-			return mDatagbasseApi.getPrimitiveAuthorDao().query(coauthorForAuthorQuery);
+			return mDatabaseApi.getPrimitiveAuthorDao().query(coauthorForAuthorQuery);
 
 		}
 		catch (SQLException ex)
@@ -183,11 +183,11 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 		Article article;
 		synchronized (mNextUnassignedArticleLock)
 		{
-			article = mDatagbasseApi.getArticleDao().queryForFirst(mNextUnprocessedArticleQuery);
+			article = mDatabaseApi.getArticleDao().queryForFirst(mNextUnprocessedArticleQuery);
 			if (article != null)
 			{
 				article.setProcessed(true);
-				mDatagbasseApi.getArticleDao().update(article);
+				mDatabaseApi.getArticleDao().update(article);
 			}
 		}
 
@@ -202,7 +202,7 @@ public class PrimitiveAuthorApi extends BaseApi<PrimitiveAuthor, Integer> implem
 
 	private PreparedQuery<Article> buildNextUnprocessedArticleQuery() throws SQLException
 	{
-		return mDatagbasseApi.getArticleDao().queryBuilder().where().eq(Article.Column.processed_by_disambiguation_resolver, false).prepare();
+		return mDatabaseApi.getArticleDao().queryBuilder().where().eq(Article.Column.processed_by_disambiguation_resolver, false).prepare();
 	}
 
 }

@@ -17,7 +17,7 @@ import edu.uci.ics.jung.visualization.renderers.DefaultVertexLabelRenderer;
 import net.inference.Config;
 import net.inference.database.IDatabaseApi;
 import net.inference.database.dto.IAuthor;
-import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.DatabaseApi;
 import net.inference.sqlite.dto.Author;
 
 import javax.swing.*;
@@ -84,7 +84,7 @@ public class JungNetworkViewer extends JPanel {
         private static IDatabaseApi api;
 
         static {
-            api = new DatagbasseApi(Config.Database.TEST, false);
+            api = new DatabaseApi(Config.Database.TEST, false);
         }
 
 

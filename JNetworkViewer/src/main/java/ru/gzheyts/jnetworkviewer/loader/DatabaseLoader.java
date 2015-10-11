@@ -6,7 +6,7 @@ import net.inference.Config;
 import net.inference.database.IDatabaseApi;
 import net.inference.database.dto.IAuthor;
 import net.inference.database.dto.ICluster;
-import net.inference.sqlite.DatagbasseApi;
+import net.inference.sqlite.DatabaseApi;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.Cluster;
 import org.apache.log4j.Logger;
@@ -27,7 +27,7 @@ public class DatabaseLoader {
     private static final Logger logger = Logger.getLogger(DatabaseLoader.class);
 
     static {
-        api = new DatagbasseApi(Config.Database.TEST, false);
+        api = new DatabaseApi(Config.Database.TEST, false);
     }
 
     public static void load(Network network) {

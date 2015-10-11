@@ -34,14 +34,14 @@ import java.util.List;
 public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 {
 	private static Logger logger = LoggerFactory.getLogger(AuthorApi.class);
-	private DatagbasseApi mDatagbasseApi;
+	private DatabaseApi mDatabaseApi;
 	private PreparedQuery<Author> authorForClusterQuery;
 	private PreparedQuery<Author> coauthorForAuthorQuery;
 
-	public AuthorApi(DatagbasseApi datagbasseApi)
+	public AuthorApi(DatabaseApi databaseApi)
 	{
-		super(datagbasseApi, Author.class);
-		this.mDatagbasseApi = datagbasseApi;
+		super(databaseApi, Author.class);
+		this.mDatabaseApi = databaseApi;
 	}
 
 
@@ -83,7 +83,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		AuthorToCluster authorToCluster = new AuthorToCluster(author, cluster);
 		try
 		{
-			return mDatagbasseApi.getAuthorToClusterDao().create(authorToCluster) == 1;
+			return mDatabaseApi.getAuthorToClusterDao().create(authorToCluster) == 1;
 		}
 		catch (SQLException e)
 		{
@@ -98,7 +98,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		AuthorToAuthor authorToAuthor = new AuthorToAuthor(author, coauthor);
 		try
 		{
-			return mDatagbasseApi.getAuthorToAuthorDao().createIfNotExists(authorToAuthor);
+			return mDatabaseApi.getAuthorToAuthorDao().createIfNotExists(authorToAuthor);
 		}
 		catch (SQLException e)
 		{
@@ -117,7 +117,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 				coauthorForAuthorQuery = buildCoauthorForAuthorQuery();
 			}
 			coauthorForAuthorQuery.setArgumentHolderValue(0, author);
-			return mDatagbasseApi.getInferenceAuthorDao().query(coauthorForAuthorQuery);
+			return mDatabaseApi.getInferenceAuthorDao().query(coauthorForAuthorQuery);
 
 		}
 		catch (SQLException ex)
@@ -141,7 +141,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 
 			authorForClusterQuery.setArgumentHolderValue(0, cluster);
 
-			return mDatagbasseApi.getInferenceAuthorDao().query(authorForClusterQuery);
+			return mDatabaseApi.getInferenceAuthorDao().query(authorForClusterQuery);
 
 		}
 		catch (Exception e)
@@ -158,13 +158,13 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 		QueryBuilder<AuthorToCluster, Integer> authorClusterQb;
 		QueryBuilder<Author, Integer> authorQb;
 
-		authorClusterQb = mDatagbasseApi.<Integer>getAuthorToClusterDao().queryBuilder();
+		authorClusterQb = mDatabaseApi.<Integer>getAuthorToClusterDao().queryBuilder();
 		authorClusterQb.selectColumns(IAuthorToCluster.Column.author);
 		SelectArg clusterSelectArg = new SelectArg();
 		authorClusterQb.where().eq(IAuthorToCluster.Column.cluster, clusterSelectArg);
 
 
-		authorQb = mDatagbasseApi.<Integer>getInferenceAuthorDao().queryBuilder();
+		authorQb = mDatabaseApi.<Integer>getInferenceAuthorDao().queryBuilder();
 		authorQb.where().in(IAuthor.Column.id, authorClusterQb);
 		return authorQb.prepare();
 
@@ -174,13 +174,13 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	{
 		QueryBuilder<AuthorToAuthor, Integer> coauthorsQb;
 		QueryBuilder<Author, Integer> authorQb;
-		coauthorsQb = mDatagbasseApi.<Integer>getAuthorToAuthorDao().queryBuilder();
+		coauthorsQb = mDatabaseApi.<Integer>getAuthorToAuthorDao().queryBuilder();
 		coauthorsQb.selectColumns(IAuthorToAuthor.Column.coauthor);
 		SelectArg authorSelectArg = new SelectArg();
 		coauthorsQb.where().eq(IAuthorToAuthor.Column.author, authorSelectArg);
 
 
-		authorQb = mDatagbasseApi.<Integer>getInferenceAuthorDao().queryBuilder();
+		authorQb = mDatabaseApi.<Integer>getInferenceAuthorDao().queryBuilder();
 		authorQb.where().in(IAuthor.Column.id, coauthorsQb);
 		return authorQb.prepare();
 	}
@@ -200,7 +200,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 				articleForAuthorQuery = makeArticleForAuthorQuery();
 			}
 			articleForAuthorQuery.setArgumentHolderValue(0, author);
-			return mDatagbasseApi.article().getDao().query(articleForAuthorQuery);
+			return mDatabaseApi.article().getDao().query(articleForAuthorQuery);
 		}
 		catch (SQLException e)
 		{
@@ -237,7 +237,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 				companyForAuthorQuery = makeCompanyForAuthorQuery();
 			}
 			companyForAuthorQuery.setArgumentHolderValue(0, author);
-			return mDatagbasseApi.getCompanyDao().query(companyForAuthorQuery);
+			return mDatabaseApi.getCompanyDao().query(companyForAuthorQuery);
 		}
 		catch (SQLException e)
 		{
@@ -268,13 +268,13 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	@Override
 	public List<AuthorToAuthor> addAuthorToAuthors(List<AuthorToAuthor> authorToAuthors) throws Exception
 	{
-		return mDatagbasseApi.getAuthorToAuthorDao().callBatchTasks(() -> {
+		return mDatabaseApi.getAuthorToAuthorDao().callBatchTasks(() -> {
 
 			List<AuthorToAuthor> outAuthorToAuthors = new ArrayList<>();
 
 			for (AuthorToAuthor authorToAuthor : authorToAuthors)
 			{
-				outAuthorToAuthors.add(mDatagbasseApi.getAuthorToAuthorDao().createIfNotExists(authorToAuthor));
+				outAuthorToAuthors.add(mDatabaseApi.getAuthorToAuthorDao().createIfNotExists(authorToAuthor));
 			}
 			return outAuthorToAuthors;
 		});
@@ -286,11 +286,11 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	 */
 	private PreparedQuery<Article> makeArticleForAuthorQuery() throws SQLException
 	{
-		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatagbasseApi.<Integer>getAuthorToArticleDao().queryBuilder();
+		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatabaseApi.<Integer>getAuthorToArticleDao().queryBuilder();
 		authorArticleQb.selectColumns(AuthorToArticle.Column.article_id);
 		SelectArg authorSelectArg = new SelectArg();
 		authorArticleQb.where().eq(IAuthorToArticle.Column.author, authorSelectArg);
-		QueryBuilder<Article, Integer> articleQb = mDatagbasseApi.<Integer>getArticleDao().queryBuilder();
+		QueryBuilder<Article, Integer> articleQb = mDatabaseApi.<Integer>getArticleDao().queryBuilder();
 		articleQb.where().in(IArticle.Column.id, authorArticleQb);
 		return articleQb.prepare();
 	}
@@ -300,11 +300,11 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	 */
 	private PreparedQuery<Author> makeAuthorForArticleQuery() throws SQLException
 	{
-		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatagbasseApi.<Integer>getAuthorToArticleDao().queryBuilder();
+		QueryBuilder<AuthorToArticle, Integer> authorArticleQb = mDatabaseApi.<Integer>getAuthorToArticleDao().queryBuilder();
 		authorArticleQb.selectColumns(IAuthorToArticle.Column.author);
 		SelectArg articleSelectArg = new SelectArg();
 		authorArticleQb.where().eq(IAuthorToArticle.Column.article_id, articleSelectArg);
-		QueryBuilder<Author, Integer> authorQb = mDatagbasseApi.author().getDao().queryBuilder();
+		QueryBuilder<Author, Integer> authorQb = mDatabaseApi.author().getDao().queryBuilder();
 		authorQb.where().in(IArticle.Column.id, authorArticleQb);
 		return authorQb.prepare();
 	}
@@ -314,11 +314,11 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	 */
 	private PreparedQuery<Company> makeCompanyForAuthorQuery() throws SQLException
 	{
-		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatagbasseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
+		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatabaseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
 		authorCompanyQb.selectColumns(IAuthorToCompany.Column.company);
 		SelectArg authorSelectArg = new SelectArg();
 		authorCompanyQb.where().eq(IAuthorToCompany.Column.author, authorSelectArg);
-		QueryBuilder<Company, Integer> companyQb = mDatagbasseApi.<Integer>getCompanyDao().queryBuilder();
+		QueryBuilder<Company, Integer> companyQb = mDatabaseApi.<Integer>getCompanyDao().queryBuilder();
 		companyQb.where().in(IArticle.Column.id, authorCompanyQb);
 		return companyQb.prepare();
 	}
@@ -328,11 +328,11 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	 */
 	private PreparedQuery<Author> makeAuthorForCompanyQuery() throws SQLException
 	{
-		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatagbasseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
+		QueryBuilder<AuthorToCompany, Integer> authorCompanyQb = mDatabaseApi.<Integer>getAuthorToCompanyDao().queryBuilder();
 		authorCompanyQb.selectColumns(IAuthorToArticle.Column.author);
 		SelectArg companySelectArg = new SelectArg();
 		authorCompanyQb.where().eq(IAuthorToCompany.Column.company, companySelectArg);
-		QueryBuilder<Author, Integer> authorQb = mDatagbasseApi.author().getDao().queryBuilder();
+		QueryBuilder<Author, Integer> authorQb = mDatabaseApi.author().getDao().queryBuilder();
 		authorQb.where().in(ICompany.Column.id, authorCompanyQb);
 		return authorQb.prepare();
 	}

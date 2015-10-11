@@ -35,7 +35,7 @@ import java.sql.SQLException;
  *
  * @author xanderblinov
  */
-public class DatagbasseApi implements IDatabaseApi
+public class DatabaseApi implements IDatabaseApi
 {
 	private final DbHelper mDbHelper;
 	private IArticleApi mArticleApi = new ArticleApi(this);
@@ -47,7 +47,7 @@ public class DatagbasseApi implements IDatabaseApi
 	private IAuthorArticleApi authorArticleApi = new AuthorToArticleApi(this);
 	private ICompanyApi companyApi = new CompanyApi(this);
 
-	public DatagbasseApi(Config.Database database, boolean recreateDatabase)
+	public DatabaseApi(Config.Database database, boolean recreateDatabase)
 	{
 		mDbHelper = new DbHelper(database, recreateDatabase);
 
