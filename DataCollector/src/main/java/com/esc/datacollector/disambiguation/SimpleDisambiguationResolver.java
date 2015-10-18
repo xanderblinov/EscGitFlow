@@ -22,7 +22,7 @@ import java.util.concurrent.Executors;
 public class SimpleDisambiguationResolver implements IDisambiguationResolver
 {
 
-	private static final int THREAD_COUNT = 1;
+	private static final int THREAD_COUNT = 4;
 
 	private final ExecutorService mExecutorService = Executors.newFixedThreadPool(THREAD_COUNT);
 
