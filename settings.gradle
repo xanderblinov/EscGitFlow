@@ -1,0 +1,11 @@
+rootProject.name = 'Esc'
+include 'Database'
+
+include 'Evolution'
+
+include 'DataCollector'
+
+include 'CommonLib'
+
+include 'JNetworkViewer'
+
