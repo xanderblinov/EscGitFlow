@@ -8,6 +8,8 @@ import com.j256.ormlite.table.DatabaseTable;
 import net.inference.database.dto.IClusteringType;
 import net.inference.database.dto.IEvolution;
 
+import java.util.Arrays;
+
 /**
  * Date: 2/1/2015
  * Time: 5:53 PM
@@ -28,8 +30,8 @@ public class Evolution implements IEvolution
 	private String mFromYear;
 	@DatabaseField(columnName = Column.to_year)
 	private String mToYear;
-
-
+	@DatabaseField(columnName = Column.params,dataType = DataType.SERIALIZABLE)
+	private double[] mParams;
     @ForeignCollectionField
     private ForeignCollection<EvolutionSlice> slices;
 
@@ -83,7 +85,17 @@ public class Evolution implements IEvolution
         return slices;
     }
 
-    @Override
+	public double[] getParams()
+	{
+		return mParams;
+	}
+
+	public void setParams(double[] params)
+	{
+		mParams = params;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -108,13 +120,15 @@ public class Evolution implements IEvolution
     }
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Evolution{" +
 				"mId=" + mId +
 				", mTime='" + mTime + '\'' +
 				", mType=" + mType +
 				", mFromYear='" + mFromYear + '\'' +
 				", mToYear='" + mToYear + '\'' +
+				", mParams=" + Arrays.toString(mParams) +
 				", slices=" + slices +
 				'}';
 	}

@@ -30,7 +30,7 @@ public class PrimitiveAuthor implements IPrimitiveAuthor
 	@DatabaseField(columnName = Column.inference_id)
 	private long mInferenceId;
 
-	@DatabaseField(columnName = Column.author, foreign = true)
+	@DatabaseField(columnName = Column.author, foreign = true, canBeNull = true)
 	private Author mAuthor;
 
 	@SuppressWarnings("unused")
