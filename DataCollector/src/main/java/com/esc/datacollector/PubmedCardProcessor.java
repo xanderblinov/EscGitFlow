@@ -9,7 +9,8 @@ import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.ArticleSource;
 import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
-import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.PrimitiveTerm;
+import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -35,19 +36,16 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		final IDatabaseApi databaseApi = Application.getDatabaseApi();
 
-		final boolean hasKeywords = !Checks.isEmpty(pubmedCard.getKeyWorlds());
+		final boolean hasKeywords = !Checks.isEmpty(pubmedCard.getKeyWords());
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
-		List<Term> newTerms = new ArrayList<>();////mari
+		List<PrimitiveTerm> primitiveTerms = new ArrayList<>();
+		List<PrimitiveTermToPrimitiveTerm> primTermToTerms = new ArrayList<>();
 
 		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
 
-		System.out.println("Keys: " + Arrays.toString(pubmedCard.getKey()));////
-		System.out.println("KeyWorlds: " + Arrays.toString(pubmedCard.getKeyWorlds()));////
-
-
-
+		//System.out.println(Arrays.toString(pubmedCard.getKeyWords()));
 		try
 		{
 			if (databaseApi.article().exists(article))
@@ -73,33 +71,43 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			System.out.println(primitiveAuthor.toString());
 		}
-
-		if(hasKeywords)
-		{
-			for (int j = 0; j < pubmedCard.getKeyWorlds().length; j++){
-				final String term = pubmedCard.getKeyWorlds()[j];
-				Term newTerm = new Term(term, pubmedCard.getTitle().toString(), pubmedCard.getKeyWorlds());
-				if (newTerm.getValue().contains(",")){
-					ArrayList<String> termArr = newTerm.setEncoding();
-					for(int i = 0; i < termArr.size(); i++){
-						Term subTerm = new Term(termArr.get(i), pubmedCard.getTitle().toString(), pubmedCard.getKeyWorlds());
-						newTerms.add(subTerm);
+		if (hasKeywords)
+			for (int i = 0; i < pubmedCard.getKeyWords().length ; i++)
+			{
+				final String keyWords = pubmedCard.getKeyWords()[i];
+				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords);
+				if(primitiveTerm.getValue().contains(",")){
+					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
+					for (int j = 0; j < primitiveTermsArray.size() ; j++)
+					{
+						primitiveTerms.add((new PrimitiveTerm(primitiveTermsArray.get(j).trim())));
 					}
 				}
 				else
-					newTerms.add(newTerm);
-				System.out.println(newTerm.toString());
+					primitiveTerms.add(primitiveTerm);
+				System.out.println(primitiveTerm.toString());
+			}
+
+		for(int i = 0; i < primitiveTerms.size(); i++)
+		{
+			for(int j = 0; j < primitiveTerms.size()-1; j++){
+				PrimitiveTermToPrimitiveTerm primTermToTerm = new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j));
+				primTermToTerms.add(primTermToTerm);
 			}
 		}
 
 		try
 		{
 			primitiveAuthors = databaseApi.primitiveAuthor().addAuthors(primitiveAuthors);
-			newTerms = databaseApi.term().addTerms(newTerms);
 
 			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
 
 			System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
+
+			primitiveTerms = databaseApi.term().addTerms(primitiveTerms);
+
+			primTermToTerms = databaseApi.primTermToTerm().addTerms(primTermToTerms);
+
 		}
 		catch (Exception e)
 		{
@@ -107,7 +115,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		}
 
 
-			//TODO add authors and coauthors to api impl
+		//TODO add authors and coauthors to api impl
 
 		return true;
 	}
@@ -131,7 +139,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		if (Checks.isEmpty(pubmedCard.getKeyWorlds()))
+		if (Checks.isEmpty(pubmedCard.getKeyWords()))
 		{
 			System.out.println(pubmedCard.getPmid() + " no terms  found");
 			return false;

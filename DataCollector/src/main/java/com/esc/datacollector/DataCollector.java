@@ -50,7 +50,7 @@ public class DataCollector
 
 		api.onStart();
 
-		new PubMedParser("./pub_result.htm").parseFile();
+		new PubMedParser("./test_pubmed.htm").parseFile();
 
 		//new SimpleDisambiguationResolver().start();
 

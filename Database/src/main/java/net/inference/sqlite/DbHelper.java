@@ -21,7 +21,8 @@ import net.inference.sqlite.dto.EvolutionSlice;
 import net.inference.sqlite.dto.Parameter;
 import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
-import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.PrimitiveTerm;
+import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -61,7 +62,8 @@ class DbHelper
             AuthorToArticle.class,
             AuthorToCompany.class,
 		    Company.class,
-		    Term.class,
+			PrimitiveTerm.class,
+			PrimitiveTermToPrimitiveTerm.class,
 			ArticleToTerm.class
 
     };
