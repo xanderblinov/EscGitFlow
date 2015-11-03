@@ -38,7 +38,7 @@ abstract class AbsPubmedCard
 		static final String PST      = "PST";
 		static final String SO       = "SO";
 		static final String OT       = "OT";
-		static final String MH       = "MH";/////mari
+		static final String MH       = "MH";
 
 	// @formatter:on
 

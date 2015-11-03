@@ -36,7 +36,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		final IDatabaseApi databaseApi = Application.getDatabaseApi();
 
-		final boolean hasKeywords = !Checks.isEmpty(pubmedCard.getKeyWords());
+		final boolean hasKeyOt = !Checks.isEmpty(pubmedCard.getKeyOt());
+		final boolean hasKeyMh = !Checks.isEmpty(pubmedCard.getKeyMh());
+
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
@@ -71,16 +73,33 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			System.out.println(primitiveAuthor.toString());
 		}
-		if (hasKeywords)
-			for (int i = 0; i < pubmedCard.getKeyWords().length ; i++)
+		if (hasKeyOt)
+			for (int i = 0; i < pubmedCard.getKeyOt().length ; i++)
 			{
-				final String keyWords = pubmedCard.getKeyWords()[i];
-				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords);
+				final String keyWords = pubmedCard.getKeyOt()[i];
+				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"OT", article);
 				if(primitiveTerm.getValue().contains(",")){
 					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
 					for (int j = 0; j < primitiveTermsArray.size() ; j++)
 					{
-						primitiveTerms.add((new PrimitiveTerm(primitiveTermsArray.get(j).trim())));
+						primitiveTerms.add((new PrimitiveTerm(primitiveTermsArray.get(j).trim(),"OT",article)));
+					}
+				}
+				else
+					primitiveTerms.add(primitiveTerm);
+				System.out.println(primitiveTerm.toString());
+			}
+
+		if (hasKeyMh)
+			for (int i = 0; i < pubmedCard.getKeyMh().length ; i++)
+			{
+				final String keyWords = pubmedCard.getKeyMh()[i];
+				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"MH", article);
+				if(primitiveTerm.getValue().contains(",")){
+					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
+					for (int j = 0; j < primitiveTermsArray.size() ; j++)
+					{
+						primitiveTerms.add((new PrimitiveTerm(primitiveTermsArray.get(j).trim(),"MH",article)));
 					}
 				}
 				else
@@ -91,7 +110,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		for(int i = 0; i < primitiveTerms.size(); i++)
 		{
 			for(int j = 0; j < primitiveTerms.size()-1; j++){
-				PrimitiveTermToPrimitiveTerm primTermToTerm = new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j));
+				PrimitiveTermToPrimitiveTerm primTermToTerm = new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j),article);
 				primTermToTerms.add(primTermToTerm);
 			}
 		}
@@ -104,7 +123,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
 
-			primitiveTerms = databaseApi.term().addTerms(primitiveTerms);
+			primitiveTerms = databaseApi.primterm().addTerms(primitiveTerms);
 
 			primTermToTerms = databaseApi.primTermToTerm().addTerms(primTermToTerms);
 
@@ -139,7 +158,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		if (Checks.isEmpty(pubmedCard.getKeyWords()))
+		if (Checks.isEmpty(pubmedCard.getKeyOt()))
 		{
 			System.out.println(pubmedCard.getPmid() + " no terms  found");
 			return false;

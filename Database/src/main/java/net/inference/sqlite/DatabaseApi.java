@@ -16,6 +16,7 @@ import net.inference.database.IEvolutionApi;
 import net.inference.database.IPrimitiveAuthorApi;
 import net.inference.database.IPrimitiveTermApi;
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
+import net.inference.database.ITermApi;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
@@ -30,6 +31,7 @@ import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
+import net.inference.sqlite.dto.Term;
 
 
 import java.sql.SQLException;
@@ -51,8 +53,9 @@ public class DatabaseApi implements IDatabaseApi
 	private IAuthorCompanyApi authorCompanyApi = new AuthorToCompanyApi(this);
 	private IAuthorArticleApi authorArticleApi = new AuthorToArticleApi(this);
 	private ICompanyApi companyApi = new CompanyApi(this);
-	private IPrimitiveTermApi termApi = new PrimitiveTermApi(this);  /////mariya
-	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);  /////mariya
+	private IPrimitiveTermApi primtermApi = new PrimitiveTermApi(this);
+	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);
+	private ITermApi termApi = new TermApi(this);
 
 
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
@@ -120,15 +123,21 @@ public class DatabaseApi implements IDatabaseApi
 	}
 
 	@Override
-	public IPrimitiveTermApi term()
+	public IPrimitiveTermApi primterm()
 	{
-		return  termApi;
+		return  primtermApi;
 	}
 
 	@Override
 	public IPrimitiveTermToPrimitiveTermApi primTermToTerm()
 	{
 		return primtermToTermApi;
+	}
+
+	@Override
+	public ITermApi term()
+	{
+		return  termApi;
 	}
 
 
@@ -199,6 +208,11 @@ public class DatabaseApi implements IDatabaseApi
 	<T> Dao<PrimitiveTermToPrimitiveTerm, T> getPrimitiveTermToPrimitiveTermDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveTermToPrimitiveTerm.class);
+	}
+
+	<T> Dao<Term, T> getTermDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), Term.class);
 	}
 
 	public ConnectionSource getConnection() {

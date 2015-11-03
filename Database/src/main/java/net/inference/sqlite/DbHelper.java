@@ -23,6 +23,8 @@ import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
+import net.inference.sqlite.dto.Term;
+
 
 import java.io.File;
 import java.sql.SQLException;
@@ -64,7 +66,8 @@ class DbHelper
 		    Company.class,
 			PrimitiveTerm.class,
 			PrimitiveTermToPrimitiveTerm.class,
-			ArticleToTerm.class
+			ArticleToTerm.class,
+			Term.class
 
     };
 	/*@formatter:on*/

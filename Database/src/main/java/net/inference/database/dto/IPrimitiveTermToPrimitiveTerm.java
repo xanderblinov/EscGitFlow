@@ -3,6 +3,7 @@ package net.inference.database.dto;
 import java.util.ArrayList;
 
 import net.inference.sqlite.dto.PrimitiveTerm;
+import net.inference.sqlite.dto.Article;
 
 /**
  * Created by Мария on 24.10.15.
@@ -16,7 +17,7 @@ public interface IPrimitiveTermToPrimitiveTerm
 		public static final String id = "id";
 		public static final String from = "from";
 		public static final String to = "to";
-		public static final String count = "count";
+		public static final String article_id = "article_id";
 	}
 
 	PrimitiveTerm getFrom();
@@ -27,9 +28,9 @@ public interface IPrimitiveTermToPrimitiveTerm
 
 	void setTo(final PrimitiveTerm to);
 
-	int getCount();
+	Article getArticle();
 
-	void incCount(final int count);
+	void setArticle(final Article article);
 
 	long getId();
 

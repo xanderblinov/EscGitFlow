@@ -27,9 +27,11 @@ public interface IDatabaseApi
 
 	IPrimitiveAuthorApi primitiveAuthor();
 
-	IPrimitiveTermApi term();
+	IPrimitiveTermApi primterm();
 
 	IPrimitiveTermToPrimitiveTermApi primTermToTerm();
+
+	ITermApi term();
 
 
 	/**

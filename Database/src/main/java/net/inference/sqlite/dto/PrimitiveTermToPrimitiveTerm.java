@@ -18,19 +18,19 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 	private PrimitiveTerm mFrom;
 	@DatabaseField(columnName = Column.to, foreign = true)
 	private PrimitiveTerm mTo;
-	@DatabaseField(columnName = Column.count)
-	private int mCount;
+	@DatabaseField(columnName = Column.article_id, foreign = true)
+	private Article mArticle;
 
 	public PrimitiveTermToPrimitiveTerm()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-	public PrimitiveTermToPrimitiveTerm(final PrimitiveTerm from, final PrimitiveTerm to)
+	public PrimitiveTermToPrimitiveTerm(final PrimitiveTerm from, final PrimitiveTerm to, final Article article)
 	{
 		mFrom = from;
 		mTo = to;
-		mCount = 1;
+		mArticle = article;
 	}
 
 	@Override
@@ -46,10 +46,10 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 	public void setTo(final PrimitiveTerm to){ mTo = to; }
 
 	@Override
-	public int getCount(){ return mCount; }
+	public Article getArticle(){ return mArticle; }
 
 	@Override
-	public void incCount(final int count){ mCount++; }
+	public void setArticle(final Article article){ mArticle = article; }
 
 	@Override
 	public long getId()
@@ -64,7 +64,7 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 				"mId=" + mId +
 				", mFrom=" + mFrom +
 				", mTo=" + mTo +
-				", mCount=" + mCount +
+				", mArticle=" + mArticle +
 				'}';
 	}
 
@@ -87,6 +87,10 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 			return false;
 		}
 		if (!getFrom().equals(that.getFrom()))
+		{
+			return false;
+		}
+		if (!getArticle().equals(that.getArticle()))
 		{
 			return false;
 		}

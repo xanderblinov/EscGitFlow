@@ -25,8 +25,11 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	private String mType;
 	@DatabaseField(columnName = Column.date)
 	private String mDate;
-	@DatabaseField(columnName = Column.publication)
-	private String mPublication;
+	@DatabaseField(columnName = Column.publication, foreign = true)
+	private Article mPublication;
+	@DatabaseField(columnName = Column.term, foreign = true)
+	private Term mTerm;                     //пока что String, заменить на Term (когда будет Term)
+
 
 
 
@@ -37,9 +40,11 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	}
 
 
-	public PrimitiveTerm(String value)
+	public PrimitiveTerm(String value, String type, Article article)
 	{
+		mType = type;
 		mValue = value;
+		mPublication = article;
 	}
 
 	public String getValue()
@@ -57,24 +62,6 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	public void setPublication(String publication)
 	{
 
-	}
-
-	@Override
-	public String getNeighbors()
-	{
-		return null;
-	}
-
-	@Override
-	public void addNeighbors(String[] neighbors)
-	{
-
-	}
-
-	@Override
-	public boolean existNeighbor(String neighbor)
-	{
-		return false;
 	}
 
 	public ArrayList<String> separatePrimitiveTerms()
