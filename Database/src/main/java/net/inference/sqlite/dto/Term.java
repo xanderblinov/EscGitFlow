@@ -15,8 +15,13 @@ import net.inference.database.dto.ITerm;
 @DatabaseTable(tableName = ITerm.TABLE_NAME)
 public class Term implements ITerm
 {
-	@DatabaseField(columnName = Column.value, id = true)
+
+	@DatabaseField(columnName = Column.id, generatedId = true)
+	private int mId;
+	@DatabaseField(columnName = Column.value)
 	private String mValue;
+	@DatabaseField(columnName = Column.type)
+	private String mType;
 
 	public Term()
 	{
@@ -24,31 +29,21 @@ public class Term implements ITerm
 	}
 
 
-	public Term(String value)
+	public Term(String value, String type)
 	{
 		mValue = value;
+		mType = type;
 	}
 
-	public String getValue()
-	{
-		return mValue;
-	}
+	public  int getId(){ return mId; }
 
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof Term))
-		{
-			return false;
-		}
+	public void setValue(final String value){ mValue = value; }
 
-		Term term = (Term) o;
+	public String getValue(){ return mValue; }
 
-		return !(getValue() != null ? !getValue().equals(term.getValue()) : term.getValue() != null);
+	public void setType(final String type){ mType = type; }
+
+	public String getType(){ return mType; }
 
 	}
 

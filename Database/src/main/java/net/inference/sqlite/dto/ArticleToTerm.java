@@ -19,7 +19,7 @@ public class ArticleToTerm implements IArticleToTerm
 	@DatabaseField(columnName = Column.article, foreign = true)
 	private Article mArticle;
 	@DatabaseField(columnName = Column.term, foreign = true)
-	private Term mTerm;
+	private PrimitiveTerm mTerm;
 
 	@SuppressWarnings("unused")
 	public ArticleToTerm()
@@ -27,7 +27,7 @@ public class ArticleToTerm implements IArticleToTerm
 		//TO dao
 	}
 
-	public ArticleToTerm(Article article, Term term)
+	public ArticleToTerm(Article article, PrimitiveTerm term)
 	{
 		mArticle = article;
 		mTerm = term;
@@ -44,7 +44,7 @@ public class ArticleToTerm implements IArticleToTerm
 		return mArticle;
 	}
 
-	public Term getTerm()
+	public PrimitiveTerm getTerm()
 	{
 		return mTerm;
 	}

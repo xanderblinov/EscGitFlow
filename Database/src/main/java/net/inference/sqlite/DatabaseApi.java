@@ -46,6 +46,10 @@ public class DatabaseApi implements IDatabaseApi
 	private IAuthorCompanyApi authorCompanyApi = new AuthorToCompanyApi(this);
 	private IAuthorArticleApi authorArticleApi = new AuthorToArticleApi(this);
 	private ICompanyApi companyApi = new CompanyApi(this);
+	private IPrimitiveTermApi primtermApi = new PrimitiveTermApi(this);
+	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);
+	private ITermApi termApi = new TermApi(this);
+
 
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
 	{
@@ -111,6 +115,24 @@ public class DatabaseApi implements IDatabaseApi
 		return mPrimitiveAuthorApi;
 	}
 
+	@Override
+	public IPrimitiveTermApi primterm()
+	{
+		return  primtermApi;
+	}
+
+	@Override
+	public IPrimitiveTermToPrimitiveTermApi primTermToTerm()
+	{
+		return primtermToTermApi;
+	}
+
+	@Override
+	public ITermApi term()
+	{
+		return  termApi;
+	}
+
 
 	public <T> Dao<Article, T> getArticleDao() throws SQLException
 	{
@@ -170,6 +192,22 @@ public class DatabaseApi implements IDatabaseApi
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveAuthor.class);
 	}
+
+	<T> Dao<PrimitiveTerm, T> getPrimitiveTermDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveTerm.class);
+	}
+
+	<T> Dao<PrimitiveTermToPrimitiveTerm, T> getPrimitiveTermToPrimitiveTermDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveTermToPrimitiveTerm.class);
+	}
+
+	<T> Dao<Term, T> getTermDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), Term.class);
+	}
+
 	public ConnectionSource getConnection() {
 		try {
 			return mDbHelper.getConnection();

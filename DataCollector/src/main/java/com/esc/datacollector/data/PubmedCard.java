@@ -26,7 +26,10 @@ public class PubmedCard extends AbsPubmedCard
 	private String[] mAD;
 
 	@MedlineField(value = OT, multiple = true)
-	private String[] mKeyWorlds;
+	private String[] mKeyOt;
+
+	@MedlineField(value = MH, multiple = true)
+	private String[] mKeyMh;
 
 	@MedlineField(value = DP)
 	private String mDP;
@@ -62,10 +65,13 @@ public class PubmedCard extends AbsPubmedCard
 		return mDP;
 	}
 
-	public String[] getKeyWorlds()
+	public String[] getKeyOt()
 	{
-		return mKeyWorlds;
+		return mKeyOt;
 	}
+
+	public String[] getKeyMh() {	return mKeyMh; }
+
 
 	public int getYear()
 	{
