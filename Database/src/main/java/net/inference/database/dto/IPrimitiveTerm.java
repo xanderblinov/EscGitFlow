@@ -1,7 +1,6 @@
 package net.inference.database.dto;
 
-import java.util.ArrayList;
-import net.inference.sqlite.dto.Article;
+import java.util.List;
 
 
 /**
@@ -29,7 +28,7 @@ public interface IPrimitiveTerm
 
 	void setPublication(final String publication);
 
-	ArrayList<String> separatePrimitiveTerms();
+	List<String> separatePrimitiveTerms(String keyWords);
 
 }
 

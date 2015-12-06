@@ -1,11 +1,13 @@
 package net.inference.sqlite.dto;
 
-import java.util.ArrayList;
-
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import net.inference.database.dto.IPrimitiveTerm;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Date: 12/19/2014
@@ -17,21 +19,38 @@ import net.inference.database.dto.IPrimitiveTerm;
 @DatabaseTable(tableName = IPrimitiveTerm.TABLE_NAME)
 public class PrimitiveTerm implements IPrimitiveTerm
 {
+	public static final String PRIMITIVE_TERM_SEPARATOR = ",";
+
+	public enum TermType
+	{
+		OT("OT"), MH("MH");
+
+		private final String mAbbreviation;
+
+		TermType(String abbreviation)
+		{
+
+			mAbbreviation = abbreviation;
+		}
+
+		public String getAbbreviation()
+		{
+			return mAbbreviation;
+		}
+	}
+
 	@DatabaseField(columnName = Column.id, generatedId = true)
 	private int mId;
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
-	@DatabaseField(columnName = Column.type)
-	private String mType;
+	@DatabaseField(columnName = Column.type, dataType = DataType.ENUM_STRING)
+	private TermType mType;
 	@DatabaseField(columnName = Column.date)
 	private String mDate;
 	@DatabaseField(columnName = Column.publication, foreign = true)
 	private Article mPublication;
 	@DatabaseField(columnName = Column.term, foreign = true)
-	private Term mTerm;                     //пока что String, заменить на Term (когда будет Term)
-
-
-
+	private Term mTerm;
 
 
 	public PrimitiveTerm()
@@ -40,7 +59,7 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	}
 
 
-	public PrimitiveTerm(String value, String type, Article article)
+	public PrimitiveTerm(String value, TermType type, Article article)
 	{
 		mType = type;
 		mValue = value;
@@ -64,13 +83,11 @@ public class PrimitiveTerm implements IPrimitiveTerm
 
 	}
 
-	public ArrayList<String> separatePrimitiveTerms()
+	public static List<String> separatePrimitiveTerms(String keyWords)
 	{
-		ArrayList<String> createdPrimitiveTerms = new ArrayList<>();
-		String[] primitiveTermsArr = this.getValue().split(",");
-		for (int i = 0; i < primitiveTermsArr.length; i++)
-			createdPrimitiveTerms.add(primitiveTermsArr[i]);
-		return createdPrimitiveTerms;
+		String[] primitiveTermsArr = keyWords.split(PRIMITIVE_TERM_SEPARATOR);
+
+		return Arrays.asList(primitiveTermsArr);
 	}
 
 

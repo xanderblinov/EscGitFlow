@@ -15,6 +15,7 @@ import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
+import net.inference.sqlite.dto.ClusterToCluster;
 import net.inference.sqlite.dto.Company;
 import net.inference.sqlite.dto.Evolution;
 import net.inference.sqlite.dto.EvolutionSlice;
@@ -67,7 +68,7 @@ class DbHelper
 			PrimitiveTerm.class,
 			PrimitiveTermToPrimitiveTerm.class,
 			ArticleToTerm.class,
-			Term.class
+			ClusterToCluster.class
 
     };
 	/*@formatter:on*/

@@ -45,7 +45,7 @@ public class Term implements ITerm
 
 	public String getType(){ return mType; }
 
-	}
+
 
 	@Override
 	public int hashCode()
