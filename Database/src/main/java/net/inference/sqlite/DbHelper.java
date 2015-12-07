@@ -15,10 +15,7 @@ import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
-<<<<<<< HEAD
 import net.inference.sqlite.dto.ClusterToCluster;
-=======
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 import net.inference.sqlite.dto.Company;
 import net.inference.sqlite.dto.Evolution;
 import net.inference.sqlite.dto.EvolutionSlice;
@@ -28,7 +25,6 @@ import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
-
 
 import java.io.File;
 import java.sql.SQLException;
@@ -71,11 +67,8 @@ class DbHelper
 			PrimitiveTerm.class,
 			PrimitiveTermToPrimitiveTerm.class,
 			ArticleToTerm.class,
-<<<<<<< HEAD
-			ClusterToCluster.class
-=======
+			ClusterToCluster.class,
 			Term.class
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 
     };
 	/*@formatter:on*/

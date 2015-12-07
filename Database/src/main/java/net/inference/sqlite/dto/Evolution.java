@@ -5,14 +5,12 @@ import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
+
 import net.inference.database.dto.IClusteringType;
 import net.inference.database.dto.IEvolution;
 
-<<<<<<< HEAD
 import java.util.Arrays;
 
-=======
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 /**
  * Date: 2/1/2015
  * Time: 5:53 PM
@@ -33,13 +31,9 @@ public class Evolution implements IEvolution
 	private String mFromYear;
 	@DatabaseField(columnName = Column.to_year)
 	private String mToYear;
-<<<<<<< HEAD
 	@DatabaseField(columnName = Column.params,dataType = DataType.SERIALIZABLE)
 	private double[] mParams;
-=======
 
-
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
     @ForeignCollectionField
     private ForeignCollection<EvolutionSlice> slices;
 
@@ -93,7 +87,6 @@ public class Evolution implements IEvolution
         return slices;
     }
 
-<<<<<<< HEAD
 	public double[] getParams()
 	{
 		return mParams;
@@ -105,9 +98,6 @@ public class Evolution implements IEvolution
 	}
 
 	@Override
-=======
-    @Override
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -132,23 +122,15 @@ public class Evolution implements IEvolution
     }
 
 	@Override
-<<<<<<< HEAD
 	public String toString()
 	{
-=======
-	public String toString() {
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 		return "Evolution{" +
-				"mId=" + mId +
+				"mParams=" + Arrays.toString(mParams) +
+				", mId=" + mId +
 				", mTime='" + mTime + '\'' +
 				", mType=" + mType +
 				", mFromYear='" + mFromYear + '\'' +
 				", mToYear='" + mToYear + '\'' +
-<<<<<<< HEAD
-				", mParams=" + Arrays.toString(mParams) +
-=======
->>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
-				", slices=" + slices +
 				'}';
 	}
 }
