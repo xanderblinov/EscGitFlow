@@ -1,6 +1,9 @@
 package net.inference.sqlite;
 
+<<<<<<< HEAD
 import com.j256.ormlite.dao.Dao;
+=======
+>>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.stmt.PreparedQuery;
@@ -64,6 +67,7 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 	public List<Author> addAuthors(final List<Author> authors) throws Exception
 	{
 
+<<<<<<< HEAD
 		final Dao<Author, Integer> authorDao = getDao();
 		List<Author> outAuthors = new ArrayList<>();
 
@@ -72,6 +76,18 @@ public class AuthorApi extends BaseApi<Author, Integer> implements IAuthorApi
 			outAuthors.add(authorDao.createIfNotExists(author));
 		}
 		return outAuthors;
+=======
+		return getDao().callBatchTasks(() -> {
+
+			List<Author> outAuthors = new ArrayList<>();
+
+			for (Author author : authors)
+			{
+				outAuthors.add(getDao().createIfNotExists(author));
+			}
+			return outAuthors;
+		});
+>>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 
 	}
 

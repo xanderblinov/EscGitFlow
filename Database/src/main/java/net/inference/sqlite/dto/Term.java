@@ -22,6 +22,8 @@ public class Term implements ITerm
 	private String mValue;
 	@DatabaseField(columnName = Column.type)
 	private String mType;
+	@DatabaseField(columnName = Column.counter)
+	private int mCounter=1;
 
 	public Term()
 	{
@@ -29,33 +31,26 @@ public class Term implements ITerm
 	}
 
 
-	public Term(String value, String type)
+	public Term(PrimitiveTerm termArg)
 	{
-		mValue = value;
-		mType = type;
+		mValue = termArg.getValue();
 	}
 
 	public  int getId(){ return mId; }
 
 	public void setValue(final String value){ mValue = value; }
 
-	public String getValue(){ return mValue; }
+	public String getValue()
+	{
+		return mValue;
+	}
 
 	public void setType(final String type){ mType = type; }
 
 	public String getType(){ return mType; }
 
-
-
-	@Override
-	public int hashCode()
+	public void incCounter()
 	{
-		return getValue() != null ? getValue().hashCode() : 0;
-	}
-
-	@Override
-	public String toString()
-	{
-		return mValue;
+		mCounter=mCounter+1;
 	}
 }

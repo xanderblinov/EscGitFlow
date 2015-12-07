@@ -15,6 +15,7 @@ public interface ITerm
 		public static final String value = "value";
 		public static final String id = "id";
 		public static final String type = "type";
+		public static final String counter = "Number of PT";
 	}
 
 	int getId();
@@ -26,4 +27,6 @@ public interface ITerm
 	void setType(final String type);
 
 	String getType();
+
+	void incCounter();
 }

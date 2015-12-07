@@ -1,6 +1,11 @@
 package net.inference.database.dto;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+import java.util.ArrayList;
+import net.inference.sqlite.dto.Article;
+>>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 
 
 /**
@@ -28,7 +33,11 @@ public interface IPrimitiveTerm
 
 	void setPublication(final String publication);
 
+<<<<<<< HEAD
 	List<String> separatePrimitiveTerms(String keyWords);
+=======
+	ArrayList<String> separatePrimitiveTerms();
+>>>>>>> a9cc4415ea4d00a3a9eb1c48a102c7509f91dfdb
 
 }
 

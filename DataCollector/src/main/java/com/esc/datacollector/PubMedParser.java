@@ -101,6 +101,7 @@ public class PubMedParser extends AbsParserEngine
 			{
 				if (mFileReadingCompleted && mPubmedCards.size() == 0)
 				{
+					mPubmedCardProcessor.addTerms();
 					getExecutorService().shutdown();
 					return;
 				}
@@ -115,7 +116,6 @@ public class PubMedParser extends AbsParserEngine
 					continue;
 				}
 				mPubmedCardProcessor.execute(pubmedCard);
-
 			}
 		}
 	}
