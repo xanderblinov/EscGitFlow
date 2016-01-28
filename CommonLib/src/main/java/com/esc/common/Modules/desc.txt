@@ -1,0 +1,3 @@
+Project key(not used in requests, was used to form API key) - "EvofScComm"
+API key - AIzaSyBMpMIj38PG1F1_B3ynC0AeIq-rlKmWMk0(used in requests - &key=%APIKEY%)
+Billing account(we should create it to raise number of possible requests per day to 150000):
