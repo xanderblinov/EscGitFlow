@@ -7,6 +7,7 @@ import java.util.List;
  */
 public class GooglePlacesResponse implements java.io.Serializable {
     public List<Object> html_attributions;
+    public String next_page_token;
     public List<Result> results;
     public String status;
 }

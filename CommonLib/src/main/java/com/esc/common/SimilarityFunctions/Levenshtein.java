@@ -50,6 +50,6 @@ public class Levenshtein implements IGetCoefficient{
     public float GetCoefficient(String whatToCheck, String withWhatToCheck, boolean ignoreCase) {
         double result = GetDistance(whatToCheck,withWhatToCheck,ignoreCase);
 
-        return (float)result/(float)whatToCheck.length();
+        return 1.0f - (float)result/(float)Math.max(whatToCheck.length(),withWhatToCheck.length());
     }
 }

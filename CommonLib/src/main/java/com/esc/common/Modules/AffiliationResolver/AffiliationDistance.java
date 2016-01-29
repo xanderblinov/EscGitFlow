@@ -5,6 +5,8 @@ import com.esc.common.SimilarityFunctions.GooglePlacesCoeff;
 import com.esc.common.SimilarityFunctions.IGetCoefficient;
 import com.esc.common.SimilarityFunctions.Jaccard;
 import com.esc.common.SimilarityFunctions.Levenshtein;
+import com.esc.common.util.LabeledMatrice2Float;
+import com.esc.common.util.Matrice2Float;
 
 /**
  * Created by afirsov on 1/28/2016.
@@ -22,7 +24,7 @@ public class AffiliationDistance implements IAffiliationDistance {
             "novosibirsk national institue",
             "Cansas university"};
         AffiliationDistance dist = new AffiliationDistance(arr);
-        float[][] matrix = dist.GetDistanceMatrix(MatrixType.Levenshtein);
+        Matrice2Float matrix = dist.GetDistanceMatrix(MatrixType.Levenshtein);
     }
 
     private GooglePlacesAPI api;
@@ -30,21 +32,17 @@ public class AffiliationDistance implements IAffiliationDistance {
     private Jaccard jaccard;
     private GooglePlacesCoeff googlePlaces;
     private String[] affiliations;
-    private float[][] resultMatrix;
-    private String[][] resultMatrixWithLabels;
+    private Matrice2Float resultMatrix;
+    private LabeledMatrice2Float resultMatrixWithLabels;
 
     public AffiliationDistance(String[] affilis) {
         api = new GooglePlacesAPI();
         levenshtein = new Levenshtein();
         jaccard = new Jaccard();
-        googlePlaces = new GooglePlacesCoeff();
+        googlePlaces = new GooglePlacesCoeff(levenshtein);
         affiliations = affilis.clone();
-        resultMatrix = new float[affilis.length][affilis.length];
-        resultMatrixWithLabels = new String[affilis.length + 1][affilis.length + 1];
-    }
-
-    public float[][] GetCountedResult(){
-        return resultMatrix.clone();
+        resultMatrix = new Matrice2Float(affilis.length,affilis.length);
+        resultMatrixWithLabels = new LabeledMatrice2Float(affilis.length,affilis.length);
     }
 
     /**
@@ -60,7 +58,7 @@ public class AffiliationDistance implements IAffiliationDistance {
      * @return
      */
     @Override
-    public float[][] GetDistanceMatrix(MatrixType type) {
+    public Matrice2Float GetDistanceMatrix(MatrixType type) {
 
         IGetCoefficient method = null;
         switch(type){
@@ -76,11 +74,12 @@ public class AffiliationDistance implements IAffiliationDistance {
         }
         for (int i = 0; i < affiliations.length; i++) {
             for (int j = 0; j < affiliations.length;j++ ) {
-                resultMatrix[i][j] = method.GetCoefficient(affiliations[i], affiliations[j],true);
+                resultMatrix.Add(i,j,method.GetCoefficient(affiliations[i], affiliations[j],true));
             }
         }
 
-        return resultMatrix.clone();
+        resultMatrix.NormalizeColumns();
+        return resultMatrix;
     }
 
     /**
@@ -96,28 +95,12 @@ public class AffiliationDistance implements IAffiliationDistance {
      * @param type MatrixType type parameter indicating how to count values of cells (Levenshtein, Jaccard, etc).
      * @return
      */
-    public String[][] GetDistanceMatrixWithLabels(MatrixType type) {
+    public LabeledMatrice2Float GetDistanceMatrixWithLabels(MatrixType type) {
 
-        IGetCoefficient method = null;
-        switch(type){
-            case Levenshtein:
-                method = levenshtein;
-                break;
-            case Jaccard:
-                method = jaccard;
-                break;
-            case GooglePlaces:
-                method = googlePlaces;
-                break;
-        }
-        for (int i = 0; i < affiliations.length; i++) {
-            resultMatrixWithLabels[i + 1][0] = Integer.toString(i);
-            for (int j =0; j < affiliations.length;j++ ) {
-                resultMatrixWithLabels[0][j + 1] = Integer.toString(j);
-                resultMatrixWithLabels[i + 1][j + 1] = "Value:" + Float.toString(1.0f - method.GetCoefficient(affiliations[i], affiliations[j],true));
-            }
-        }
+        Matrice2Float floatMatrix = GetDistanceMatrix(type);
+        resultMatrixWithLabels = new LabeledMatrice2Float(floatMatrix);
 
-        return resultMatrixWithLabels.clone();
+        resultMatrixWithLabels.NormalizeColumns();
+        return resultMatrixWithLabels;
     }
 }
