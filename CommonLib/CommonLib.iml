@@ -44,5 +44,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Gradle: stax:stax-api:1.0.1" level="project" />
   </component>
 </module>

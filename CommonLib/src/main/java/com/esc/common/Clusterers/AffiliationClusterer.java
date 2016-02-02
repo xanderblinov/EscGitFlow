@@ -4,50 +4,63 @@ import algorithms.ClusteringAlgorithm;
 import algorithms.DBSCAN;
 import algorithms.KMeans;
 import com.esc.common.Modules.AffiliationResolver.AffiliationDistance;
-import com.esc.common.Modules.AffiliationResolver.MatrixType;
-import com.esc.common.util.LabeledMatrice2Float;
-import com.sun.org.apache.xpath.internal.operations.Variable;
-import distance.DistanceMeasure;
+import com.esc.common.SimilarityFunctions.GooglePlacesCoeff;
+import com.esc.common.SimilarityFunctions.Jaccard;
+import com.esc.common.SimilarityFunctions.LevenshteinWorded;
+import com.esc.common.util.Matrices.IMatrice2;
+import com.esc.common.util.Matrices.MatriceType;
 import distance.EuclideanDistance;
 import input.Dataset;
 import input.FeatureVector;
 import output.Cluster;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Scanner;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created by afirsov on 1/28/2016.
  */
 
 public class AffiliationClusterer{
-    private Dataset set = new Dataset();
+    private Dataset set;
     private ClusteringAlgorithm clustering;
     private String[] initialArray;
     public Dataset GetDataset(){
         return set;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         long startTime = System.nanoTime();
-        String[] arr = new String[]{
-                "University of Cansas",
-                "Cansas City university",
-                "Universuty of Winnipeg, physics department",
-                "University of winnipeg",
-                "Winnipeg university",
-                "novosibirsk State university",
-                "novosibirsk national institue",
-                "Cansas university"};
 
-        AffiliationDistance dist = new AffiliationDistance(arr);
-        LabeledMatrice2Float matrix = dist.GetDistanceMatrixWithLabels(MatrixType.GooglePlaces);
+        String fileName = new File("CommonLib/src/main/Files/nsk_company_list_sorted.txt").getAbsolutePath();
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(fileName)));
+
+        ArrayList<String>arr = new ArrayList<>();
+        String line = "";
+        while((line = bufferedReader.readLine()) != null) {
+            arr.add(line);
+        }
+
+        bufferedReader.close();
+
+        AffiliationDistance dist = new AffiliationDistance(arr.toArray(new String[arr.size()]),
+                new LevenshteinWorded(),
+                MatriceType.LabeledMatrice2Float);
+        IMatrice2<String, Float> matrix = dist.GetDistanceMatrix();
 
 
-        AffiliationClusterer clstrr = new AffiliationClusterer(arr, matrix.GetMatrice());
-        clstrr.PerformDBSCANClustering(0.05f,1);
-        //clstrr.PerformKMeansClustering(new EuclideanDistance(), 3);
+        DBSCAN dbscan = new DBSCAN();
+        dbscan.setEpsilon(0.1f);
+        dbscan.setMinPoints(1);
+
+        KMeans kmeans = new KMeans(new EuclideanDistance(), 30);
+
+        AffiliationClusterer clstrr = new AffiliationClusterer(arr.toArray(new String[arr.size()]), matrix, kmeans);
+        clstrr.PerformClustering();
 
 
         long endTime = System.nanoTime();
@@ -56,29 +69,23 @@ public class AffiliationClusterer{
         System.out.println(clstrr.ToString() + "\n" + "Preformed in " + Long.toString(duration) + " milliseconds");
     }
 
-    public AffiliationClusterer(String[] initialArr, String[][] countedMatrix)
+    public AffiliationClusterer(String[] initialArr, IMatrice2<String,Float> countedMatrix, ClusteringAlgorithm alg)
     {
-        initialArray = initialArr;
-        for (int i = 1; i<initialArray.length;i++) {
-            set.add(new FeatureVector(countedMatrix[i],false));
+        String[][] matrice = countedMatrix.GetMatrice();
+        this.set = new Dataset();
+        this.initialArray = initialArr;
+        for (int i = 1; i < matrice[0].length;i++) {
+            String[] fv = new String[matrice[0].length];
+            for(int j = 0; j<matrice.length;j++)
+            {
+                fv[j] = matrice[j][i];
+            }
+            this.set.add(new FeatureVector(fv,false));
         }
+        this.clustering = alg;
     }
-    public void PerformDBSCANClustering(float epsilon, int minPoints){
+    public void PerformClustering(){
         set.reset();
-
-        clustering = new DBSCAN();
-
-        ((DBSCAN)clustering).setEpsilon(epsilon);
-        ((DBSCAN)clustering).setMinPoints(minPoints);
-
-        clustering.doClustering(set);
-    }
-
-    public void PerformKMeansClustering(DistanceMeasure msr, int numberOfClusters){
-        set.reset();
-
-        clustering = new KMeans(msr,numberOfClusters);
-
         clustering.doClustering(set);
     }
 
