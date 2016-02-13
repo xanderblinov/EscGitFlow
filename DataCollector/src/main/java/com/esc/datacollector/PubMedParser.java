@@ -102,6 +102,7 @@ public class PubMedParser extends AbsParserEngine
 				if (mFileReadingCompleted && mPubmedCards.size() == 0)
 				{
 					mPubmedCardProcessor.addTerms();
+					mPubmedCardProcessor.addCommonWords();
 					getExecutorService().shutdown();
 					return;
 				}

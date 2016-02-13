@@ -33,6 +33,8 @@ public interface IDatabaseApi
 
 	ITermApi term();
 
+	ICommonWordApi commonWord();
+
 
 	/**
 	 * Init database and table

@@ -31,6 +31,9 @@ public class PubmedCard extends AbsPubmedCard
 	@MedlineField(value = MH, multiple = true)
 	private String[] mKeyMh;
 
+	@MedlineField(value = AB)
+	private String mAB;
+
 	@MedlineField(value = DP)
 	private String mDP;
 
@@ -71,6 +74,8 @@ public class PubmedCard extends AbsPubmedCard
 	}
 
 	public String[] getKeyMh() {	return mKeyMh; }
+
+	public String getAB(){ return mAB; }
 
 
 	public int getYear()

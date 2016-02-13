@@ -28,7 +28,7 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	@DatabaseField(columnName = Column.publication, foreign = true)
 	private Article mPublication;
 	@DatabaseField(columnName = Column.term, foreign = true)
-	private Term mTerm;                     //пока что String, заменить на Term (когда будет Term)
+	private Term mTerm;
 
 
 
@@ -52,6 +52,13 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	{
 		return mValue;
 	}
+
+	public void setTerm(Term inputTerm)
+	{
+		this.mTerm=inputTerm;
+	}
+
+	public String getTermValue(){return mTerm.getValue();}
 
 	@Override
 	public String getPublication()

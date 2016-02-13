@@ -12,11 +12,23 @@ import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.CommonWord;
 
+import java.io.File;
+
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.sound.midi.Soundbank;
 
 import edu.smu.tspell.wordnet.*;
 
@@ -29,6 +41,8 @@ import edu.smu.tspell.wordnet.*;
 public class PubmedCardProcessor implements IPubmedCardProcessor
 {
 	List<Term> terms = new ArrayList<>();
+	List<CommonWord> commonWords = new ArrayList<>();
+
 	@Override
 	public boolean execute(PubmedCard pubmedCard)
 	{
@@ -43,12 +57,17 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		final boolean hasKeyOt = !Checks.isEmpty(pubmedCard.getKeyOt());
 		final boolean hasKeyMh = !Checks.isEmpty(pubmedCard.getKeyMh());
+		final boolean hasAb = !Checks.isEmpty(pubmedCard.getAB());
 
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
 		List<PrimitiveTerm> primitiveTerms = new ArrayList<>();
 		List<PrimitiveTermToPrimitiveTerm> primTermToTerms = new ArrayList<>();
+
+		System.out.println("I");
+		File file = new File("C:\\Users\\palen\\Desktop\\usuallwordsdatabase.txt");
+		Scanner scanner;
 
 		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
 
@@ -118,6 +137,59 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 				System.out.println(primitiveTerm.toString());
 			}
 
+		try{
+			scanner = new Scanner(file);
+			List<String> common_words = new ArrayList<>();
+			while (scanner.hasNext()) {
+				if (scanner.hasNext()) {
+					common_words.add(scanner.nextLine());
+				} else {
+					scanner.next();
+				}
+			}
+			if(hasAb)
+			{
+				String annotation = pubmedCard.getAB();
+				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\d|\\.|,|;|:| - |'s|'|=|%", "");
+				String [ ] word_array = annotation.split(" ");
+				List<String> word_list = new ArrayList<>();
+				final int year = pubmedCard.getYear();
+				boolean found;
+
+				for(int j = 0; j < word_array.length; j++){
+					if(!word_array[j].equals(""))
+						word_list.add(word_array[j]);
+				}
+				for(int j = 0; j < word_list.size(); j++)
+				{
+					found=false;
+					if(common_words.contains(word_list.get(j).toLowerCase()) || common_words.contains(word_list.get(j).toLowerCase().replace("-", "")))
+					{
+						final CommonWord commonWord=new CommonWord(word_list.get(j).toLowerCase());
+						for (int i = 0; i < commonWords.size() ; i++)
+						{
+							if (commonWord.equals(commonWords.get(i)))
+							{
+								commonWords.get(i).incCounter();
+								found=true;
+								break;
+							}
+						}
+						if(!found) commonWords.add(commonWord);
+					}
+					else{
+						System.out.println(j + "FOUND TERM: " + word_list.get(j));
+						PrimitiveTerm abstractTerm = new PrimitiveTerm(word_list.get(j),"AB",year, article);
+						primitiveTerms.add(abstractTerm);
+					}
+				}
+
+			}
+		}
+		catch (IOException e)
+		{
+		}
+
 		for(int i = 0; i < primitiveTerms.size(); i++)
 		{
 			for(int j = 0; j < primitiveTerms.size()-1; j++){
@@ -130,32 +202,36 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		fpts: for (int i = 0; i < primitiveTerms.size() ; i++)
 		{
 			final PrimitiveTerm primitiveTerm = primitiveTerms.get(i);
-			final String primitiveTermValue = primitiveTerm.getValue();
+			final String primitiveTermValue = primitiveTerm.getValue().toLowerCase();
 			Synset[] synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
-			//получаем массив групп синонимов существительных для текущего примитивного термина
+			//we are getting all synsets from WordNet for our primitive term
 			for (int j = 0; j < terms.size(); j++)
 			{
-				if (!primitiveTermValue.equals(terms.get(j).getValue()))
+				final Term term=terms.get(j);
+				final String termValue=term.getValue().toLowerCase();
+
+				if (!primitiveTermValue.equals(termValue))
 					for (int k = 0; k < synsets.length; k++)
 					{
 						final NounSynset nounSynset=(NounSynset)synsets[k];
-						if (terms.get(j).getValue().equals(nounSynset.getWordForms()[0]))
-						//сравниваем основное значение из каждой группы синонимов со значениями уже существуюших терминов
-						{
-							terms.get(j).incCounter();
-							System.out.printf("COUNTER INCREASED "+terms.get(j).getValue()+"%n");
-							continue fpts;
-						}
+						for (int l=0; l < nounSynset.getWordForms().length;l++)
+							if (termValue.equals(nounSynset.getWordForms()[l]))
+							//comparing meanings from synset with term
+							{
+								term.incCounter();
+								primitiveTerm.setTerm(term);
+								continue fpts;
+							}
 					}
 				else {
-					terms.get(j).incCounter();
-					System.out.printf("COUNTER INCREASED "+terms.get(j).getValue()+"%n");
+					term.incCounter();
+					primitiveTerm.setTerm(term);
 					continue fpts;
 				}
 			}
-			Term newTerm = new Term(primitiveTerm);
+			Term newTerm = new Term(terms.size()+1,primitiveTerm);
 			terms.add(newTerm);
-			System.out.printf("TERMS SIZE %d%n",terms.size());
+			primitiveTerm.setTerm(newTerm);
 		}
 
 		try
@@ -201,7 +277,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		if (Checks.isEmpty(pubmedCard.getKeyOt()))
+		if (Checks.isEmpty(pubmedCard.getKeyOt()) && Checks.isEmpty(pubmedCard.getAB()) && Checks.isEmpty(pubmedCard.getKeyMh()))
 		{
 			System.out.println(pubmedCard.getPmid() + " no terms  found");
 			return false;
@@ -215,6 +291,19 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		try
 		{
 			terms = databaseApi.term().addTerms(terms);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	public void addCommonWords()
+	{
+		final IDatabaseApi databaseApi = Application.getDatabaseApi();
+		try
+		{
+			commonWords = databaseApi.commonWord().addCommonWords(commonWords);
 		}
 		catch (Exception e)
 		{

@@ -2,8 +2,7 @@ package net.inference.database;
 
 import java.util.List;
 
-import net.inference.database.dto.ITerm;
-import net.inference.sqlite.dto.PrimitiveTerm;
+
 import net.inference.sqlite.dto.Term;
 
 /**

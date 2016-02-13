@@ -1,17 +1,17 @@
 package net.inference.database.dto;
 
 /**
- * Created by Мария on 03.11.15.
+ * Created by palen on 11.02.2016.
  */
-public interface ITerm
+public interface ICommonWord
 {
-	String TABLE_NAME = "term";
+	String TABLE_NAME = "commonWord";
 
 	class Column
 	{
 		public static final String value = "value";
 		public static final String id = "id";
-		public static final String counter = "number of PrTerms";
+		public static final String counter = "number of usages";
 	}
 
 	int getId();
@@ -21,5 +21,5 @@ public interface ITerm
 	String getValue();
 
 	void incCounter();
-}
 
+}

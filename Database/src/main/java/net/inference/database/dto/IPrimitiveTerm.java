@@ -2,6 +2,7 @@ package net.inference.database.dto;
 
 import java.util.ArrayList;
 import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.Term;
 
 
 /**
@@ -21,7 +22,6 @@ public interface IPrimitiveTerm
 		public static final String type = "type";
 		public static final String date = "date";
 		public static final String publication = "publication";
-		public static final String neighbors = "with_terms";
 		public static final String term = "term";
 	}
 

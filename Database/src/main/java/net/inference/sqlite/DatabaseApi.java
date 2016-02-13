@@ -10,6 +10,7 @@ import net.inference.database.IAuthorApi;
 import net.inference.database.IAuthorArticleApi;
 import net.inference.database.IAuthorCompanyApi;
 import net.inference.database.IClusterApi;
+import net.inference.database.ICommonWordApi;
 import net.inference.database.ICompanyApi;
 import net.inference.database.IDatabaseApi;
 import net.inference.database.IEvolutionApi;
@@ -17,6 +18,7 @@ import net.inference.database.IPrimitiveAuthorApi;
 import net.inference.database.IPrimitiveTermApi;
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
 import net.inference.database.ITermApi;
+import net.inference.database.dto.ICommonWord;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
@@ -56,6 +58,7 @@ public class DatabaseApi implements IDatabaseApi
 	private IPrimitiveTermApi primtermApi = new PrimitiveTermApi(this);
 	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);
 	private ITermApi termApi = new TermApi(this);
+	private ICommonWordApi commonWordApi = new CommonWordApi(this);
 
 
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
@@ -138,6 +141,12 @@ public class DatabaseApi implements IDatabaseApi
 	public ITermApi term()
 	{
 		return  termApi;
+	}
+
+	@Override
+	public ICommonWordApi commonWord()
+	{
+		return commonWordApi;
 	}
 
 
