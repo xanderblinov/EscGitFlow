@@ -7,7 +7,14 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 
 import java.sql.SQLException;
-
+/**
+ * 
+ * @deprecated should use {@link net.inference.sqlite.DatabaseApi}.
+ *
+ * no manual connection by jdbc
+ *
+ */
+@Deprecated
 public class DBConnection
 {
 

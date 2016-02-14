@@ -3,9 +3,12 @@ package com.esc.louvainalgorithm;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+/**
+ * @deprecated should use {@link net.inference.sqlite.dto.AuthorToAuthor}  with {@link net.inference.sqlite.AuthorApi}
+ *
+ */
+@Deprecated
 @DatabaseTable(tableName = "primitive_author_to_author")
-
-
 public class AuthorToAuthor
 {
 

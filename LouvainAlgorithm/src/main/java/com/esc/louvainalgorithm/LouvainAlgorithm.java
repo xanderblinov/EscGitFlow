@@ -112,7 +112,7 @@ public class LouvainAlgorithm
 		for(i = 0; i < cluster.length; i++)
 		{
 
-			oir.recordAuthorToClusterData(connection.coauthorDao.getPartauthor(i), cluster[i]);
+			oir.recordAuthorToClusterData(connection.coauthorDao.getPartAuthor(i), cluster[i]);
 
 		}
 		oir.recordEvolutionSliceData(year, id);

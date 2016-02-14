@@ -3,9 +3,14 @@ package com.esc.louvainalgorithm;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+
+/**
+ * @deprecated should use {@link net.inference.sqlite.dto.EvolutionSlice}  with {@link net.inference.sqlite.EvolutionApi}
+ *
+ * add methods to it. F.e. you can check {@link net.inference.sqlite.AuthorApi}
+ */
+@Deprecated
 @DatabaseTable(tableName = "evolution_slice")
-
-
 public class EvolutionSlice
 {
 

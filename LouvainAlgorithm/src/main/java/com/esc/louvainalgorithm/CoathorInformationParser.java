@@ -1,20 +1,22 @@
 package com.esc.louvainalgorithm;
 
 
-import java.sql.SQLException;
-import java.util.Arrays;
-
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.support.ConnectionSource;
+
+import java.sql.SQLException;
+import java.util.Arrays;
 
 public class CoathorInformationParser
 {
 
 	private Dao<AuthorToAuthor, Integer> coauthorDao;
 	private int nLines, nNodes;
-	private int[] firstNeighborIndex, neighbor, nNeighbors, node1, node2, partauthor;
-	double[] edgeWeight1, edgeWeight2, nodeWeight;
+	private int[] mFirstNeighborIndex;
+	private int[] neighbor;
+	private int[] mPartAuthor;
+	double[] mEdgeWeight1, mEdgeWeight2, mNodeWeight;
 
 
 	public CoathorInformationParser(ConnectionSource source) throws SQLException
@@ -23,17 +25,6 @@ public class CoathorInformationParser
 		coauthorDao = DaoManager.createDao(source, AuthorToAuthor.class);
 
 	}
-
-/*
-	public void countLines() throws SQLException
-	{
-
-		int nLines = 0;
-		while(coauthorDao.queryForId(nLines + 1) != null)
-		nLines++;
-
-
-	}*/
 
 	public void countLines(int year) throws SQLException
 	{
@@ -58,20 +49,6 @@ public class CoathorInformationParser
 		return nLines;
 
 	}
-/*
-	public void countNodes() throws SQLException
-	{
-
-		int nNodes = 0;
-		int i = 0;
-		while((coauthorDao.queryForId(i + 1) != null))
-		{
-			if (coauthorDao.queryForId(i + 1).getAuthor() > nNodes)
-				nNodes = coauthorDao.queryForId(i + 1).getAuthor();
-			i++;
-		}
-
-	}*/
 
 	public void countNodes(int year) throws SQLException
 	{
@@ -99,25 +76,25 @@ public class CoathorInformationParser
 		int i, j, temp, nEdges;
 		this.countLines(year);
 		this.countNodes(year);
-		this.node1 = new int[nLines];
-		this.node2 = new int[nLines];
-		this.edgeWeight1 = new double[nLines];
+		int[] node1 = new int[nLines];
+		int[] node2 = new int[nLines];
+		this.mEdgeWeight1 = new double[nLines];
 
 		for(i = 0; i < nLines; i++)
-			this.edgeWeight1[i] = 0;
+			this.mEdgeWeight1[i] = 0;
 
 		for (i = 0; i < nLines; i++)
 		{
 
-			this.node1[i] = coauthorDao.queryForId(i + 1).getAuthor()- 1;
-			this.node2[i] = coauthorDao.queryForId(i + 1).getCoauthor() - 1;
-			this.edgeWeight1[i]++;
+			node1[i] = coauthorDao.queryForId(i + 1).getAuthor()- 1;
+			node2[i] = coauthorDao.queryForId(i + 1).getCoauthor() - 1;
+			this.mEdgeWeight1[i]++;
 
 		}
 
-		this.partauthor = new int[nNodes];
+		this.mPartAuthor = new int[nNodes];
 		for(i = 0; i < nNodes; i++)
-			this.partauthor[i] = 0;
+			this.mPartAuthor[i] = 0;
 
 		i = 0;
 		j = 0;
@@ -126,9 +103,9 @@ public class CoathorInformationParser
 		while(i < 1)
 		{
 
-			if((this.partauthor[i] < temp) && (coauthorDao.queryForId(j + 1).getYear() == year))
+			if((this.mPartAuthor[i] < temp) && (coauthorDao.queryForId(j + 1).getYear() == year))
 			{
-				this.partauthor[i] = temp;
+				this.mPartAuthor[i] = temp;
 				i++;
 			}
 
@@ -140,9 +117,9 @@ public class CoathorInformationParser
 		while(i < nNodes)
 		{
 
-			if((this.partauthor[i - 1] < temp) && (coauthorDao.queryForId(j + 1).getYear() == year))
+			if((this.mPartAuthor[i - 1] < temp) && (coauthorDao.queryForId(j + 1).getYear() == year))
 			{
-				this.partauthor[i] = temp;
+				this.mPartAuthor[i] = temp;
 				i++;
 			}
 
@@ -152,51 +129,50 @@ public class CoathorInformationParser
 		}
 
 
-
-		this.nNeighbors = new int[nNodes];
+		int[] nNeighbors = new int[nNodes];
 		for (i = 0; i < nLines; i++)
 			if (node1[i] < node2[i])
 			{
-				this.nNeighbors[node1[i]]++;
-				this.nNeighbors[node2[i]]++;
+				nNeighbors[node1[i]]++;
+				nNeighbors[node2[i]]++;
 			}
 
-		this.firstNeighborIndex = new int[nNodes + 1];
+		this.mFirstNeighborIndex = new int[nNodes + 1];
 		nEdges = 0;
 
 		for (i = 0; i < nNodes; i++)
 		{
 
-			this.firstNeighborIndex[i] = nEdges;
+			this.mFirstNeighborIndex[i] = nEdges;
 			nEdges += nNeighbors[i];
 
 		}
-		this.firstNeighborIndex[nNodes] = nEdges;
+		this.mFirstNeighborIndex[nNodes] = nEdges;
 
 		this.neighbor = new int[nEdges];
-		this.edgeWeight2 = new double[nEdges];
+		this.mEdgeWeight2 = new double[nEdges];
 		Arrays.fill(nNeighbors, 0);
 		for (i = 0; i < nLines; i++)
 			if (node1[i] < node2[i])
 			{
-				j = this.firstNeighborIndex[node1[i]] + this.nNeighbors[node1[i]];
-				this.neighbor[j] = this.node2[i];
-				this.edgeWeight2[j] = this.edgeWeight1[i];
-				this.nNeighbors[node1[i]]++;
-				j = firstNeighborIndex[node2[i]] + this.nNeighbors[node2[i]];
-				this.neighbor[j] = this.node1[i];
-				this.edgeWeight2[j] = this.edgeWeight1[i];
-				this.nNeighbors[node2[i]]++;
+				j = this.mFirstNeighborIndex[node1[i]] + nNeighbors[node1[i]];
+				this.neighbor[j] = node2[i];
+				this.mEdgeWeight2[j] = this.mEdgeWeight1[i];
+				nNeighbors[node1[i]]++;
+				j = mFirstNeighborIndex[node2[i]] + nNeighbors[node2[i]];
+				this.neighbor[j] = node1[i];
+				this.mEdgeWeight2[j] = this.mEdgeWeight1[i];
+				nNeighbors[node2[i]]++;
 			}
 
 
-		this.nodeWeight = new double[nNodes];
+		this.mNodeWeight = new double[nNodes];
 
 		for (i = 0; i < nEdges; i++)
-			this.nodeWeight[neighbor[i]] = 0;
+			this.mNodeWeight[neighbor[i]] = 0;
 
 		for (i = 0; i < nEdges; i++)
-			this.nodeWeight[neighbor[i]] += this.edgeWeight2[i];
+			this.mNodeWeight[neighbor[i]] += this.mEdgeWeight2[i];
 
 
 
@@ -205,7 +181,7 @@ public class CoathorInformationParser
 	public int[] getFirstNeighborIndex()
 	{
 
-		return this.firstNeighborIndex;
+		return this.mFirstNeighborIndex;
 
 	}
 
@@ -219,29 +195,28 @@ public class CoathorInformationParser
 	public double[] getEdgeWeight()
 	{
 
-		return this.edgeWeight2;
+		return this.mEdgeWeight2;
 
 	}
 
 	public double[] getNodeWeight()
 	{
 
-		return this.nodeWeight;
+		return this.mNodeWeight;
 
 	}
 
-	public int getPartauthor(int i)
+	public int getPartAuthor(int i)
 	{
 
-		return this.partauthor[i];
+		return this.mPartAuthor[i];
 
 	}
 
 	public Network getNetwork()
 	{
 
-		Network temp = new Network(nNodes, firstNeighborIndex, neighbor, edgeWeight2, nodeWeight);
-		return temp;
+		return new Network(nNodes, mFirstNeighborIndex, neighbor, mEdgeWeight2, mNodeWeight);
 
 
 	}
