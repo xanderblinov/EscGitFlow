@@ -18,3 +18,4 @@ hs_err_pid*
 Esc.iml
 Database/src/main/resources/coauthors.sql
 Evolution/Evolution.iml
+*.iml
