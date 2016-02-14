@@ -1,11 +1,3 @@
 rootProject.name = 'Esc'
-include 'Database'
-
-include 'Evolution'
-
-include 'DataCollector'
-
-include 'CommonLib'
-
-include 'JNetworkViewer'
+include 'Database', 'Evolution', 'DataCollector', 'CommonLib', 'JNetworkViewer' , 'LouvainAlgorithm'
 
