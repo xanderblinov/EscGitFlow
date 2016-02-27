@@ -31,11 +31,11 @@ public class SimpleDisambiguationResolver implements IDisambiguationResolver
 	{
 		for (int i = 0; i < THREAD_COUNT; i++)
 		{
-			mExecutorService.execute(new ResolveNextPartOfAuthorsRunnable());
+			mExecutorService.execute(new ResolveNextPartOfAuthrosRunnable());
 		}
 	}
 
-	private class ResolveNextPartOfAuthorsRunnable implements Runnable
+	private class ResolveNextPartOfAuthrosRunnable implements Runnable
 	{
 		@Override
 		public void run()

@@ -12,16 +12,27 @@ import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.TermToTerm;
 
+import java.io.File;
+
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import edu.smu.tspell.wordnet.NounSynset;
-import edu.smu.tspell.wordnet.Synset;
-import edu.smu.tspell.wordnet.SynsetType;
-import edu.smu.tspell.wordnet.WordNetDatabase;
+import edu.smu.tspell.wordnet.*;
 
 /**
  * Date: 13-Sep-15
@@ -31,7 +42,6 @@ import edu.smu.tspell.wordnet.WordNetDatabase;
  */
 public class PubmedCardProcessor implements IPubmedCardProcessor
 {
-
 	List<Term> terms = new ArrayList<>();
 
 	@Override
@@ -48,16 +58,27 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		final boolean hasKeyOt = !Checks.isEmpty(pubmedCard.getKeyOt());
 		final boolean hasKeyMh = !Checks.isEmpty(pubmedCard.getKeyMh());
+		final boolean hasAb = !Checks.isEmpty(pubmedCard.getAB());
 
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
 		List<PrimitiveTerm> primitiveTerms = new ArrayList<>();
-
 		List<PrimitiveTermToPrimitiveTerm> primTermToTerms = new ArrayList<>();
+		List<TermToTerm> termToTerms = new ArrayList<>();
+
+
+		//List<Integer> list = new ArrayList<Integer>();
+		//File file = new File("x./2of12inf.tt");
 
 		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
 
+
+
+
+
+
+		//System.out.println(Arrays.toString(pubmedCard.getKeyWords()));
 		try
 		{
 			if (databaseApi.article().exists(article))
@@ -81,91 +102,155 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			primitiveAuthors.add(primitiveAuthor);
 
-			System.out.println(primitiveAuthor.toString());
+			//System.out.println(primitiveAuthor.toString());
 		}
+
 		if (hasKeyOt)
-		{
-			for (int i = 0; i < pubmedCard.getKeyOt().length; i++)
+			for (int i = 0; i < pubmedCard.getKeyOt().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyOt()[i];
-
-				List<String> primitiveTermsArray = PrimitiveTerm.separatePrimitiveTerms(keyWords);
-
-				for (String aPrimitiveTermsArray : primitiveTermsArray)
-				{
-					primitiveTerms.add((new PrimitiveTerm(aPrimitiveTermsArray.trim(), PrimitiveTerm.TermType.OT, article)));
+				final int year = pubmedCard.getYear();
+				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"OT", year, article);
+				if(primitiveTerm.getValue().contains(",")){
+					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
+					for (int j = 0; j < primitiveTermsArray.size() ; j++)
+					{
+						PrimitiveTerm separatedPrimitiveTerm=
+								new PrimitiveTerm(primitiveTermsArray.get(j).trim(),"MH",year, article);
+						primitiveTerms.add(separatedPrimitiveTerm);
+					}
 				}
-
+				else
+					primitiveTerms.add(primitiveTerm);
+				//System.out.println(primitiveTerm.toString());
 			}
-		}
 
 		if (hasKeyMh)
-		{
-			for (int i = 0; i < pubmedCard.getKeyMh().length; i++)
+			for (int i = 0; i < pubmedCard.getKeyMh().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyMh()[i];
+				final int year = pubmedCard.getYear();
+				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"MH", year, article);
+				if(primitiveTerm.getValue().contains(",")){
+					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
+					for (int j = 0; j < primitiveTermsArray.size(); j++)
+					{
+						PrimitiveTerm separatedPrimitiveTerm=
+								new PrimitiveTerm(primitiveTermsArray.get(j).trim(),"MH",year, article);
+						primitiveTerms.add(separatedPrimitiveTerm);
+					}
+				}
+				else
+					primitiveTerms.add(primitiveTerm);
+				//System.out.println(primitiveTerm.toString());
+			}
 
-				List<String> primitiveTermsArray = PrimitiveTerm.separatePrimitiveTerms(keyWords);
 
-				for (String aPrimitiveTermsArray : primitiveTermsArray)
+		//open the dict with common words
+		File file = new File("C:\\Users\\Мария\\Desktop\\ESC-Terms1-Work_on_Terms (1)\\ESC-Terms1-Work_on_Terms\\DataCollector\\src\\main\\resources\\2of12inf.txt");
+		Scanner scanner;
+
+
+		try{
+			scanner = new Scanner(file);
+			List<String> common_words = new ArrayList<>();
+			while (scanner.hasNext()) {
+				if (scanner.hasNext()) {
+					common_words.add(scanner.nextLine());
+				} else {
+					scanner.next();
+				}
+			}
+			if(hasAb)
+			{
+				String annotation = pubmedCard.getAB();
+				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\d|\\.|,|;|:| - |'s|'|=|%", "");
+				String [ ] word_array = annotation.split(" ");
+				List<String> word_list = new ArrayList<>();
+				final int year = pubmedCard.getYear();
+
+				for(int j = 0; j < word_array.length; j++){
+					if(!word_array[j].equals(""))
+						word_list.add(word_array[j]);
+				}
+				for(int j = 0; j < word_list.size(); j++)
 				{
-					primitiveTerms.add((new PrimitiveTerm(aPrimitiveTermsArray.trim(), PrimitiveTerm.TermType.MH, article)));
+					if(common_words.contains(word_list.get(j).toLowerCase()) || common_words.contains(word_list.get(j).toLowerCase().replace("-", ""))){
+						word_list.remove(j);
+						j = j - 1;
+					}
+					else{
+						//System.out.println(j + "FOUND TERM: " + word_list.get(j));
+						PrimitiveTerm abstractTerm = new PrimitiveTerm(word_list.get(j),"AB",year, article);
+						primitiveTerms.add(abstractTerm);
+					}
+				}
+
+			}
+		}
+		catch (IOException e)
+		{
+		}
+
+
+		for(int i = 0; i < primitiveTerms.size(); i++)
+		{
+			for(int j = 0; j < primitiveTerms.size()-1; j++){
+				if(i != j){
+					PrimitiveTermToPrimitiveTerm primTermToTerm =
+						new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j),article);
+					primTermToTerms.add(primTermToTerm);
 				}
 			}
 		}
 
-		List<PrimitiveTermToPrimitiveTerm> primitiveTermToPrimitiveTerms = new ArrayList<>();
-		for (int i = 0; i < primitiveTerms.size(); i++)
-		{
-			for (int j = 0; j < primitiveTerms.size() - 1; j++)
-			{
-				PrimitiveTermToPrimitiveTerm primTermToTerm = new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i), primitiveTerms.get(j), article);
-				primitiveTermToPrimitiveTerms.add(primTermToTerm);
-			}
-		}
-
-		for (int i = 0; i < primitiveTerms.size(); i++)
-		{
-			for (int j = 0; j < primitiveTerms.size() - 1; j++)
-			{
-				PrimitiveTermToPrimitiveTerm primTermToTerm = new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i), primitiveTerms.get(j), article);
-				primTermToTerms.add(primTermToTerm);
-			}
-		}
-
-		fpts:
-		for (int i = 0; i < primitiveTerms.size(); i++)
+		fpts: for (int i = 0; i < primitiveTerms.size() ; i++)
 		{
 			final PrimitiveTerm primitiveTerm = primitiveTerms.get(i);
 			final String primitiveTermValue = primitiveTerm.getValue();
 			Synset[] synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
-
+			//we are getting all synsets from WordNet for our primitive term
 			for (int j = 0; j < terms.size(); j++)
 			{
-				if (!primitiveTermValue.equals(terms.get(j).getValue()))
-				{
+				final Term term=terms.get(j);
+				final String termValue=term.getValue();
+
+				if (!primitiveTermValue.equals(termValue))
 					for (int k = 0; k < synsets.length; k++)
 					{
-						final NounSynset nounSynset = (NounSynset) synsets[k];
-						if (terms.get(j).getValue().equals(nounSynset.getWordForms()[0]))
-						{
-							terms.get(j).incCounter();
-							System.out.printf("COUNTER INCREASED " + terms.get(j).getValue() + "%n");
-							continue fpts;
-						}
+						final NounSynset nounSynset=(NounSynset)synsets[k];
+						for (int l=0; l < nounSynset.getWordForms().length;l++)
+							if (termValue.equals(nounSynset.getWordForms()[l]))
+							//comparing meanings from synset with term
+							{
+								term.incCounter();
+								primitiveTerm.setTerm(term);
+								continue fpts;
+							}
 					}
-				}
-				else
-				{
-					terms.get(j).incCounter();
-					System.out.printf("COUNTER INCREASED " + terms.get(j).getValue() + "%n");
-					continue fpts;
-				}
+				else {
+						term.incCounter();
+						primitiveTerm.setTerm(term);
+						continue fpts;
+					 }
 			}
-			Term newTerm = new Term(primitiveTerm);
+			Term newTerm = new Term(terms.size()+1,primitiveTerm);
 			terms.add(newTerm);
-			System.out.printf("TERMS SIZE %d%n", terms.size());
+			primitiveTerm.setTerm(newTerm);
 		}
+
+		//module for term to term
+		for(int k = 0; k < primTermToTerms.size(); k++){
+			PrimitiveTerm from = primTermToTerms.get(k).getFrom(), to = primTermToTerms.get(k).getTo();
+			Term A = from.getTerm(), B = to.getTerm();
+			TermToTerm newPair = new TermToTerm(A,B);
+			if(newPair.getFrom() != newPair.getTo())
+				if (!has(termToTerms, newPair))
+					termToTerms.add(newPair);
+		}
+
+
+
 
 		try
 		{
@@ -173,11 +258,16 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
 
-			System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
+			//System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
 
 			primitiveTerms = databaseApi.primterm().addTerms(primitiveTerms);
 
 			primTermToTerms = databaseApi.primTermToTerm().addTerms(primTermToTerms);
+
+			termToTerms = databaseApi.termToTerm().addTerms(termToTerms);
+
+
+
 
 		}
 		catch (Exception e)
@@ -210,7 +300,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		if (Checks.isEmpty(pubmedCard.getKeyOt()))
+		if (Checks.isEmpty(pubmedCard.getKeyOt()) && Checks.isEmpty(pubmedCard.getAB()) && Checks.isEmpty(pubmedCard.getKeyMh()))
 		{
 			System.out.println(pubmedCard.getPmid() + " no terms  found");
 			return false;
@@ -218,7 +308,6 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		return true;
 	}
-
 	public void addTerms()
 	{
 		final IDatabaseApi databaseApi = Application.getDatabaseApi();
@@ -230,5 +319,15 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		{
 			e.printStackTrace();
 		}
+	}
+
+	public boolean has (List<TermToTerm> pairList, TermToTerm elem){
+		for(int i = 0; i < pairList.size(); i++)
+			if( pairList.get(i).equals(elem) ){//.getFrom().getValue().equals(elem.getFrom().getValue()) && pairList.get(i).getTo().getValue().equals(elem.getTo().getValue()) ){
+				pairList.get(i).incCount();
+				return true;
+			}
+		return false;
+
 	}
 }

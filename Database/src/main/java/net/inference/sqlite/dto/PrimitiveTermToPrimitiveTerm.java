@@ -60,7 +60,7 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 	@Override
 	public String toString()
 	{
-		return "PrimitiveAuthorToAuthor{" +
+		return "PrimitiveTermToTerm{" +
 				"mId=" + mId +
 				", mFrom=" + mFrom +
 				", mTo=" + mTo +

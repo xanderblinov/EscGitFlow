@@ -1,10 +1,9 @@
 package net.inference.database.dto;
 
+import java.util.ArrayList;
+
 /**
- * Date: 20-Sep-15
- * Time: 4:40 PM
- *
- * @author xanderblinov
+ * Created by Мария on 03.11.15.
  */
 public interface ITerm
 {
@@ -14,7 +13,6 @@ public interface ITerm
 	{
 		public static final String value = "value";
 		public static final String id = "id";
-		public static final String type = "type";
 		public static final String counter = "Number of PT";
 	}
 
@@ -24,9 +22,6 @@ public interface ITerm
 
 	String getValue();
 
-	void setType(final String type);
-
-	String getType();
-
 	void incCounter();
 }
+
