@@ -13,4 +13,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':CommonLib')
     compile project(':Database')
+    compile project(':JavaML')
 }

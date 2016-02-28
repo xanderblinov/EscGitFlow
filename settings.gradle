@@ -11,3 +11,5 @@ include 'JNetworkViewer'
 
 include 'JavaML'
 
+include 'TestClusteringPankova'
+

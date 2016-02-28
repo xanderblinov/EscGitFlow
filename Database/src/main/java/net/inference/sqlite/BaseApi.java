@@ -1,15 +1,16 @@
 package net.inference.sqlite;
 
-import java.sql.SQLException;
-import java.util.Collections;
-import java.util.List;
-
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
+
 import net.inference.database.IBaseApi;
 import net.inference.database.IDatabaseApi;
+
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author gzheyts
@@ -38,6 +39,21 @@ public class BaseApi<T,ID> implements IBaseApi<T,ID>
         }
 
         return Collections.emptyList();
+    }
+
+    @Override
+    public long count()
+    {
+        try
+        {
+            return getDao().countOf();
+        }
+        catch (SQLException e)
+        {
+            logger.error(e, "");
+        }
+
+        return 0;
     }
 
     @Override

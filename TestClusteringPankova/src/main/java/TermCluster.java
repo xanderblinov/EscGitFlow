@@ -1,68 +1,66 @@
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+import net.inference.Config;
+import net.inference.sqlite.DatabaseApi;
+import net.inference.sqlite.dto.TermToTerm;
 import net.sf.javaml.clustering.Clusterer;
 import net.sf.javaml.clustering.KMeans;
-import net.sf.javaml.clustering.KMedoids;
-import net.sf.javaml.clustering.MultiKMeans;
-import net.sf.javaml.core.Dataset;
-import net.sf.javaml.core.DefaultDataset;
-import net.sf.javaml.core.DenseInstance;
-import net.sf.javaml.core.Instance;
-
 import net.sf.javaml.clustering.evaluation.AICScore;
 import net.sf.javaml.clustering.evaluation.BICScore;
 import net.sf.javaml.clustering.evaluation.ClusterEvaluation;
 import net.sf.javaml.clustering.evaluation.SumOfSquaredErrors;
+import net.sf.javaml.core.Dataset;
+import net.sf.javaml.core.DefaultDataset;
+import net.sf.javaml.core.DenseInstance;
+import net.sf.javaml.core.Instance;
 import net.sf.javaml.tools.weka.WekaClusterer;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
 import weka.clusterers.XMeans;
 /**
  * Created by M.Pankova on 26.02.16.
  */
-public class Term_cluster
+public class TermCluster
 {
-	public static Connection connection;
-	public static Statement statement;
-	public static ResultSet resSet;
+	//public static Connection connection;
+	//public static Statement statement;
+	//public static ResultSet resSet;
 
 	public static void main(String[] args)throws ClassNotFoundException, SQLException, IOException
 	{
-		Class.forName("org.sqlite.JDBC");
+		/*Class.forName("org.sqlite.JDBC");
 		connection = DriverManager.getConnection("jdbc:sqlite:Database\\src\\main\\resources\\test.db");
 		System.out.println("Database connected");
-		statement = connection.createStatement();
+		statement = connection.createStatement();*/
 
-		int countTerm = 0;
-		resSet = statement.executeQuery("SELECT * FROM term");
-		while (resSet.next())
-			countTerm++;
+		DatabaseApi api = new DatabaseApi(Config.Database.TEST, false);
 
-		int [][] term_array = new int[countTerm][countTerm];
+		int countTerm = (int) api.term().count();
 
-		int countTermToTerm = 0;
-		resSet = statement.executeQuery("SELECT * FROM term_to_term");
-		while (resSet.next())
-			countTermToTerm++;
+		int [][] termsArray = new int[countTerm][countTerm];
 
-		//сделали матрицу расстояний между терминами
-		resSet = statement.executeQuery("SELECT * FROM term_to_term");
-		for(int i = 0; i < countTermToTerm; i++){
-			resSet.next();
-			term_array[resSet.getInt("from") - 1][resSet.getInt("to") - 1] += resSet.getInt("count");
+		int countTermToTerm = (int) api.termToTerm().count();
+
+		//made matrix between terms
+		final List<TermToTerm> termToTermList = api.termToTerm().findAll();
+
+
+		for(TermToTerm termToTerm: termToTermList)
+		{
+			//all connection were counted twice!
+			termsArray[termToTerm.getFrom().getId()-1][termToTerm.getTo().getId()-1] += termToTerm.getCount();
 		}
+
 
 		Dataset data = new DefaultDataset();
 		double[] rel = new double[countTerm];
 
 		for(int i = 0; i < countTerm; i++){
 			for(int j = 0; j < countTerm; j++){
-				rel[j] = term_array[i][j];
+				rel[j] = termsArray[i][j];
 			}
-			Instance tmpInstance = new DenseInstance(rel);// TODO SparseInstanse
+			Instance tmpInstance = new DenseInstance(rel);// TODO SparseInstance
 			data.add(tmpInstance);
 		}
 

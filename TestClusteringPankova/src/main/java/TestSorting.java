@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by M.Pankova on 11.12.15.
  */
-public class Test_Sorting
+public class TestSorting
 {
 	public static Connection connection;
 	public static Statement statement;
