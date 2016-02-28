@@ -4,14 +4,21 @@ import algorithms.ClusteringAlgorithm;
 import algorithms.DBSCAN;
 import algorithms.KMeans;
 import com.esc.common.Modules.AffiliationResolver.AffiliationDistance;
-import com.esc.common.SimilarityFunctions.GooglePlacesCoeff;
-import com.esc.common.SimilarityFunctions.Jaccard;
-import com.esc.common.SimilarityFunctions.LevenshteinWorded;
+import com.esc.common.Modules.ExcelUtil.ClustersToExcel;
+import com.esc.common.Modules.ExcelUtil.Excel;
+import com.esc.common.Modules.GooglePlaces.models.GooglePlacesResponse;
+import com.esc.common.SimilarityFunctions.*;
+import com.esc.common.Web.Method;
+import com.esc.common.util.Beautifier.ForGoogle;
 import com.esc.common.util.Matrices.IMatrice2;
 import com.esc.common.util.Matrices.MatriceType;
+import com.esc.common.util.Pair;
+import com.sun.javaws.exceptions.InvalidArgumentException;
 import distance.EuclideanDistance;
 import input.Dataset;
 import input.FeatureVector;
+import jxl.Workbook;
+import jxl.write.WriteException;
 import output.Cluster;
 
 import java.io.*;
@@ -27,50 +34,34 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class AffiliationClusterer{
     private Dataset set;
-    private ClusteringAlgorithm clustering;
-    private String[] initialArray;
-    public Dataset GetDataset(){
+    public Dataset getSet() {
         return set;
     }
-
-    public static void main(String[] args) throws IOException {
-        long startTime = System.nanoTime();
-
-        String fileName = new File("CommonLib/src/main/Files/nsk_company_list_sorted.txt").getAbsolutePath();
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(fileName)));
-
-        ArrayList<String>arr = new ArrayList<>();
-        String line = "";
-        while((line = bufferedReader.readLine()) != null) {
-            arr.add(line);
-        }
-
-        bufferedReader.close();
-
-        AffiliationDistance dist = new AffiliationDistance(arr.toArray(new String[arr.size()]),
-                new LevenshteinWorded(),
-                MatriceType.LabeledMatrice2Float);
-        IMatrice2<String, Float> matrix = dist.GetDistanceMatrix();
-
-
-        DBSCAN dbscan = new DBSCAN();
-        dbscan.setEpsilon(0.1f);
-        dbscan.setMinPoints(1);
-
-        KMeans kmeans = new KMeans(new EuclideanDistance(), 30);
-
-        AffiliationClusterer clstrr = new AffiliationClusterer(arr.toArray(new String[arr.size()]), matrix, kmeans);
-        clstrr.PerformClustering();
-
-
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime)/1000000;
-
-        System.out.println(clstrr.ToString() + "\n" + "Preformed in " + Long.toString(duration) + " milliseconds");
+    private ClusteringAlgorithm clustering;
+    private String[] initialArray;
+    public String[] getInitialArray(){
+        return initialArray;
+    }
+    public String simType = "Jaccard";
+    public String getSimilarityType(){
+        return simType;
+    }
+    public String clasterType = "DBSCAN";
+    public String getClasterType(){
+        return clasterType;
+    }
+    public long lastDuration;
+    public long getDuration(){
+        return lastDuration;
+    }
+    public ArrayList<Pair<String,String>> args;
+    public ArrayList<Pair<String,String>> getArguments(){
+        return args;
     }
 
     public AffiliationClusterer(String[] initialArr, IMatrice2<String,Float> countedMatrix, ClusteringAlgorithm alg)
     {
+        args = new ArrayList<>();
         String[][] matrice = countedMatrix.GetMatrice();
         this.set = new Dataset();
         this.initialArray = initialArr;
@@ -100,5 +91,9 @@ public class AffiliationClusterer{
             output += ";\n";
         }
         return output;
+    }
+
+    public void ToExcel(String path) throws IOException, WriteException, InvalidArgumentException {
+
     }
 }

@@ -25,7 +25,7 @@ public class AffiliationDistance implements IAffiliationDistance {
             "Cansas university"};
 
         AffiliationDistance dist = new AffiliationDistance(arr, new Levenshtein(), MatriceType.LabeledMatrice2Float);
-        IMatrice2 matrix = dist.GetDistanceMatrix();
+        IMatrice2 matrix = dist.GetDistanceMatrix(1.0f);
     }
 
     private GooglePlacesAPI api;
@@ -61,15 +61,16 @@ public class AffiliationDistance implements IAffiliationDistance {
      * @return
      */
     @Override
-    public IMatrice2 GetDistanceMatrix() {
-
+    public IMatrice2 GetDistanceMatrix(float multiplicationIndex) {
         for (int i = 0; i < affiliations.length; i++) {
             for (int j = 0; j < affiliations.length;j++ ) {
                 resultMatrix.Add(i,j,method.GetCoefficient(affiliations[i], affiliations[j],true));
             }
         }
 
-        resultMatrix.NormalizeColumns();
+        if(multiplicationIndex == 1.0f) {
+            resultMatrix.NormalizeColumns();
+        }
         return resultMatrix;
     }
 }

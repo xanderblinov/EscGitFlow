@@ -6,7 +6,7 @@ import com.esc.common.Web.Method;
 import com.sun.deploy.net.URLEncoder;
 import com.google.gson.Gson;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Timer;
@@ -47,6 +47,16 @@ public class GooglePlacesAPI extends BaseGooglePlacesAPI {
                 tokenParam = tokenPresent ? "&pagetoken=" + tokenParam: "";
                 response = http.send(NameSearchDomain + params + tokenParam, Method.GET,null);
                 GooglePlacesResponse resp = new Gson().fromJson(response,GooglePlacesResponse.class);
+                if(resp.status.equals("ZERO_RESULTS"))
+                {
+                    try(PrintWriter writer = new PrintWriter(
+                            new BufferedWriter(
+                                    new FileWriter(
+                                            new File("CommonLib/src/main/java/com/esc/common/Modules/GooglePlaces/Logs/failed.txt").getAbsoluteFile(), true))))
+                    {
+                        writer.println(name + "\n");
+                    }
+                }
                 resultArr.add(resp);
                 if(resp.next_page_token != null) {
                     tokenPresent = true;
@@ -60,7 +70,6 @@ public class GooglePlacesAPI extends BaseGooglePlacesAPI {
                 e.printStackTrace();
             }
         }while(true);
-
 
         if(resultArr.toArray().length == 1)
         {

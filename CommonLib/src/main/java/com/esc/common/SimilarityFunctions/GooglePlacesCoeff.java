@@ -27,6 +27,18 @@ public class GooglePlacesCoeff implements IGetCoefficient {
     private Map<String,GooglePlacesResponse> cache;
     private IGetCoefficient helper;
 
+    public void SetCache(Map<String,GooglePlacesResponse> ca){
+        if(ca == null)
+        {
+            throw new NullPointerException("ca");
+        }
+        cache = ca;
+    }
+
+    public Map<String,GooglePlacesResponse> GetCache(){
+        return cache;
+    }
+
     @Override
     public float GetCoefficient(String whatToCheck, String withWhatToCheck, boolean ignoreCase) {
         String toCheckText = !ignoreCase ? whatToCheck : whatToCheck.toLowerCase();
@@ -50,11 +62,11 @@ public class GooglePlacesCoeff implements IGetCoefficient {
             Float currCoeff = 0.0f;
 
             for (Result res : fromCheck.results){
-                if(res.id == checkedOne.id) {
+                if(res.place_id.equals(checkedOne.place_id)) {
                     return 1.0f;
                 }
 
-                currCoeff = helper.GetCoefficient(res.name,checkedOne.name,true);
+                /*currCoeff = helper.GetCoefficient(res.name,checkedOne.name,true);
                 if(currCoeff > bestCoeff){
                     bestCoeff = currCoeff;
                 }
@@ -69,7 +81,7 @@ public class GooglePlacesCoeff implements IGetCoefficient {
                     if(currCoeff > bestCoeff){
                         bestCoeff = currCoeff;
                     }
-                }
+                }*/
             }
 
             return bestCoeff;

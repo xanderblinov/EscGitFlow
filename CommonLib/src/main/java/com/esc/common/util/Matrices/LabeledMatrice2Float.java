@@ -69,12 +69,17 @@ public class LabeledMatrice2Float implements IMatrice2<String,Float>{
         for (int i = 1; i<data[0].length;i++) {
             Double sumSquare = 0.0;
             for (int j = 1; j<data.length;j++) {
-                sumSquare += Math.pow(Double.parseDouble(data[j][i].split(":")[1]),2);
+                 sumSquare += Math.pow(Double.parseDouble(data[j][i].split(":")[1]),2);
             }
+
             sumSquare = Math.pow(sumSquare,(double)1/2);
             for (int j = 1; j<data.length;j++) {
-                data[j][i] = "Value:" + (sumSquare == 0 || sumSquare == null ? 0.0f :
-                        Float.parseFloat(data[j][j].split(":")[1])/ sumSquare.floatValue());
+                if(sumSquare == 0 || sumSquare == null || Double.isNaN(sumSquare)){
+                    data[j][i] = "Value:0.0f";
+                    continue;
+                }
+                Float result = Float.parseFloat(data[j][i].split(":")[1])/ sumSquare.floatValue();
+                data[j][i] = "Value:" + result;
             }
         }
     }
