@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by Мария on 11.12.15.
+ * Created by M.Pankova on 11.12.15.
  */
 public class Test_Sorting
 {

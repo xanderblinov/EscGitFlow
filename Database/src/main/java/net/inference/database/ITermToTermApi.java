@@ -1,11 +1,11 @@
 package net.inference.database;
 
-import java.util.List;
-
 import net.inference.sqlite.dto.TermToTerm;
 
+import java.util.List;
+
 /**
- * Created by Мария on 15.12.15.
+ * Created by M.Pankova on 15.12.15.
  */
 public interface ITermToTermApi extends IBaseApi <TermToTerm,Integer>
 {

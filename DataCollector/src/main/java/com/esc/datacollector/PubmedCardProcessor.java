@@ -15,24 +15,16 @@ import net.inference.sqlite.dto.Term;
 import net.inference.sqlite.dto.TermToTerm;
 
 import java.io.File;
-
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import edu.smu.tspell.wordnet.*;
+import edu.smu.tspell.wordnet.NounSynset;
+import edu.smu.tspell.wordnet.Synset;
+import edu.smu.tspell.wordnet.SynsetType;
+import edu.smu.tspell.wordnet.WordNetDatabase;
 
 /**
  * Date: 13-Sep-15
@@ -147,7 +139,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 
 		//open the dict with common words
-		File file = new File("C:\\Users\\Мария\\Desktop\\ESC-Terms1-Work_on_Terms (1)\\ESC-Terms1-Work_on_Terms\\DataCollector\\src\\main\\resources\\2of12inf.txt");
+		File file = new File("DataCollector/src/main/resources/2of12inf.txt");
 		Scanner scanner;
 
 

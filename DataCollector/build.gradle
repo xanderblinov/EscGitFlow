@@ -7,8 +7,16 @@ repositories {
     mavenCentral()
 }
 
+task setSystemProperty() << {
+    System.setProperty("wordnet.database.dir", new File("DataCollector/src/main/resources/world_net/dict").getAbsolutePath());
+
+    println 'setSystemProperty'
+}
+
+build.dependsOn setSystemProperty
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile project(':CommonLib')
     compile project(':Database')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }

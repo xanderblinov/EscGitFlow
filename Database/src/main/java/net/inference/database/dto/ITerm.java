@@ -1,9 +1,7 @@
 package net.inference.database.dto;
 
-import java.util.ArrayList;
-
 /**
- * Created by Мария on 03.11.15.
+ * Created by M.Pankova on 03.11.15.
  */
 public interface ITerm
 {

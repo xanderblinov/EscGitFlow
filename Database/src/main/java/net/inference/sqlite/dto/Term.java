@@ -5,7 +5,7 @@ import com.j256.ormlite.table.DatabaseTable;
 import net.inference.database.dto.ITerm;
 
 /**
- * Created by Мария on 03.11.15.
+ * Created by M.Pankova on 03.11.15.
  */
 
 @DatabaseTable(tableName = ITerm.TABLE_NAME)

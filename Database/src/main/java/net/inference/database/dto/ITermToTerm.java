@@ -2,7 +2,7 @@ package net.inference.database.dto;
 import net.inference.sqlite.dto.Term;
 
 /**
- * Created by Мария on 15.12.15.
+ * Created by M.Pankova on 15.12.15.
  */
 public interface ITermToTerm
 {

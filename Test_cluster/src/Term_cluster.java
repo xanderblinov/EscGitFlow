@@ -21,7 +21,7 @@ import net.sf.javaml.clustering.evaluation.SumOfSquaredErrors;
 import net.sf.javaml.tools.weka.WekaClusterer;
 import weka.clusterers.XMeans;
 /**
- * Created by Мария on 26.02.16.
+ * Created by M.Pankova on 26.02.16.
  */
 public class Term_cluster
 {

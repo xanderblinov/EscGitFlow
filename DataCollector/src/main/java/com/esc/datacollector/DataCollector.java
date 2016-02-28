@@ -1,7 +1,5 @@
 package com.esc.datacollector;
 
-import com.esc.datacollector.disambiguation.SimpleDisambiguationResolver;
-
 import net.inference.Config;
 import net.inference.sqlite.DatabaseApi;
 
@@ -49,7 +47,7 @@ public class DataCollector
 		DatabaseApi api = new DatabaseApi(Config.Database.TEST, false);
 
 		api.onStart();
-		System.setProperty("wordnet.database.dir", "D:\\Programs\\WordNet2.1\\dict\\");
+		//	System.setProperty("wordnet.database.dir", new File("DataCollector/src/main/resources/world_net/dict").getAbsolutePath());
 
 		new PubMedParser("./pub_result.htm").parseFile();
 

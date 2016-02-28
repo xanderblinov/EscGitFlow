@@ -13,7 +13,7 @@ import net.inference.database.dto.ITermToTerm;
 import net.inference.sqlite.dto.TermToTerm;
 
 /**
- * Created by Мария on 15.12.15.
+ * Created by M.Pankova on 15.12.15.
  */
 public class TermToTermApi extends BaseApi<TermToTerm, Integer> implements ITermToTermApi
 {

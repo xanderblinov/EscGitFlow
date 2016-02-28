@@ -7,7 +7,7 @@ import net.inference.database.dto.ITermToTerm;
 import net.inference.database.dto.ITerm;
 
 /**
- * Created by Мария on 15.12.15.
+ * Created by M.Pankova on 15.12.15.
  */
 @DatabaseTable(tableName = ITermToTerm.TABLE_NAME)
 public class TermToTerm implements ITermToTerm
