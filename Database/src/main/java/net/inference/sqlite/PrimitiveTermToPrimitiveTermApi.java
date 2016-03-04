@@ -1,20 +1,18 @@
 package net.inference.sqlite;
-import java.sql.SQLException;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
-import net.inference.database.dto.IPrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * Created by Мария on 24.10.15.
+ * Created by M.Pankova on 24.10.15.
  */
 public class PrimitiveTermToPrimitiveTermApi extends BaseApi<PrimitiveTermToPrimitiveTerm, Integer> implements IPrimitiveTermToPrimitiveTermApi
 {

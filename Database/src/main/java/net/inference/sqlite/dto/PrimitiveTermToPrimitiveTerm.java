@@ -3,11 +3,10 @@ package net.inference.sqlite.dto;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import net.inference.database.dto.IPrimitiveTerm;
 import net.inference.database.dto.IPrimitiveTermToPrimitiveTerm;
 
 /**
- * Created by Мария on 24.10.15.
+ * Created by M.Pankova on 24.10.15.
  */
 @DatabaseTable(tableName = IPrimitiveTermToPrimitiveTerm.TABLE_NAME)
 public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTerm
@@ -60,7 +59,7 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 	@Override
 	public String toString()
 	{
-		return "PrimitiveAuthorToAuthor{" +
+		return "PrimitiveTermToTerm{" +
 				"mId=" + mId +
 				", mFrom=" + mFrom +
 				", mTo=" + mTo +
