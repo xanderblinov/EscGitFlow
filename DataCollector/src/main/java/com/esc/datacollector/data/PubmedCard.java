@@ -40,6 +40,9 @@ public class PubmedCard extends AbsPubmedCard
 	@MedlineField(TI)
 	private String mTitle;
 
+	@MedlineField(value = AB)
+	private String mAB;
+
 	public String getPmid()
 	{
 		return mPmid;
@@ -64,6 +67,8 @@ public class PubmedCard extends AbsPubmedCard
 	{
 		return mDP;
 	}
+
+	public String getAB(){ return mAB; }
 
 	public String[] getKeyOt()
 	{

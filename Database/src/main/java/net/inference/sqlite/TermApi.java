@@ -11,7 +11,7 @@ import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.Term;
 
 /**
- * Created by Мария on 03.11.15.
+ * Created by M.Pankova on 03.11.15.
  */
 public class TermApi extends BaseApi<Term, Integer> implements ITermApi
 {

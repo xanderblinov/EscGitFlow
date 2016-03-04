@@ -23,7 +23,6 @@ public class Author implements IAuthor
 	private String mSurname;
 	@DatabaseField(columnName = Column.encoding)
 	private String mEncoding;
-
 	@DatabaseField(columnName = Column.click)
 	private String mClick;
 

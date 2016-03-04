@@ -2,26 +2,20 @@ package net.inference.sqlite.dto;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-
 import net.inference.database.dto.ITerm;
 
 /**
- * Date: 12/19/2014
- * Time: 3:15 PM
- *
- * @author xanderblinov
+ * Created by M.Pankova on 03.11.15.
  */
 
 @DatabaseTable(tableName = ITerm.TABLE_NAME)
 public class Term implements ITerm
 {
 
-	@DatabaseField(columnName = Column.id, generatedId = true)
+	@DatabaseField(columnName = Column.id, id = true)
 	private int mId;
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
-	@DatabaseField(columnName = Column.type)
-	private String mType;
 	@DatabaseField(columnName = Column.counter)
 	private int mCounter=1;
 
@@ -31,8 +25,9 @@ public class Term implements ITerm
 	}
 
 
-	public Term(PrimitiveTerm termArg)
+	public Term(int id, PrimitiveTerm termArg)
 	{
+		mId=id;
 		mValue = termArg.getValue();
 	}
 
@@ -45,12 +40,26 @@ public class Term implements ITerm
 		return mValue;
 	}
 
-	public void setType(final String type){ mType = type; }
-
-	public String getType(){ return mType; }
-
 	public void incCounter()
 	{
-		mCounter=mCounter+1;
+		mCounter++;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof Term))
+		{
+			return false;
+		}
+
+		Term term = (Term) o;
+
+		return !(getValue() != null ? !getValue().equals(term.getValue()) : term.getValue() != null);
+
 	}
 }
