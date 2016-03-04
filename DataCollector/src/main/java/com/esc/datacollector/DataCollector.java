@@ -1,5 +1,8 @@
 package com.esc.datacollector;
 
+import net.inference.Config;
+import net.inference.sqlite.DatabaseApi;
+
 /**
  * Date: 4/16/2015
  * Time: 9:05 PM
@@ -11,7 +14,7 @@ public class DataCollector
 	private static final String PUBMED_START_LINE_REGEX = "(....)- (.*)";
 
 	public static void main(String[] args)
-	{
+		{
 /*
 		api.onStart();
 		for (Article article_id : api.article_id().getAllArticles())
@@ -41,6 +44,10 @@ public class DataCollector
 		resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$2").trim();
 		System.out.println(//sultString);*/
 
+		DatabaseApi api = new DatabaseApi(Config.Database.TEST, false);
+
+		api.onStart();
+		//	System.setProperty("wordnet.database.dir", new File("DataCollector/src/main/resources/world_net/dict").getAbsolutePath());
 
 		new PubMedParser("./pub_result.htm").parseFile();
 

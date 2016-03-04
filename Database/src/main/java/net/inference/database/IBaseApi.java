@@ -1,8 +1,8 @@
 package net.inference.database;
 
-import java.util.List;
-
 import com.j256.ormlite.dao.Dao;
+
+import java.util.List;
 
 /**
  * @author gzheyts
@@ -10,6 +10,8 @@ import com.j256.ormlite.dao.Dao;
 public interface IBaseApi<T, ID> {
 
     List<T> findAll();
+
+	long count();
 
     T findById(ID id);
 

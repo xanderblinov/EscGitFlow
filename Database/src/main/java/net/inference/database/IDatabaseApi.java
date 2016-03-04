@@ -33,6 +33,8 @@ public interface IDatabaseApi
 
 	ITermApi term();
 
+	ITermToTermApi termToTerm();
+
 
 	/**
 	 * Init database and table

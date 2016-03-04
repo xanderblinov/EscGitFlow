@@ -1,12 +1,10 @@
 package net.inference.database.dto;
 
-import java.util.ArrayList;
-
-import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.PrimitiveTerm;
 
 /**
- * Created by Мария on 24.10.15.
+ * Created by M.Pankova on 24.10.15.
  */
 public interface IPrimitiveTermToPrimitiveTerm
 {
