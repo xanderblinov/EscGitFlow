@@ -17,13 +17,14 @@ import net.inference.database.IPrimitiveAuthorApi;
 import net.inference.database.IPrimitiveTermApi;
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
 import net.inference.database.ITermApi;
+import net.inference.database.ITermToTermApi;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
-import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
+import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.Company;
 import net.inference.sqlite.dto.Evolution;
 import net.inference.sqlite.dto.EvolutionSlice;
@@ -32,6 +33,8 @@ import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.TermToTerm;
+
 
 import java.sql.SQLException;
 
@@ -55,6 +58,7 @@ public class DatabaseApi implements IDatabaseApi
 	private IPrimitiveTermApi primtermApi = new PrimitiveTermApi(this);
 	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);
 	private ITermApi termApi = new TermApi(this);
+	private ITermToTermApi termToTermApi = new TermToTermApi(this);
 
 
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
@@ -139,6 +143,11 @@ public class DatabaseApi implements IDatabaseApi
 		return  termApi;
 	}
 
+	@Override
+	public ITermToTermApi termToTerm()
+	{
+		return termToTermApi;
+	}
 
 	public <T> Dao<Article, T> getArticleDao() throws SQLException
 	{
@@ -212,6 +221,11 @@ public class DatabaseApi implements IDatabaseApi
 	<T> Dao<Term, T> getTermDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), Term.class);
+	}
+
+	<T> Dao<TermToTerm, T> getTermToTermDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), TermToTerm.class);
 	}
 
 	public ConnectionSource getConnection() {

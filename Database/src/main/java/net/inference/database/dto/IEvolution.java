@@ -18,7 +18,6 @@ public interface IEvolution extends IEntity
 		public static final String type_id = "type_id";
 		public static final String from_year = "from_year";
 		public static final String to_year = "to_year";
-		public static final String params = "params";
 	}
 
 	public long getId();
@@ -38,8 +37,4 @@ public interface IEvolution extends IEntity
 	public String getToYear();
 
 	public void setToYear(final String toYear);
-
-	public double[] getParams();
-
-	public void setParams(double[] params);
 }
