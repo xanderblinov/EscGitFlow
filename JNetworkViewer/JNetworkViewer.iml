@@ -14,8 +14,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Database" exported="" />
     <orderEntry type="module" module-name="CommonLib" exported="" />
+    <orderEntry type="module" module-name="Database" exported="" />
     <orderEntry type="library" exported="" name="Gradle: com.github.monkeysintown:jgraphx:3.1.2.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: net.sf.doolin:javadocking:1.4.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.google.code.gson:gson:2.3.1" level="project" />
