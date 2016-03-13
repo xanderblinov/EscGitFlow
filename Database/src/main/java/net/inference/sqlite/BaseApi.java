@@ -4,6 +4,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
+import com.j256.ormlite.stmt.UpdateBuilder;
 
 import net.inference.database.IBaseApi;
 import net.inference.database.IDatabaseApi;
@@ -76,6 +77,47 @@ public class BaseApi<T,ID> implements IBaseApi<T,ID>
 
         return Collections.emptyList();
     }
+
+	@Override
+	public List<T> findByProperties(String firstProperty, String firstValue, String secondProperty, String secondValue){
+		try {
+			return getDao().queryBuilder().where()
+					.eq(firstProperty, firstValue)
+					.and()
+					.eq(secondProperty, secondValue).query();
+		} catch (SQLException e) {
+			logger.error(e, "");
+		}
+
+		return Collections.emptyList();
+	}
+
+	@Override
+	public List<T> findByProperties(String firstProperty, int firstValue, String secondProperty, int secondValue){
+		try {
+			return getDao().queryBuilder().where()
+					.eq(firstProperty, firstValue)
+					.and()
+					.eq(secondProperty, secondValue).query();
+		} catch (SQLException e) {
+			logger.error(e, "");
+		}
+
+		return Collections.emptyList();
+	}
+
+	@Override
+	public void changeProperty(long id, String propertyName, int propertyValue){
+		UpdateBuilder<T, ID> updateBuilder;
+		try{
+			updateBuilder = getDao().updateBuilder();
+			updateBuilder.updateColumnValue(propertyName, propertyValue);
+			updateBuilder.where().eq("id" ,id);
+			updateBuilder.update();
+		}
+		catch (SQLException e){
+		}
+	}
 
     @Override
     public ID id(T obj) {

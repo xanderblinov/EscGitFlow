@@ -1,5 +1,6 @@
 package net.inference.database;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import net.inference.database.dto.ITerm;
@@ -17,4 +18,7 @@ public interface ITermApi extends IBaseApi <Term,Integer>
 	{
 		return null;
 	}
+
+	boolean exists(Term term) throws SQLException;
+
 }

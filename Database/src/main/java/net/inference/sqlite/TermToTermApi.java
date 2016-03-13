@@ -58,4 +58,12 @@ public class TermToTermApi extends BaseApi<TermToTerm, Integer> implements ITerm
 	}
 		return null;
 	};
+
+	@Override
+	public boolean exists(TermToTerm elem) throws SQLException
+	{
+		return
+		getDao().queryForFirst(getDao().queryBuilder().where().eq(ITermToTerm.Column.from, elem.getFrom()).and().eq(ITermToTerm.Column.to, elem.getTo()).prepare()) !=
+		null;
+	}
 }

@@ -17,6 +17,12 @@ public interface IBaseApi<T, ID> {
 
     List<T> findByProperty(String propertyName, String propertyValue);
 
+	List<T> findByProperties(String firstProperty, String firstValue, String secondProperty, String secondValue);
+
+	List<T> findByProperties(String firstProperty, int firstValue, String secondProperty, int secondValue);
+
+	void changeProperty(long id, String propertyName, int propertyValue);
+
     ID id(T obj);
 
     boolean create(T obj);

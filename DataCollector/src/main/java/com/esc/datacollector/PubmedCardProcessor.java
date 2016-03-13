@@ -242,6 +242,28 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		}
 
 
+		/*alternative way for termToTerm using database, very slow way
+
+		for(int k = 0; k < primTermToTerms.size(); k++){
+			PrimitiveTerm from = primTermToTerms.get(k).getFrom(), to = primTermToTerms.get(k).getTo();
+			Term A = from.getTerm(), B = to.getTerm();
+			TermToTerm newPair = new TermToTerm(A,B);
+
+			if(newPair.getFrom() != newPair.getTo()){
+				try{
+					if(!databaseApi.termToTerm().exists(newPair))
+						databaseApi.termToTerm().addTerm(newPair);
+					else{
+						TermToTerm elem = databaseApi.termToTerm().findByProperties(TermToTerm.Column.from, A.getId(), TermToTerm.Column.to, B.getId()).get(0);
+						databaseApi.termToTerm().changeProperty(elem.getId(), "count", elem.getCount() + 1);
+					}
+				}
+				catch (SQLException e){
+
+				}
+			}
+		}*/
+
 
 
 		try

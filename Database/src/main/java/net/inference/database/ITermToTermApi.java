@@ -2,6 +2,7 @@ package net.inference.database;
 
 import net.inference.sqlite.dto.TermToTerm;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -16,4 +17,7 @@ public interface ITermToTermApi extends IBaseApi <TermToTerm,Integer>
 	{
 		return null;
 	}
+
+	boolean exists(TermToTerm elem) throws SQLException;
+
 }

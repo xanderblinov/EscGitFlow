@@ -1,6 +1,7 @@
 import net.inference.Config;
 import net.inference.sqlite.DatabaseApi;
 import net.inference.sqlite.dto.TermToTerm;
+import net.inference.sqlite.dto.Term;
 import net.sf.javaml.clustering.Clusterer;
 import net.sf.javaml.clustering.KMeans;
 import net.sf.javaml.clustering.evaluation.AICScore;
@@ -11,6 +12,8 @@ import net.sf.javaml.core.Dataset;
 import net.sf.javaml.core.DefaultDataset;
 import net.sf.javaml.core.DenseInstance;
 import net.sf.javaml.core.Instance;
+import net.sf.javaml.core.SparseInstance;
+
 import net.sf.javaml.tools.weka.WekaClusterer;
 
 import java.io.IOException;
@@ -44,6 +47,8 @@ public class TermCluster
 
 		//made matrix between terms
 		final List<TermToTerm> termToTermList = api.termToTerm().findAll();
+		final List<Term> termList = api.term().findAll();
+
 
 
 		for(TermToTerm termToTerm: termToTermList)
@@ -60,16 +65,26 @@ public class TermCluster
 			for(int j = 0; j < countTerm; j++){
 				rel[j] = termsArray[i][j];
 			}
-			Instance tmpInstance = new DenseInstance(rel);// TODO SparseInstance
+			Instance tmpInstance = new SparseInstance(rel, termList.get(i).getValue());
+			//System.out.println(tmpInstance);
 			data.add(tmpInstance);
 		}
+		System.out.println("Data's size is: " + data.size());
 
 		//cluster from JavaML
-		Clusterer km = new KMeans();
+		Clusterer km = new KMeans(4);
+		System.out.println("Start");
 		Dataset[] clusters = km.cluster(data);
 		System.out.println("Cluster count: " + clusters.length);
+		for(int i = 0; i < clusters.length; i++){
+			System.out.println("Cluster "+i+": ");
+			for(int j = 0; j < clusters[i].size(); j++)
+				System.out.print(clusters[i].get(j).classValue()+", ");
+			System.out.println("");
+		}
 
-		ClusterEvaluation sse= new SumOfSquaredErrors();
+
+		/*ClusterEvaluation sse= new SumOfSquaredErrors();
 		ClusterEvaluation aic = new AICScore();
 		ClusterEvaluation bic = new BICScore();
 
@@ -86,7 +101,7 @@ public class TermCluster
 		Clusterer jmlxm = new WekaClusterer(xm);
 		Dataset[] clusters_weka = jmlxm.cluster(data);
 		System.out.println("Weka: " + clusters_weka.length + "score is: " + sse.score(clusters_weka));
-
+*/
 	}
 
 }
