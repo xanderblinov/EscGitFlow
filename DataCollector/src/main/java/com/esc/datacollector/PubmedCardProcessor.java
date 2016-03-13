@@ -97,11 +97,12 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			//System.out.println(primitiveAuthor.toString());
 		}
 
+		final int year = pubmedCard.getYear();
+
 		if (hasKeyOt)
 			for (int i = 0; i < pubmedCard.getKeyOt().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyOt()[i];
-				final int year = pubmedCard.getYear();
 				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"OT", year, article);
 				if(primitiveTerm.getValue().contains(",")){
 					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
@@ -121,7 +122,6 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			for (int i = 0; i < pubmedCard.getKeyMh().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyMh()[i];
-				final int year = pubmedCard.getYear();
 				PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords,"MH", year, article);
 				if(primitiveTerm.getValue().contains(",")){
 					ArrayList<String> primitiveTermsArray=primitiveTerm.separatePrimitiveTerms();
@@ -156,28 +156,17 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			if(hasAb)
 			{
 				String annotation = pubmedCard.getAB();
-				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\d|\\.|,|;|:| - |'s|'|=|%", "");
+				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\.|,|;|\\*|:| - |'s|'|=|%|<|>", "");
 				String [ ] word_array = annotation.split(" ");
-				List<String> word_list = new ArrayList<>();
-				final int year = pubmedCard.getYear();
 
 				for(int j = 0; j < word_array.length; j++){
-					if(!word_array[j].equals(""))
-						word_list.add(word_array[j]);
-				}
-				for(int j = 0; j < word_list.size(); j++)
-				{
-					if(common_words.contains(word_list.get(j).toLowerCase()) || common_words.contains(word_list.get(j).toLowerCase().replace("-", ""))){
-						word_list.remove(j);
-						j = j - 1;
-					}
-					else{
-						//System.out.println(j + "FOUND TERM: " + word_list.get(j));
-						PrimitiveTerm abstractTerm = new PrimitiveTerm(word_list.get(j),"AB",year, article);
-						primitiveTerms.add(abstractTerm);
+					if(!(word_array[j].length() == 0) && !word_array[j].matches("\\d+")){
+						if(!common_words.contains(word_array[j].toLowerCase()) && !common_words.contains(word_array[j].toLowerCase().replace("-", ""))){
+							PrimitiveTerm abstractTerm = new PrimitiveTerm(word_array[j],"AB",year, article);
+							primitiveTerms.add(abstractTerm);
+						}
 					}
 				}
-
 			}
 		}
 		catch (IOException e)
@@ -207,12 +196,12 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 				final Term term=terms.get(j);
 				final String termValue=term.getValue();
 
-				if (!primitiveTermValue.equals(termValue))
+				if ( !(primitiveTermValue.intern() == termValue.intern()) )
 					for (int k = 0; k < synsets.length; k++)
 					{
 						final NounSynset nounSynset=(NounSynset)synsets[k];
 						for (int l=0; l < nounSynset.getWordForms().length;l++)
-							if (termValue.equals(nounSynset.getWordForms()[l]))
+							if (termValue.intern() == nounSynset.getWordForms()[l].intern())
 							//comparing meanings from synset with term
 							{
 								term.incCounter();
