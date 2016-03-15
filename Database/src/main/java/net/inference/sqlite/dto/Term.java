@@ -16,6 +16,8 @@ public class Term implements ITerm
 	private int mId;
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
+	@DatabaseField(columnName = Column.year)
+	private int mYear;
 	@DatabaseField(columnName = Column.counter)
 	private int mCounter=1;
 
@@ -29,6 +31,7 @@ public class Term implements ITerm
 	{
 		mId=id;
 		mValue = termArg.getValue();
+		mYear = termArg.getYear();
 	}
 
 	public  int getId(){ return mId; }
@@ -40,10 +43,16 @@ public class Term implements ITerm
 		return mValue;
 	}
 
+	public void setYear(final int year){ mYear = year; }
+
+	public int getYear()	{ return mYear; }
+
 	public void incCounter()
 	{
 		mCounter++;
 	}
+
+	public int getCount(){ return  mCounter; };
 
 	@Override
 	public boolean equals(Object o)

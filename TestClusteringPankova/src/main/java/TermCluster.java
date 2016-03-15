@@ -49,6 +49,9 @@ public class TermCluster
 		final List<TermToTerm> termToTermList = api.termToTerm().findAll();
 		final List<Term> termList = api.term().findAll();
 
+		/*Term term = termList.get(0);
+		FrequencyAnalysis elem = new FrequencyAnalysis(api, term);
+		System.out.println(elem.toString());*/
 
 
 		for(TermToTerm termToTerm: termToTermList)
@@ -72,14 +75,18 @@ public class TermCluster
 		System.out.println("Data's size is: " + data.size());
 
 		//cluster from JavaML
-		Clusterer km = new KMeans(4);
+		Clusterer km = new KMeans(6);
 		System.out.println("Start");
 		Dataset[] clusters = km.cluster(data);
 		System.out.println("Cluster count: " + clusters.length);
 		for(int i = 0; i < clusters.length; i++){
 			System.out.println("Cluster "+i+": ");
-			for(int j = 0; j < clusters[i].size(); j++)
+			for(int j = 0; j < clusters[i].size(); j++){
 				System.out.print(clusters[i].get(j).classValue()+", ");
+				//print count of using in every year for every term
+				/*FrequencyAnalysis elem = new FrequencyAnalysis(api, clusters[i].get(j).classValue().toString() );
+				System.out.println(elem.toString());*/
+			}
 			System.out.println("");
 		}
 

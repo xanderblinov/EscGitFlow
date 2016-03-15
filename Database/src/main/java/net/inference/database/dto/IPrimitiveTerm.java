@@ -20,7 +20,7 @@ public interface IPrimitiveTerm
 		public static final String value = "value";
 		public static final String id = "id";
 		public static final String type = "type";
-		public static final String date = "date";
+		public static final String year = "year";
 		public static final String publication = "publication";
 		public static final String term = "term";
 	}
@@ -30,6 +30,10 @@ public interface IPrimitiveTerm
 	void setPublication(final String publication);
 
 	ArrayList<String> separatePrimitiveTerms();
+
+	void setYear(int year);
+
+	int getYear();
 
 }
 

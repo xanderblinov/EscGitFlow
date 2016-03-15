@@ -99,7 +99,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		final int year = pubmedCard.getYear();
 
-		if (hasKeyOt)
+		/*if (hasKeyOt)
 			for (int i = 0; i < pubmedCard.getKeyOt().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyOt()[i];
@@ -116,9 +116,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 				else
 					primitiveTerms.add(primitiveTerm);
 				//System.out.println(primitiveTerm.toString());
-			}
+			}*/
 
-		if (hasKeyMh)
+		/*if (hasKeyMh)
 			for (int i = 0; i < pubmedCard.getKeyMh().length ; i++)
 			{
 				final String keyWords = pubmedCard.getKeyMh()[i];
@@ -135,7 +135,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 				else
 					primitiveTerms.add(primitiveTerm);
 				//System.out.println(primitiveTerm.toString());
-			}
+			}*/
 
 
 		//open the dict with common words
@@ -156,7 +156,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			if(hasAb)
 			{
 				String annotation = pubmedCard.getAB();
-				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\.|,|;|\\*|:| - |'s|'|=|%|<|>", "");
+				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\.|,|;|\\*|\"|~|:| - |'s|'|=|%|<|>", "");
 				String [ ] word_array = annotation.split(" ");
 
 				for(int j = 0; j < word_array.length; j++){
@@ -185,6 +185,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			}
 		}
 
+		System.setProperty("wordnet.database.dir", "D:\\Programs\\WordNet2.1\\dict\\");
 		fpts: for (int i = 0; i < primitiveTerms.size() ; i++)
 		{
 			final PrimitiveTerm primitiveTerm = primitiveTerms.get(i);
@@ -196,24 +197,26 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 				final Term term=terms.get(j);
 				final String termValue=term.getValue();
 
-				if ( !(primitiveTermValue.intern() == termValue.intern()) )
-					for (int k = 0; k < synsets.length; k++)
-					{
-						final NounSynset nounSynset=(NounSynset)synsets[k];
-						for (int l=0; l < nounSynset.getWordForms().length;l++)
-							if (termValue.intern() == nounSynset.getWordForms()[l].intern())
-							//comparing meanings from synset with term
-							{
-								term.incCounter();
-								primitiveTerm.setTerm(term);
-								continue fpts;
-							}
-					}
-				else {
-						term.incCounter();
-						primitiveTerm.setTerm(term);
-						continue fpts;
-					 }
+				if (primitiveTerm.getYear() == term.getYear()){
+					if ( !(primitiveTermValue.intern() == termValue.intern()))
+						for (int k = 0; k < synsets.length; k++)
+						{
+							final NounSynset nounSynset=(NounSynset)synsets[k];
+							for (int l=0; l < nounSynset.getWordForms().length;l++)
+								if (termValue.intern() == nounSynset.getWordForms()[l].intern())
+								//comparing meanings from synset with term
+								{
+									term.incCounter();
+									primitiveTerm.setTerm(term);
+									continue fpts;
+								}
+						}
+					else {
+							term.incCounter();
+							primitiveTerm.setTerm(term);
+							continue fpts;
+						 }
+				}
 			}
 			Term newTerm = new Term(terms.size()+1,primitiveTerm);
 			terms.add(newTerm);

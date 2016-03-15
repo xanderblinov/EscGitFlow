@@ -23,8 +23,8 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	private String mValue;
 	@DatabaseField(columnName = Column.type)
 	private String mType;
-	@DatabaseField(columnName = Column.date)
-	private int mDate;
+	@DatabaseField(columnName = Column.year)
+	private int mYear;
 	@DatabaseField(columnName = Column.publication, foreign = true)
 	private Article mPublication;
 	@DatabaseField(columnName = Column.term, foreign = true)
@@ -41,12 +41,12 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	}
 
 
-	public PrimitiveTerm(String value, String type, int date, Article article)
+	public PrimitiveTerm(String value, String type, int year, Article article)
 	{
 		mType = type;
 		mValue = value;
 		mPublication = article;
-		mDate = date;
+		mYear = year;
 	}
 
 	public String getValue()
@@ -62,6 +62,10 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	public String getTermValue(){return mTerm.getValue();}
 
 	public Term getTerm(){ return mTerm; }
+
+	public int getYear(){ return mYear; }
+
+	public void setYear(int year){ mYear = year; }
 
 	@Override
 	public String getPublication()

@@ -11,6 +11,7 @@ public interface ITerm
 	{
 		public static final String value = "value";
 		public static final String id = "id";
+		public static final String year = "year";
 		public static final String counter = "Number of PT";
 	}
 
@@ -21,5 +22,11 @@ public interface ITerm
 	String getValue();
 
 	void incCounter();
+
+	int getCount();
+
+	void setYear(final int year);
+
+	int getYear();
 }
 
