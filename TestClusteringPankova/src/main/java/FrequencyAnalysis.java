@@ -24,6 +24,21 @@ public class FrequencyAnalysis
 		}
 	}
 
+	FrequencyAnalysis(List<Term> termList, String term){
+		actTerm = term;
+		for(int i = 0; i < termList.size(); i++){
+			Term baseTerm = termList.get(i);
+			if(actTerm.equals(baseTerm.getValue()) ||
+			   actTerm.equals(baseTerm.getValue().substring(0, baseTerm.getValue().length()-1)) ||
+			   actTerm.substring(0, actTerm.length()-1).equals(baseTerm.getValue()))
+			{
+				addUsing(baseTerm);
+				termList.remove(i);
+				i--;
+			}
+		}
+	}
+
 	void addUsing(Term term){
 		Frequency newFreq = new Frequency(term.getYear(), term.getCount());
 		if (!exist(newFreq))

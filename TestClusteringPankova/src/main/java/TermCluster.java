@@ -16,6 +16,7 @@ import net.sf.javaml.core.SparseInstance;
 
 import net.sf.javaml.tools.weka.WekaClusterer;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -36,6 +37,7 @@ public class TermCluster
 		connection = DriverManager.getConnection("jdbc:sqlite:Database\\src\\main\\resources\\test.db");
 		System.out.println("Database connected");
 		statement = connection.createStatement();*/
+
 
 		DatabaseApi api = new DatabaseApi(Config.Database.TEST, false);
 
@@ -60,8 +62,33 @@ public class TermCluster
 			termsArray[termToTerm.getFrom().getId()-1][termToTerm.getTo().getId()-1] += termToTerm.getCount();
 		}
 
+		int termCount = termList.size();
+		int[][] data = new int[termCount][3];
 
-		Dataset data = new DefaultDataset();
+		/*for(int i = 0; i < termsArray.length; i++){
+			for(int j = 0; j < termsArray.length; j++)
+				System.out.print(termsArray[i][j] + " ");
+			System.out.print("\n");
+		}*/
+
+		/*for(int i = 0; i < termsArray.length; i++){
+			for(int j = 0; j < i; j++){
+				if (termsArray[i][j] != 0)
+					System.out.println(termsArray[i][j] + " " + termsArray[j][i] + " " +i + " " + j);
+
+			}
+		}*/
+		FileWriter input = new FileWriter("input.txt", false);
+
+		for(int i = 0; i < termsArray.length; i++){
+			for(int j = i + 1; j < termsArray.length; j++){
+				if (termsArray[i][j] != 0)
+					input.write(i + "\t" + j + "\t" + termsArray[i][j] + "\n");
+			}
+		}
+		input.flush();
+
+		/*Dataset data = new DefaultDataset();
 		double[] rel = new double[countTerm];
 
 		for(int i = 0; i < countTerm; i++){
@@ -73,9 +100,10 @@ public class TermCluster
 			data.add(tmpInstance);
 		}
 		System.out.println("Data's size is: " + data.size());
-
+		api.onStop();*/
 		//cluster from JavaML
-		Clusterer km = new KMeans(6);
+
+		/*Clusterer km = new KMeans(6,3);
 		System.out.println("Start");
 		Dataset[] clusters = km.cluster(data);
 		System.out.println("Cluster count: " + clusters.length);
@@ -84,11 +112,11 @@ public class TermCluster
 			for(int j = 0; j < clusters[i].size(); j++){
 				System.out.print(clusters[i].get(j).classValue()+", ");
 				//print count of using in every year for every term
-				/*FrequencyAnalysis elem = new FrequencyAnalysis(api, clusters[i].get(j).classValue().toString() );
-				System.out.println(elem.toString());*/
+				*//*FrequencyAnalysis elem = new FrequencyAnalysis(api, clusters[i].get(j).classValue().toString() );
+				System.out.println(elem.toString());*//*
 			}
 			System.out.println("");
-		}
+		}*/
 
 
 		/*ClusterEvaluation sse= new SumOfSquaredErrors();

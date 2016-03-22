@@ -176,7 +176,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 		for(int i = 0; i < primitiveTerms.size(); i++)
 		{
-			for(int j = 0; j < primitiveTerms.size()-1; j++){
+			for(int j = 0 ; j < primitiveTerms.size(); j++){
 				if(i != j){
 					PrimitiveTermToPrimitiveTerm primTermToTerm =
 						new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j),article);

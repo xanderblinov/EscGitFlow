@@ -1,0 +1,3336 @@
+The term 'U2' used in the: [2001: 1 , 2000: 27 ] years
+The term 'U2AF' used in the: [2001: 5 , 2000: 1 ] years
+The term '65-kDa' used in the: [2001: 1 , 2000: 3 ] years
+The term '35-kDa' used in the: [2001: 1 ] years
+The term 'subunits' used in the: [2001: 16 , 2002: 1 , 2000: 81 ] years
+The term 'polypyrimidine' used in the: [2001: 1 , 2000: 4 ] years
+The term 'dinucleotide' used in the: [2001: 1 , 2000: 3 ] years
+The term 'arginine/serine-rich' used in the: [2001: 1 , 2000: 1 ] years
+The term 'subcellular' used in the: [2001: 3 , 2000: 25 ] years
+The term 'heterologous' used in the: [2001: 2 , 2000: 6 ] years
+The term 'spliceosome' used in the: [2001: 5 , 2000: 43 ] years
+The term 'RNA' used in the: [2000: 328 , 2001: 17 , 2002: 2 ] years
+The term 'RNA-protein' used in the: [2000: 6 ] years
+The term 'metalloenzyme' used in the: [2000: 1 ] years
+The term 'U6' used in the: [2000: 10 ] years
+The term 'Mg2+' used in the: [2000: 3 ] years
+The term 'pro-Sp' used in the: [2000: 1 ] years
+The term 'phosphoryl' used in the: [2000: 2 ] years
+The term 'U80' used in the: [2000: 2 ] years
+The term 'thiophilic' used in the: [2000: 1 ] years
+The term 'transesterification' used in the: [2000: 3 ] years
+The term 'U6/sU80Rp-reconstituted' used in the: [2000: 1 ] years
+The term 'metal-binding' used in the: [2000: 1 ] years
+The term 'wild-type' used in the: [2000: 46 , 2001: 2 ] years
+The term 'pre-messenger' used in the: [2000: 3 ] years
+The term 'eukaryotic' used in the: [2000: 12 , 2001: 4 ] years
+The term 'multiformed' used in the: [2000: 1 ] years
+The term 'NPC' used in the: [2000: 43 , 2001: 2 ] years
+The term 'translocation' used in the: [2000: 61 , 2001: 6 ] years
+The term 'elegans' used in the: [2001: 4 , 2002: 1 , 2000: 17 ] years
+The term 'TRA-1A' used in the: [2001: 5 ] years
+The term 'TRA-2A' used in the: [2001: 6 ] years
+The term 'FEM-3' used in the: [2001: 2 ] years
+The term 'TRA-1A-binding' used in the: [2001: 1 ] years
+The term 'feminizing' used in the: [2001: 1 ] years
+The term 'masculinize' used in the: [2001: 1 ] years
+The term 'feminize' used in the: [2001: 1 ] years
+The term 'tra-2' used in the: [2001: 1 ] years
+The term 'vivo' used in the: [2001: 11 , 2000: 63 ] years
+The term 'line-specific' used in the: [2001: 1 ] years
+The term 'supraoptic' used in the: [2001: 1 ] years
+The term 'AVP' used in the: [2001: 6 ] years
+The term 'multinucleated' used in the: [2001: 2 , 2000: 9 ] years
+The term 'immunocytochemically' used in the: [2001: 1 ] years
+The term 'sex-dependent' used in the: [2001: 1 ] years
+The term 'proximal' used in the: [2001: 5 , 2002: 1 , 2000: 23 ] years
+The term 'utero' used in the: [2001: 2 ] years
+The term 'genomic' used in the: [2001: 4 , 2000: 32 ] years
+The term 'breakpoint' used in the: [2001: 1 , 2000: 6 ] years
+The term '6B3' used in the: [2001: 1 ] years
+The term '6A32' used in the: [2001: 2 ] years
+The term 'Mest' used in the: [2001: 5 ] years
+The term 'Ch' used in the: [2001: 5 , 2000: 1 ] years
+The term 'Mest-deficient' used in the: [2001: 1 ] years
+The term 'L23' used in the: [2001: 1 , 2000: 2 ] years
+The term 'bp' used in the: [2001: 5 , 2000: 18 ] years
+The term 'exons' used in the: [2001: 3 , 2000: 116 ] years
+The term '17q21--q22' used in the: [2001: 1 ] years
+The term 'hexameric' used in the: [2001: 1 ] years
+The term 'telomeres' used in the: [2001: 4 , 2000: 25 ] years
+The term 'immortalization' used in the: [2001: 2 , 2000: 2 ] years
+The term 'hTR' used in the: [2001: 3 , 2000: 10 ] years
+The term 'hTERT' used in the: [2001: 9 ] years
+The term 'protein-1' used in the: [2001: 3 , 2000: 9 ] years
+The term 'telomeric-repeat' used in the: [2001: 1 ] years
+The term 'hematopoietic' used in the: [2001: 4 , 2000: 12 ] years
+The term 'monocytes' used in the: [2001: 4 , 2000: 18 ] years
+The term 'RT-PCR' used in the: [2001: 2 , 2000: 24 ] years
+The term 'TRF2' used in the: [2001: 4 , 2000: 11 ] years
+The term 'all-trans' used in the: [2001: 1 , 2000: 4 ] years
+The term 'ATRA' used in the: [2001: 1 , 2000: 11 ] years
+The term 'tyrosine' used in the: [2001: 5 , 2000: 13 ] years
+The term 'TH' used in the: [2001: 12 ] years
+The term 'intraventricular' used in the: [2001: 1 ] years
+The term 'dose-dependent' used in the: [2001: 2 , 2000: 14 ] years
+The term 'ip' used in the: [2001: 2 , 2000: 1 ] years
+The term 'acetylcholine' used in the: [2001: 2 , 2000: 1 ] years
+The term 'splanchnic' used in the: [2001: 1 ] years
+The term '3-h' used in the: [2001: 2 , 2000: 1 ] years
+The term 'Intraventricular' used in the: [2001: 1 ] years
+The term 'reinhardtii' used in the: [2001: 2 , 2000: 4 ] years
+The term 'Mbb1' used in the: [2001: 3 ] years
+The term 'stromal' used in the: [2001: 1 , 2000: 3 ] years
+The term 'chloroplast-transit' used in the: [2001: 1 ] years
+The term 'N-terminal' used in the: [2001: 6 , 2000: 37 ] years
+The term 'tetratricopeptide-like' used in the: [2001: 1 ] years
+The term 'homologue' used in the: [2001: 1 , 2000: 27 ] years
+The term 'psbB' used in the: [2001: 1 ] years
+The term 'Epigenetic' used in the: [2000: 3 ] years
+The term 'deacetylase' used in the: [2000: 6 ] years
+The term 'MHC' used in the: [2000: 8 , 2001: 1 ] years
+The term 'costimulatory' used in the: [2000: 2 ] years
+The term 'IFN-gamma' used in the: [2000: 10 , 2001: 19 ] years
+The term 'transactivator' used in the: [2000: 3 , 2001: 1 ] years
+The term 'well-established' used in the: [2000: 2 ] years
+The term 'Th2' used in the: [2000: 4 ] years
+The term 'ectopic' used in the: [2000: 8 ] years
+The term 'GATA-3' used in the: [2000: 2 ] years
+The term 'IL-4' used in the: [2000: 9 ] years
+The term 'intergenic' used in the: [2000: 3 ] years
+The term 'Th2-specific' used in the: [2000: 1 ] years
+The term 'DNase' used in the: [2000: 20 , 2001: 3 ] years
+The term 'VEGF' used in the: [2001: 12 , 2000: 2 ] years
+The term 'beta-actin' used in the: [2001: 1 , 2000: 2 ] years
+The term 'Palo' used in the: [2001: 1 ] years
+The term 'Heinrich-Heine-University' used in the: [2001: 1 ] years
+The term 'Germany' used in the: [2001: 1 ] years
+The term 'intracytoplasmic' used in the: [2001: 1 , 2000: 2 ] years
+The term 'tripronucleic' used in the: [2001: 1 ] years
+The term 'RT/nested' used in the: [2001: 1 ] years
+The term 'PCR' used in the: [2001: 2 , 2000: 6 ] years
+The term '30/33' used in the: [2001: 1 ] years
+The term '10-to-16-cell' used in the: [2001: 1 ] years
+The term 'morulae' used in the: [2001: 1 ] years
+The term '5/5' used in the: [2001: 1 ] years
+The term 'Neuroblastoma' used in the: [2001: 1 ] years
+The term 'neurite' used in the: [2001: 3 , 2000: 4 ] years
+The term 'C-theta' used in the: [2001: 1 ] years
+The term 'isozyme' used in the: [2001: 1 , 2000: 6 ] years
+The term 'ii' used in the: [2001: 4 ] years
+The term 'oligonucleotide' used in the: [2001: 2 , 2000: 23 ] years
+The term 'mRNPs' used in the: [2001: 3 , 2000: 13 ] years
+The term 'half-life' used in the: [2001: 6 , 2000: 13 ] years
+The term 'nucleotides' used in the: [2000: 33 , 2001: 3 ] years
+The term 'exon-exon' used in the: [2001: 1 , 2000: 2 ] years
+The term 'HeLa' used in the: [2001: 4 , 2002: 1 , 2000: 23 ] years
+The term 'laevis' used in the: [2001: 1 , 2000: 8 ] years
+The term 'Immunoprecipitations' used in the: [2001: 2 , 2000: 4 ] years
+The term 'SRm160' used in the: [2001: 1 , 2000: 5 ] years
+The term 'RNPS1' used in the: [2001: 1 ] years
+The term 'Y14' used in the: [2001: 1 , 2000: 5 ] years
+The term 'hGH' used in the: [2001: 2 ] years
+The term 'HSIII' used in the: [2001: 5 ] years
+The term 'kb' used in the: [2001: 11 , 2000: 33 ] years
+The term 'HSIV' used in the: [2001: 1 ] years
+The term '-28' used in the: [2001: 1 , 2000: 1 ] years
+The term '-32' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Transgenic' used in the: [2001: 2 ] years
+The term 'placentally' used in the: [2001: 1 ] years
+The term 'P-elements' used in the: [2001: 3 , 2000: 3 ] years
+The term 'acetyl' used in the: [2001: 1 , 2000: 5 ] years
+The term 'p27Kip1' used in the: [2001: 4 , 2000: 11 ] years
+The term 'G1' used in the: [2001: 1 , 2000: 12 ] years
+The term 'Proteasome-mediated' used in the: [2001: 1 ] years
+The term 'cDNA' used in the: [2001: 12 , 2000: 86 ] years
+The term 'C-terminus' used in the: [2001: 1 , 2000: 4 ] years
+The term 'vitro' used in the: [2001: 10 , 2000: 80 , 2002: 1 ] years
+The term 'nuclear-localization' used in the: [2001: 1 ] years
+The term 'G0/G1' used in the: [2001: 1 , 2000: 2 ] years
+The term 'IX' used in the: [2000: 6 ] years
+The term 'plastid-derived' used in the: [2000: 1 ] years
+The term 'porphyrins' used in the: [2000: 3 ] years
+The term 'Chlamydomonas' used in the: [2001: 2 , 2000: 4 ] years
+The term 'brs-1' used in the: [2000: 1 ] years
+The term 'HSP70' used in the: [2000: 11 ] years
+The term 'darkpresumably' used in the: [2000: 1 ] years
+The term 'plastidic' used in the: [2000: 3 ] years
+The term 'methyltransferase' used in the: [2000: 9 ] years
+The term 'importin-alpha' used in the: [2000: 2 ] years
+The term 'glutathione' used in the: [2000: 7 ] years
+The term 'GST' used in the: [2000: 2 ] years
+The term 'coimmunoprecipitation' used in the: [2000: 1 ] years
+The term '5-terminal' used in the: [2000: 1 ] years
+The term 'm7GpppC' used in the: [2000: 1 ] years
+The term 'MT/RNA/Impalpha' used in the: [2000: 1 ] years
+The term 'methylation' used in the: [2000: 23 ] years
+The term 'RanGDP' used in the: [2000: 2 ] years
+The term 'biogenesis' used in the: [2000: 17 ] years
+The term 'Myb' used in the: [2000: 2 ] years
+The term 'so-called' used in the: [2000: 3 ] years
+The term 'c-myb' used in the: [2000: 1 ] years
+The term 'amino' used in the: [2001: 8 , 2000: 75 ] years
+The term '2-dependent' used in the: [2000: 1 ] years
+The term 'carboxyl-terminus' used in the: [2000: 1 ] years
+The term 'isoform' used in the: [2001: 20 , 2000: 69 ] years
+The term 'FERTILISATION' used in the: [2000: 2 ] years
+The term 'Arabidopsis' used in the: [2000: 12 ] years
+The term 'ENDOSPERM' used in the: [2000: 1 ] years
+The term 'MEA' used in the: [2000: 8 ] years
+The term 'Polycomb' used in the: [2000: 1 ] years
+The term 'transcriptional' used in the: [2001: 18 , 2000: 97 ] years
+The term 'fis' used in the: [2000: 1 ] years
+The term 'characterised' used in the: [2000: 2 ] years
+The term 'mea' used in the: [2000: 1 ] years
+The term 'pull-down' used in the: [2000: 5 ] years
+The term 'transfected' used in the: [2000: 24 , 2001: 6 ] years
+The term 'ESC' used in the: [2000: 4 ] years
+The term 'MMP-2' used in the: [2001: 4 ] years
+The term '2-kilobase' used in the: [2001: 1 ] years
+The term '3-untranslated' used in the: [2001: 2 , 2000: 4 ] years
+The term '-1306' used in the: [2001: 2 ] years
+The term '+220' used in the: [2001: 1 ] years
+The term 'transfection' used in the: [2001: 2 , 2000: 22 ] years
+The term 'A10' used in the: [2001: 1 , 2000: 11 ] years
+The term 'CCACC' used in the: [2001: 1 ] years
+The term 'allelic' used in the: [2001: 1 , 2000: 1 ] years
+The term 'allele-specific' used in the: [2001: 1 , 2000: 4 ] years
+The term 'Smads' used in the: [2001: 3 , 2000: 5 ] years
+The term 'transduction' used in the: [2001: 3 , 2000: 16 ] years
+The term 'Smad3' used in the: [2001: 7 , 2000: 9 ] years
+The term 'collagen' used in the: [2001: 4 , 2000: 11 ] years
+The term 'glomerular' used in the: [2001: 1 , 2000: 1 ] years
+The term 'glomerulosclerosis' used in the: [2001: 1 ] years
+The term 'GC' used in the: [2001: 5 , 2000: 12 ] years
+The term '-268' used in the: [2001: 1 ] years
+The term '-268/-260' used in the: [2001: 1 ] years
+The term 'inducibility' used in the: [2001: 1 , 2000: 3 ] years
+The term '-283/-250' used in the: [2001: 1 ] years
+The term 'Smad4' used in the: [2001: 1 ] years
+The term 'Gal4-Smad3' used in the: [2001: 1 ] years
+The term 'transactivation' used in the: [2000: 20 , 2001: 2 ] years
+The term 'overexpression' used in the: [2001: 3 , 2000: 43 ] years
+The term 'ligand-dependent' used in the: [2001: 1 , 2000: 1 ] years
+The term 'NMD' used in the: [2001: 6 , 2000: 8 ] years
+The term 'ribosome-associated' used in the: [2001: 1 ] years
+The term 'hUpf1p' used in the: [2001: 3 ] years
+The term 'Saccharomyces' used in the: [2001: 3 , 2000: 23 ] years
+The term 'orthologue' used in the: [2001: 6 , 2000: 10 ] years
+The term 'Upf3p' used in the: [2001: 2 ] years
+The term 'X-linked' used in the: [2001: 1 , 2000: 7 ] years
+The term 'epitope-tagged' used in the: [2001: 1 , 2000: 3 ] years
+The term 'hUpf3p-X' used in the: [2001: 3 ] years
+The term 'immunofluorescence' used in the: [2001: 1 , 2000: 20 ] years
+The term 'MLP' used in the: [2001: 7 ] years
+The term 'cardiopathy' used in the: [2001: 1 ] years
+The term 'physiopathology' used in the: [2001: 1 ] years
+The term 'cytoplasms' used in the: [2001: 1 ] years
+The term 'immunodetection' used in the: [2001: 1 ] years
+The term 'retro-differentiated' used in the: [2001: 1 ] years
+The term 'ultrastructural' used in the: [2001: 1 , 2000: 7 ] years
+The term '-/-' used in the: [2001: 1 , 2002: 2 ] years
+The term 'myocardium' used in the: [2001: 2 , 2000: 6 ] years
+The term 'insulin-like' used in the: [2001: 1 , 2000: 2 ] years
+The term 'IGF-2' used in the: [2001: 2 ] years
+The term 'up-regulated' used in the: [2001: 4 , 2000: 17 ] years
+The term 'run-on' used in the: [2001: 4 , 2000: 10 ] years
+The term 'electrophoretic' used in the: [2001: 3 , 2000: 20 ] years
+The term '-1229/+140' used in the: [2001: 1 ] years
+The term 'pSV-luc' used in the: [2001: 1 ] years
+The term 'down-regulation' used in the: [2001: 6 , 2000: 17 ] years
+The term 'stepwise' used in the: [2001: 1 ] years
+The term '-138/+140' used in the: [2001: 1 ] years
+The term '14-base' used in the: [2001: 1 ] years
+The term '-1091/-1048' used in the: [2001: 1 ] years
+The term 'CGAGGGC' used in the: [2001: 1 ] years
+The term 'cis' used in the: [2001: 3 , 2002: 1 , 2000: 5 ] years
+The term 'Functionality' used in the: [2001: 1 ] years
+The term 'mitochondrial' used in the: [2001: 18 , 2000: 57 ] years
+The term 'cox2' used in the: [2001: 8 ] years
+The term 'II' used in the: [2000: 116 , 2001: 17 ] years
+The term 'polypeptide' used in the: [2001: 7 , 2000: 23 ] years
+The term 'sp' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Chlorophyte' used in the: [2001: 1 ] years
+The term 'Leguminosae' used in the: [2001: 1 ] years
+The term 'per2' used in the: [2000: 2 ] years
+The term 'PERIOD2' used in the: [2000: 1 ] years
+The term 'TIMELESS-like' used in the: [2000: 1 ] years
+The term 'situ' used in the: [2000: 47 , 2001: 5 ] years
+The term 'suprachiasmatic' used in the: [2000: 3 ] years
+The term 'translocated' used in the: [2000: 9 , 2001: 1 ] years
+The term 'protein-coding' used in the: [2001: 2 , 2000: 3 ] years
+The term 'ascomycetes' used in the: [2001: 1 ] years
+The term 'nuclear-encoded' used in the: [2001: 2 , 2000: 3 ] years
+The term 'lichen-forming' used in the: [2001: 1 ] years
+The term 'Ascomycota' used in the: [2001: 1 ] years
+The term 'reverse-splicing' used in the: [2001: 2 ] years
+The term 'rRNAs' used in the: [2001: 4 , 2000: 23 ] years
+The term 'transposable' used in the: [2001: 1 , 2000: 1 ] years
+The term 'proto-splice' used in the: [2001: 1 ] years
+The term 'factor-beta' used in the: [2000: 11 , 2001: 1 ] years
+The term 'multifunctional' used in the: [2000: 4 , 2001: 1 ] years
+The term 'chondrocyte' used in the: [2000: 6 ] years
+The term 'BMP-2' used in the: [2000: 1 ] years
+The term 'p3TP-Lux' used in the: [2000: 1 ] years
+The term 'potentiated' used in the: [2000: 6 ] years
+The term 'virally' used in the: [2000: 1 ] years
+The term 'colx' used in the: [2000: 1 ] years
+The term 'Wild-type' used in the: [2000: 3 ] years
+The term 'oocytes' used in the: [2001: 13 , 2002: 1 , 2000: 53 ] years
+The term 'CPE' used in the: [2002: 5 ] years
+The term 'AAUAAA' used in the: [2002: 1 ] years
+The term 'polyadenylation' used in the: [2002: 4 , 2000: 7 ] years
+The term 'phosphorylation' used in the: [2000: 29 , 2002: 2 , 2001: 10 ] years
+The term 'Eg2-stimulated' used in the: [2002: 1 ] years
+The term 'Eg2-phosphorylated' used in the: [2002: 1 ] years
+The term 'VSV' used in the: [2002: 2 ] years
+The term 'MD' used in the: [2002: 4 , 2000: 1 ] years
+The term 'nucleoporin' used in the: [2002: 2 , 2000: 16 ] years
+The term 'Nup98-/-' used in the: [2002: 1 ] years
+The term 'Spo11' used in the: [2002: 6 ] years
+The term 'DNA' used in the: [2001: 20 , 2002: 1 , 2000: 215 ] years
+The term 'synapsis' used in the: [2002: 5 ] years
+The term 'homologs' used in the: [2000: 11 , 2002: 1 , 2001: 1 ] years
+The term 'pachytene' used in the: [2002: 1 , 2000: 3 ] years
+The term 'Rad51/Dmc1' used in the: [2002: 2 ] years
+The term 'leptotene' used in the: [2002: 1 ] years
+The term 'synapsed' used in the: [2002: 1 ] years
+The term 'Dmc1' used in the: [2002: 1 ] years
+The term 'Morc-/-' used in the: [2002: 1 ] years
+The term 'topo' used in the: [2001: 7 ] years
+The term 'IIbeta' used in the: [2001: 3 ] years
+The term 'catalytically' used in the: [2000: 2 , 2001: 1 ] years
+The term 'amphiphysin' used in the: [2001: 1 ] years
+The term 'one-third' used in the: [2001: 1 , 2000: 4 ] years
+The term 'inducible' used in the: [2000: 21 , 2001: 5 ] years
+The term 'adipocyte' used in the: [2001: 6 ] years
+The term '3T3-L1' used in the: [2001: 2 ] years
+The term 'proliferator-activated' used in the: [2001: 1 , 2000: 5 ] years
+The term '48-h' used in the: [2001: 1 ] years
+The term 'sterol' used in the: [2001: 1 , 2000: 4 ] years
+The term 'PPARgamma' used in the: [2001: 6 , 2000: 9 ] years
+The term 'proteasome' used in the: [2001: 1 , 2000: 22 ] years
+The term 'insulin-sensitive' used in the: [2001: 1 , 2000: 1 ] years
+The term 'exoribonucleases' used in the: [2000: 2 ] years
+The term 'Xrn2p/Rat1p' used in the: [2000: 4 ] years
+The term 'nucleolar' used in the: [2000: 32 ] years
+The term 'XRN-like' used in the: [2000: 3 ] years
+The term 'eukaryotes' used in the: [2000: 21 , 2001: 1 ] years
+The term 'XRN-family' used in the: [2000: 2 ] years
+The term 'AtXRNs' used in the: [2000: 3 ] years
+The term 'complementation' used in the: [2000: 3 ] years
+The term 'pre-mRNAs' used in the: [2001: 10 , 2000: 87 ] years
+The term 'UA-rich' used in the: [2000: 1 ] years
+The term 'RBPs' used in the: [2000: 3 ] years
+The term 'plumbaginifolia' used in the: [2000: 2 ] years
+The term 'RBP47' used in the: [2000: 6 ] years
+The term 'RBD-type' used in the: [2000: 1 ] years
+The term 'N-terminus' used in the: [2000: 5 ] years
+The term 'U1' used in the: [2000: 8 ] years
+The term 'RBD' used in the: [2000: 2 ] years
+The term 'fractionation' used in the: [2000: 10 ] years
+The term 'crosslinking' used in the: [2000: 1 ] years
+The term 'UBP1' used in the: [2000: 3 ] years
+The term 'three-RBD' used in the: [2000: 1 ] years
+The term 'et' used in the: [2000: 4 ] years
+The term 'EMBO' used in the: [2000: 1 ] years
+The term 'protoplasts' used in the: [2000: 4 ] years
+The term 'RAE1' used in the: [2000: 4 ] years
+The term 'RNP' used in the: [2000: 24 , 2001: 4 ] years
+The term 'BR' used in the: [2000: 7 ] years
+The term 'tentans' used in the: [2000: 2 ] years
+The term 'Ct-RAE1' used in the: [2000: 6 ] years
+The term 'hRAE1' used in the: [2000: 2 ] years
+The term 'nucleoplasm' used in the: [2000: 11 ] years
+The term 'tetrapeptide' used in the: [2001: 1 ] years
+The term 'GLFG' used in the: [2001: 7 , 2000: 3 ] years
+The term 'Nup100p' used in the: [2001: 1 ] years
+The term 'Kap95p' used in the: [2001: 5 ] years
+The term 'GFP-tagged' used in the: [2001: 1 ] years
+The term 'Nup116-GLFG' used in the: [2001: 4 ] years
+The term 'Mtr2-GFP' used in the: [2001: 1 ] years
+The term 'Gle1-GFP' used in the: [2001: 1 ] years
+The term 'lysates' used in the: [2001: 1 , 2000: 6 ] years
+The term 'bacterially' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Mex67p' used in the: [2001: 5 , 2000: 12 ] years
+The term 'Mtr2p' used in the: [2001: 1 , 2000: 2 ] years
+The term 'two-hybrid' used in the: [2000: 18 , 2001: 1 ] years
+The term 'Mex67p-GLFG' used in the: [2001: 1 ] years
+The term 'dehydrogenase' used in the: [2000: 9 ] years
+The term 'CoA' used in the: [2000: 8 ] years
+The term 'intronic/exonic' used in the: [2000: 1 ] years
+The term 'missense' used in the: [2000: 5 ] years
+The term 'enhancer' used in the: [2000: 16 ] years
+The term 'Drosophila' used in the: [2002: 1 , 2000: 33 , 2001: 5 ] years
+The term 'KetelD' used in the: [2000: 12 ] years
+The term 'lethals' used in the: [2000: 1 ] years
+The term '2-3' used in the: [2000: 4 ] years
+The term 'transgenes' used in the: [2000: 11 ] years
+The term 'lethality' used in the: [2001: 2 , 2000: 12 ] years
+The term '97-kD' used in the: [2000: 1 ] years
+The term 'NLS' used in the: [2000: 13 ] years
+The term 'polyclonal' used in the: [2000: 7 , 2001: 1 ] years
+The term 'oogenesis' used in the: [2000: 5 , 2001: 1 ] years
+The term 'PRP17/CDC40' used in the: [2000: 1 ] years
+The term 'prp17/cdc40' used in the: [2000: 1 ] years
+The term 'prp17/cdc40Delta' used in the: [2000: 1 ] years
+The term 'Slu7p' used in the: [2000: 1 ] years
+The term 'Prp22p' used in the: [2000: 9 ] years
+The term 'SYF1' used in the: [2000: 2 ] years
+The term 'SYF3' used in the: [2000: 1 ] years
+The term 'Syf3p' used in the: [2000: 1 ] years
+The term 'TPR' used in the: [2000: 2 ] years
+The term 'Isy1p' used in the: [2000: 1 ] years
+The term 'Ntc20p' used in the: [2000: 1 , 2001: 4 ] years
+The term 'repressor' used in the: [2000: 15 ] years
+The term 'cis-acting' used in the: [2001: 1 , 2000: 14 ] years
+The term 'cytoskeleton' used in the: [2000: 6 ] years
+The term 'three-hybrid' used in the: [2000: 3 ] years
+The term 'She3p' used in the: [2000: 3 ] years
+The term 'She3p-MS2' used in the: [2000: 1 ] years
+The term 'She3p-MS2-dependent' used in the: [2000: 1 ] years
+The term 'NTPase/helicase' used in the: [2000: 1 ] years
+The term 'helicase' used in the: [2001: 9 , 2000: 24 ] years
+The term 'T637A' used in the: [2000: 1 ] years
+The term 'ATP' used in the: [2000: 12 ] years
+The term '34-37' used in the: [2000: 1 ] years
+The term 'prp22-S635A' used in the: [2000: 1 ] years
+The term 'Val539' used in the: [2000: 1 ] years
+The term 'Ia' used in the: [2000: 1 ] years
+The term 'co-purify' used in the: [2000: 1 ] years
+The term 'CDC5L' used in the: [2000: 14 ] years
+The term 'pombe' used in the: [2000: 12 ] years
+The term 'multiprotein' used in the: [2000: 2 ] years
+The term 'immunodepleting' used in the: [2000: 1 ] years
+The term 'anti-CDC5L' used in the: [2000: 1 ] years
+The term 'Eucaryotic' used in the: [2001: 1 ] years
+The term 'hypoxic' used in the: [2001: 2 , 2000: 3 ] years
+The term 'anoxia' used in the: [2001: 3 , 2000: 1 ] years
+The term 'cytochrome-c' used in the: [2001: 4 ] years
+The term 'anoxic' used in the: [2001: 3 ] years
+The term 'VI' used in the: [2001: 2 , 2000: 2 ] years
+The term 'promitochondria' used in the: [2001: 1 ] years
+The term 'mit-' used in the: [2001: 1 ] years
+The term 'holocytochrome-c' used in the: [2001: 1 ] years
+The term 'p21WAF1induces' used in the: [2001: 1 ] years
+The term 'p53' used in the: [2001: 5 , 2000: 93 ] years
+The term 'p21WAF1at' used in the: [2001: 1 ] years
+The term 'WiDr' used in the: [2001: 1 ] years
+The term 'His273' used in the: [2001: 1 ] years
+The term 'p53-binding' used in the: [2001: 1 , 2000: 1 ] years
+The term 'cycloheximide' used in the: [2001: 1 , 2000: 6 ] years
+The term 'p21WAF1mRNA' used in the: [2001: 2 ] years
+The term 'His273expression' used in the: [2001: 1 ] years
+The term 'p21WAF1promoter' used in the: [2001: 1 ] years
+The term 'p21WAF1in' used in the: [2001: 1 ] years
+The term 'p21WAF1through' used in the: [2001: 1 ] years
+The term 'spermatogenesis' used in the: [2001: 3 , 2000: 8 ] years
+The term 'cell-germ' used in the: [2001: 1 ] years
+The term 'ubiquitination' used in the: [2001: 1 , 2000: 4 ] years
+The term 'Dna43' used in the: [2000: 1 ] years
+The term 'HsMcm10' used in the: [2000: 6 ] years
+The term 'Cdc23' used in the: [2000: 4 ] years
+The term 'NB1-RGB' used in the: [2000: 1 ] years
+The term 'Orc2' used in the: [2000: 3 ] years
+The term 'Mcm6' used in the: [2000: 1 ] years
+The term 'etiolated' used in the: [2000: 1 ] years
+The term 'nuclear-localized' used in the: [2000: 1 ] years
+The term 'single-copy' used in the: [2000: 3 ] years
+The term 'etr1-1' used in the: [2000: 1 ] years
+The term 'GUS' used in the: [2000: 3 ] years
+The term 'EIN3' used in the: [2000: 2 ] years
+The term 'Cet1' used in the: [2000: 8 ] years
+The term 'Ceg1' used in the: [2000: 8 ] years
+The term 'phosphorylated' used in the: [2000: 14 , 2001: 1 ] years
+The term 'triphosphatase' used in the: [2000: 1 ] years
+The term 'allosterically' used in the: [2000: 2 ] years
+The term 'Ceg1-Cet1' used in the: [2000: 1 ] years
+The term 'oatp' used in the: [2001: 12 ] years
+The term 'Na+-independent' used in the: [2001: 1 ] years
+The term 'taurocholate' used in the: [2001: 2 ] years
+The term 'microM' used in the: [2001: 1 , 2000: 12 ] years
+The term 'glycine-conjugated' used in the: [2001: 1 ] years
+The term 'Madin-Darby' used in the: [2001: 1 ] years
+The term 'carboxy' used in the: [2001: 1 , 2000: 3 ] years
+The term 'jejunal' used in the: [2001: 1 ] years
+The term 'syntenic' used in the: [2001: 1 , 2000: 3 ] years
+The term 'OATP-A' used in the: [2001: 2 ] years
+The term 'exchange-driven' used in the: [2001: 1 ] years
+The term 'hyperbilirubinemia' used in the: [2000: 1 ] years
+The term 'multidrug-resistance' used in the: [2000: 1 ] years
+The term 'ABCC2' used in the: [2000: 1 ] years
+The term 'hepatocytes' used in the: [2000: 21 ] years
+The term 'ATP-binding' used in the: [2000: 1 , 2001: 1 ] years
+The term 'Transfection' used in the: [2000: 7 , 2001: 1 ] years
+The term 'endoglycosidase' used in the: [2000: 1 ] years
+The term 'reticulum' used in the: [2000: 4 ] years
+The term 'HEK293' used in the: [2000: 4 ] years
+The term 'Arg1392' used in the: [2000: 1 ] years
+The term 'Golgi' used in the: [2000: 3 ] years
+The term 'holoenzyme' used in the: [2001: 1 ] years
+The term 'prostaglandins' used in the: [2001: 2 , 2000: 4 ] years
+The term 'Cyclooxygenase-2' used in the: [2001: 1 ] years
+The term 'G/H' used in the: [2001: 1 ] years
+The term 'loading-derived' used in the: [2001: 1 ] years
+The term 'osteoblasts' used in the: [2001: 2 , 2000: 1 ] years
+The term 'stress-induced' used in the: [2001: 5 , 2000: 1 ] years
+The term 'MC3T3-E1' used in the: [2001: 1 ] years
+The term 'plasmids' used in the: [2001: 2 , 2000: 13 ] years
+The term 'murine' used in the: [2001: 7 , 2000: 29 ] years
+The term '-172' used in the: [2001: 1 , 2000: 1 ] years
+The term '-79' used in the: [2001: 2 , 2000: 2 ] years
+The term 'C/EBP' used in the: [2001: 4 , 2000: 15 ] years
+The term 'cAMP-response' used in the: [2001: 2 ] years
+The term 'CREB' used in the: [2001: 4 , 2000: 13 ] years
+The term 'AP-1-binding' used in the: [2001: 1 ] years
+The term 'polyglutamine' used in the: [2001: 2 , 2000: 6 ] years
+The term 'Huntington' used in the: [2001: 1 , 2000: 2 ] years
+The term 'apoptotic' used in the: [2001: 2 , 2000: 14 ] years
+The term 'caspase-1' used in the: [2001: 3 , 2000: 1 ] years
+The term 'caspase-3' used in the: [2001: 2 , 2000: 1 ] years
+The term 'NF-kappaB' used in the: [2001: 11 , 2000: 86 ] years
+The term 'nitric' used in the: [2001: 2 , 2000: 8 ] years
+The term 'TKI' used in the: [2001: 6 ] years
+The term 'hyporesponsiveness' used in the: [2001: 1 ] years
+The term 'iNOS' used in the: [2001: 15 , 2000: 12 ] years
+The term 'AG556' used in the: [2001: 1 ] years
+The term 'iv' used in the: [2001: 5 , 2000: 2 ] years
+The term '60-120' used in the: [2001: 1 ] years
+The term 'mesenteric' used in the: [2001: 1 ] years
+The term 'IRF-1' used in the: [2001: 8 ] years
+The term 'cytokine-stimulated' used in the: [2001: 1 ] years
+The term 'IL-1beta' used in the: [2001: 1 , 2000: 31 ] years
+The term 'immunoreactivity' used in the: [2001: 1 , 2000: 11 ] years
+The term '24-' used in the: [2001: 1 ] years
+The term 'enterocyte' used in the: [2001: 5 ] years
+The term 'thymic' used in the: [2000: 3 ] years
+The term 'Notch2' used in the: [2000: 5 ] years
+The term 'N2ICD' used in the: [2000: 2 ] years
+The term 'ribosome' used in the: [2000: 11 , 2001: 1 ] years
+The term 'cap-independent' used in the: [2000: 1 ] years
+The term 'IRES' used in the: [2000: 9 ] years
+The term 'arginine-rich' used in the: [2001: 1 , 2000: 1 ] years
+The term 'NLS/RBD' used in the: [2001: 2 ] years
+The term 'RRE' used in the: [2001: 2 , 2000: 2 ] years
+The term 'helix-loop-helix' used in the: [2001: 2 , 2000: 2 ] years
+The term 'carboxy-terminal' used in the: [2000: 4 , 2001: 1 ] years
+The term 'DeltaLoop' used in the: [2001: 1 ] years
+The term 'costimulatory/adhesion' used in the: [2000: 1 ] years
+The term 'AML' used in the: [2000: 9 ] years
+The term 'CD86' used in the: [2000: 6 ] years
+The term 'HLA-ABC' used in the: [2000: 1 ] years
+The term 'ICAM-1' used in the: [2000: 16 ] years
+The term 'butyrate' used in the: [2000: 9 ] years
+The term 'FR901228' used in the: [2000: 1 ] years
+The term 'trapoxin' used in the: [2000: 1 ] years
+The term 'up-regulates' used in the: [2000: 3 ] years
+The term 'H3' used in the: [2000: 5 ] years
+The term 'allogeneic' used in the: [2000: 1 ] years
+The term 'HL60' used in the: [2000: 3 ] years
+The term '4-fold' used in the: [2000: 6 ] years
+The term 'immunotherapeutic' used in the: [2000: 1 ] years
+The term 'GH' used in the: [2000: 13 ] years
+The term 'ie' used in the: [2001: 3 , 2000: 8 ] years
+The term 'glutamate' used in the: [2000: 12 , 2001: 4 ] years
+The term '200-300' used in the: [2000: 1 ] years
+The term 'cytochrome' used in the: [2001: 6 , 2000: 8 ] years
+The term 'drug-metabolizing' used in the: [2000: 1 ] years
+The term '10-30' used in the: [2000: 1 ] years
+The term 'MSG-treated' used in the: [2000: 2 ] years
+The term 'polyadenylase' used in the: [2000: 1 ] years
+The term 'intron' used in the: [2001: 13 , 2000: 37 ] years
+The term 'mini-GH' used in the: [2000: 1 ] years
+The term 'gliomas' used in the: [2001: 2 ] years
+The term 'non-astrocytic' used in the: [2001: 2 ] years
+The term 'oligodendroglial' used in the: [2001: 5 ] years
+The term 'telomerase-positive' used in the: [2001: 4 , 2000: 1 ] years
+The term '8/8' used in the: [2001: 1 ] years
+The term '3/6' used in the: [2001: 1 ] years
+The term 'p16INK4/Rb' used in the: [2001: 1 ] years
+The term 'pRb' used in the: [2001: 1 , 2000: 2 ] years
+The term 'ankyrin-repeats' used in the: [2000: 2 ] years
+The term 'homology' used in the: [2000: 34 , 2001: 3 ] years
+The term 'LPS' used in the: [2001: 3 , 2000: 22 ] years
+The term 'IL-6' used in the: [2000: 36 , 2001: 3 ] years
+The term '3T3' used in the: [2000: 6 ] years
+The term 'centromeres' used in the: [2001: 1 , 2000: 3 ] years
+The term 'Kinetochores' used in the: [2000: 1 ] years
+The term 'immunoprecipitating' used in the: [2000: 2 ] years
+The term '3Hthymidine' used in the: [2000: 2 ] years
+The term 'mid-to-late' used in the: [2000: 1 ] years
+The term 'asynchronously' used in the: [2000: 1 ] years
+The term 'kinetochore' used in the: [2000: 6 ] years
+The term 'spectrin' used in the: [2000: 20 ] years
+The term 'phosphatase-like' used in the: [2000: 1 ] years
+The term '19q1313' used in the: [2000: 1 ] years
+The term 'betaIVSigma1-betaIVSigma4' used in the: [2000: 1 ] years
+The term 'actin-binding' used in the: [2000: 1 ] years
+The term 'SH3-binding' used in the: [2000: 1 ] years
+The term 'betaIVSigma2' used in the: [2000: 1 ] years
+The term 'NH2-' used in the: [2000: 2 ] years
+The term 'betaIVSigma4' used in the: [2000: 1 ] years
+The term 'kD' used in the: [2001: 2 , 2002: 1 , 2000: 44 ] years
+The term 'colocalizes' used in the: [2000: 5 ] years
+The term '480/270-kD' used in the: [2000: 2 ] years
+The term 'hippocampus' used in the: [2000: 3 , 2001: 1 ] years
+The term 'Na+' used in the: [2000: 2 ] years
+The term 'monocyte-derived' used in the: [2000: 2 ] years
+The term 'proinflammatory' used in the: [2000: 13 ] years
+The term 'platelet-activating' used in the: [2000: 1 ] years
+The term 'atherosclerotic' used in the: [2000: 4 , 2001: 1 ] years
+The term 'downregulated' used in the: [2000: 8 ] years
+The term 'monocyte/macrophages' used in the: [2000: 2 ] years
+The term 'immunohistochemical' used in the: [2000: 9 ] years
+The term 'intima' used in the: [2000: 1 ] years
+The term 'biotin-16-UTP' used in the: [2001: 1 ] years
+The term 'hexamer' used in the: [2001: 1 , 2000: 1 ] years
+The term 'transection' used in the: [2001: 1 , 2000: 1 ] years
+The term '1-2' used in the: [2000: 3 ] years
+The term 'Nna1' used in the: [2000: 2 ] years
+The term 'ATP/GTP' used in the: [2000: 1 ] years
+The term 'GFP-Nna1' used in the: [2000: 1 ] years
+The term 'osteoclastic' used in the: [2001: 2 ] years
+The term 'Gas6' used in the: [2001: 5 ] years
+The term 'resorbed' used in the: [2001: 2 ] years
+The term 'mitogen-activated' used in the: [2001: 1 , 2000: 11 ] years
+The term 'p38' used in the: [2001: 4 , 2000: 23 ] years
+The term 'immunoprecipitated' used in the: [2001: 1 , 2000: 5 ] years
+The term 'ovariectomy' used in the: [2001: 1 , 2000: 1 ] years
+The term 'TfR' used in the: [2001: 10 ] years
+The term 'protein-2' used in the: [2001: 1 , 2000: 2 ] years
+The term 'HPCs' used in the: [2001: 4 ] years
+The term 'differentiation/maturation' used in the: [2001: 1 ] years
+The term 'granulocytic' used in the: [2001: 1 ] years
+The term 'megakaryocytic' used in the: [2001: 3 , 2000: 1 ] years
+The term 'downmodulated' used in the: [2001: 2 ] years
+The term 'IRP' used in the: [2001: 2 , 2000: 3 ] years
+The term 'erythropoietin' used in the: [2001: 1 , 2000: 4 ] years
+The term 'IRP-1/IRP-2' used in the: [2001: 1 ] years
+The term 'macrophages' used in the: [2000: 34 , 2001: 1 ] years
+The term 'Epo-dependent' used in the: [2001: 1 ] years
+The term 'Isw2' used in the: [2000: 1 ] years
+The term 'lsw2' used in the: [2000: 2 ] years
+The term 'Nuclease' used in the: [2000: 2 ] years
+The term 'kinases' used in the: [2001: 16 , 2000: 137 ] years
+The term 'p21/waf1' used in the: [2000: 8 ] years
+The term 'HAM/TSP' used in the: [2000: 1 ] years
+The term 'cyclin/cdk' used in the: [2000: 1 ] years
+The term 'A/cdk2' used in the: [2000: 2 ] years
+The term 'H1' used in the: [2000: 22 ] years
+The term 'Rb' used in the: [2000: 5 ] years
+The term 'HDAC1' used in the: [2000: 6 ] years
+The term 'transactivate' used in the: [2000: 1 ] years
+The term '-49' used in the: [2000: 2 ] years
+The term 'E2A' used in the: [2000: 27 ] years
+The term 'E12' used in the: [2000: 6 ] years
+The term 'acetylated' used in the: [2000: 5 ] years
+The term 'complexing' used in the: [2000: 3 ] years
+The term 'JC' used in the: [2000: 5 ] years
+The term 'ganglion-like' used in the: [2000: 2 ] years
+The term 'leukoencephalopathy' used in the: [2000: 1 ] years
+The term '21-year-old' used in the: [2000: 1 ] years
+The term 'brainstem' used in the: [2000: 1 ] years
+The term 'inclusion-bearing' used in the: [2000: 1 ] years
+The term 'astrocytes' used in the: [2000: 7 ] years
+The term 'band-like' used in the: [2000: 1 ] years
+The term 'immunoreactive' used in the: [2000: 5 ] years
+The term 'capsid' used in the: [2000: 2 ] years
+The term 'cell-like' used in the: [2000: 1 ] years
+The term 'malformative' used in the: [2000: 1 ] years
+The term 'subcompartments' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Polydeoxythymidine' used in the: [2001: 1 ] years
+The term 'polyadenylated' used in the: [2002: 1 , 2001: 1 , 2000: 4 ] years
+The term 'acute-phase' used in the: [2000: 1 ] years
+The term 'cytokine-signaling' used in the: [2000: 1 ] years
+The term 'GHRE' used in the: [2000: 1 ] years
+The term 'protease' used in the: [2000: 15 ] years
+The term 'time-dependent' used in the: [2000: 10 ] years
+The term 'high-affinity' used in the: [2000: 1 ] years
+The term 'SIE' used in the: [2000: 1 ] years
+The term 'monocyte-conditioned' used in the: [2000: 1 ] years
+The term 'Stat5-dependent' used in the: [2000: 1 ] years
+The term 'factor-alpha' used in the: [2000: 12 ] years
+The term 'GH-induced' used in the: [2000: 1 ] years
+The term 'effectors' used in the: [2000: 5 , 2001: 1 ] years
+The term 'TLRs' used in the: [2001: 1 ] years
+The term 'kappaB' used in the: [2001: 1 , 2000: 3 ] years
+The term 'fibroblasts' used in the: [2001: 5 , 2000: 38 ] years
+The term 'TLR4-overexpressing' used in the: [2001: 1 ] years
+The term 'peroxide-induced' used in the: [2001: 2 ] years
+The term 'Oct-1' used in the: [2001: 1 , 2000: 1 ] years
+The term 'ischemic' used in the: [2001: 1 , 2000: 3 ] years
+The term 'ROS' used in the: [2001: 1 ] years
+The term 'SR-protein' used in the: [2001: 2 , 2000: 1 ] years
+The term '2-cell' used in the: [2001: 2 ] years
+The term 'karyoplasm' used in the: [2001: 2 ] years
+The term 'NXF1' used in the: [2000: 1 ] years
+The term 'RNP-type' used in the: [2000: 1 ] years
+The term 'NTF2-like' used in the: [2000: 1 ] years
+The term 'p15' used in the: [2000: 5 ] years
+The term 'ubiquitin-associated' used in the: [2000: 1 ] years
+The term 'NXF3' used in the: [2000: 2 ] years
+The term 'Caenorhabditis' used in the: [2001: 3 , 2000: 10 ] years
+The term 'TAP-p15' used in the: [2000: 1 ] years
+The term 'spmex67' used in the: [2000: 3 ] years
+The term 'rae1-167' used in the: [2000: 4 ] years
+The term 'spMex67p' used in the: [2000: 6 ] years
+The term 'scMex67p' used in the: [2000: 1 ] years
+The term 'Deltamex67' used in the: [2000: 2 ] years
+The term 'complex-targeting' used in the: [2000: 1 ] years
+The term 'GFP' used in the: [2000: 9 ] years
+The term '149-505' used in the: [2000: 1 ] years
+The term 'Borna' used in the: [2001: 1 ] years
+The term 'noncytopathic' used in the: [2001: 1 ] years
+The term 'neurotrophin' used in the: [2001: 1 ] years
+The term 'crest-derived' used in the: [2001: 1 ] years
+The term 'growth-associated' used in the: [2001: 1 ] years
+The term 'chromaffin-specific' used in the: [2001: 1 ] years
+The term 'ERKs' used in the: [2001: 2 , 2000: 6 ] years
+The term 'NBs' used in the: [2001: 11 , 2000: 10 ] years
+The term 'molitor' used in the: [2001: 3 ] years
+The term 'cytochemistry' used in the: [2001: 1 ] years
+The term 'previtellogenic' used in the: [2001: 2 ] years
+The term 'ring-shaped' used in the: [2001: 2 , 2000: 1 ] years
+The term 'ribonucleoproteins' used in the: [2001: 4 , 2000: 16 ] years
+The term 'non-snRNP' used in the: [2001: 2 ] years
+The term 'B-snurposomes' used in the: [2001: 1 ] years
+The term 'snurposomes' used in the: [2001: 1 , 2000: 7 ] years
+The term 'spliceosomal' used in the: [2001: 5 , 2000: 9 ] years
+The term '7-trimethylguanosine' used in the: [2000: 1 ] years
+The term 'Sm' used in the: [2000: 17 ] years
+The term 'C/D' used in the: [2000: 7 ] years
+The term 'peroxisome' used in the: [2001: 1 , 2000: 7 ] years
+The term 'beta-oxidation' used in the: [2000: 4 ] years
+The term 'proliferators' used in the: [2000: 3 ] years
+The term 'pleiotropic' used in the: [2000: 3 ] years
+The term 'alpha-activation' used in the: [2000: 1 ] years
+The term 'acid-oxidizing' used in the: [2000: 1 ] years
+The term 'intracisternal-A' used in the: [2000: 1 ] years
+The term 'IAP-LE' used in the: [2000: 4 ] years
+The term 'EST' used in the: [2000: 7 , 2001: 1 ] years
+The term 'in-frame' used in the: [2000: 3 ] years
+The term 'Kb' used in the: [2000: 2 ] years
+The term 'gonadotropin-treated' used in the: [2000: 1 ] years
+The term 'lutea' used in the: [2000: 7 ] years
+The term 'retroviral' used in the: [2000: 4 ] years
+The term 'duplex-unwinding' used in the: [2001: 1 ] years
+The term 'sativum' used in the: [2001: 1 , 2000: 1 ] years
+The term 'DEAD-box' used in the: [2001: 1 , 2000: 2 ] years
+The term 'SRT' used in the: [2001: 1 , 2000: 21 ] years
+The term 'overexpressed' used in the: [2000: 20 , 2001: 1 ] years
+The term 'ATPase' used in the: [2001: 1 , 2000: 5 ] years
+The term 'cytosol' used in the: [2001: 5 , 2000: 9 ] years
+The term 'pathogenesis' used in the: [2001: 3 , 2000: 12 ] years
+The term 'MMP-9' used in the: [2000: 9 , 2001: 11 ] years
+The term 'MC' used in the: [2000: 15 ] years
+The term 'superoxide' used in the: [2000: 7 ] years
+The term 'oxidase' used in the: [2001: 9 , 2000: 11 ] years
+The term 'cycler' used in the: [2000: 1 ] years
+The term 'IL-1beta-primed' used in the: [2000: 1 ] years
+The term 'Cytokine-induced' used in the: [2000: 1 ] years
+The term '5-flanking' used in the: [2001: 1 , 2000: 4 ] years
+The term 'c-Jun' used in the: [2001: 1 , 2000: 16 ] years
+The term 'signal-regulated' used in the: [2000: 2 , 2001: 1 ] years
+The term 'HXXO-mediated' used in the: [2000: 1 ] years
+The term 'p38-MAPK' used in the: [2000: 1 ] years
+The term 'golli' used in the: [2000: 11 ] years
+The term 'MTS5+' used in the: [2000: 1 ] years
+The term 'medullary' used in the: [2000: 2 ] years
+The term 'dendritic' used in the: [2000: 1 ] years
+The term 'Thymocytes' used in the: [2000: 1 ] years
+The term 'thymocyte' used in the: [2000: 13 ] years
+The term 'double-negative' used in the: [2000: 3 ] years
+The term 'CD8-' used in the: [2000: 1 ] years
+The term 'single-positive' used in the: [2000: 2 ] years
+The term 'HBx' used in the: [2000: 7 ] years
+The term 'Chang' used in the: [2000: 1 ] years
+The term 'adriamycin' used in the: [2000: 2 ] years
+The term 'p21WAF1' used in the: [2000: 6 ] years
+The term 'hypomethylation' used in the: [2000: 2 ] years
+The term 'DNMT3B' used in the: [2000: 2 ] years
+The term 'hypomethylated' used in the: [2000: 2 ] years
+The term 'G6PD' used in the: [2000: 1 ] years
+The term 'untransformed' used in the: [2000: 1 ] years
+The term 'X-like' used in the: [2000: 1 ] years
+The term 'Suvar3-9' used in the: [2000: 3 ] years
+The term 'eIF2' used in the: [2000: 1 ] years
+The term 'Suvar3-9/eIF-2gamma' used in the: [2000: 2 ] years
+The term 'arietis' used in the: [2000: 1 ] years
+The term 'decemlineata' used in the: [2000: 1 ] years
+The term 'libatrix' used in the: [2000: 1 ] years
+The term 'Coleoptera' used in the: [2000: 1 ] years
+The term 'eIF-2gamma' used in the: [2000: 3 ] years
+The term 'coleopteran' used in the: [2000: 1 ] years
+The term 'nonconserved' used in the: [2000: 1 ] years
+The term 'Suvar3-9-specific' used in the: [2000: 1 ] years
+The term 'Lithobius' used in the: [2000: 1 ] years
+The term 'phylogenetic' used in the: [2000: 4 ] years
+The term 'CBs' used in the: [2000: 28 ] years
+The term 'fibrillarin' used in the: [2000: 11 ] years
+The term 'alpha-helix' used in the: [2000: 1 ] years
+The term 'confocal' used in the: [2000: 7 ] years
+The term 'photobleaching' used in the: [2000: 1 ] years
+The term 's-1' used in the: [2000: 1 ] years
+The term 'LIM' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Z-discs' used in the: [2000: 1 ] years
+The term 'myofibrils' used in the: [2001: 1 , 2000: 1 ] years
+The term 'beta-catalytic' used in the: [2001: 1 ] years
+The term 'translation-enhancing' used in the: [2001: 1 ] years
+The term 'Cuezva' used in the: [2001: 2 ] years
+The term 'Biol' used in the: [2001: 1 , 2000: 2 ] years
+The term 'Biochem' used in the: [2001: 1 , 2000: 1 ] years
+The term 'chimaeric' used in the: [2001: 1 , 2000: 1 ] years
+The term 'beta-subunits' used in the: [2001: 1 ] years
+The term 'cell-specific' used in the: [2000: 10 , 2001: 1 ] years
+The term 'virus-transformed' used in the: [2000: 1 ] years
+The term 'yr' used in the: [2000: 1 ] years
+The term 'satellite-rich' used in the: [2000: 1 ] years
+The term 'methylated' used in the: [2000: 9 ] years
+The term 'heterochromatic' used in the: [2000: 4 ] years
+The term 'metaphase' used in the: [2000: 7 ] years
+The term '3-rich' used in the: [2000: 1 ] years
+The term 'DNMT3A' used in the: [2000: 1 ] years
+The term 'sequence-specific' used in the: [2000: 2 ] years
+The term 'collagenase' used in the: [2001: 2 , 2000: 5 ] years
+The term 'HT-1080' used in the: [2001: 1 ] years
+The term 'invasiveness' used in the: [2001: 1 ] years
+The term 'JNKs' used in the: [2001: 1 , 2000: 16 ] years
+The term '12-myristate' used in the: [2001: 1 , 2000: 2 ] years
+The term 'Ets' used in the: [2001: 1 ] years
+The term 'IkappaBalpha' used in the: [2001: 1 , 2000: 8 ] years
+The term 'long-germ' used in the: [2000: 1 ] years
+The term 'Toll-receptor' used in the: [2000: 2 ] years
+The term 'blastoderm' used in the: [2000: 1 ] years
+The term 'gastrulation' used in the: [2000: 5 ] years
+The term 'short-germ' used in the: [2000: 1 ] years
+The term 'castaneum' used in the: [2000: 1 ] years
+The term 'serosa' used in the: [2000: 1 ] years
+The term 'Androgens' used in the: [2000: 2 ] years
+The term 'PSA' used in the: [2000: 12 ] years
+The term 'androgens' used in the: [2000: 2 ] years
+The term 'antiandrogen' used in the: [2000: 1 ] years
+The term 'electromobility' used in the: [2000: 2 ] years
+The term 'butyrate-treated' used in the: [2000: 1 ] years
+The term 'Lipoxygenase-derived' used in the: [2001: 1 ] years
+The term 'CYP74' used in the: [2001: 4 ] years
+The term 'oxylipins' used in the: [2001: 2 ] years
+The term 'esculentum' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Escherichia' used in the: [2001: 1 , 2000: 5 ] years
+The term '9-hydroperoxy' used in the: [2001: 4 ] years
+The term 'linolenic' used in the: [2001: 2 ] years
+The term 'divinyl' used in the: [2001: 6 ] years
+The term 'colnelenic' used in the: [2001: 1 ] years
+The term 'Genomic' used in the: [2001: 1 , 2000: 2 ] years
+The term 'LEUNIG' used in the: [2000: 7 ] years
+The term 'map-based' used in the: [2000: 1 ] years
+The term 'corepressors' used in the: [2000: 2 ] years
+The term 'Groucho' used in the: [2000: 1 ] years
+The term 'posttranslational' used in the: [2000: 2 ] years
+The term 'X-ray' used in the: [2000: 2 ] years
+The term 'RAD51' used in the: [2000: 1 ] years
+The term 'LIM15' used in the: [2000: 1 ] years
+The term 'recombination' used in the: [2002: 2 , 2000: 8 ] years
+The term '20-30' used in the: [2000: 2 ] years
+The term 'ciliated' used in the: [2000: 4 ] years
+The term 'retrotransposon' used in the: [2000: 2 ] years
+The term 'frameshifts' used in the: [2000: 1 ] years
+The term 'T/C' used in the: [2000: 1 ] years
+The term 'T/CAG' used in the: [2000: 1 ] years
+The term 'Gln' used in the: [2000: 1 ] years
+The term 'polynucleotide' used in the: [2000: 3 ] years
+The term 'micronuclear' used in the: [2000: 1 ] years
+The term 'Iodinated' used in the: [2001: 1 ] years
+The term 'oestrogen' used in the: [2001: 1 ] years
+The term 'amino-terminal' used in the: [2000: 9 , 2001: 3 ] years
+The term 'proteolysis' used in the: [2001: 2 , 2000: 3 ] years
+The term 'oligomeric' used in the: [2001: 1 ] years
+The term 'alpha-ketoacid' used in the: [2000: 1 ] years
+The term 'decarboxylase' used in the: [2000: 3 ] years
+The term 'lipoamide' used in the: [2000: 1 ] years
+The term 'Phylogenetic' used in the: [2000: 2 ] years
+The term 'Dim1p/hDim1/Dib1p/DML-1' used in the: [2000: 1 ] years
+The term 'anaphase' used in the: [2000: 6 ] years
+The term 'Dib1p' used in the: [2000: 1 ] years
+The term 'tri-snRNP' used in the: [2000: 1 ] years
+The term 'co-expressed' used in the: [2000: 3 ] years
+The term 'alanine' used in the: [2000: 2 ] years
+The term 'DML-1' used in the: [2000: 1 ] years
+The term 'C4SR' used in the: [2000: 6 ] years
+The term 'C4' used in the: [2000: 1 ] years
+The term 'serine-arginine' used in the: [2000: 1 ] years
+The term 'erythroblasts' used in the: [2000: 1 ] years
+The term 'transcription/packaging' used in the: [2000: 1 ] years
+The term 'descriptor' used in the: [2000: 1 ] years
+The term 'DW' used in the: [2000: 1 ] years
+The term 'aspartic' used in the: [2000: 1 ] years
+The term 'dipeptide' used in the: [2000: 1 ] years
+The term 'GTP-binding' used in the: [2000: 2 ] years
+The term 'GP-1' used in the: [2000: 1 ] years
+The term 'Gtpbp2' used in the: [2000: 3 ] years
+The term 'AGP-1' used in the: [2000: 1 ] years
+The term '9kb' used in the: [2000: 1 ] years
+The term 'round-spermatids' used in the: [2000: 1 ] years
+The term '17qC-D' used in the: [2000: 1 ] years
+The term 'leptospirosis' used in the: [2000: 1 ] years
+The term 'shermani' used in the: [2000: 5 ] years
+The term 'Henle' used in the: [2000: 1 ] years
+The term 'electrophoresis' used in the: [2000: 4 , 2001: 1 ] years
+The term 'microg/ml' used in the: [2000: 9 ] years
+The term 'chemoattractant' used in the: [2000: 4 ] years
+The term '24-fold' used in the: [2000: 1 ] years
+The term 'Supernatant' used in the: [2000: 1 ] years
+The term '71-' used in the: [2000: 1 ] years
+The term 'bratislava' used in the: [2000: 1 ] years
+The term 'nonpathogenic' used in the: [2000: 1 ] years
+The term 'serovar' used in the: [2000: 1 ] years
+The term 'B-associated' used in the: [2000: 2 ] years
+The term 'alveolar' used in the: [2000: 15 , 2001: 2 ] years
+The term 'Survanta' used in the: [2000: 6 ] years
+The term 'formazan-based' used in the: [2000: 1 ] years
+The term 'ELISA' used in the: [2001: 2 , 2000: 6 ] years
+The term '2-fold' used in the: [2000: 1 ] years
+The term 'fibrogenesis' used in the: [2001: 1 , 2000: 1 ] years
+The term 'c-Fos' used in the: [2000: 3 ] years
+The term 'AP-1-CAT' used in the: [2000: 1 ] years
+The term 'atheromatus' used in the: [2001: 1 ] years
+The term 'agonist' used in the: [2001: 2 , 2000: 10 ] years
+The term 'ligand' used in the: [2001: 2 , 2000: 8 ] years
+The term 'Inducible' used in the: [2001: 2 , 2000: 2 ] years
+The term 'autocrine/paracrine' used in the: [2001: 1 , 2000: 1 ] years
+The term 'C-zeta' used in the: [2001: 1 ] years
+The term 'proapoptotic' used in the: [2001: 1 , 2000: 1 ] years
+The term 'resiniferatoxin' used in the: [2001: 1 ] years
+The term 'receptor-1' used in the: [2001: 3 ] years
+The term 'capsaicin' used in the: [2001: 3 ] years
+The term 'pH' used in the: [2001: 1 , 2000: 8 ] years
+The term '17p13' used in the: [2001: 1 ] years
+The term 'Progesterone-induced' used in the: [2000: 1 ] years
+The term 'PR' used in the: [2000: 16 ] years
+The term 'progesterone-regulated' used in the: [2000: 1 ] years
+The term 'progesterone-induced' used in the: [2000: 6 ] years
+The term 'Elk-1' used in the: [2001: 9 , 2000: 3 ] years
+The term 'serum-responsive' used in the: [2001: 1 ] years
+The term 'NGF-differentiated' used in the: [2001: 1 ] years
+The term 'DNA-binding' used in the: [2001: 1 , 2000: 11 ] years
+The term 'sElk' used in the: [2001: 1 ] years
+The term 'NGF-driven' used in the: [2001: 1 ] years
+The term 'nuclear/cytoplasm' used in the: [2001: 1 ] years
+The term 'nAChR' used in the: [2001: 5 , 2000: 4 ] years
+The term 'melanogaster' used in the: [2000: 8 , 2001: 1 ] years
+The term 'radioligand' used in the: [2001: 1 ] years
+The term 'co-assembly' used in the: [2001: 1 ] years
+The term 'cysteine-loop' used in the: [2001: 1 ] years
+The term 'BDGP' used in the: [2001: 2 ] years
+The term 'hybridisation' used in the: [2001: 3 , 2000: 3 ] years
+The term '80B' used in the: [2001: 1 ] years
+The term 'germline' used in the: [2000: 5 ] years
+The term 'ventralized' used in the: [2000: 1 ] years
+The term 'ventralizing' used in the: [2000: 1 ] years
+The term 'grk' used in the: [2000: 1 ] years
+The term 'HIV-1' used in the: [2000: 12 ] years
+The term 'Rev/Rev-responsive' used in the: [2000: 2 ] years
+The term 'codon-optimized' used in the: [2000: 2 ] years
+The term 'CRM1-independent' used in the: [2000: 1 ] years
+The term 'Na/K-ATPase' used in the: [2000: 3 ] years
+The term 'T3to' used in the: [2000: 1 ] years
+The term '75-' used in the: [2000: 1 ] years
+The term '1-mRNAs' used in the: [2000: 1 ] years
+The term 'transcription-polymerase' used in the: [2001: 1 , 2000: 7 ] years
+The term 'electrophiles' used in the: [2000: 1 ] years
+The term 'oxidative' used in the: [2001: 4 , 2000: 12 ] years
+The term 'H4IIE' used in the: [2000: 2 ] years
+The term 'h-1' used in the: [2000: 1 ] years
+The term 'pro-oxidant' used in the: [2000: 1 ] years
+The term 'Nrf-1/2' used in the: [2000: 1 ] years
+The term 'SAAD' used in the: [2000: 4 ] years
+The term 'LY294002' used in the: [2000: 2 ] years
+The term '3-kinase' used in the: [2000: 3 ] years
+The term 'SB203580' used in the: [2000: 4 , 2001: 2 ] years
+The term 'heat-shock' used in the: [2000: 1 ] years
+The term 'oligo-antisense' used in the: [2000: 1 ] years
+The term 'hsp70' used in the: [2000: 6 ] years
+The term 'oligodeoxynucleotides' used in the: [2000: 4 ] years
+The term 'non-sequence' used in the: [2000: 1 ] years
+The term 'adenomatous' used in the: [2000: 1 ] years
+The term 'coli' used in the: [2001: 1 , 2000: 9 ] years
+The term 'NES' used in the: [2001: 4 , 2000: 19 ] years
+The term '320-kDa' used in the: [2000: 1 ] years
+The term 'leptomycin' used in the: [2000: 5 ] years
+The term 'Immunohistochemical' used in the: [2000: 8 ] years
+The term 'K-specific' used in the: [2000: 1 ] years
+The term 'C-reactive' used in the: [2000: 1 ] years
+The term '3B' used in the: [2000: 3 ] years
+The term 'IL-6-induced' used in the: [2000: 1 ] years
+The term 'p50' used in the: [2000: 12 ] years
+The term 'cytokines' used in the: [2001: 4 , 2000: 54 ] years
+The term 'p50-binding' used in the: [2000: 1 ] years
+The term 'P50-' used in the: [2000: 1 ] years
+The term 'dimers' used in the: [2000: 2 ] years
+The term 'p50-containing' used in the: [2000: 1 ] years
+The term 'Telomerase' used in the: [2001: 2 , 2000: 2 ] years
+The term 'CD8+' used in the: [2000: 1 ] years
+The term 'functionality' used in the: [2000: 1 ] years
+The term 'melatonin' used in the: [2001: 13 ] years
+The term 'lymphocytic' used in the: [2001: 2 ] years
+The term 'U937' used in the: [2001: 6 , 2000: 3 ] years
+The term 'RZRalpha' used in the: [2001: 1 ] years
+The term 'RORalpha2' used in the: [2001: 2 ] years
+The term 'mononuclear' used in the: [2001: 1 , 2000: 7 ] years
+The term 'phytohemagglutinin' used in the: [2001: 1 ] years
+The term 'myristate' used in the: [2001: 1 ] years
+The term 'mtl' used in the: [2001: 3 ] years
+The term 'RZR/RORalpha' used in the: [2001: 1 ] years
+The term 'RORgamma1' used in the: [2001: 1 ] years
+The term 'karyopherins' used in the: [2001: 2 , 2000: 3 ] years
+The term 'GTPase' used in the: [2000: 3 ] years
+The term 'UbcM2' used in the: [2000: 5 ] years
+The term 'ubiquitin-conjugating' used in the: [2000: 2 ] years
+The term 'agglutinin' used in the: [2000: 2 ] years
+The term 'Directionally' used in the: [2000: 1 ] years
+The term 'biotin-based' used in the: [2000: 1 ] years
+The term 'differentially' used in the: [2000: 11 ] years
+The term 'L8' used in the: [2000: 1 ] years
+The term 'TUNEL' used in the: [2000: 4 ] years
+The term 'internucleosomal' used in the: [2000: 8 ] years
+The term 'Caspase' used in the: [2000: 1 ] years
+The term 'bcl-2' used in the: [2000: 12 ] years
+The term 'anti-IgM' used in the: [2000: 1 ] years
+The term 'PMA' used in the: [2001: 3 , 2000: 10 ] years
+The term 'Cajal' used in the: [2000: 4 , 2001: 4 ] years
+The term 'preassembly' used in the: [2001: 2 ] years
+The term 'Opitz' used in the: [2000: 1 ] years
+The term 'midline' used in the: [2000: 1 ] years
+The term 'RBCC' used in the: [2000: 1 ] years
+The term 'coiled-coil' used in the: [2000: 1 ] years
+The term 'L626P' used in the: [2000: 2 ] years
+The term 'pathognomonic' used in the: [2000: 1 ] years
+The term 'cell-derived' used in the: [2000: 1 ] years
+The term 'fluorescence-activated' used in the: [2000: 1 ] years
+The term 'unspliced' used in the: [2001: 1 , 2000: 4 ] years
+The term '5--3' used in the: [2000: 1 ] years
+The term 'Rat1p' used in the: [2000: 1 ] years
+The term '50-fold' used in the: [2000: 2 ] years
+The term 'Y14-containing' used in the: [2000: 1 ] years
+The term 'postsplicing' used in the: [2000: 1 ] years
+The term 'mitogenic' used in the: [2000: 4 ] years
+The term 'proto-oncogenes' used in the: [2000: 3 ] years
+The term 'ras' used in the: [2000: 1 ] years
+The term 'tumorigenesis' used in the: [2000: 5 ] years
+The term 'ras-transformed' used in the: [2000: 2 ] years
+The term 'transfectants' used in the: [2001: 1 , 2000: 4 ] years
+The term 'LUCA15' used in the: [2000: 5 ] years
+The term 'homopolymers' used in the: [2000: 1 ] years
+The term 'HT1080' used in the: [2000: 1 ] years
+The term 'Cdk1' used in the: [2000: 6 ] years
+The term 'Wee1B' used in the: [2000: 9 ] years
+The term 'wee1-50Deltamik1' used in the: [2000: 1 ] years
+The term 'G2-M' used in the: [2000: 4 ] years
+The term 'tyrosine-15' used in the: [2000: 1 ] years
+The term 'Phenylarsine' used in the: [2000: 1 ] years
+The term 'vicinal' used in the: [2000: 2 ] years
+The term '23-dimercaptopropanol' used in the: [2000: 1 ] years
+The term 'dithiothreitol' used in the: [2000: 2 ] years
+The term '2-mercaptoethanol' used in the: [2000: 2 ] years
+The term 'mucosal' used in the: [2000: 3 ] years
+The term 'HSF1' used in the: [2000: 17 ] years
+The term 'mM' used in the: [2000: 5 ] years
+The term 'Thioredoxin' used in the: [2000: 1 ] years
+The term 'PAO-treated' used in the: [2000: 1 ] years
+The term 'vicinal-containing' used in the: [2000: 1 ] years
+The term 'kilobase' used in the: [2001: 1 , 2000: 3 ] years
+The term 'cytosolic-like' used in the: [2001: 2 ] years
+The term 'mtDNA' used in the: [2001: 1 , 2000: 9 ] years
+The term 'CTD' used in the: [2000: 7 ] years
+The term 'snRNPs' used in the: [2000: 34 , 2001: 8 ] years
+The term 'Ski2p' used in the: [2000: 1 ] years
+The term 'Ski8p' used in the: [2000: 1 ] years
+The term 'SKI7' used in the: [2000: 2 ] years
+The term 'SKI3' used in the: [2000: 1 ] years
+The term 'RNA-processing' used in the: [2000: 1 ] years
+The term 'CSL4' used in the: [2000: 2 ] years
+The term 'Csl4p' used in the: [2000: 2 ] years
+The term 'csl4-1' used in the: [2000: 2 ] years
+The term 'nucleus-encoded' used in the: [2001: 1 , 2000: 2 ] years
+The term 'cross-linking' used in the: [2000: 10 ] years
+The term 'site-directed' used in the: [2000: 5 , 2001: 1 ] years
+The term 'polyU' used in the: [2000: 1 ] years
+The term 'Prostaglandin' used in the: [2000: 1 ] years
+The term 'PGA2' used in the: [2000: 5 ] years
+The term 'non-small-cell' used in the: [2000: 1 ] years
+The term 'down-regulates' used in the: [2000: 4 ] years
+The term 'mobility-shift' used in the: [2000: 2 , 2001: 1 ] years
+The term 'PGA2-treated' used in the: [2000: 2 ] years
+The term '390-base' used in the: [2000: 2 ] years
+The term 'K12' used in the: [2000: 2 ] years
+The term 'AUF1' used in the: [2000: 1 ] years
+The term 'supershifting' used in the: [2000: 1 ] years
+The term '3UTR' used in the: [2000: 3 ] years
+The term 'CNS' used in the: [2001: 1 , 2000: 3 ] years
+The term 'PC12' used in the: [2001: 7 , 2000: 3 ] years
+The term 'translocates' used in the: [2000: 4 ] years
+The term 'MKK4' used in the: [2000: 1 ] years
+The term 'MKK7' used in the: [2000: 1 ] years
+The term 'JNK/MKK7' used in the: [2000: 1 ] years
+The term 'JNK-c-Jun' used in the: [2000: 1 ] years
+The term 'Nramp2' used in the: [2000: 1 ] years
+The term '3-noncoding' used in the: [2000: 1 ] years
+The term 'transcription-PCR' used in the: [2000: 2 ] years
+The term '+IRE' used in the: [2000: 1 ] years
+The term 'immunocytochemical' used in the: [2000: 6 ] years
+The term 'HEP2G' used in the: [2000: 1 ] years
+The term 'Schwann' used in the: [2000: 4 ] years
+The term 'FOS' used in the: [2000: 9 ] years
+The term 'tritiated' used in the: [2000: 1 ] years
+The term 'semi-quantitative' used in the: [2000: 2 ] years
+The term 'Gy/h' used in the: [2000: 4 ] years
+The term 'whole-cell' used in the: [2000: 1 ] years
+The term '43-Gy/h' used in the: [2000: 1 ] years
+The term 'deacetylation' used in the: [2000: 2 ] years
+The term 'TSA' used in the: [2000: 7 ] years
+The term 'lytic' used in the: [2000: 7 ] years
+The term 'Zta' used in the: [2000: 1 ] years
+The term '12-O-tetradecanoylphorbol-13-acetate' used in the: [2000: 2 ] years
+The term 'BRLF1' used in the: [2000: 7 ] years
+The term 'YY1-binding' used in the: [2000: 1 ] years
+The term '23-fold' used in the: [2000: 1 ] years
+The term 'nucleosomes' used in the: [2000: 12 ] years
+The term '308-fold' used in the: [2000: 1 ] years
+The term 'papillomavirus' used in the: [2000: 7 ] years
+The term 'E1E4' used in the: [2000: 7 ] years
+The term 'HPV6' used in the: [2000: 6 ] years
+The term 'E4-DEAD' used in the: [2000: 1 ] years
+The term 'L1' used in the: [2000: 3 ] years
+The term 'leucine' used in the: [2000: 8 ] years
+The term 'E1wedgeE4' used in the: [2000: 1 ] years
+The term 'E1E4-binding' used in the: [2000: 1 ] years
+The term '50K' used in the: [2000: 1 ] years
+The term 'RhlB' used in the: [2000: 1 ] years
+The term 'Rrp3' used in the: [2000: 1 ] years
+The term 'cofactor' used in the: [2001: 1 , 2000: 6 ] years
+The term '3-flanking' used in the: [2001: 1 , 2000: 1 ] years
+The term '02-kb' used in the: [2001: 1 ] years
+The term 'protein-silencer-element' used in the: [2001: 1 ] years
+The term 'testicular' used in the: [2001: 2 , 2000: 4 ] years
+The term 'MuMig' used in the: [2001: 1 ] years
+The term 'monokine' used in the: [2001: 1 ] years
+The term 'chemokine' used in the: [2001: 2 , 2000: 9 ] years
+The term 'IFN-gamma-/-' used in the: [2001: 4 ] years
+The term 'DR-/-' used in the: [2001: 2 ] years
+The term 'virus-infected' used in the: [2001: 2 ] years
+The term 'IFN-alpha/beta-induced' used in the: [2001: 1 ] years
+The term 'gammaRF-2' used in the: [2001: 2 ] years
+The term 'lineage-specific' used in the: [2000: 2 ] years
+The term 'PU1' used in the: [2000: 9 ] years
+The term 'erythroleukemia' used in the: [2000: 3 ] years
+The term 'erythroid' used in the: [2001: 7 , 2000: 15 ] years
+The term 'GATA-1-mediated' used in the: [2000: 1 ] years
+The term 'protein-protein' used in the: [2001: 1 , 2000: 7 ] years
+The term '483-bp-long' used in the: [2000: 1 ] years
+The term 'Mhb1' used in the: [2000: 5 ] years
+The term 'hypoxia' used in the: [2000: 1 ] years
+The term 'snRNAs' used in the: [2000: 28 , 2001: 1 ] years
+The term 'Ntc85p' used in the: [2001: 1 ] years
+The term 'NTC20' used in the: [2001: 1 ] years
+The term 'Prp8' used in the: [2000: 3 ] years
+The term 'hypertension-sensitive' used in the: [2000: 1 ] years
+The term 'LEW' used in the: [2000: 3 ] years
+The term 'congenic' used in the: [2000: 7 ] years
+The term '118-centimorgan' used in the: [2000: 1 ] years
+The term 'substrains' used in the: [2000: 3 ] years
+The term 'Sa' used in the: [2000: 2 ] years
+The term 'Aly' used in the: [2000: 6 ] years
+The term 'heterogenous' used in the: [2000: 1 ] years
+The term 'co-localizes' used in the: [2000: 5 ] years
+The term 'L-type' used in the: [2000: 4 ] years
+The term 'sarcolemma' used in the: [2000: 1 ] years
+The term 'PKA' used in the: [2000: 3 ] years
+The term 'alpha2-' used in the: [2000: 4 ] years
+The term 'steady-state' used in the: [2001: 1 , 2000: 17 ] years
+The term '-adrenergic' used in the: [2000: 4 ] years
+The term '10-7m-treated' used in the: [2000: 1 ] years
+The term 'propranolol' used in the: [2000: 1 ] years
+The term 'H-89' used in the: [2000: 1 ] years
+The term 'SIN4' used in the: [2000: 1 ] years
+The term 'higher-order' used in the: [2000: 2 ] years
+The term 'Tup1-Ssn6' used in the: [2000: 3 ] years
+The term 'Tup1-Ssn6-mediated' used in the: [2000: 1 ] years
+The term 'tup1' used in the: [2000: 1 ] years
+The term 'rbt' used in the: [2000: 12 ] years
+The term 'MNase' used in the: [2000: 2 ] years
+The term 'RBT' used in the: [2000: 1 ] years
+The term 'Peroxisome' used in the: [2000: 2 ] years
+The term 'superfamily' used in the: [2000: 5 ] years
+The term 'Immunofluorescent' used in the: [2000: 3 ] years
+The term 'Cardiomyocytes' used in the: [2000: 1 ] years
+The term 'factor-kappaB' used in the: [2000: 13 ] years
+The term 'H2B' used in the: [2000: 1 ] years
+The term 'polyubiquitinated' used in the: [2000: 1 ] years
+The term 'ubiquitin' used in the: [2000: 7 ] years
+The term 'nucleosomal' used in the: [2000: 7 ] years
+The term 'NER' used in the: [2000: 6 ] years
+The term 'adducts' used in the: [2000: 4 ] years
+The term 'cisplatin' used in the: [2000: 10 ] years
+The term 'lactacystin' used in the: [2000: 1 ] years
+The term 'N-acetyl-leucyl-leucyl-norleucinal' used in the: [2000: 1 ] years
+The term 'ubiquitinated' used in the: [2000: 1 ] years
+The term 'NER-dependent' used in the: [2000: 1 ] years
+The term 'caspase-dependent' used in the: [2000: 1 ] years
+The term 'PARP' used in the: [2000: 1 ] years
+The term 'Ca2+-binding' used in the: [2000: 3 ] years
+The term 'Yamaguchi' used in the: [2000: 1 ] years
+The term 'Chem' used in the: [2000: 1 ] years
+The term '1915-1918' used in the: [2000: 1 ] years
+The term 'Ca2+' used in the: [2000: 17 ] years
+The term 'AP-1-' used in the: [2001: 7 , 2000: 55 ] years
+The term 'Neutrophil' used in the: [2000: 1 ] years
+The term 'intercellular' used in the: [2000: 5 ] years
+The term 'acinar' used in the: [2000: 7 ] years
+The term 'cerulein' used in the: [2000: 5 ] years
+The term 'upregulates' used in the: [2000: 1 ] years
+The term 'metal-dependent' used in the: [2000: 1 ] years
+The term 'MRE' used in the: [2000: 1 ] years
+The term 'MRE-binding' used in the: [2000: 2 ] years
+The term 'factor-1' used in the: [2000: 7 ] years
+The term 'hMTF-1' used in the: [2000: 9 ] years
+The term 'fractionated' used in the: [2000: 2 ] years
+The term 'Cu' used in the: [2000: 4 ] years
+The term 'calcineurin-NFAT' used in the: [2000: 1 ] years
+The term 'muscle-specific' used in the: [2000: 10 ] years
+The term 'myotubes' used in the: [2000: 8 ] years
+The term 'NFAT2' used in the: [2000: 27 ] years
+The term 'MLC2' used in the: [2000: 1 ] years
+The term 'Ca2+-ATPase' used in the: [2000: 1 ] years
+The term 'soleus' used in the: [2000: 1 ] years
+The term 'digitorum' used in the: [2000: 1 ] years
+The term 'EDL' used in the: [2000: 1 ] years
+The term 'Calcineurin' used in the: [2000: 1 ] years
+The term 'dystrophy' used in the: [2000: 5 ] years
+The term 'adult-onset' used in the: [2000: 1 ] years
+The term 'GCG8-13' used in the: [2000: 1 ] years
+The term 'polyA' used in the: [2000: 39 ] years
+The term 'polyalanine' used in the: [2000: 2 ] years
+The term 'neurodegenerative' used in the: [2000: 5 ] years
+The term 'histonic' used in the: [2000: 1 ] years
+The term 'YBL1' used in the: [2000: 3 ] years
+The term 'NF-YB' used in the: [2000: 5 ] years
+The term 'CCAAT-binding' used in the: [2000: 1 ] years
+The term 'TBP' used in the: [2000: 2 ] years
+The term 'latters' used in the: [2000: 1 ] years
+The term 'coevolved' used in the: [2000: 1 ] years
+The term 'Ku' used in the: [2000: 4 ] years
+The term 'xrs-5' used in the: [2000: 2 ] years
+The term 'Azacytidine-reverted' used in the: [2000: 1 ] years
+The term 'supershifted' used in the: [2001: 1 , 2000: 6 ] years
+The term 'C-terminally' used in the: [2000: 1 ] years
+The term 'hyaluronan' used in the: [2000: 5 , 2001: 1 ] years
+The term 'PAI-1' used in the: [2000: 5 ] years
+The term 'uPA' used in the: [2000: 6 ] years
+The term 'bleomycin-treated' used in the: [2000: 1 ] years
+The term 'hsp27' used in the: [2000: 1 ] years
+The term 'additiontransfection' used in the: [2000: 1 ] years
+The term 'aneuploidy' used in the: [2000: 1 ] years
+The term 'nucleoside' used in the: [2000: 1 ] years
+The term 'diphosphohydrolase' used in the: [2000: 1 ] years
+The term 'reactivity' used in the: [2000: 1 ] years
+The term 'endothelial' used in the: [2001: 2 , 2000: 17 ] years
+The term 'adenoviruses' used in the: [2000: 1 ] years
+The term 'beta-galactosidase' used in the: [2000: 2 ] years
+The term '+/-' used in the: [2000: 9 ] years
+The term 'noninfected' used in the: [2000: 1 ] years
+The term '2Y' used in the: [2000: 1 ] years
+The term 'P2Y-mediated' used in the: [2000: 1 ] years
+The term 'von' used in the: [2000: 1 ] years
+The term 'ATP-induced' used in the: [2000: 1 ] years
+The term 'type-2X' used in the: [2000: 1 ] years
+The term 'de' used in the: [2000: 3 ] years
+The term 'Large-scale' used in the: [2000: 1 ] years
+The term 'cytosines' used in the: [2000: 1 ] years
+The term 'GC-sequences' used in the: [2000: 1 ] years
+The term 'conceptuses' used in the: [2000: 1 ] years
+The term 'disomy' used in the: [2000: 1 ] years
+The term 'Delta-like' used in the: [2000: 1 ] years
+The term '80kb' used in the: [2000: 1 ] years
+The term 'unmethylated' used in the: [2000: 1 ] years
+The term 'Igf2' used in the: [2000: 5 ] years
+The term 'cytokinesis' used in the: [2000: 2 ] years
+The term 'sep1p' used in the: [2000: 4 ] years
+The term 'trophocyte' used in the: [2000: 2 ] years
+The term 'polytrophic' used in the: [2000: 1 ] years
+The term 'Panorpa' used in the: [2000: 1 ] years
+The term '3H-riboprobes' used in the: [2000: 1 ] years
+The term 'bodies/coiled' used in the: [2000: 2 ] years
+The term 'PB' used in the: [2000: 21 ] years
+The term '10-20' used in the: [2000: 1 ] years
+The term '03-20' used in the: [2000: 1 ] years
+The term 'immunogold' used in the: [2000: 4 ] years
+The term 'zebrafish' used in the: [2000: 9 ] years
+The term 'gastrula' used in the: [2000: 2 ] years
+The term 'mid-blastula' used in the: [2000: 1 ] years
+The term 'MDA-MB-231' used in the: [2001: 1 , 2000: 2 ] years
+The term 'actinomycin' used in the: [2000: 7 , 2001: 2 ] years
+The term 'p38alpha' used in the: [2001: 1 ] years
+The term 'kainate-binding' used in the: [2001: 2 ] years
+The term 'Bergmann' used in the: [2001: 3 ] years
+The term 'kainate' used in the: [2001: 2 ] years
+The term 'glutamate-responsive' used in the: [2001: 1 ] years
+The term 'mutagenesis' used in the: [2000: 7 , 2001: 1 ] years
+The term 'glutamatergic' used in the: [2001: 1 , 2000: 1 ] years
+The term 'testis-specific' used in the: [2000: 4 ] years
+The term 'isoelectric' used in the: [2000: 2 ] years
+The term 'chromosome-X' used in the: [2000: 2 ] years
+The term 'haploid-specific' used in the: [2000: 1 ] years
+The term 'spermatid' used in the: [2000: 14 ] years
+The term 'Lissencephaly1' used in the: [2000: 1 ] years
+The term 'ventralization' used in the: [2000: 2 ] years
+The term 'Dynein' used in the: [2000: 2 ] years
+The term 'Lis1' used in the: [2000: 1 ] years
+The term 'motor-based' used in the: [2000: 1 ] years
+The term 'morphogenesis' used in the: [2000: 2 ] years
+The term 'RXRs' used in the: [2000: 5 ] years
+The term 'retinoid' used in the: [2000: 8 ] years
+The term 'Immunochemical' used in the: [2000: 1 ] years
+The term 'immunostaining' used in the: [2000: 6 ] years
+The term 'RXRalpha' used in the: [2000: 2 ] years
+The term 'extravillous' used in the: [2000: 1 ] years
+The term 'villous' used in the: [2000: 2 ] years
+The term 'retinoic' used in the: [2001: 4 , 2000: 10 ] years
+The term 'pre-eclampsia' used in the: [2000: 5 ] years
+The term 'NC' used in the: [2000: 6 ] years
+The term 'IUGR' used in the: [2000: 2 ] years
+The term 'Coactivators' used in the: [2000: 1 ] years
+The term 'MBF2' used in the: [2000: 13 ] years
+The term 'BmFTZ-F1' used in the: [2000: 4 ] years
+The term 'Bombyx' used in the: [2000: 1 ] years
+The term 'D3' used in the: [2000: 4 ] years
+The term 'stage-specific' used in the: [2000: 3 ] years
+The term 'microsporogenesis' used in the: [2000: 1 ] years
+The term 'DEAH-box' used in the: [2000: 2 ] years
+The term 'Dhr2p' used in the: [2000: 4 ] years
+The term '18S' used in the: [2000: 2 ] years
+The term 'A0' used in the: [2000: 1 ] years
+The term 'ProtA-Dhr2p' used in the: [2000: 1 ] years
+The term 'preribosomal' used in the: [2000: 2 ] years
+The term 'pseudoknot' used in the: [2000: 1 ] years
+The term 'Egr-1' used in the: [2001: 6 , 2000: 5 ] years
+The term 'tunica' used in the: [2001: 1 ] years
+The term 'TbetaR-2' used in the: [2001: 4 ] years
+The term 'promoter/chloramphenicol' used in the: [2001: 1 ] years
+The term 'Egr-1-inducible' used in the: [2001: 1 ] years
+The term 'factor-A' used in the: [2001: 1 ] years
+The term 'TbetaR-2/CAT' used in the: [2001: 1 ] years
+The term '-143' used in the: [2001: 1 , 2000: 3 ] years
+The term 'ERT/ets' used in the: [2001: 1 ] years
+The term 'transcriptionally' used in the: [2000: 14 , 2001: 1 ] years
+The term 'serpin' used in the: [2000: 1 ] years
+The term 'I-hypersensitive' used in the: [2000: 2 ] years
+The term 'matrix-attachment' used in the: [2000: 1 ] years
+The term 'microcell' used in the: [2000: 1 ] years
+The term 'neo' used in the: [2000: 2 ] years
+The term 'position-independent' used in the: [2000: 1 ] years
+The term 'Long-term' used in the: [2000: 2 ] years
+The term 'cosmid' used in the: [2000: 2 ] years
+The term 'MAN1' used in the: [2000: 7 ] years
+The term '43-residue' used in the: [2000: 1 ] years
+The term 'emr-1' used in the: [2000: 1 ] years
+The term 'lem-3' used in the: [2000: 1 ] years
+The term 'Ce-emerin' used in the: [2000: 4 ] years
+The term '17-' used in the: [2000: 1 ] years
+The term 'immunolocalization' used in the: [2000: 2 ] years
+The term 'mid-late' used in the: [2000: 1 ] years
+The term '24-cell' used in the: [2000: 1 ] years
+The term 'prophase' used in the: [2002: 2 , 2000: 2 ] years
+The term 'locus-associated' used in the: [2000: 1 ] years
+The term 'unc-50' used in the: [2000: 2 ] years
+The term 'Hydropathy' used in the: [2000: 1 ] years
+The term 'transmembrane' used in the: [2000: 8 ] years
+The term 'SaOS-2' used in the: [2000: 1 ] years
+The term 'Triton' used in the: [2000: 1 ] years
+The term 'UNCL-HA' used in the: [2000: 1 ] years
+The term 'NaCl' used in the: [2000: 3 ] years
+The term 'tructural' used in the: [2000: 1 ] years
+The term 'muscle-type' used in the: [2000: 1 ] years
+The term '6-fold' used in the: [2000: 4 ] years
+The term 'ADP-ribosylation' used in the: [2000: 1 ] years
+The term '20-kDa' used in the: [2000: 1 ] years
+The term 'exocytic' used in the: [2000: 1 ] years
+The term 'ARF-like' used in the: [2000: 1 ] years
+The term 'ARL4' used in the: [2000: 3 ] years
+The term 'hARL4' used in the: [2000: 4 ] years
+The term 'compartmentation' used in the: [2000: 1 ] years
+The term 'Sertoli' used in the: [2001: 1 , 2000: 8 ] years
+The term 'ARL4-T34N' used in the: [2000: 1 ] years
+The term 'protein-interaction' used in the: [2000: 1 ] years
+The term 'ARL2' used in the: [2000: 1 ] years
+The term 'auto-ADP-ribosylation' used in the: [2000: 1 ] years
+The term '5-O-thiotriphosphate' used in the: [2000: 1 ] years
+The term 'ARF' used in the: [2000: 27 ] years
+The term 'somitogenesis' used in the: [2000: 1 ] years
+The term '5-portion' used in the: [2000: 1 ] years
+The term 'SBE' used in the: [2000: 7 ] years
+The term 'cisplatin-sensitive' used in the: [2000: 1 ] years
+The term '-167' used in the: [2000: 2 ] years
+The term 'drug-resistant' used in the: [2000: 1 ] years
+The term 'DM' used in the: [2000: 6 ] years
+The term 'CUG' used in the: [2000: 7 ] years
+The term 'myopathy' used in the: [2000: 1 ] years
+The term 'pathophysiological' used in the: [2000: 3 ] years
+The term 'IL-1' used in the: [2000: 40 ] years
+The term 'mediator-specific' used in the: [2000: 2 ] years
+The term 'bronchoscopy' used in the: [2000: 1 ] years
+The term 'TNF' used in the: [2000: 12 ] years
+The term 'LPS+IL-10' used in the: [2000: 1 ] years
+The term 'LPS-mediated' used in the: [2000: 2 ] years
+The term '18-66' used in the: [2000: 1 ] years
+The term 'dpf' used in the: [2000: 9 ] years
+The term 'thiols' used in the: [2000: 3 ] years
+The term 'SCSA' used in the: [2000: 1 ] years
+The term 'protamines' used in the: [2000: 5 ] years
+The term 'P1' used in the: [2000: 7 ] years
+The term 'cytometric' used in the: [2000: 2 ] years
+The term 'histone/protamine' used in the: [2000: 1 ] years
+The term 'Trp53' used in the: [2000: 4 ] years
+The term 'Trp26' used in the: [2000: 1 ] years
+The term 'cell-cycle' used in the: [2000: 4 ] years
+The term 'MEFs' used in the: [2000: 1 ] years
+The term 'HtrA2' used in the: [2000: 4 ] years
+The term 'HtrA1' used in the: [2000: 1 ] years
+The term 'osteoarthritic' used in the: [2000: 1 ] years
+The term 'tunicamycin' used in the: [2000: 2 ] years
+The term 'autoproteolysis' used in the: [2000: 1 ] years
+The term 'adenomas' used in the: [2000: 12 ] years
+The term 'uraemic' used in the: [2000: 1 ] years
+The term 'CaSR' used in the: [2000: 6 ] years
+The term 'hyperparathyroidism' used in the: [2000: 1 ] years
+The term '10-107' used in the: [2000: 1 ] years
+The term 'India' used in the: [2000: 1 ] years
+The term 'nonadenomatous' used in the: [2000: 3 ] years
+The term 'two-thirds' used in the: [2001: 1 , 2000: 1 ] years
+The term 'ECM' used in the: [2000: 11 ] years
+The term 'SMC' used in the: [2000: 16 , 2001: 4 ] years
+The term '70-74' used in the: [2000: 2 ] years
+The term 'down-regulatory' used in the: [2000: 1 ] years
+The term 'PR-IR' used in the: [2000: 9 ] years
+The term '24-36' used in the: [2000: 1 ] years
+The term '8-fold' used in the: [2000: 2 ] years
+The term 'coincubated' used in the: [2000: 1 ] years
+The term 'progesterone-dependent' used in the: [2000: 1 ] years
+The term 'preovulatory' used in the: [2000: 1 ] years
+The term 'biphasic' used in the: [2000: 2 ] years
+The term 'EI24' used in the: [2000: 6 ] years
+The term 'ectopically' used in the: [2000: 1 ] years
+The term '11q23--q24' used in the: [2000: 1 ] years
+The term 'IGFBP-5' used in the: [2000: 17 ] years
+The term 'translational' used in the: [2001: 2 , 2000: 7 ] years
+The term 'puromycin' used in the: [2000: 1 ] years
+The term 'UTRs' used in the: [2000: 12 ] years
+The term 'nt' used in the: [2000: 2 ] years
+The term 'BA2' used in the: [2000: 1 ] years
+The term 'androgen-induced' used in the: [2000: 7 ] years
+The term 'dosewise' used in the: [2000: 1 ] years
+The term 'BRCA2' used in the: [2000: 1 ] years
+The term 'virions' used in the: [2000: 7 ] years
+The term 'A4' used in the: [2000: 1 ] years
+The term 'antisense-AS3' used in the: [2000: 1 ] years
+The term 'prolactin' used in the: [2000: 2 ] years
+The term 'ISH' used in the: [2000: 2 ] years
+The term 'microdensity' used in the: [2000: 1 ] years
+The term 't23q13p25' used in the: [2000: 1 ] years
+The term 'PAX8' used in the: [2000: 1 ] years
+The term 'PAX8-PPARgamma1' used in the: [2000: 3 ] years
+The term 'thiazolidinedione-induced' used in the: [2000: 1 ] years
+The term 'bulbar' used in the: [2000: 1 ] years
+The term 'CAG' used in the: [2001: 1 , 2000: 1 ] years
+The term 'co-activator' used in the: [2000: 1 ] years
+The term 'spinocerebellar' used in the: [2000: 1 ] years
+The term 'CBP-sequestration' used in the: [2000: 1 ] years
+The term 'huntingtin' used in the: [2001: 10 , 2000: 8 ] years
+The term 'interactors' used in the: [2000: 3 ] years
+The term 'HYPC' used in the: [2000: 1 ] years
+The term 'disease-related' used in the: [2000: 1 ] years
+The term 'insoluble-aggregate' used in the: [2000: 1 ] years
+The term 'aberrantly' used in the: [2000: 2 ] years
+The term 'palmitoyltransferase' used in the: [2000: 1 ] years
+The term 'acyl' used in the: [2000: 2 ] years
+The term 'CPT-Ialpha' used in the: [2000: 9 ] years
+The term '40-fold' used in the: [2000: 3 ] years
+The term '3000-4000' used in the: [2000: 1 ] years
+The term 'HDACs' used in the: [2000: 3 ] years
+The term 'hydroxamic' used in the: [2000: 2 ] years
+The term 'suberoylanilide' used in the: [2000: 1 ] years
+The term 'T24' used in the: [2000: 2 ] years
+The term 'p27' used in the: [2000: 3 ] years
+The term 'genotoxicity' used in the: [2000: 1 ] years
+The term 'N-methyl-N-nitro-N-nitrosoguanidine' used in the: [2000: 1 ] years
+The term 'MSH2' used in the: [2000: 4 ] years
+The term 'GT' used in the: [2000: 3 ] years
+The term 'long-lasting' used in the: [2000: 1 ] years
+The term 'O6-methylguanine-DNA' used in the: [2000: 1 ] years
+The term 'O6-benzylguanine' used in the: [2000: 1 ] years
+The term 'genotoxic' used in the: [2000: 2 ] years
+The term 'Py' used in the: [2000: 3 ] years
+The term 'mBBP' used in the: [2000: 1 ] years
+The term 'ST1/BBP' used in the: [2000: 1 ] years
+The term 'SF1/mBBP' used in the: [2000: 3 ] years
+The term 'Rana' used in the: [2000: 2 ] years
+The term 'vitellogenesis' used in the: [2000: 1 ] years
+The term 'nucleic' used in the: [2001: 1 , 2000: 4 ] years
+The term 'Notophtalmus' used in the: [2000: 1 ] years
+The term 'Wu' used in the: [2000: 1 ] years
+The term 'NO38' used in the: [2000: 2 ] years
+The term 'immunofluorescent' used in the: [2000: 2 ] years
+The term 'VCAM-1' used in the: [2000: 8 ] years
+The term '2-hydroxychalcone' used in the: [2000: 5 ] years
+The term 'concentration-dependent' used in the: [2000: 4 ] years
+The term 'Mex67p/Mtr2p' used in the: [2000: 2 ] years
+The term 'FG' used in the: [2000: 1 ] years
+The term 'MTR2' used in the: [2000: 1 ] years
+The term 'Nup159p' used in the: [2000: 1 ] years
+The term 'Rip1p/Nup40p' used in the: [2000: 1 ] years
+The term 'subcomplexes' used in the: [2000: 2 ] years
+The term 'penetrant' used in the: [2000: 1 ] years
+The term 'notochord' used in the: [2000: 1 ] years
+The term 'beta-catenin' used in the: [2000: 18 ] years
+The term 'bozozok/dharma/nieuwkoid' used in the: [2000: 1 ] years
+The term 'dorsalized' used in the: [2000: 1 ] years
+The term 'Wnt' used in the: [2000: 6 ] years
+The term 'Znr2/Ndr1/Squint' used in the: [2000: 1 ] years
+The term 'cotransporter' used in the: [2000: 3 ] years
+The term 'post-transcriptionally' used in the: [2000: 1 ] years
+The term 'phosphorylation-dependent' used in the: [2000: 1 ] years
+The term 'URE' used in the: [2000: 5 ] years
+The term 'beta-globin' used in the: [2000: 10 ] years
+The term 'globin/SGLT1' used in the: [2000: 1 ] years
+The term '38-kDa' used in the: [2000: 2 ] years
+The term 'A-dependent' used in the: [2000: 1 ] years
+The term '21q221-q222' used in the: [2000: 1 ] years
+The term '57-kb' used in the: [2000: 1 ] years
+The term 'glycinamide' used in the: [2000: 1 ] years
+The term 'formyltransferase' used in the: [2000: 1 ] years
+The term 'head-to-head' used in the: [2000: 1 ] years
+The term 'GART' used in the: [2000: 1 ] years
+The term 'Phemx' used in the: [2000: 7 ] years
+The term '25-kDa' used in the: [2000: 1 ] years
+The term 'tetraspanin' used in the: [2000: 1 ] years
+The term 'TAPA-1' used in the: [2000: 1 ] years
+The term 'monoallelic' used in the: [2000: 3 ] years
+The term 'osteoblastic' used in the: [2001: 1 , 2000: 1 ] years
+The term 'IGFBP-rP2' used in the: [2000: 1 ] years
+The term 'osteoblast-enriched' used in the: [2000: 1 ] years
+The term 'calvariae' used in the: [2000: 1 ] years
+The term 'Cortisol' used in the: [2000: 2 ] years
+The term 'cortisol' used in the: [2000: 2 ] years
+The term 'CBC' used in the: [2000: 5 ] years
+The term 'eIF4G' used in the: [2000: 7 ] years
+The term 'eIF4G-CBC' used in the: [2000: 1 ] years
+The term 'less-abundant' used in the: [2001: 1 ] years
+The term 'LH-nRNP' used in the: [2001: 5 ] years
+The term 'Sekeris' used in the: [2001: 1 ] years
+The term 'Nucleic' used in the: [2001: 1 ] years
+The term '2742-2753' used in the: [2001: 1 ] years
+The term 'hnRNP' used in the: [2000: 50 , 2001: 4 ] years
+The term 'immunoprecipitation' used in the: [2001: 2 , 2000: 8 ] years
+The term '32Porthophosphate-labelled' used in the: [2001: 1 ] years
+The term 'nuclear-matrix' used in the: [2001: 1 ] years
+The term 'DNA/RNA' used in the: [2000: 3 ] years
+The term 'AML1-MTG8' used in the: [2000: 3 ] years
+The term 'leukaemic' used in the: [2000: 3 ] years
+The term 'RNase' used in the: [2001: 3 , 2000: 11 ] years
+The term 'ribozyme' used in the: [2000: 6 ] years
+The term 'abscisic' used in the: [2000: 3 ] years
+The term 'his1-s' used in the: [2000: 5 ] years
+The term 'H1-S' used in the: [2000: 6 ] years
+The term 'H1-Sbeta-glucuronidase' used in the: [2000: 1 ] years
+The term 'subtype' used in the: [2001: 1 , 2000: 2 ] years
+The term 'thymidine' used in the: [2000: 1 ] years
+The term 'NDUFS4' used in the: [2000: 2 ] years
+The term 'homozygous' used in the: [2000: 11 , 2001: 1 ] years
+The term 'CGA' used in the: [2000: 1 ] years
+The term 'TGA' used in the: [2000: 1 ] years
+The term 'hypothesise' used in the: [2000: 1 ] years
+The term 'supermolecular' used in the: [2000: 1 ] years
+The term 'thalassemic' used in the: [2000: 1 ] years
+The term 'Hb' used in the: [2000: 5 ] years
+The term 'IVS2-745/IVS2-745' used in the: [2000: 1 ] years
+The term 'genotypes' used in the: [2000: 3 ] years
+The term 'tetracycline-dependent' used in the: [2000: 1 ] years
+The term 'INS-1' used in the: [2000: 1 ] years
+The term 'alpha-P291fsinsC' used in the: [2000: 6 ] years
+The term 'MODY3' used in the: [2000: 1 ] years
+The term 'beta-cell' used in the: [2000: 2 ] years
+The term 'L-pyruvate' used in the: [2000: 2 ] years
+The term '3-hydroxy-3-methylglutaryl' used in the: [2000: 1 ] years
+The term 'reductase' used in the: [2000: 6 ] years
+The term 'OGDH' used in the: [2000: 2 ] years
+The term 'nutrient-evoked' used in the: [2000: 1 ] years
+The term 'Pb' used in the: [2000: 6 ] years
+The term '1h' used in the: [2000: 1 ] years
+The term 'Pb-elicited' used in the: [2000: 1 ] years
+The term 'U2/U6' used in the: [2000: 3 ] years
+The term 'adenosine' used in the: [2000: 10 ] years
+The term 'A-to-G' used in the: [2000: 1 ] years
+The term 'Prp2' used in the: [2000: 6 ] years
+The term 'DExH' used in the: [2000: 1 ] years
+The term 'PRP2' used in the: [2000: 1 ] years
+The term 'GAL1-PRP2' used in the: [2000: 1 ] years
+The term 'three-month-old' used in the: [2000: 1 ] years
+The term '17beta' used in the: [2000: 1 ] years
+The term 'Estradiol' used in the: [2000: 1 ] years
+The term 'O6-Methylguanine-DNA' used in the: [2000: 1 ] years
+The term 'O6-alkylguanine' used in the: [2000: 1 ] years
+The term 'O6-chloroethylguanine' used in the: [2000: 1 ] years
+The term 'N-nitrosourea-type' used in the: [2000: 1 ] years
+The term '13-bis2-chloroethyl-1-nitrosourea' used in the: [2000: 1 ] years
+The term 'PaCa-2' used in the: [2000: 3 ] years
+The term 'promoter-dependent' used in the: [2000: 2 ] years
+The term 'element-binding' used in the: [2001: 1 , 2000: 2 ] years
+The term 'acetyltransferase' used in the: [2001: 1 , 2000: 5 ] years
+The term 'TSA-inducible' used in the: [2000: 1 ] years
+The term 'Cdk2-cyclin' used in the: [2000: 2 ] years
+The term 'Mv1Lu' used in the: [2000: 1 ] years
+The term 'kinase/cyclin' used in the: [2000: 1 ] years
+The term 'kinase-bound' used in the: [2000: 1 ] years
+The term 'dihydrocytochalasin' used in the: [2000: 1 ] years
+The term 'mitogen-induced' used in the: [2000: 1 ] years
+The term 'retinoblastoma' used in the: [2000: 3 ] years
+The term 'p107' used in the: [2000: 3 ] years
+The term 'E-cdk2' used in the: [2000: 1 ] years
+The term 'cdk2' used in the: [2000: 4 ] years
+The term 'H2CB-treated' used in the: [2000: 1 ] years
+The term 'cytoskeleton-dependent' used in the: [2000: 1 ] years
+The term 'SMA' used in the: [2000: 23 ] years
+The term 'immunoaffinity' used in the: [2000: 1 ] years
+The term 'NSC1' used in the: [2000: 4 ] years
+The term 'snRNA-free' used in the: [2000: 1 ] years
+The term 'SMN-interacting' used in the: [2000: 2 ] years
+The term 'dp103/Gemin3' used in the: [2000: 1 ] years
+The term 'GIP1/Gemin4' used in the: [2000: 1 ] years
+The term 'herpesvirus' used in the: [2000: 2 ] years
+The term 'immunogenic' used in the: [2000: 1 ] years
+The term 'BCBL-1' used in the: [2000: 5 ] years
+The term 'gpK81B' used in the: [2000: 5 ] years
+The term 'Mabs' used in the: [2000: 1 ] years
+The term 'MAb' used in the: [2000: 1 ] years
+The term '075-kb' used in the: [2000: 1 ] years
+The term 'TPA-induced' used in the: [2000: 1 ] years
+The term 'cross-reactivity' used in the: [2000: 1 ] years
+The term 'rMW' used in the: [2000: 4 ] years
+The term '14Cglucosamine' used in the: [2000: 1 ] years
+The term 'deglycosylation' used in the: [2000: 2 ] years
+The term 'O-glycosidase' used in the: [2000: 1 ] years
+The term 'deglacosylation' used in the: [2000: 1 ] years
+The term 'O-glycosylation' used in the: [2000: 1 ] years
+The term 'Dom' used in the: [2000: 4 ] years
+The term '719-amino-acid' used in the: [2000: 1 ] years
+The term 'Heterozygous' used in the: [2000: 3 ] years
+The term 'DOM' used in the: [2000: 3 ] years
+The term 'euchromatic' used in the: [2000: 1 ] years
+The term 'winged-helix' used in the: [2000: 1 ] years
+The term 'Localisation' used in the: [2001: 1 ] years
+The term 'involuting' used in the: [2001: 1 ] years
+The term 'alphaS1' used in the: [2001: 1 ] years
+The term 'non-lactating' used in the: [2001: 1 ] years
+The term 'SYT' used in the: [2001: 12 ] years
+The term 'serine' used in the: [2002: 1 , 2000: 8 , 2001: 1 ] years
+The term 'synteny' used in the: [2001: 1 ] years
+The term 'SK-N-SH' used in the: [2001: 1 ] years
+The term 'forskolin' used in the: [2001: 1 ] years
+The term 'cyclase' used in the: [2001: 1 ] years
+The term 'amygdala' used in the: [2001: 1 , 2000: 1 ] years
+The term 'UBPs' used in the: [2000: 1 ] years
+The term 'UBP-t2' used in the: [2000: 5 ] years
+The term 'Immunoelectron' used in the: [2000: 1 ] years
+The term 'Fusions' used in the: [2000: 1 ] years
+The term 'deubiquitinating' used in the: [2000: 1 ] years
+The term 'euthermic' used in the: [2000: 1 ] years
+The term 'polyA-binding' used in the: [2000: 1 ] years
+The term 'polyribosomes' used in the: [2000: 2 ] years
+The term 'DEX' used in the: [2000: 9 , 2001: 7 ] years
+The term 'NF-kappaB/Rel' used in the: [2000: 9 ] years
+The term 'CREB/ATF' used in the: [2000: 2 ] years
+The term 'chloramphenicol' used in the: [2000: 3 ] years
+The term 'nucleo-cytoplasmic' used in the: [2000: 2 ] years
+The term 'HTDV/HERV-K' used in the: [2000: 1 ] years
+The term 'HTDV/HERV-K-expressing' used in the: [2000: 1 ] years
+The term 'cyclins' used in the: [2000: 76 ] years
+The term 'Cyclin' used in the: [2000: 5 ] years
+The term 'Myc-activating' used in the: [2000: 1 ] years
+The term 'dysregulation' used in the: [2000: 1 ] years
+The term 'Hirt' used in the: [2000: 1 ] years
+The term 'Myc-ER' used in the: [2000: 1 ] years
+The term 'Myc-induced' used in the: [2000: 1 ] years
+The term 'cycle-regulating' used in the: [2000: 1 ] years
+The term 'Nitric' used in the: [2000: 1 ] years
+The term 'transduces' used in the: [2000: 2 ] years
+The term 'Ras-dependent' used in the: [2000: 1 ] years
+The term 'NO-activated' used in the: [2000: 4 ] years
+The term 'NO-induced' used in the: [2000: 2 ] years
+The term 'Elk-1-induced' used in the: [2000: 1 ] years
+The term 'TCRgamma' used in the: [2000: 4 ] years
+The term '7-kDa' used in the: [2000: 2 ] years
+The term 'intra-nuclear' used in the: [2000: 1 ] years
+The term 'osteogenesis' used in the: [2000: 1 ] years
+The term 'OI' used in the: [2000: 6 ] years
+The term 'cytologically' used in the: [2000: 1 ] years
+The term 'slow-splicing' used in the: [2000: 1 ] years
+The term 'microfluorimetric' used in the: [2000: 1 ] years
+The term 'transcriptase-polymerase' used in the: [2000: 6 ] years
+The term 'CHO-K1' used in the: [2000: 1 ] years
+The term 'overexpressing' used in the: [2001: 1 , 2000: 6 ] years
+The term 'Gal4-mediated' used in the: [2000: 3 ] years
+The term 'Gal4-DNA' used in the: [2000: 1 ] years
+The term '5-methylcytosine' used in the: [2000: 1 ] years
+The term 'Gal4-based' used in the: [2000: 1 ] years
+The term 'A1-A3' used in the: [2000: 1 ] years
+The term 'sativa' used in the: [2000: 3 ] years
+The term 'anti-MedsaCycA2' used in the: [2000: 1 ] years
+The term 'PSTAIRE-motif-containing' used in the: [2000: 1 ] years
+The term 'CycA2-associated' used in the: [2000: 1 ] years
+The term 'Abeta' used in the: [2000: 3 ] years
+The term 'Alzheimer' used in the: [2000: 1 ] years
+The term 'APP' used in the: [2000: 2 ] years
+The term 'multiparameter' used in the: [2000: 1 ] years
+The term 'Abeta42' used in the: [2000: 2 ] years
+The term 'L-APP' used in the: [2000: 1 ] years
+The term 'H2O2' used in the: [2000: 4 ] years
+The term 'CdCl2' used in the: [2000: 1 ] years
+The term 'non-adapted' used in the: [2000: 3 ] years
+The term 'Non-adapted' used in the: [2000: 1 ] years
+The term 'oxidant-induced' used in the: [2000: 3 ] years
+The term 'deoxyribonucleotidyl' used in the: [2000: 1 ] years
+The term 'positivity' used in the: [2000: 1 ] years
+The term 'MT-1' used in the: [2000: 1 ] years
+The term 'S-transferases' used in the: [2000: 7 ] years
+The term 'gamma-glutamylcysteine' used in the: [2000: 1 ] years
+The term 'gamma-GCS' used in the: [2000: 2 ] years
+The term 'heritably' used in the: [2000: 1 ] years
+The term 'anthocyanin' used in the: [2000: 1 ] years
+The term 'Pl-Rhoades' used in the: [2000: 4 ] years
+The term 'methylation-sensitive' used in the: [2000: 1 ] years
+The term 'juvenile-to-adult' used in the: [2000: 1 ] years
+The term '14-18' used in the: [2000: 1 ] years
+The term 'double-strand' used in the: [2002: 1 , 2000: 1 ] years
+The term 'CRM1' used in the: [2000: 3 ] years
+The term 'molecularly' used in the: [2000: 1 ] years
+The term 'conditional-lethal' used in the: [2000: 1 ] years
+The term 'hemizygous' used in the: [2000: 1 ] years
+The term 'colorectal' used in the: [2000: 6 ] years
+The term 'antimetastasis' used in the: [2000: 1 ] years
+The term 'cimetidine-mediated' used in the: [2000: 1 ] years
+The term 'ranitidine' used in the: [2000: 1 ] years
+The term 'sialyl-Lewis' used in the: [2000: 1 ] years
+The term 'glucocorticoid-induced' used in the: [2000: 1 ] years
+The term 'adenocarcinomas' used in the: [2000: 5 ] years
+The term 'pathologic' used in the: [2000: 2 ] years
+The term 'Kaplan-Meier' used in the: [2000: 1 ] years
+The term 'SREBP-1c' used in the: [2001: 1 , 2000: 18 ] years
+The term 'sterol-regulatory' used in the: [2000: 1 ] years
+The term '-90' used in the: [2000: 3 ] years
+The term 'SRE' used in the: [2001: 3 , 2000: 6 ] years
+The term 'refed' used in the: [2000: 1 ] years
+The term 'promyelocytic' used in the: [2000: 4 ] years
+The term 'phorbol' used in the: [2001: 2 , 2000: 5 ] years
+The term 'exon/intron' used in the: [2000: 2 ] years
+The term 'PKC' used in the: [2000: 18 ] years
+The term 'Myc' used in the: [2000: 5 ] years
+The term 'RFX1-binding' used in the: [2000: 2 ] years
+The term 'MIE1-protein' used in the: [2000: 1 ] years
+The term 'cytomegalovirus' used in the: [2000: 4 ] years
+The term 'Shenk' used in the: [2000: 1 ] years
+The term 'prp2' used in the: [2000: 4 ] years
+The term 'SpU2AF59' used in the: [2000: 1 ] years
+The term 'temperature-sensitive' used in the: [2000: 3 ] years
+The term 'Ultrastructural' used in the: [2000: 1 ] years
+The term 'homogenous' used in the: [2000: 1 ] years
+The term 'spU2AF59' used in the: [2000: 1 ] years
+The term 'HDAC2' used in the: [2000: 1 ] years
+The term 'q13' used in the: [2000: 1 ] years
+The term 'monocyte-chemoattractant-protein-1' used in the: [2000: 1 ] years
+The term 'non-tumorigenic' used in the: [2000: 1 ] years
+The term 'segregants' used in the: [2000: 1 ] years
+The term 'DHSR' used in the: [2000: 3 ] years
+The term '3-DHSR' used in the: [2000: 1 ] years
+The term 'heterodimerized' used in the: [2000: 1 ] years
+The term 'fra-1' used in the: [2000: 2 ] years
+The term 'HPV-positive' used in the: [2000: 1 ] years
+The term 'Nup88' used in the: [2000: 1 ] years
+The term 'GAL4' used in the: [2000: 3 ] years
+The term 'IkappaB' used in the: [2000: 2 ] years
+The term 'bone-resorbing' used in the: [2000: 1 ] years
+The term 'osteoblast-like' used in the: [2000: 2 , 2001: 1 ] years
+The term '96-fold' used in the: [2000: 1 ] years
+The term 'particle-induced' used in the: [2000: 3 ] years
+The term 'serine/threonine' used in the: [2000: 2 ] years
+The term 'HA1004' used in the: [2000: 1 ] years
+The term 'interleukin-6' used in the: [2000: 6 ] years
+The term 'Janus' used in the: [2000: 1 ] years
+The term 'IL-2-induced' used in the: [2000: 1 ] years
+The term 'IL-2' used in the: [2001: 3 , 2000: 6 ] years
+The term 'Jak-STAT' used in the: [2000: 1 ] years
+The term 'combinatorial' used in the: [2000: 1 ] years
+The term 'TFIIF' used in the: [2000: 1 ] years
+The term 'high-resolution' used in the: [2000: 2 ] years
+The term 'CD34+' used in the: [2000: 7 ] years
+The term 'hemolytic' used in the: [2000: 1 ] years
+The term 'erythropoiesis' used in the: [2001: 1 , 2000: 1 ] years
+The term 'ED2high' used in the: [2000: 6 ] years
+The term 'ED2low' used in the: [2000: 2 ] years
+The term 'glucocorticoid' used in the: [2000: 7 ] years
+The term 'age-associated' used in the: [2000: 1 ] years
+The term 'Sp110' used in the: [2000: 15 ] years
+The term 'Sp140' used in the: [2000: 1 ] years
+The term 'NB4' used in the: [2000: 3 ] years
+The term 'ATRA-treated' used in the: [2000: 1 ] years
+The term 'Sp100/Sp140' used in the: [2000: 1 ] years
+The term 'prehepatocyte' used in the: [2000: 1 ] years
+The term 'glucose-dependent' used in the: [2000: 1 ] years
+The term 'galactose' used in the: [2000: 1 ] years
+The term '3-O-methyl' used in the: [2000: 1 ] years
+The term 'tetramer' used in the: [2000: 2 ] years
+The term 'N1' used in the: [2000: 8 ] years
+The term 'whole-mount' used in the: [2000: 1 ] years
+The term 'NLS-defective' used in the: [2000: 4 ] years
+The term 'NLS-containing' used in the: [2000: 1 ] years
+The term 'Saos-2' used in the: [2000: 1 ] years
+The term 'CTGn' used in the: [2000: 2 ] years
+The term 'PTB' used in the: [2000: 8 ] years
+The term 'factor--that' used in the: [2000: 1 ] years
+The term 'neuron-specific' used in the: [2000: 2 ] years
+The term 'cross-links' used in the: [2000: 2 ] years
+The term 'CUCUCU' used in the: [2000: 1 ] years
+The term 'cytokine-dependent' used in the: [2000: 1 ] years
+The term 'SNF2' used in the: [2000: 1 ] years
+The term '838-amino' used in the: [2000: 1 ] years
+The term 'Hells' used in the: [2000: 1 ] years
+The term 'SWI/SNF2-related' used in the: [2000: 1 ] years
+The term 'actin-dependent' used in the: [2000: 1 ] years
+The term 'proliferation-associated' used in the: [2000: 1 ] years
+The term '594a' used in the: [2000: 1 ] years
+The term 'lymphoblastic' used in the: [2000: 1 ] years
+The term 'SWI/SNF' used in the: [2000: 1 ] years
+The term 'invasive/metastatic' used in the: [2000: 2 ] years
+The term 'invasive/nonmetastatic' used in the: [2000: 2 ] years
+The term 'HP1Hsgamma' used in the: [2000: 1 ] years
+The term 'IV/laminin/gelatin' used in the: [2000: 1 ] years
+The term 'HP1' used in the: [2000: 2 ] years
+The term 'interleukin-2' used in the: [2000: 4 ] years
+The term 'CD40-L' used in the: [2000: 1 ] years
+The term 'staurosporine' used in the: [2000: 1 ] years
+The term 'NF-AT' used in the: [2000: 3 ] years
+The term 'NF-AT-AP-1' used in the: [2000: 1 ] years
+The term 'CD-40L' used in the: [2000: 1 ] years
+The term 'HOX' used in the: [2000: 2 ] years
+The term 'HOXB6' used in the: [2000: 8 ] years
+The term 'hyperproliferative' used in the: [2000: 1 ] years
+The term 'GFP-fusion' used in the: [2000: 1 ] years
+The term 'Wiley-Liss' used in the: [2000: 1 ] years
+The term 'Ciliary' used in the: [2000: 1 ] years
+The term 'CNTF' used in the: [2000: 3 ] years
+The term '11beta-HSD' used in the: [2000: 9 ] years
+The term 'glucocorticoid-responsive' used in the: [2000: 1 ] years
+The term 'C/EBPalpha' used in the: [2000: 4 ] years
+The term '+76' used in the: [2000: 1 ] years
+The term 'glomerulonephritis' used in the: [2000: 4 ] years
+The term 'D1-positive' used in the: [2000: 1 ] years
+The term 'PDGF' used in the: [2000: 5 ] years
+The term 'mitogenesis' used in the: [2000: 1 ] years
+The term 'Antisense' used in the: [2000: 3 ] years
+The term 'p21Waf-1' used in the: [2000: 1 ] years
+The term 'Grb3-3' used in the: [2000: 8 ] years
+The term 'receptor-bound' used in the: [2000: 1 ] years
+The term 'Nef' used in the: [2000: 1 ] years
+The term 'Jurkat' used in the: [2001: 5 , 2000: 4 ] years
+The term 'co-receptor' used in the: [2000: 1 ] years
+The term 'MEKK1' used in the: [2000: 1 ] years
+The term 'LTR' used in the: [2000: 1 ] years
+The term '33-37' used in the: [2000: 1 ] years
+The term 'SPANX' used in the: [2000: 1 ] years
+The term 'human/mouse' used in the: [2000: 1 ] years
+The term '15-20' used in the: [2000: 1 ] years
+The term 'spermiogenesis' used in the: [2000: 1 ] years
+The term 'keratinocyte' used in the: [2000: 9 ] years
+The term 'Tfx-20' used in the: [2000: 1 ] years
+The term 'Superfect' used in the: [2000: 3 ] years
+The term 'GSV' used in the: [2000: 5 ] years
+The term 'Lipofectin' used in the: [2000: 2 ] years
+The term '1-1000' used in the: [2000: 1 ] years
+The term 'IGF-1R' used in the: [2000: 2 ] years
+The term 'amido' used in the: [2000: 1 ] years
+The term 'TRF1' used in the: [2001: 3 , 2000: 7 ] years
+The term 'MTR1' used in the: [2000: 1 ] years
+The term 'melastatin' used in the: [2000: 1 ] years
+The term 'Trp' used in the: [2000: 1 ] years
+The term 'Beckwith-Wiedemann' used in the: [2000: 1 ] years
+The term 'Tapa1' used in the: [2000: 1 ] years
+The term '44-kb' used in the: [2000: 1 ] years
+The term 'membrane-spanning' used in the: [2000: 1 ] years
+The term 'biallelic' used in the: [2000: 1 ] years
+The term 'CNG' used in the: [2000: 7 ] years
+The term 'Immunolocalization' used in the: [2000: 2 ] years
+The term 'antennal' used in the: [2000: 1 ] years
+The term 'Pax' used in the: [2000: 11 ] years
+The term 'BRCT' used in the: [2000: 1 ] years
+The term 'repair/recombination' used in the: [2000: 1 ] years
+The term 'CQ' used in the: [2000: 13 ] years
+The term 'rheumatologic' used in the: [2000: 1 ] years
+The term 'PBMC' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Intracellular' used in the: [2000: 1 ] years
+The term 'bafilomycin' used in the: [2000: 3 ] years
+The term 'endosomes' used in the: [2000: 1 ] years
+The term 'preincubation' used in the: [2000: 1 ] years
+The term 'congener' used in the: [2000: 1 ] years
+The term 'Deoxyribonuclease' used in the: [2000: 1 ] years
+The term 'mGCDH' used in the: [2000: 1 ] years
+The term 'mDNase' used in the: [2000: 1 ] years
+The term 'GenBank' used in the: [2000: 2 ] years
+The term 'factor-kappaB/Rel' used in the: [2000: 1 ] years
+The term 'synthase' used in the: [2001: 9 , 2000: 7 ] years
+The term 'IkappaB-alpha' used in the: [2000: 6 ] years
+The term 'c-Rel' used in the: [2000: 3 ] years
+The term 'membrane-bound' used in the: [2000: 1 ] years
+The term 'O2-' used in the: [2000: 2 ] years
+The term 'HAECs' used in the: [2000: 3 ] years
+The term 'HMECs' used in the: [2000: 6 ] years
+The term 'O2-production' used in the: [2000: 2 ] years
+The term 'chemiluminescence' used in the: [2000: 1 ] years
+The term 'P005' used in the: [2000: 3 ] years
+The term 'iodonium' used in the: [2000: 1 ] years
+The term 'microm' used in the: [2000: 3 ] years
+The term 'HIV-LTR' used in the: [2000: 1 ] years
+The term 'cancer-derived' used in the: [2000: 1 ] years
+The term 'E7' used in the: [2000: 1 ] years
+The term 'SiHa' used in the: [2000: 1 ] years
+The term 'p53-dependant' used in the: [2000: 1 ] years
+The term 'Hdm2' used in the: [2000: 2 ] years
+The term 'caspase' used in the: [2001: 1 , 2000: 7 ] years
+The term 'CK1epsilon' used in the: [2000: 2 ] years
+The term 'phosphorylates' used in the: [2001: 1 , 2000: 1 ] years
+The term 'mPer3' used in the: [2000: 2 ] years
+The term 'Mcm1' used in the: [2000: 6 ] years
+The term 'Swi' used in the: [2000: 1 ] years
+The term 'CLB2' used in the: [2000: 2 ] years
+The term 'forkhead' used in the: [2000: 3 ] years
+The term 'Fkh1' used in the: [2000: 1 ] years
+The term 'haematopoietic' used in the: [2000: 1 ] years
+The term 'CBTF122' used in the: [2000: 8 ] years
+The term 'MBT' used in the: [2000: 2 ] years
+The term 'translationally' used in the: [2000: 1 ] years
+The term 'BACKGROUND/AIMS' used in the: [2000: 1 ] years
+The term 'intraperitoneal' used in the: [2000: 2 ] years
+The term 'anti-ERK1/2' used in the: [2000: 1 ] years
+The term 'anti-p90rsk' used in the: [2000: 1 ] years
+The term 'p90rsk' used in the: [2000: 3 ] years
+The term 'EGF-induced' used in the: [2000: 1 ] years
+The term 'RPE65' used in the: [2000: 2 ] years
+The term 'isomerization' used in the: [2000: 1 ] years
+The term 'Rpe65' used in the: [2000: 6 ] years
+The term 'octamer' used in the: [2000: 5 ] years
+The term 'promoter/beta-galactosidase' used in the: [2000: 1 ] years
+The term '+52' used in the: [2000: 3 ] years
+The term 'RPE-specific' used in the: [2000: 1 ] years
+The term '-188' used in the: [2000: 1 ] years
+The term 'D407' used in the: [2000: 1 ] years
+The term 'HS27' used in the: [2000: 1 ] years
+The term 'tissue-specific' used in the: [2001: 2 , 2000: 3 ] years
+The term 'ACh' used in the: [2000: 1 ] years
+The term 'denervated' used in the: [2000: 6 ] years
+The term '24-32' used in the: [2000: 1 ] years
+The term 'denervation' used in the: [2000: 8 ] years
+The term '130-fold' used in the: [2000: 1 ] years
+The term '80-fold' used in the: [2000: 1 ] years
+The term 'CHL' used in the: [2000: 21 ] years
+The term 'anticarcinogen' used in the: [2000: 1 ] years
+The term 'LPS-decreased' used in the: [2000: 1 ] years
+The term 'immunoblot' used in the: [2000: 1 ] years
+The term 'radical-induced' used in the: [2000: 1 ] years
+The term 'TGF-beta-inducible' used in the: [2000: 1 ] years
+The term 'SMAD3' used in the: [2000: 2 ] years
+The term 'TGF-beta3' used in the: [2001: 3 , 2000: 22 ] years
+The term 'SMAD-mediated' used in the: [2000: 1 ] years
+The term 'deamination' used in the: [2000: 1 ] years
+The term 'ADAR2' used in the: [2000: 2 ] years
+The term 'ADAR2-/-' used in the: [2000: 1 ] years
+The term 'exonically' used in the: [2000: 1 ] years
+The term 'AMPA' used in the: [2000: 1 ] years
+The term 'propionate' used in the: [2000: 1 ] years
+The term 'alpha3-integrin' used in the: [2000: 4 ] years
+The term 'AEC' used in the: [2000: 8 ] years
+The term 'beta1-integrin' used in the: [2000: 2 ] years
+The term 'beta1-subunit-specific' used in the: [2000: 1 ] years
+The term 'anti-alpha3' used in the: [2000: 1 ] years
+The term 'subconfluent' used in the: [2000: 4 ] years
+The term '7alpha-hydroxylase' used in the: [2000: 1 ] years
+The term 'cis-element' used in the: [2000: 2 , 2001: 1 ] years
+The term 'one-hybrid' used in the: [2000: 1 ] years
+The term 'As41' used in the: [2000: 3 ] years
+The term 'c-myc/CNRELXRalpha' used in the: [2000: 1 ] years
+The term 'SCC-25' used in the: [2000: 6 ] years
+The term 'anti-Fas' used in the: [2000: 5 ] years
+The term 'serum-containing' used in the: [2000: 1 ] years
+The term 'phase-contrast' used in the: [2000: 1 ] years
+The term 'CH-11-treated' used in the: [2000: 1 ] years
+The term 'homeoprotein' used in the: [2000: 3 ] years
+The term 'engrailed' used in the: [2000: 1 ] years
+The term 'bullous' used in the: [2000: 1 ] years
+The term 'BPAG1' used in the: [2000: 2 ] years
+The term 'organotypic' used in the: [2000: 1 ] years
+The term 'Hoxc-8' used in the: [2000: 1 ] years
+The term 'mesencephalon' used in the: [2000: 1 ] years
+The term 'physiopathological' used in the: [2000: 1 ] years
+The term 'glycosylase' used in the: [2000: 6 ] years
+The term 'imidazole' used in the: [2000: 1 ] years
+The term 'faPy' used in the: [2000: 2 ] years
+The term 'protein-tagged' used in the: [2000: 2 ] years
+The term 'synchronised' used in the: [2000: 1 ] years
+The term 'isotypes' used in the: [2000: 8 ] years
+The term 'blastomere' used in the: [2000: 2 ] years
+The term 'stage-dependent' used in the: [2000: 3 ] years
+The term 'DSE' used in the: [2000: 3 ] years
+The term 'Hrp1/Nab4' used in the: [2000: 1 ] years
+The term 'nonsense-containing' used in the: [2000: 2 ] years
+The term 'DSE-containing' used in the: [2000: 1 ] years
+The term 'hyperacetylate' used in the: [2000: 2 ] years
+The term 'RNA-pol' used in the: [2000: 1 ] years
+The term 'Chemokines' used in the: [2000: 1 ] years
+The term 'PANC-1' used in the: [2000: 3 ] years
+The term 'enzyme-linked' used in the: [2000: 1 ] years
+The term 'TPCK' used in the: [2000: 1 ] years
+The term 'tumor-associated' used in the: [2000: 1 ] years
+The term 'facet-strawberry' used in the: [2000: 1 ] years
+The term 'interband' used in the: [2000: 2 ] years
+The term '3C7' used in the: [2000: 2 ] years
+The term 'enhancer-promoter' used in the: [2000: 1 ] years
+The term 'vulval' used in the: [2000: 3 ] years
+The term 'lin-13' used in the: [2000: 2 ] years
+The term 'non-Multivulva' used in the: [2000: 1 ] years
+The term 'LIN-13' used in the: [2000: 2 ] years
+The term 'Rb-mediated' used in the: [2000: 1 ] years
+The term 'myogenic' used in the: [2000: 3 ] years
+The term 'myf-5' used in the: [2000: 1 ] years
+The term 'myofiber' used in the: [2000: 2 ] years
+The term 'Immunoreactivity' used in the: [2000: 1 ] years
+The term 'MRF4-null' used in the: [2000: 1 ] years
+The term 'dystrophin' used in the: [2000: 11 ] years
+The term 'carboxyl-terminal' used in the: [2000: 4 ] years
+The term 'postsynaptic' used in the: [2000: 2 ] years
+The term 'extrasynaptic' used in the: [2000: 1 ] years
+The term 'synaptically' used in the: [2000: 1 ] years
+The term 'dystrophic' used in the: [2000: 1 ] years
+The term 'syne-2' used in the: [2000: 1 ] years
+The term 'PCNA' used in the: [2000: 1 ] years
+The term 'calmodulin' used in the: [2000: 1 ] years
+The term 'C-terminal-binding' used in the: [2000: 1 ] years
+The term 'TOK-1beta' used in the: [2000: 2 ] years
+The term 'CDK2' used in the: [2000: 3 ] years
+The term 'hypothalamic' used in the: [2000: 1 ] years
+The term 'steroidogenesis' used in the: [2000: 1 ] years
+The term 'Nur77' used in the: [2000: 1 ] years
+The term 'Nor1' used in the: [2000: 11 ] years
+The term 'ACTH' used in the: [2000: 2 ] years
+The term 'AngII' used in the: [2000: 2 ] years
+The term 'Time-course' used in the: [2000: 1 , 2001: 1 ] years
+The term 'long-term' used in the: [2000: 3 ] years
+The term 'P450c21' used in the: [2000: 1 ] years
+The term 'palindromic' used in the: [2000: 1 ] years
+The term 'POMC' used in the: [2000: 1 ] years
+The term 'exon-intron' used in the: [2000: 4 ] years
+The term 'interspecific' used in the: [2000: 1 ] years
+The term 'Jackson' used in the: [2000: 1 ] years
+The term '11p15' used in the: [2000: 2 ] years
+The term 'mOR37' used in the: [2000: 3 ] years
+The term 'exportin' used in the: [2000: 5 ] years
+The term 'NES-containing' used in the: [2000: 1 ] years
+The term 'relocalize' used in the: [2000: 2 ] years
+The term 'Rev-mediated' used in the: [2000: 1 ] years
+The term '3q21' used in the: [2000: 4 ] years
+The term 'PAC' used in the: [2000: 1 ] years
+The term 'ASM' used in the: [2000: 6 ] years
+The term 'Growth-arrested' used in the: [2000: 1 ] years
+The term 'nordihydroguaiaretic' used in the: [2000: 1 ] years
+The term 'Bcl-2' used in the: [2000: 3 ] years
+The term 'bcl-xL' used in the: [2000: 8 ] years
+The term '687-706' used in the: [2000: 1 ] years
+The term '2-O-methoxy-ethoxy-modified' used in the: [2000: 1 ] years
+The term 'non-small' used in the: [2000: 1 ] years
+The term 'bispecific' used in the: [2000: 3 ] years
+The term '10-100-fold' used in the: [2000: 1 ] years
+The term 'bcl-2/bcl-xL' used in the: [2000: 1 ] years
+The term 'nPAPs' used in the: [2000: 2 ] years
+The term 'chloroplast-localized' used in the: [2000: 1 ] years
+The term 'Arabidopsis-encoded' used in the: [2000: 1 ] years
+The term 'UNG' used in the: [2000: 1 ] years
+The term 'Ung2' used in the: [2000: 6 ] years
+The term 'glyco-sylase' used in the: [2000: 1 ] years
+The term 'mid-gestation' used in the: [2000: 1 ] years
+The term '1/6' used in the: [2000: 1 ] years
+The term 'SM22' used in the: [2000: 2 ] years
+The term 'virus-long' used in the: [2000: 1 ] years
+The term 'CArG' used in the: [2000: 1 ] years
+The term '34-kDa' used in the: [2000: 2 ] years
+The term 'NES-mediated' used in the: [2000: 3 ] years
+The term '-145' used in the: [2000: 1 ] years
+The term '-375' used in the: [2000: 1 ] years
+The term 'endotoxin' used in the: [2001: 1 , 2000: 3 ] years
+The term 'endotoxic' used in the: [2001: 1 , 2000: 2 ] years
+The term 'selenoorganic' used in the: [2000: 1 ] years
+The term 'COX-2' used in the: [2001: 10 , 2000: 1 ] years
+The term 'monocyte/neutrophil' used in the: [2000: 1 ] years
+The term 'MNEI' used in the: [2000: 5 ] years
+The term 'MNEI-luciferase' used in the: [2000: 2 ] years
+The term '-128' used in the: [2000: 2 ] years
+The term 'PU1/Spi-1' used in the: [2000: 1 ] years
+The term 'supershift' used in the: [2000: 4 ] years
+The term 'glycolipid' used in the: [2000: 1 ] years
+The term 'Glucocorticoid' used in the: [2000: 2 , 2001: 1 ] years
+The term 'HAS1' used in the: [2001: 1 ] years
+The term 'HAS3' used in the: [2001: 1 ] years
+The term 'osteosarcoma' used in the: [2000: 2 , 2001: 1 ] years
+The term '97--98' used in the: [2001: 1 ] years
+The term 'suppressive' used in the: [2001: 1 , 2000: 1 ] years
+The term 'RU486' used in the: [2000: 1 , 2001: 1 ] years
+The term 'AMD' used in the: [2001: 2 ] years
+The term 'destabilizer' used in the: [2001: 1 ] years
+The term 'near-total' used in the: [2001: 1 ] years
+The term 'Ly-6SF' used in the: [2000: 2 ] years
+The term 'Ly-6C' used in the: [2000: 4 ] years
+The term 'Ly-6A/E' used in the: [2000: 1 ] years
+The term 'granulocytes' used in the: [2001: 3 , 2000: 2 ] years
+The term 're-expressed' used in the: [2000: 1 ] years
+The term 'SCID' used in the: [2000: 8 ] years
+The term 'dephosphorylation' used in the: [2000: 2 ] years
+The term 'protein-1alpha' used in the: [2000: 1 ] years
+The term 'receptor-alpha' used in the: [2000: 1 ] years
+The term 'fibrates' used in the: [2000: 3 ] years
+The term 'ACO-peroxisome' used in the: [2000: 2 ] years
+The term 'ACO' used in the: [2000: 1 ] years
+The term 'PPARbeta' used in the: [2000: 1 ] years
+The term 'Cardiotrophin-1' used in the: [2000: 1 ] years
+The term 'gp130' used in the: [2000: 3 ] years
+The term 'norepinephrine' used in the: [2001: 1 , 2000: 1 ] years
+The term '7F3' used in the: [2000: 1 ] years
+The term 'NE-stimulated' used in the: [2000: 1 ] years
+The term 'immunoregulatory' used in the: [2000: 1 ] years
+The term 'NHD' used in the: [2000: 3 ] years
+The term 'Ca' used in the: [2000: 2 ] years
+The term 'NFATx' used in the: [2000: 1 ] years
+The term 'endonuclease' used in the: [2000: 2 ] years
+The term 'chelators' used in the: [2000: 2 ] years
+The term '4E' used in the: [2000: 2 ] years
+The term 'eIF4E-binding' used in the: [2000: 2 ] years
+The term 'eIF4E-Transporter' used in the: [2000: 1 ] years
+The term 'HA-eIF4E' used in the: [2000: 1 ] years
+The term 'dopamine' used in the: [2000: 12 ] years
+The term '2-4' used in the: [2000: 1 ] years
+The term '5-HTP' used in the: [2000: 2 ] years
+The term '41R' used in the: [2000: 12 ] years
+The term '5-encoded' used in the: [2000: 1 ] years
+The term 'S10' used in the: [2000: 2 ] years
+The term 'RPS10' used in the: [2000: 3 ] years
+The term 'RFLP' used in the: [2000: 1 ] years
+The term 'EF-1beta2' used in the: [2000: 1 ] years
+The term 'TEs' used in the: [2000: 4 ] years
+The term 'galectin' used in the: [2000: 1 ] years
+The term 'abomasal' used in the: [2000: 1 ] years
+The term 'contortus' used in the: [2000: 1 ] years
+The term 'eosinophil' used in the: [2000: 1 ] years
+The term 'OVGAL11' used in the: [2000: 1 ] years
+The term 'type-I' used in the: [2000: 1 ] years
+The term 'Tax-independent' used in the: [2000: 2 ] years
+The term 'JunD' used in the: [2000: 3 ] years
+The term '26S' used in the: [2000: 4 ] years
+The term 'DRH' used in the: [2000: 6 ] years
+The term 'hepatocarcinogen' used in the: [2000: 1 ] years
+The term 'preneoplastic' used in the: [2000: 5 ] years
+The term 'DRHF2' used in the: [2000: 1 ] years
+The term 'gamma-glutamyltranspeptidase' used in the: [2000: 1 ] years
+The term '6-phosphatase/insulin-like' used in the: [2000: 2 ] years
+The term 'Drh2' used in the: [2000: 2 ] years
+The term 'subpeaks' used in the: [2000: 1 ] years
+The term 'polymorphic' used in the: [2000: 1 ] years
+The term 'NR0B1' used in the: [2000: 1 ] years
+The term 'congenita' used in the: [2000: 1 ] years
+The term 'hypogonadotropic' used in the: [2000: 1 ] years
+The term 'HHG' used in the: [2000: 1 ] years
+The term 'AHC-HHG' used in the: [2000: 1 ] years
+The term 'nucleolytic' used in the: [2000: 1 ] years
+The term 'debranched' used in the: [2000: 1 ] years
+The term '53-terminal' used in the: [2000: 1 ] years
+The term 'U46' used in the: [2001: 1 , 2000: 10 ] years
+The term 'SF2/ASF' used in the: [2000: 6 ] years
+The term 'ribonucleic' used in the: [2000: 1 ] years
+The term 'nonpregnant' used in the: [2000: 1 ] years
+The term 'NF-E2' used in the: [2000: 10 ] years
+The term 'erythropoietin-induced' used in the: [2000: 1 ] years
+The term 'monoblastoid' used in the: [2000: 1 ] years
+The term 'NF-E2-transfected' used in the: [2000: 1 ] years
+The term 'hemopoietic' used in the: [2001: 4 , 2000: 1 ] years
+The term 'PTHR' used in the: [2000: 12 ] years
+The term 'IHC' used in the: [2000: 1 ] years
+The term 'paraffin-embedded' used in the: [2000: 1 ] years
+The term 'surface/secretory' used in the: [2000: 1 ] years
+The term 'thecal' used in the: [2000: 1 ] years
+The term 'Immunoreactive' used in the: [2000: 1 ] years
+The term 'hindlimbs' used in the: [2000: 2 ] years
+The term 'littermates' used in the: [2000: 1 ] years
+The term 'SmMAK16' used in the: [2000: 5 ] years
+The term 'mansoni' used in the: [2000: 2 ] years
+The term 'MAK16' used in the: [2000: 2 ] years
+The term 'CeMAK16' used in the: [2000: 1 ] years
+The term 'COS-7s' used in the: [2000: 4 ] years
+The term 'src' used in the: [2000: 2 ] years
+The term 'SH-3' used in the: [2000: 1 ] years
+The term 'IGF-IR' used in the: [2000: 26 ] years
+The term 'NBSH-SY5Y' used in the: [2000: 1 ] years
+The term '7-8' used in the: [2000: 2 ] years
+The term 'P005-0001' used in the: [2000: 1 ] years
+The term 'RA' used in the: [2000: 17 ] years
+The term 'non-receptor' used in the: [2000: 1 ] years
+The term 'Ca2+-dependent' used in the: [2000: 1 ] years
+The term 'neurodegeneration' used in the: [2000: 1 ] years
+The term 'E-64-d' used in the: [2000: 4 ] years
+The term 'T12' used in the: [2000: 1 ] years
+The term 'g-cm' used in the: [2000: 1 ] years
+The term 'DMSO' used in the: [2000: 1 ] years
+The term '1-cm' used in the: [2000: 1 ] years
+The term 'S2' used in the: [2000: 9 , 2001: 1 ] years
+The term 'calpain/calpastatin' used in the: [2000: 1 ] years
+The term 'neurofilament' used in the: [2000: 1 ] years
+The term 'SR-A' used in the: [2000: 12 ] years
+The term 'coincubation' used in the: [2000: 1 ] years
+The term 'macrophage-conditioned' used in the: [2000: 1 ] years
+The term '30-fold' used in the: [2000: 1 ] years
+The term '80-100' used in the: [2000: 1 ] years
+The term 'bioactivity' used in the: [2000: 1 ] years
+The term 'cyclooxygenase-2' used in the: [2001: 1 , 2000: 2 ] years
+The term 'THP-1' used in the: [2000: 1 ] years
+The term 'mitogens' used in the: [2000: 2 ] years
+The term 'apoptosis-inducing' used in the: [2000: 2 ] years
+The term 'activation-induced' used in the: [2000: 4 ] years
+The term 'agonistic' used in the: [2000: 1 ] years
+The term 'lin' used in the: [2000: 2 ] years
+The term 'cell-autonomously' used in the: [2000: 1 ] years
+The term 'Pangolin' used in the: [2000: 1 ] years
+The term 'parasegmental' used in the: [2000: 1 ] years
+The term 'SLE' used in the: [2000: 8 ] years
+The term 'ANA' used in the: [2000: 2 ] years
+The term 'aetiology' used in the: [2000: 1 ] years
+The term 'secreta' used in the: [2000: 1 ] years
+The term 'Dnase1-deficient' used in the: [2000: 1 ] years
+The term 'Dnase1-dose-dependent' used in the: [2000: 1 ] years
+The term 'synthase-2' used in the: [2000: 1 ] years
+The term 'nontumorigenic' used in the: [2000: 1 ] years
+The term 'PGE2' used in the: [2000: 4 ] years
+The term 'Apc+/+' used in the: [2000: 1 ] years
+The term 'SMT' used in the: [2000: 1 ] years
+The term 'NOR-1' used in the: [2000: 2 ] years
+The term 'Super-shift' used in the: [2000: 1 ] years
+The term 'IMCE' used in the: [2000: 3 ] years
+The term 'leukemogenic' used in the: [2000: 1 ] years
+The term 'rAF-9' used in the: [2000: 6 ] years
+The term 'dimorphic' used in the: [2000: 1 ] years
+The term 'sex-specific' used in the: [2000: 1 ] years
+The term 'pigmentosum' used in the: [2000: 2 ] years
+The term '1000-fold' used in the: [2000: 1 ] years
+The term 'DNA-damaging' used in the: [2000: 2 ] years
+The term 'polyploidy' used in the: [2000: 3 ] years
+The term 'binucleation' used in the: [2000: 2 ] years
+The term 'non-NER-related' used in the: [2000: 1 ] years
+The term 'apolipoprotein' used in the: [2000: 4 ] years
+The term 'APOBEC-1' used in the: [2000: 5 ] years
+The term 'McArdle' used in the: [2000: 1 ] years
+The term 'hic-5' used in the: [2000: 4 ] years
+The term '1kb' used in the: [2000: 1 ] years
+The term '0cM' used in the: [2000: 1 ] years
+The term '17beta-estradiol' used in the: [2000: 1 ] years
+The term '-751' used in the: [2000: 1 ] years
+The term '-239' used in the: [2000: 1 ] years
+The term 'AGE/TNF-alpha' used in the: [2000: 2 ] years
+The term '-671' used in the: [2000: 1 ] years
+The term '-189' used in the: [2000: 2 ] years
+The term 'anti-p65/p50' used in the: [2000: 1 ] years
+The term 'AGE-RAGE' used in the: [2000: 1 ] years
+The term 'beta-tubulin' used in the: [2000: 3 ] years
+The term 'pseudogenes' used in the: [2000: 2 ] years
+The term 'tubulin' used in the: [2000: 1 ] years
+The term 'FSHD1' used in the: [2000: 2 ] years
+The term '4q35' used in the: [2000: 2 ] years
+The term 'TUBB4Q-related' used in the: [2000: 1 ] years
+The term 'PEV' used in the: [2000: 3 ] years
+The term 'reported-fms-like-tyrosine' used in the: [2000: 1 ] years
+The term 'Flt-1' used in the: [2000: 4 ] years
+The term 'flt-1' used in the: [2000: 4 ] years
+The term 'cotransfection' used in the: [2001: 1 , 2000: 3 ] years
+The term 'U7' used in the: [2000: 6 ] years
+The term 'hairpin-binding' used in the: [2000: 2 ] years
+The term 'fide' used in the: [2000: 2 ] years
+The term 'non-destructible' used in the: [2000: 1 ] years
+The term 'p80-coilin' used in the: [2001: 1 , 2000: 1 ] years
+The term 'phosphatase-1' used in the: [2000: 1 ] years
+The term 'Forkhead-associated' used in the: [2000: 1 ] years
+The term 'phosphopeptide' used in the: [2000: 3 ] years
+The term 'E-Cdk2' used in the: [2000: 1 ] years
+The term 'Bicaudal-D' used in the: [2000: 1 ] years
+The term 'Bic-DGFP' used in the: [2000: 8 ] years
+The term '1-6' used in the: [2000: 1 ] years
+The term 'dorso-anterior' used in the: [2000: 1 ] years
+The term 'mael' used in the: [2000: 1 ] years
+The term 'germarium' used in the: [2000: 1 ] years
+The term 'negative-end' used in the: [2000: 1 ] years
+The term 'antero-posterior' used in the: [2000: 1 ] years
+The term 'metalloproteinases' used in the: [2000: 4 ] years
+The term 'MMP-12' used in the: [2000: 8 ] years
+The term 'atheromas' used in the: [2000: 1 ] years
+The term 'pro-atherosclerotic' used in the: [2000: 1 ] years
+The term 'colony-stimulating' used in the: [2000: 1 ] years
+The term 'cytokine-mediated' used in the: [2000: 1 ] years
+The term 'testis-brain-RNA-binding' used in the: [2000: 1 ] years
+The term 'microfilaments' used in the: [2000: 1 ] years
+The term 'trichocyst' used in the: [2000: 3 ] years
+The term 'exocytotic' used in the: [2000: 3 ] years
+The term 'aminoethyldextran' used in the: [2000: 1 ] years
+The term 'secretagogue-induced' used in the: [2000: 1 ] years
+The term 'Annexin' used in the: [2000: 1 ] years
+The term '37-kDa' used in the: [2000: 1 ] years
+The term 'chaperone-like' used in the: [2000: 1 ] years
+The term 'GY' used in the: [2000: 1 ] years
+The term 'HJ' used in the: [2000: 1 ] years
+The term 'Mol' used in the: [2001: 1 , 2000: 1 ] years
+The term 'A549' used in the: [2000: 2 ] years
+The term 'annexins' used in the: [2000: 11 ] years
+The term 'pp65-positive' used in the: [2000: 1 ] years
+The term 'immunocompetent' used in the: [2000: 1 ] years
+The term 'pp65' used in the: [2000: 2 ] years
+The term 'IE' used in the: [2000: 6 ] years
+The term 'coculture' used in the: [2000: 5 ] years
+The term 'HELF' used in the: [2000: 3 ] years
+The term 'laboratory-adapted' used in the: [2000: 1 ] years
+The term 'Coculture' used in the: [2000: 1 ] years
+The term 'microfusion' used in the: [2000: 2 ] years
+The term 'Npl3p' used in the: [2000: 5 ] years
+The term 'Temperature-sensitive' used in the: [2000: 1 ] years
+The term 'cap-binding' used in the: [2000: 3 ] years
+The term 'CBP20' used in the: [2000: 2 ] years
+The term 'Cbp80p' used in the: [2000: 3 ] years
+The term 'co-precipitate' used in the: [2000: 1 ] years
+The term 'RCCC' used in the: [2000: 3 ] years
+The term 'TRalpha' used in the: [2000: 2 ] years
+The term '16x' used in the: [2000: 1 ] years
+The term '17x' used in the: [2000: 1 ] years
+The term 'goosecoid-like' used in the: [2000: 1 ] years
+The term 'rnf4' used in the: [2000: 5 ] years
+The term 'Gscl/rnf4' used in the: [2000: 1 ] years
+The term 'notochordal' used in the: [2000: 4 ] years
+The term 'perichromatin' used in the: [2001: 1 , 2000: 5 ] years
+The term '6-36' used in the: [2000: 1 ] years
+The term 'morphometric' used in the: [2000: 1 ] years
+The term '16-21' used in the: [2000: 1 ] years
+The term '21-30' used in the: [2000: 1 ] years
+The term 'perichordal' used in the: [2000: 1 ] years
+The term 'Immunoblot' used in the: [2000: 2 ] years
+The term 'NG108-15' used in the: [2000: 7 ] years
+The term 'delta3' used in the: [2000: 6 ] years
+The term '15-amino' used in the: [2000: 1 ] years
+The term 'RIP3' used in the: [2000: 5 ] years
+The term 'rip3' used in the: [2000: 2 ] years
+The term 'FADD' used in the: [2000: 2 ] years
+The term 'RIP3-induced' used in the: [2000: 1 ] years
+The term '-6' used in the: [2000: 5 ] years
+The term 'Z-VDVAD' used in the: [2000: 1 ] years
+The term 'pro-apoptotic' used in the: [2000: 1 ] years
+The term 'TNFR1' used in the: [2000: 1 ] years
+The term 'loxP/cre' used in the: [2000: 1 ] years
+The term 'Insulin-like' used in the: [2000: 1 ] years
+The term 'HT-29' used in the: [2000: 5 ] years
+The term 'GH-RH' used in the: [2000: 5 ] years
+The term 'microg' used in the: [2000: 4 ] years
+The term 'sc' used in the: [2001: 3 , 2000: 2 ] years
+The term 'JV-1-36' used in the: [2000: 1 ] years
+The term 'Histological' used in the: [2000: 1 ] years
+The term 'dose-dependently' used in the: [2000: 1 ] years
+The term 'ySMN' used in the: [2000: 6 ] years
+The term 'microglia' used in the: [2000: 6 ] years
+The term 'tosyl-Phe-chloromethlyketone' used in the: [2000: 1 ] years
+The term 'vasa' used in the: [2000: 10 ] years
+The term 'Danio' used in the: [2000: 3 ] years
+The term 'feegradei' used in the: [2000: 1 ] years
+The term 'nuage' used in the: [2000: 1 ] years
+The term 'depolymerization' used in the: [2000: 1 ] years
+The term 'cisplatin-caused' used in the: [2000: 1 ] years
+The term 'MCAS' used in the: [2000: 3 ] years
+The term 'A2780/CP70' used in the: [2000: 2 ] years
+The term 'U5' used in the: [2000: 4 ] years
+The term 'A-I' used in the: [2000: 2 ] years
+The term 'HDL-C' used in the: [2000: 3 ] years
+The term 'apoA-I' used in the: [2000: 6 ] years
+The term 'LDL-C' used in the: [2000: 1 ] years
+The term 'LCAT' used in the: [2000: 1 ] years
+The term 'ACAT' used in the: [2000: 1 ] years
+The term 'CETP' used in the: [2000: 2 ] years
+The term 'LDL-receptor' used in the: [2000: 1 ] years
+The term 'Cyp6a2' used in the: [2000: 7 ] years
+The term 'ry506' used in the: [2000: 4 ] years
+The term 'CYP6A2' used in the: [2000: 3 ] years
+The term '91-R' used in the: [2000: 6 ] years
+The term 'F1' used in the: [2000: 2 ] years
+The term 'underproducer' used in the: [2000: 3 ] years
+The term 'Cyp6a8-91R' used in the: [2000: 3 ] years
+The term 'isogenic' used in the: [2000: 2 ] years
+The term 'resubstituted' used in the: [2000: 1 ] years
+The term 'Cyp' used in the: [2000: 1 ] years
+The term 'processestranscription' used in the: [2000: 1 ] years
+The term 'Nup153' used in the: [2000: 3 ] years
+The term 'Pre-mRNA' used in the: [2001: 2 , 2000: 2 ] years
+The term 'diffusion-based' used in the: [2000: 2 ] years
+The term 'immunolabeled' used in the: [2000: 1 ] years
+The term 'subspeckles' used in the: [2000: 6 ] years
+The term 'beta-tropomyosin' used in the: [2000: 1 ] years
+The term 'hs' used in the: [2000: 6 ] years
+The term 'nucleoporinlike' used in the: [2000: 1 ] years
+The term 'Nup42p' used in the: [2000: 1 ] years
+The term 'Hammell' used in the: [2000: 1 ] years
+The term 'Dev' used in the: [2000: 2 ] years
+The term 'Stutz' used in the: [2000: 1 ] years
+The term 'Zhang' used in the: [2000: 1 ] years
+The term 'Neville' used in the: [2000: 1 ] years
+The term '112857-2868' used in the: [2000: 1 ] years
+The term 'microexons' used in the: [2000: 2 ] years
+The term 'troponin' used in the: [2000: 1 ] years
+The term 'SF1' used in the: [2000: 5 ] years
+The term 'subcomplex' used in the: [2000: 1 ] years
+The term 'A-tagged' used in the: [2000: 1 ] years
+The term 'NUP116' used in the: [2000: 1 ] years
+The term 'Gle2p/Rae1p' used in the: [2000: 1 ] years
+The term 'U2AF35' used in the: [2001: 5 , 2000: 1 ] years
+The term 'microscopy-based' used in the: [2000: 1 ] years
+The term 'Telangiectasia' used in the: [2000: 1 ] years
+The term 'telangiectasia' used in the: [2000: 1 ] years
+The term 'rad3Sp' used in the: [2000: 1 ] years
+The term 'E85' used in the: [2000: 3 ] years
+The term 'ES-cell' used in the: [2000: 1 ] years
+The term 'brain-derived' used in the: [2000: 1 ] years
+The term 'IV-containing' used in the: [2000: 1 ] years
+The term 'III-BDNF' used in the: [2000: 1 ] years
+The term 'IV' used in the: [2001: 16 , 2000: 11 ] years
+The term 'GnRH' used in the: [2000: 12 ] years
+The term 'post-NMA' used in the: [2000: 1 ] years
+The term 'n9/treatment' used in the: [2000: 1 ] years
+The term '15-' used in the: [2000: 3 ] years
+The term 'post-injection' used in the: [2000: 1 ] years
+The term 'E115' used in the: [2000: 4 ] years
+The term 'histochemically' used in the: [2000: 1 ] years
+The term 'mitochondrial-encoded' used in the: [2000: 2 ] years
+The term '3H-uridine' used in the: [2000: 1 ] years
+The term 'half-lives' used in the: [2000: 1 ] years
+The term 'nasopharyngeal' used in the: [2000: 1 ] years
+The term 'non-NPC' used in the: [2000: 5 ] years
+The term 'EBNA1' used in the: [2000: 2 ] years
+The term 'non-' used in the: [2000: 2 ] years
+The term 'valine' used in the: [2000: 1 ] years
+The term 'Bcl-XL' used in the: [2000: 1 ] years
+The term 'passaged' used in the: [2000: 1 ] years
+The term '55th' used in the: [2000: 1 ] years
+The term 'karyotype' used in the: [2000: 1 ] years
+The term 'doublings' used in the: [2000: 3 ] years
+The term 'HPV-1' used in the: [2000: 7 ] years
+The term 'HuR' used in the: [2000: 13 ] years
+The term 'salt-induced' used in the: [2000: 1 ] years
+The term 'reassociated' used in the: [2000: 1 ] years
+The term 'mg/ml' used in the: [2000: 1 ] years
+The term 'disulfide' used in the: [2000: 2 ] years
+The term '10-nm' used in the: [2000: 1 ] years
+The term 'salt-insoluble' used in the: [2000: 1 ] years
+The term 'brucei' used in the: [2000: 2 ] years
+The term 'elongation/processing' used in the: [2000: 1 ] years
+The term 'RanGTPase' used in the: [2000: 1 ] years
+The term 'Rev-containing' used in the: [2000: 1 ] years
+The term 'LAT-B' used in the: [2000: 2 ] years
+The term 'depolymerizing' used in the: [2000: 1 ] years
+The term 'mRNA-positive' used in the: [2000: 1 ] years
+The term 'GAPDH' used in the: [2000: 1 ] years
+The term 'intron-containing' used in the: [2000: 5 ] years
+The term 'tomentosiformis' used in the: [2000: 3 ] years
+The term 'tabacum' used in the: [2000: 1 ] years
+The term 'sylvestris' used in the: [2000: 2 ] years
+The term 'EMBL' used in the: [2000: 1 ] years
+The term 'extensins' used in the: [2000: 1 ] years
+The term 'Dendritic' used in the: [2000: 1 ] years
+The term 'adjuvant' used in the: [2000: 1 ] years
+The term '5A' used in the: [2000: 4 ] years
+The term 'DC' used in the: [2000: 5 ] years
+The term '7-diaminoheptane' used in the: [2000: 1 ] years
+The term 'DC-mediated' used in the: [2000: 1 ] years
+The term 'decapped' used in the: [2000: 1 ] years
+The term 'xrn1Delta' used in the: [2000: 3 ] years
+The term 'xrn1' used in the: [2000: 5 ] years
+The term 'high-copy' used in the: [2000: 1 ] years
+The term 'High-copy' used in the: [2000: 1 ] years
+The term 'CEG1' used in the: [2000: 2 ] years
+The term 'eIF3' used in the: [2000: 1 ] years
+The term 'TIF4631' used in the: [2000: 1 ] years
+The term 'pab1' used in the: [2000: 2 ] years
+The term '7mG' used in the: [2000: 1 ] years
+The term 'CTE' used in the: [2000: 4 ] years
+The term 'TAP/Mex67p' used in the: [2000: 3 ] years
+The term 'hnRNP-like' used in the: [2000: 3 ] years
+The term 'musculus' used in the: [2000: 1 ] years
+The term 'REF-bps' used in the: [2000: 1 ] years
+The term 'covalent' used in the: [2000: 1 ] years
+The term 'dihydrotestosterone' used in the: [2000: 2 ] years
+The term 'prostatic' used in the: [2000: 3 ] years
+The term 'PNAmyc-T' used in the: [2000: 6 ] years
+The term 'rhodamine' used in the: [2000: 1 ] years
+The term 'MYC' used in the: [2000: 2 ] years
+The term 'cell-selective' used in the: [2000: 2 ] years
+The term 'phenotypically' used in the: [2000: 1 ] years
+The term 'life-span' used in the: [2000: 1 ] years
+The term 'EPC-1' used in the: [2000: 1 ] years
+The term '35-' used in the: [2000: 1 ] years
+The term 'Emerson' used in the: [2000: 1 ] years
+The term 'striate' used in the: [2000: 2 ] years
+The term 'chlorotic' used in the: [2000: 1 ] years
+The term 'plastid' used in the: [2000: 7 ] years
+The term 'tumor-transforming' used in the: [2000: 1 ] years
+The term 'PTTG-binding' used in the: [2000: 2 ] years
+The term 'papillomaviruses' used in the: [2000: 4 ] years
+The term 'GU-rich' used in the: [2000: 1 ] years
+The term '64-kDa' used in the: [2000: 2 ] years
+The term 'W12' used in the: [2000: 1 ] years
+The term 'EIAV' used in the: [2000: 2 ] years
+The term 'ESE' used in the: [2000: 7 ] years
+The term 'GST-Rev' used in the: [2000: 2 ] years
+The term 'protein-ESE' used in the: [2000: 1 ] years
+The term 'trans-complementation' used in the: [2000: 1 ] years
+The term 'protein-RNA' used in the: [2000: 1 ] years
+The term 'persica' used in the: [2000: 1 ] years
+The term 'RPS28' used in the: [2000: 3 ] years
+The term 'mitotically' used in the: [2000: 1 ] years
+The term 'subtending' used in the: [2000: 1 ] years
+The term 'cold-regulated' used in the: [2000: 3 ] years
+The term 'frost-sensitive' used in the: [2000: 1 ] years
+The term '18/15' used in the: [2000: 1 ] years
+The term 'COR14b' used in the: [2000: 1 ] years
+The term 'locusi' used in the: [2000: 1 ] years
+The term 'monococcum' used in the: [2000: 1 ] years
+The term 'Chinese' used in the: [2001: 2 , 2000: 2 ] years
+The term 'Spring/Cheyenne' used in the: [2000: 1 ] years
+The term 'Xpsr2021' used in the: [2000: 1 ] years
+The term 'ZNF274' used in the: [2000: 9 ] years
+The term 'Oda' used in the: [2000: 1 ] years
+The term 'Yano' used in the: [2000: 1 ] years
+The term 'Muramatsu' used in the: [2000: 1 ] years
+The term 'Biotechnol' used in the: [2000: 1 ] years
+The term 'C2H2-type' used in the: [2000: 1 ] years
+The term 'Kruppel-associated' used in the: [2000: 1 ] years
+The term '19qter' used in the: [2000: 1 ] years
+The term 'KRAB' used in the: [2000: 1 ] years
+The term 'zinc-fingers' used in the: [2000: 11 ] years
+The term 'domain-containing' used in the: [2000: 1 ] years
+The term 'SHP' used in the: [2000: 7 ] years
+The term 'PIAS' used in the: [2000: 14 ] years
+The term 'SOCS3-mRNA' used in the: [2000: 1 ] years
+The term 'TyrP-759' used in the: [2000: 1 ] years
+The term 'FATP' used in the: [2000: 1 ] years
+The term 'esterification' used in the: [2000: 1 ] years
+The term 'FATP-1' used in the: [2000: 5 ] years
+The term 'LGD1069' used in the: [2000: 1 ] years
+The term '8-tetrahydro-2-naphthylethenylbenzoic' used in the: [2000: 1 ] years
+The term 'modulatory' used in the: [2000: 1 ] years
+The term 'PPAR-RXR' used in the: [2000: 2 ] years
+The term 'damage-specific' used in the: [2000: 1 ] years
+The term 'p48' used in the: [2000: 4 ] years
+The term 'repair-proficient' used in the: [2000: 1 ] years
+The term 'repair-deficient' used in the: [2000: 1 ] years
+The term 'XP3RO' used in the: [2000: 2 ] years
+The term 'env' used in the: [2000: 1 ] years
+The term 'gag-pol' used in the: [2000: 3 ] years
+The term 'ubiquitin-proteasome' used in the: [2000: 1 ] years
+The term 'BEAS' used in the: [2000: 1 ] years
+The term 'NF-kappaB-dependent' used in the: [2000: 3 ] years
+The term 'IKK' used in the: [2000: 2 ] years
+The term 'MSL5' used in the: [2000: 1 ] years
+The term 'pre-spliceosomes' used in the: [2000: 2 ] years
+The term 'cs' used in the: [2000: 2 ] years
+The term 'branchpoint' used in the: [2000: 1 ] years
+The term 'Trans' used in the: [2000: 1 ] years
+The term 'trypanosomatid' used in the: [2000: 3 ] years
+The term 'Leishmania' used in the: [2000: 2 ] years
+The term 'episomal' used in the: [2000: 1 ] years
+The term 'CsCl' used in the: [2000: 1 ] years
+The term 'nuclear-cytoplasmic' used in the: [2000: 1 ] years
+The term 'nSREBP-1a' used in the: [2000: 2 ] years
+The term 'nSREBP-2' used in the: [2000: 1 ] years
+The term 'glycerolipids' used in the: [2000: 1 ] years
+The term 'RNA-related' used in the: [2000: 2 ] years
+The term 'polioviral' used in the: [2000: 1 ] years
+The term 'C1' used in the: [2000: 3 ] years
+The term 'homomeric' used in the: [2000: 1 ] years
+The term 'RRM2' used in the: [2000: 2 ] years
+The term 'biomarker' used in the: [2000: 1 ] years
+The term 'Transporter-1' used in the: [2000: 1 ] years
+The term 'NIH-3T3' used in the: [2000: 1 ] years
+The term 'radiolabeling' used in the: [2000: 1 ] years
+The term 'GST-tagged' used in the: [2000: 1 ] years
+The term 'PRMT1' used in the: [2000: 2 ] years
+The term 'M9' used in the: [2000: 1 ] years
+The term 'pregnane' used in the: [2000: 1 ] years
+The term '5-rapid' used in the: [2000: 1 ] years
+The term '5-terminus' used in the: [2000: 1 ] years
+The term 'CV-1' used in the: [2000: 1 ] years
+The term 'DR3' used in the: [2000: 1 ] years
+The term 'Pregnenolone' used in the: [2000: 1 ] years
+The term '3A6' used in the: [2000: 1 ] years
+The term 'CDDP' used in the: [2000: 4 ] years
+The term 'etoposide' used in the: [2000: 1 ] years
+The term 'CPT' used in the: [2000: 3 ] years
+The term 'CYC' used in the: [2000: 2 ] years
+The term 'IFO' used in the: [2000: 2 ] years
+The term 'DOX' used in the: [2000: 2 ] years
+The term 'calorimetric' used in the: [2000: 1 ] years
+The term 'CYC/IFO' used in the: [2000: 1 ] years
+The term 'CDDP-resistant' used in the: [2000: 1 ] years
+The term 'topoisomerase' used in the: [2001: 3 , 2000: 3 ] years
+The term 'adherens' used in the: [2000: 1 ] years
+The term 'Lef/Tcf' used in the: [2000: 1 ] years
+The term 'homeobox' used in the: [2000: 2 ] years
+The term 'beta-Engrailed' used in the: [2000: 1 ] years
+The term 'organizer-specific' used in the: [2000: 1 ] years
+The term 'goosecoid' used in the: [2000: 1 ] years
+The term 'notochord/organizer' used in the: [2000: 1 ] years
+The term 'cadherin-mediated' used in the: [2000: 1 ] years
+The term 'PNBs' used in the: [2000: 3 ] years
+The term 'B23/NO38' used in the: [2000: 1 ] years
+The term 'DFNB7-DFNB11' used in the: [2000: 4 ] years
+The term 'D9S1806' used in the: [2000: 1 ] years
+The term 'TMEM2' used in the: [2000: 5 ] years
+The term 'dn' used in the: [2000: 1 ] years
+The term 'Oryza' used in the: [2000: 2 ] years
+The term 'CaCl2' used in the: [2000: 1 ] years
+The term '1a' used in the: [2000: 1 ] years
+The term 'AUUUA' used in the: [2000: 1 ] years
+The term 'CYP7A1' used in the: [2000: 9 ] years
+The term 'L35' used in the: [2000: 2 ] years
+The term 'pre-treated' used in the: [2000: 1 ] years
+The term 'ECFP' used in the: [2000: 5 ] years
+The term 'Lacandonia' used in the: [2000: 7 ] years
+The term 'extranucleolar' used in the: [2000: 2 ] years
+The term 'post-anthesis' used in the: [2000: 1 ] years
+The term 'post-splicing' used in the: [2000: 1 ] years
+The term 'A/T' used in the: [2000: 1 ] years
+The term 'African' used in the: [2000: 1 ] years
+The term 'co-localisation' used in the: [2000: 1 ] years
+The term 'protochlorophyllide' used in the: [2000: 1 ] years
+The term 'chlN' used in the: [2000: 3 ] years
+The term 'y-1' used in the: [2000: 2 ] years
+The term 'dark-grown' used in the: [2000: 2 ] years
+The term 'm-2' used in the: [2000: 1 ] years
+The term 'chloramphenicol-treated' used in the: [2000: 2 ] years
+The term 'y-7' used in the: [2000: 1 ] years
+The term 'Agrobacterium' used in the: [2000: 1 ] years
+The term 'T-DNA' used in the: [2000: 3 ] years
+The term 'rolA' used in the: [2000: 2 ] years
+The term 'agrobacteria' used in the: [2000: 1 ] years
+The term 'rhizobia' used in the: [2000: 1 ] years
+The term 'p16' used in the: [2000: 6 ] years
+The term 'psp54' used in the: [2000: 3 ] years
+The term 'p54' used in the: [2000: 5 ] years
+The term '31-34' used in the: [2000: 1 ] years
+The term 'rehydration' used in the: [2000: 1 ] years
+The term 'osmolites' used in the: [2000: 1 ] years
+The term 'vicilin' used in the: [2000: 1 ] years
+The term 'acetyl-coenzyme' used in the: [2000: 1 ] years
+The term 'ACCase' used in the: [2000: 4 ] years
+The term 'plastid-coded' used in the: [2000: 1 ] years
+The term 'nuclear-coded' used in the: [2000: 1 ] years
+The term 'alpha-carboxyltransferase' used in the: [2000: 4 ] years
+The term 'eubacteria' used in the: [2000: 2 ] years
+The term 'MS' used in the: [2000: 3 ] years
+The term 'non-MS' used in the: [2000: 1 ] years
+The term 'LDH' used in the: [2000: 1 ] years
+The term 'APO-1' used in the: [2000: 1 ] years
+The term 'Fas-mediated' used in the: [2000: 1 ] years
+The term 'IFN-gamma-induced' used in the: [2001: 1 , 2000: 1 ] years
+The term 'Hrp1' used in the: [2000: 8 ] years
+The term 'Myb-like' used in the: [2000: 1 ] years
+The term 'SNF2-related' used in the: [2000: 1 ] years
+The term 'sub-cellular' used in the: [2000: 1 ] years
+The term 'Hrp1-overexpressing' used in the: [2000: 2 ] years
+The term 'double-stranded' used in the: [2001: 1 , 2000: 2 ] years
+The term 'micrographs' used in the: [2000: 1 ] years
+The term 'Baikal' used in the: [2000: 1 ] years
+The term 'wagini' used in the: [2000: 1 ] years
+The term 'Sm-epitope' used in the: [2000: 1 ] years
+The term 'diplotene' used in the: [2001: 1 , 2000: 2 ] years
+The term 'postnucleoi' used in the: [2000: 1 ] years
+The term 'Na+/Pi' used in the: [2000: 1 ] years
+The term 'RNaPi-1' used in the: [2000: 9 ] years
+The term 'insulin-induced' used in the: [2000: 2 ] years
+The term 'citrate' used in the: [2000: 1 ] years
+The term 'Wortmannin' used in the: [2000: 1 ] years
+The term 'rapamycin' used in the: [2000: 1 ] years
+The term 'mitogen-activating' used in the: [2000: 1 ] years
+The term 'PD-98059' used in the: [2000: 1 ] years
+The term 'S6' used in the: [2000: 1 ] years
+The term 'cotyledon-specific' used in the: [2000: 2 ] years
+The term 'chlorophylls' used in the: [2000: 1 ] years
+The term 'wco' used in the: [2000: 2 ] years
+The term '16S' used in the: [2000: 1 ] years
+The term 'norflurazon' used in the: [2000: 1 ] years
+The term 'Spombe' used in the: [2000: 4 ] years
+The term 'mislocalization' used in the: [2000: 1 ] years
+The term 'Schizo-saccharomyces' used in the: [2000: 1 ] years
+The term 'Yip1p' used in the: [2000: 4 ] years
+The term 'YAB8' used in the: [2000: 1 ] years
+The term 'kinetoplast' used in the: [2000: 2 ] years
+The term 'two-dimensional' used in the: [2001: 1 , 2000: 2 ] years
+The term 'glycine-SDS' used in the: [2000: 1 ] years
+The term 'MFXLCLVCLSVS' used in the: [2000: 1 ] years
+The term 'factor-dependent' used in the: [2000: 1 ] years
+The term 'NCR-sensitive' used in the: [2000: 5 ] years
+The term 'DAL5' used in the: [2000: 2 ] years
+The term 'DUR3' used in the: [2000: 1 ] years
+The term 'Gln3p-binding' used in the: [2000: 1 ] years
+The term 'TATAs' used in the: [2000: 8 ] years
+The term 'Ure2p' used in the: [2000: 1 ] years
+The term 'myb7' used in the: [2000: 2 ] years
+The term 'Opaque2' used in the: [2000: 2 ] years
+The term 'Mybleu-Opaque2' used in the: [2000: 1 ] years
+The term '165-kD' used in the: [2000: 1 ] years
+The term 'Hypomorphic' used in the: [2000: 1 ] years
+The term 'Amorphic' used in the: [2000: 1 ] years
+The term 'hypomorphic' used in the: [2000: 1 ] years
+The term 'monopolar' used in the: [2000: 1 ] years
+The term 'MAP-free' used in the: [2000: 1 ] years
+The term 'Nup84p' used in the: [2000: 5 ] years
+The term 'Nup120p' used in the: [2000: 2 ] years
+The term 'Seh1p' used in the: [2000: 1 ] years
+The term 'COPII' used in the: [2000: 1 ] years
+The term 'nup85Delta' used in the: [2000: 1 ] years
+The term 'ultracentrifugation' used in the: [2000: 1 ] years
+The term 'triskelion-like' used in the: [2000: 1 ] years
+The term 'wapl' used in the: [2000: 9 ] years
+The term 'achiasmate' used in the: [2000: 1 ] years
+The term 'Pgd' used in the: [2000: 1 ] years
+The term '65-' used in the: [2000: 1 ] years
+The term 'chromatin-associated' used in the: [2000: 1 ] years
+The term 'beta-galactoside-binding' used in the: [2000: 1 ] years
+The term 'utilised' used in the: [2000: 2 ] years
+The term 'histidine' used in the: [2000: 1 ] years
+The term 'Confocal' used in the: [2000: 1 ] years
+The term 'PRB2A' used in the: [2000: 1 ] years
+The term 'unlinked' used in the: [2000: 1 ] years
+The term 'old-age' used in the: [2000: 1 ] years
+The term 'age-related' used in the: [2000: 2 ] years
+The term 'misregulation' used in the: [2000: 1 ] years
+The term 'oligomerization' used in the: [2000: 1 ] years
+The term 'thermostability' used in the: [2000: 1 ] years
+The term 'Tetrahymena' used in the: [2000: 2 ] years
+The term 'upshifts' used in the: [2000: 2 ] years
+The term 'sorbitol' used in the: [2000: 1 ] years
+The term 'myo-inositol' used in the: [2000: 2 ] years
+The term 'aldose' used in the: [2000: 1 ] years
+The term 'OREBP' used in the: [2000: 3 ] years
+The term 'Ecm1' used in the: [2000: 18 ] years
+The term 'K10' used in the: [2000: 1 ] years
+The term 'coculturing' used in the: [2000: 1 ] years
+The term 'spinous' used in the: [2000: 1 ] years
+The term 'wound-responsive' used in the: [2000: 1 ] years
+The term 'leucine-zipper' used in the: [2000: 1 ] years
+The term 'wizz' used in the: [2000: 2 ] years
+The term 'WIZZ-GFP' used in the: [2000: 1 ] years
+The term 'TTGAC' used in the: [2000: 1 ] years
+The term 'v-myb' used in the: [2000: 1 ] years
+The term 'oncoprotein' used in the: [2000: 6 ] years
+The term 'transferase-immunogold' used in the: [2000: 1 ] years
+The term '5-bromo-2-deoxyuridine' used in the: [2000: 1 ] years
+The term 'site-specific' used in the: [2000: 2 ] years
+The term 'gfpE2' used in the: [2000: 1 ] years
+The term 'region-controlled' used in the: [2000: 1 ] years
+The term 'cAMP/CREB' used in the: [2000: 4 ] years
+The term 'sublining' used in the: [2000: 1 ] years
+The term 'fibroblast-like' used in the: [2000: 1 ] years
+The term 'opioid' used in the: [2000: 7 ] years
+The term 'Prodynorphin' used in the: [2000: 1 ] years
+The term 'acrylodan-labeled' used in the: [2000: 1 ] years
+The term 'radioimmunoassay' used in the: [2000: 1 ] years
+The term 'dynorphin' used in the: [2000: 2 ] years
+The term 'Spinocerebellar' used in the: [2000: 1 ] years
+The term 'SCA-1' used in the: [2000: 6 ] years
+The term 'Purkinje' used in the: [2000: 10 ] years
+The term 'calbindin-D28k' used in the: [2000: 1 ] years
+The term 'PV' used in the: [2000: 4 ] years
+The term 'heterozygotes' used in the: [2000: 2 ] years
+The term 'GAP-43' used in the: [2000: 1 ] years
+The term 'nontransgenic' used in the: [2000: 1 ] years
+The term 'beta-III-Tubulin' used in the: [2000: 1 ] years
+The term 'NIs' used in the: [2000: 4 ] years
+The term 'PG' used in the: [2000: 1 ] years
+The term 'oligonucleosome' used in the: [2000: 4 ] years
+The term 'PGF2alpha' used in the: [2000: 7 ] years
+The term 'BW' used in the: [2000: 2 ] years
+The term '30-mg' used in the: [2000: 3 ] years
+The term '3beta-hydroxysteroid' used in the: [2000: 1 ] years
+The term 'PGF2alpha-induced' used in the: [2000: 1 ] years
+The term 'FSH' used in the: [2000: 31 ] years
+The term 'paracrine' used in the: [2000: 1 ] years
+The term 'FSH-S17' used in the: [2000: 1 ] years
+The term '8-4-chlorophenylthio-cAMP' used in the: [2000: 1 ] years
+The term '12-O-tetradecanoylphorbol' used in the: [2000: 1 ] years
+The term 'thapsigargin' used in the: [2000: 1 ] years
+The term 'Hepatocyte' used in the: [2000: 1 ] years
+The term 'hgfr' used in the: [2000: 2 ] years
+The term 'E45' used in the: [2000: 2 ] years
+The term 'blastocyst' used in the: [2001: 2 , 2000: 3 ] years
+The term 'E65' used in the: [2000: 2 ] years
+The term 'maternal-to-embryonic' used in the: [2000: 1 ] years
+The term 'immunopathological' used in the: [2000: 1 ] years
+The term 'CSBP' used in the: [2000: 1 ] years
+The term '6p' used in the: [2000: 1 ] years
+The term '23Mb' used in the: [2000: 1 ] years
+The term 'EBV-transformed' used in the: [2000: 1 ] years
+The term 'haplotypes' used in the: [2000: 2 ] years
+The term 'redirection' used in the: [2000: 1 ] years
+The term 'bcl-XL' used in the: [2000: 2 ] years
+The term 'MG63' used in the: [2000: 4 ] years
+The term '293-0' used in the: [2000: 3 ] years
+The term 'ng/ml' used in the: [2000: 1 ] years
+The term 'Colcemid' used in the: [2000: 2 ] years
+The term 'anti-neoplastic' used in the: [2000: 1 ] years
+The term 'Gemin3' used in the: [2000: 3 ] years
+The term 'Gemin4' used in the: [2000: 7 ] years
+The term 'nifedipine' used in the: [2000: 5 ] years
+The term 'pro-arteriosclerotic' used in the: [2000: 2 ] years
+The term 'calcium-antagonistic' used in the: [2000: 1 ] years
+The term 'bioassay' used in the: [2000: 1 ] years
+The term 'IL-1beta/TNF-alpha-induced' used in the: [2000: 1 ] years
+The term 'RTPCR' used in the: [2000: 2 ] years
+The term 'transcription-terminating' used in the: [2000: 1 ] years
+The term 'channel-blocking' used in the: [2000: 1 ] years
+The term 'microfibril-associated' used in the: [2000: 1 ] years
+The term 'MAGP-2' used in the: [2000: 6 ] years
+The term 'ATG' used in the: [2000: 1 ] years
+The term 'Hatzinikolas' used in the: [2000: 1 ] years
+The term 'thermosensitive' used in the: [2000: 2 ] years
+The term 'Hsp' used in the: [2000: 1 ] years
+The term 'Hsp70p' used in the: [2000: 1 ] years
+The term 'fluorescent-labeled' used in the: [2000: 1 ] years
+The term 'glycolytic' used in the: [2000: 1 ] years
+The term 'FGD1' used in the: [2000: 10 ] years
+The term 'dysplasia' used in the: [2000: 1 ] years
+The term 'Aarskog' used in the: [2000: 1 ] years
+The term 'Cdc42' used in the: [2000: 3 ] years
+The term 'Frabin' used in the: [2000: 1 ] years
+The term '733-amino-acid' used in the: [2000: 1 ] years
+The term 'FYVE' used in the: [2000: 1 ] years
+The term 'filopodia' used in the: [2000: 1 ] years
+The term 'FGD3' used in the: [2000: 1 ] years
+The term 'CRMPs' used in the: [2000: 1 ] years
+The term 'proteins/ULIPs' used in the: [2000: 1 ] years
+The term 'CRMP/ULIP' used in the: [2000: 2 ] years
+The term 'CRMP3/ULIP4' used in the: [2000: 4 ] years
+The term 'paraneoplastic' used in the: [2000: 2 ] years
+The term 'modified/disrupted' used in the: [2000: 1 ] years
+The term 'gyrus' used in the: [2000: 1 ] years
+The term 'Cdelta' used in the: [2000: 1 ] years
+The term 'calcium-independent' used in the: [2000: 1 ] years
+The term 'induced-C' used in the: [2000: 1 ] years
+The term '19p14' used in the: [2000: 1 ] years
+The term 'POZ' used in the: [2000: 1 ] years
+The term 'C2H2-171' used in the: [2000: 1 ] years
+The term 'ter' used in the: [2000: 1 ] years
+The term 'signalosome' used in the: [2000: 2 ] years
+The term 'photomorphogenesis' used in the: [2000: 1 ] years
+The term 'ubiquitin-mediated' used in the: [2000: 1 ] years
+The term 'clonally' used in the: [2000: 1 ] years
+The term 'folliculo-stellate' used in the: [2000: 1 ] years
+The term 'follistatin' used in the: [2000: 2 ] years
+The term 'pituitary-derived' used in the: [2000: 1 ] years
+The term 'PDFS' used in the: [2000: 3 ] years
+The term 'macroadenoma' used in the: [2000: 1 ] years
+The term 'desmosomes' used in the: [2000: 1 ] years
+The term 'vimentin' used in the: [2000: 4 ] years
+The term 'anchorage-independent' used in the: [2000: 1 ] years
+The term 'inositol' used in the: [2000: 9 ] years
+The term 'IP' used in the: [2000: 5 ] years
+The term '145-trisphosphate' used in the: [2000: 1 ] years
+The term 'Arg82' used in the: [2000: 1 ] years
+The term '1456-tetrakisphosphate' used in the: [2000: 1 ] years
+The term 'M-phase' used in the: [2000: 1 ] years
+The term 'cdc2' used in the: [2000: 2 ] years
+The term 'cyclin-cyclin' used in the: [2000: 1 ] years
+The term 'aurelia' used in the: [2000: 4 ] years
+The term 'yejR' used in the: [2000: 1 ] years
+The term 'positionally' used in the: [2000: 1 ] years
+The term 'nad1' used in the: [2000: 1 ] years
+The term 'mtDNA-encoded' used in the: [2001: 3 , 2000: 1 ] years
+The term 'dinoflagellates' used in the: [2000: 1 ] years
+The term 'Retinoic' used in the: [2000: 1 ] years
+The term 'F9' used in the: [2000: 4 ] years
+The term '176-bp' used in the: [2000: 3 ] years
+The term '-27' used in the: [2000: 1 ] years
+The term '-2763' used in the: [2000: 1 ] years
+The term 'FP1B' used in the: [2000: 1 ] years
+The term 'FP2B' used in the: [2000: 1 ] years
+The term '624bp' used in the: [2000: 1 ] years
+The term 'Zebrafish' used in the: [2000: 1 ] years
+The term '17kDa' used in the: [2000: 1 ] years
+The term 'single-stranded' used in the: [2000: 2 ] years
+The term 'NM23-H2' used in the: [2000: 1 ] years
+The term 'Camk4' used in the: [2000: 1 ] years
+The term 'spermatogonia' used in the: [2000: 1 ] years
+The term 'Serine/arginine-rich' used in the: [2000: 1 ] years
+The term 'Mtr10p' used in the: [2000: 1 ] years
+The term 'transportin-SR2' used in the: [2000: 2 ] years
+The term 'immunofluoresence' used in the: [2000: 1 ] years
+The term 'SnuCyp-20' used in the: [2000: 5 ] years
+The term 'U4/U6-60kD' used in the: [2000: 2 ] years
+The term 'Prp4' used in the: [2000: 1 ] years
+The term '20-A' used in the: [2000: 2 ] years
+The term 'alpha1-beta3' used in the: [2000: 2 ] years
+The term 'ovine' used in the: [2000: 2 ] years
+The term 'oFSH' used in the: [2000: 2 ] years
+The term 'cytometry' used in the: [2000: 1 ] years
+The term 'decondensation' used in the: [2000: 1 ] years
+The term 'titer' used in the: [2000: 2 ] years
+The term 'fluorosceinated' used in the: [2000: 1 ] years
+The term 'PSA-FITC' used in the: [2000: 1 ] years
+The term 'cross-reactive' used in the: [2000: 1 ] years
+The term 'p14ARF' used in the: [2000: 2 ] years
+The term 'p53-dependent' used in the: [2000: 2 ] years
+The term 'ARF-Mdm2' used in the: [2000: 4 ] years
+The term 'Sepharose' used in the: [2000: 1 ] years
+The term 'OCLs' used in the: [2000: 10 ] years
+The term '125-OH2D3' used in the: [2000: 2 ] years
+The term 'cross-react' used in the: [2000: 1 ] years
+The term 'MVNP' used in the: [2000: 3 ] years
+The term 'MVM' used in the: [2000: 4 ] years
+The term 'MVNP-transduced' used in the: [2000: 2 ] years
+The term 'EV-transduced' used in the: [2000: 2 ] years
+The term '25-OH2D3' used in the: [2000: 2 ] years
+The term 'pathophysiologic' used in the: [2000: 1 ] years
+The term 'maspin' used in the: [2000: 15 ] years
+The term 'maspin-negative' used in the: [2000: 2 ] years
+The term '5-aza-2-deoxycytidine' used in the: [2000: 1 ] years
+The term 'heterochromatinization' used in the: [2000: 1 ] years
+The term 'RecQ-related' used in the: [2000: 1 ] years
+The term 'BLM' used in the: [2000: 9 ] years
+The term 'RecQ4' used in the: [2000: 5 ] years
+The term 'Rothmund-Thomson' used in the: [2000: 1 ] years
+The term 'RecQ5beta' used in the: [2000: 5 ] years
+The term 'RecQ5beta-specific' used in the: [2000: 1 ] years
+The term 'N-terminally' used in the: [2000: 1 ] years
+The term 'cytochemical' used in the: [2000: 1 ] years
+The term 'Sgs1' used in the: [2000: 1 ] years
+The term '3beta' used in the: [2000: 1 ] years
+The term 'apob' used in the: [2000: 2 ] years
+The term 'B-81' used in the: [2000: 2 ] years
+The term 'apoB-100/B-100' used in the: [2000: 1 ] years
+The term 'B-100/B-81' used in the: [2000: 3 ] years
+The term 'B-100/B-100' used in the: [2000: 1 ] years
+The term 'apoB-48' used in the: [2000: 1 ] years
+The term 'receptor-mediated' used in the: [2001: 1 , 2000: 2 ] years
+The term 'mdx' used in the: [2000: 3 ] years
+The term 'noncontiguous' used in the: [2000: 1 ] years
+The term 'plasmalemmal' used in the: [2000: 1 ] years
+The term 'pathophysiology' used in the: [2000: 1 ] years
+The term 'HBSM' used in the: [2000: 3 ] years
+The term 'monospecific' used in the: [2000: 1 ] years
+The term 'alveoli' used in the: [2000: 1 ] years
+The term 'apyrimidinic/apurinic' used in the: [2000: 1 ] years
+The term 'OGG' used in the: [2000: 8 ] years
+The term 'oh8dG' used in the: [2000: 3 ] years
+The term 'C57BL/6' used in the: [2000: 2 ] years
+The term 'ischemia-reperfusion' used in the: [2000: 1 ] years
+The term 'oh8dG/dC' used in the: [2000: 1 ] years
+The term 'oh8dG/dT' used in the: [2000: 1 ] years
+The term 'oh8dG/dA' used in the: [2000: 1 ] years
+The term 'reperfusion' used in the: [2000: 1 ] years
+The term 'oligodendrocyte-specific' used in the: [2000: 1 ] years
+The term 'P/p' used in the: [2000: 5 ] years
+The term 'P/p-specific' used in the: [2000: 1 ] years
+The term 'myelination' used in the: [2000: 1 ] years
+The term 'jimpy' used in the: [2000: 1 ] years
+The term 'isoform-specific' used in the: [2000: 1 ] years
+The term 'MeCbl' used in the: [2000: 3 ] years
+The term 'SC-3' used in the: [2000: 12 ] years
+The term 'autocrine' used in the: [2000: 1 ] years
+The term 'MeCbl-treated' used in the: [2000: 3 ] years
+The term 'B29' used in the: [2000: 10 ] years
+The term 'A+T-rich' used in the: [2000: 4 ] years
+The term 'octamer-specific' used in the: [2000: 1 ] years
+The term 'NBP-45' used in the: [2000: 4 ] years
+The term '7-day-old' used in the: [2000: 1 ] years
+The term 'E2F' used in the: [2000: 4 ] years
+The term 'NIH3T3' used in the: [2000: 2 ] years
+The term 'metal-inducible' used in the: [2000: 1 ] years
+The term 'Cdk2' used in the: [2000: 4 ] years
+The term 'p19' used in the: [2000: 1 ] years
+The term 'Minichromosome' used in the: [2000: 1 ] years
+The term 'RC' used in the: [2000: 2 ] years
+The term 'Cdk-specific' used in the: [2000: 1 ] years
+The term 'MCM4' used in the: [2000: 1 ] years
+The term 'betalg' used in the: [2000: 8 ] years
+The term 'HC11' used in the: [2000: 1 ] years
+The term 'locus-specific' used in the: [2000: 1 ] years
+The term 'track-like' used in the: [2000: 1 ] years
+The term 'macromolecular' used in the: [2000: 1 ] years
+The term 'PABP1' used in the: [2000: 2 ] years
+The term 'transportin' used in the: [2000: 3 ] years
+The term 'ischemia/reperfusion' used in the: [2000: 1 ] years
+The term 'NK-kappa' used in the: [2000: 1 ] years
+The term 'Osteogenesis' used in the: [2000: 1 ] years
+The term 'COL1A2' used in the: [2001: 3 , 2000: 1 ] years
+The term 'co-purifies' used in the: [2000: 1 ] years
+The term 'alkali-labile' used in the: [2000: 1 ] years
+The term '2-OH-A' used in the: [2000: 2 ] years
+The term '8-oxo-78-dihydroguanine' used in the: [2000: 1 ] years
+The term 'co-purified' used in the: [2000: 1 ] years
+The term 'anti-hMYH' used in the: [2000: 2 ] years
+The term '5-regions' used in the: [2000: 1 ] years
+The term 'photo-chemical' used in the: [2000: 1 ] years
+The term 'pre--spliceosome' used in the: [2000: 1 ] years
+The term 'summarise' used in the: [2000: 1 ] years
+The term 'low-density' used in the: [2000: 4 ] years
+The term 'receptor-like' used in the: [2000: 1 ] years
+The term 'neurotrypsin' used in the: [2000: 1 ] years
+The term 'hepsin' used in the: [2000: 1 ] years
+The term 'Epitheliasin' used in the: [2000: 1 ] years
+The term 'multikinase' used in the: [2000: 1 ] years
+The term 'Saiardi' used in the: [2000: 1 ] years
+The term '1323-1326' used in the: [2000: 1 ] years
+The term '170-fold' used in the: [2000: 1 ] years
+The term '100-fold' used in the: [2000: 3 ] years
+The term 'Ins1345P4' used in the: [2000: 1 ] years
+The term 'Transcriptional' used in the: [2000: 2 ] years
+The term 'co-translated' used in the: [2000: 1 ] years
+The term 'constitutens' used in the: [2000: 1 ] years
+The term 'Caeserean' used in the: [2000: 1 ] years
+The term 'immerged' used in the: [2000: 1 ] years
+The term '5-20' used in the: [2000: 2 ] years
+The term 'morphometry' used in the: [2000: 1 ] years
+The term 'BZLF-1' used in the: [2000: 1 ] years
+The term 'BHRF-1' used in the: [2000: 1 ] years
+The term 'EBNA-1' used in the: [2000: 1 ] years
+The term 'EBV-infected' used in the: [2000: 2 ] years
+The term 'carboxylated' used in the: [2000: 1 ] years
+The term 'ErbB-3' used in the: [2000: 7 ] years
+The term 'juxtamembrane' used in the: [2000: 2 ] years
+The term 'cycle-regulated' used in the: [2000: 1 ] years
+The term 'ebp1' used in the: [2000: 1 ] years
+The term 'heregulin' used in the: [2000: 2 ] years
+The term 'xanthine' used in the: [2000: 1 ] years
+The term 'XOR' used in the: [2000: 4 ] years
+The term '-258' used in the: [2000: 2 ] years
+The term '-138' used in the: [2000: 1 ] years
+The term 'acacaggtgtgg' used in the: [2000: 1 ] years
+The term '-230' used in the: [2000: 1 ] years
+The term 'TFIID' used in the: [2000: 1 ] years
+The term 'origin-binding' used in the: [2000: 1 ] years
+The term 'ORC1' used in the: [2000: 3 ] years
+The term 'A2s' used in the: [2000: 15 ] years
+The term 'sPLA2' used in the: [2000: 9 ] years
+The term 'sPLA2-IIE' used in the: [2000: 6 ] years
+The term 'indoxam' used in the: [2000: 1 ] years
+The term '1p36' used in the: [2000: 1 ] years
+The term 'sPLA2-IIA-deficient' used in the: [2000: 1 ] years
+The term 'endotoxin-treated' used in the: [2000: 1 ] years
+The term 'RAP250' used in the: [2000: 5 ] years
+The term 'LXXLL' used in the: [2000: 1 ] years
+The term 'Ki-67' used in the: [2000: 2 ] years
+The term 'two-step' used in the: [2000: 1 ] years
+The term 'carcinogenesis' used in the: [2000: 2 ] years
+The term 'EPO' used in the: [2000: 6 ] years
+The term 'hypoxia-inducible' used in the: [2000: 1 ] years
+The term 'HIF-1beta' used in the: [2000: 1 ] years
+The term 'integrin' used in the: [2000: 1 ] years
+The term 'perinucleolar' used in the: [2000: 1 ] years
+The term 'argyrophylic' used in the: [2000: 1 ] years
+The term '6-8' used in the: [2000: 1 ] years
+The term 'SMNC' used in the: [2000: 50 ] years
+The term 'calphostin' used in the: [2000: 1 ] years
+The term '-77' used in the: [2000: 1 ] years
+The term 'PMA-treated' used in the: [2000: 1 ] years
+The term 'site-dependent' used in the: [2000: 1 ] years
+The term 'CTNNB1' used in the: [2000: 3 ] years
+The term 'Ser' used in the: [2000: 1 ] years
+The term 'Ser/Thr' used in the: [2000: 1 ] years
+The term '823-kDa' used in the: [2000: 1 ] years
+The term 'lamina-associated' used in the: [2000: 1 ] years
+The term 'TetR' used in the: [2000: 4 ] years
+The term 'rtTA' used in the: [2000: 10 ] years
+The term 'tetR' used in the: [2000: 3 ] years
+The term 'egg-white' used in the: [2000: 1 ] years
+The term 'tetO' used in the: [2000: 1 ] years
+The term 'Tnfr1' used in the: [2000: 1 ] years
+The term 'B6' used in the: [2000: 4 ] years
+The term 'B10' used in the: [2000: 14 ] years
+The term 'colony-forming' used in the: [2000: 1 ] years
+The term 'RAE1/Gle2p' used in the: [2000: 1 ] years
+The term 'Ran-binding' used in the: [2000: 1 ] years
+The term 'p62' used in the: [2000: 1 ] years
+The term '508-619' used in the: [2000: 1 ] years
+The term 'fusions' used in the: [2000: 1 ] years
+The term 'RAE1/hGle2' used in the: [2000: 1 ] years
+The term 'SRm160/300' used in the: [2000: 3 ] years
+The term 'SR-related' used in the: [2000: 1 ] years
+The term 'SRm300' used in the: [2000: 3 ] years
+The term 'SRm160/300-depleted' used in the: [2000: 1 ] years
+The term 'Ro' used in the: [2000: 4 ] years
+The term '60-kDa' used in the: [2000: 1 ] years
+The term 'hY' used in the: [2000: 6 ] years
+The term 'RITA' used in the: [2000: 2 ] years
+The term 'RoBPI' used in the: [2000: 7 ] years
+The term 'rhY5' used in the: [2000: 2 ] years
+The term 'coimmunoprecipitated' used in the: [2000: 1 ] years
+The term 'CYP2B' used in the: [2000: 1 ] years
+The term 'CYP2B1/2' used in the: [2000: 1 ] years
+The term 'dimethyl' used in the: [2000: 1 ] years
+The term 'Micrococcal' used in the: [2000: 1 ] years
+The term 'Angiotensin-converting' used in the: [2000: 1 ] years
+The term 'fissuring' used in the: [2000: 1 ] years
+The term 'Captopril' used in the: [2000: 1 ] years
+The term '1-stage' used in the: [2000: 1 ] years
+The term 'fosinopril' used in the: [2000: 1 ] years
+The term 'AT1' used in the: [2000: 2 ] years
+The term 'endotoxin-induced' used in the: [2000: 1 ] years
+The term 'anti-ischemic' used in the: [2000: 1 ] years
+The term 'cholecystokinin' used in the: [2000: 1 ] years
+The term 'acini' used in the: [2000: 2 ] years
+The term 'GF-109203X' used in the: [2000: 2 ] years
+The term 'BAPTA' used in the: [2000: 2 ] years
+The term 'supraphysiological' used in the: [2000: 1 ] years
+The term 'TonEBP' used in the: [2000: 6 ] years
+The term 'sodium-myo-inositol' used in the: [2000: 1 ] years
+The term 'BGT1' used in the: [2000: 2 ] years
+The term 'hypertonicity' used in the: [2000: 2 ] years
+The term 'bromodomain' used in the: [2000: 10 ] years
+The term 'Bromodomain' used in the: [2000: 1 ] years
+The term 'PHD' used in the: [2000: 2 ] years
+The term 'Acf1' used in the: [2000: 2 ] years
+The term 'BAZ1A' used in the: [2000: 1 ] years
+The term 'BAZ2A' used in the: [2000: 1 ] years
+The term '14q12-q13' used in the: [2000: 1 ] years
+The term '12q243-qter' used in the: [2000: 1 ] years
+The term '110-amino-acid' used in the: [2000: 1 ] years
+The term 'nonbasal' used in the: [2000: 1 ] years
+The term 'BPTF' used in the: [2000: 3 ] years
+The term 'FAC1' used in the: [2000: 1 ] years
+The term 'hormonally' used in the: [2000: 1 ] years
+The term 'Hyperoxia' used in the: [2000: 2 ] years
+The term 'pg/ml' used in the: [2000: 2 ] years
+The term 'NF-IL-6' used in the: [2000: 2 ] years
+The term 'p21/WAF1' used in the: [2000: 4 ] years
+The term 'p33' used in the: [2000: 1 ] years
+The term 'premessenger' used in the: [2000: 1 ] years
+The term 'temperaturelike' used in the: [2000: 1 ] years
+The term 'globin' used in the: [2000: 2 ] years
+The term 'hybridises' used in the: [2000: 1 ] years
+The term 'polyribosomal' used in the: [2000: 2 ] years
+The term 'HP50' used in the: [2000: 1 ] years
+The term 'mProx1' used in the: [2000: 1 ] years
+The term 'neointima' used in the: [2000: 1 ] years
+The term '5-deletion' used in the: [2000: 1 ] years
+The term 'Wiesel' used in the: [2000: 1 ] years
+The term 'Panares' used in the: [2000: 1 ] years
+The term 'Perrella' used in the: [2000: 1 ] years
+The term 'aureus-induced' used in the: [2000: 1 ] years
+The term 'p70' used in the: [2000: 1 ] years
+The term 'p35' used in the: [2000: 2 ] years
+The term 'IFN' used in the: [2000: 2 ] years
+The term 'extracellular-signal-regulated' used in the: [2000: 1 ] years
+The term 'Erk3' used in the: [2000: 5 ] years
+The term 'mStaf' used in the: [2000: 4 ] years
+The term 'approx' used in the: [2000: 1 ] years
+The term 'Nkx' used in the: [2000: 1 ] years
+The term 'SIF' used in the: [2000: 1 ] years
+The term 'TFII-I' used in the: [2000: 1 ] years
+The term 'NMuMG' used in the: [2000: 1 ] years
+The term 'Sp3' used in the: [2000: 4 ] years
+The term 'tPA' used in the: [2000: 2 ] years
+The term 'hippocampal' used in the: [2000: 2 ] years
+The term 'potentiating' used in the: [2001: 2 , 2000: 1 ] years
+The term 'TLS' used in the: [2000: 3 ] years
+The term 'liposarcomas' used in the: [2000: 1 ] years
+The term 'pre-meiotic' used in the: [2000: 1 ] years
+The term 'alloplasmic' used in the: [2000: 2 ] years
+The term 'crassa' used in the: [2000: 3 ] years
+The term 'PCMS' used in the: [2000: 2 ] years
+The term 'orf25' used in the: [2000: 2 ] years
+The term 'CR-orf25' used in the: [2000: 6 ] years
+The term 'rps7' used in the: [2000: 1 ] years
+The term 'orf48' used in the: [2000: 3 ] years
+The term 'basic-amino-acid-type' used in the: [2000: 1 ] years
+The term 'signals?' used in the: [2000: 1 ] years
+The term 'signal-containing' used in the: [2000: 1 ] years
+The term '5-capping' used in the: [2000: 1 ] years
+The term 'co-transcriptional' used in the: [2000: 1 ] years
+The term 'rate-limiting' used in the: [2000: 1 ] years
+The term 'CO2-induced' used in the: [2000: 1 ] years
+The term 'AFM' used in the: [2000: 1 ] years
+The term 'CO2' used in the: [2000: 16 ] years
+The term 'CFs' used in the: [2000: 4 ] years
+The term 'hrp65' used in the: [2000: 3 ] years
+The term 'Lejbkowicz' used in the: [2000: 1 ] years
+The term 'Darveau' used in the: [2000: 1 ] years
+The term 'Lemieux' used in the: [2000: 1 ] years
+The term 'Proc' used in the: [2000: 1 ] years
+The term 'Acad' used in the: [2000: 1 ] years
+The term 'USA' used in the: [2000: 1 ] years
+The term 'U1snRNP' used in the: [2000: 1 ] years
+The term 'permeabilization' used in the: [2000: 2 ] years
+The term '56-dichloro-1-beta-d-ribofuranosylbenzimidazole' used in the: [2000: 1 ] years
+The term 'Clk/Sty' used in the: [2000: 1 ] years
+The term 'myotendenous' used in the: [2000: 1 ] years
+The term 'TTX' used in the: [2000: 2 ] years
+The term 'ScVn' used in the: [2000: 2 ] years
+The term 'prespecified' used in the: [2000: 1 ] years
+The term 'striatal' used in the: [2000: 6 ] years
+The term 'KA' used in the: [2000: 6 ] years
+The term '125-50' used in the: [2000: 2 ] years
+The term '8-73' used in the: [2000: 1 ] years
+The term 'glutamic' used in the: [2000: 1 ] years
+The term 'AMPA/KA' used in the: [2000: 1 ] years
+The term '1234-tetrahydro-6-nitro-23-dibenzofquinoxaline-7-sulfonamide' used in the: [2000: 1 ] years
+The term 'sevenfold' used in the: [2000: 1 ] years
+The term 'cell-permeable' used in the: [2000: 1 ] years
+The term 'KA-induced' used in the: [2000: 1 ] years
+The term 'myogenesis' used in the: [2000: 2 ] years
+The term 'QM7' used in the: [2000: 1 ] years
+The term 'p-trifluoromethoxy' used in the: [2000: 1 ] years
+The term 'oligomycin' used in the: [2000: 1 ] years
+The term 'CMD1' used in the: [2000: 2 ] years
+The term 'non-stressed' used in the: [2000: 1 ] years
+The term 'non-bound' used in the: [2000: 1 ] years
+The term 'sub-population' used in the: [2000: 1 ] years
+The term 'Te' used in the: [2000: 4 ] years
+The term 'neuropathy' used in the: [2000: 2 ] years
+The term 'SC' used in the: [2000: 7 ] years
+The term 'endomembranes' used in the: [2000: 2 ] years
+The term 'crystalloids' used in the: [2000: 2 ] years
+The term 'Te-induced' used in the: [2000: 1 ] years
+The term 'neurotoxic' used in the: [2000: 1 ] years
+The term 'FSH-induced' used in the: [2000: 1 ] years
+The term '8-bromo' used in the: [2000: 1 ] years
+The term '4-kilobase' used in the: [2000: 1 ] years
+The term 'activin-induced' used in the: [2000: 1 ] years
+The term 'rRNA-processing' used in the: [2000: 1 ] years
+The term 'germband' used in the: [2000: 1 ] years
+The term 'primordia' used in the: [2000: 1 ] years
+The term 'DNop5' used in the: [2000: 2 ] years
+The term 'TGF-alpha' used in the: [2000: 7 ] years
+The term 'GFAP' used in the: [2000: 4 ] years
+The term 'U-373' used in the: [2000: 5 ] years
+The term 'dedifferentiation' used in the: [2000: 1 ] years
+The term 'prespliceosome' used in the: [2000: 4 ] years
+The term 'CUS2' used in the: [2000: 6 ] years
+The term 'PRP5' used in the: [2000: 3 ] years
+The term 'prp5' used in the: [2000: 1 ] years
+The term 'Klebsiella' used in the: [2000: 1 ] years
+The term 'ceftazidime' used in the: [2000: 3 ] years
+The term 'piperacillin-tazobactam' used in the: [2000: 1 ] years
+The term 'beta-lactamase' used in the: [2000: 6 ] years
+The term 'blaSHV-1' used in the: [2000: 8 ] years
+The term '45-kDa' used in the: [2000: 1 ] years
+The term 'low-level' used in the: [2000: 1 ] years
+The term 'chromosomally' used in the: [2000: 2 ] years
+The term 'A--C' used in the: [2000: 1 ] years
+The term '17-fold' used in the: [2000: 1 ] years
+The term 'single-base-pair' used in the: [2000: 1 ] years
+The term 'cell-growth' used in the: [2000: 1 ] years
+The term 'PML-RARalpha' used in the: [2000: 1 ] years
+The term 'microspeckled' used in the: [2000: 1 ] years
+The term 'PML-/-' used in the: [2000: 2 ] years
+The term 'PML+/+' used in the: [2000: 1 ] years
+The term 'ribo-some' used in the: [2000: 1 ] years
+The term 'monocistronic' used in the: [2000: 1 ] years
+The term 'non-canonical' used in the: [2000: 1 ] years
+The term 'rhinovirus' used in the: [2000: 1 ] years
+The term 'encephalomyocarditis' used in the: [2000: 1 ] years
+The term 'IRES-driven' used in the: [2000: 1 ] years
+The term 'Cdc25' used in the: [2000: 3 ] years
+The term 'Deltamik1' used in the: [2000: 1 ] years
+The term 'Ubiquitinated' used in the: [2000: 1 ] years
+The term 'photoreceptor' used in the: [2000: 2 ] years
+The term 'CRY4' used in the: [2000: 3 ] years
+The term 'Adiantum' used in the: [2000: 1 ] years
+The term 'cryptochromes' used in the: [2000: 6 ] years
+The term 'phytochrome' used in the: [2000: 1 ] years
+The term 'GUS-CRY' used in the: [2000: 4 ] years
+The term 'light-dependent' used in the: [2000: 1 ] years
+The term 'mrnp' used in the: [2000: 1 ] years
+The term 'NTF2' used in the: [2000: 3 ] years
+The term 'Rch1' used in the: [2000: 1 ] years
+The term 'factors/cargoes' used in the: [2000: 1 ] years
+The term 'ribosome-free' used in the: [2000: 1 ] years
+The term 'nonconfluent' used in the: [2000: 2 ] years
+The term 'a-actin' used in the: [2000: 1 ] years
+The term 'radioreceptor-binding' used in the: [2000: 1 ] years
+The term 'Low-density' used in the: [2000: 1 ] years
+The term 'high-density' used in the: [2000: 4 ] years
+The term 'myofibroblast' used in the: [2000: 5 ] years
+The term 'trans-splicing' used in the: [2000: 4 ] years
+The term 'pre-therapeutic' used in the: [2000: 1 ] years
+The term 'recode' used in the: [2000: 1 ] years
+The term 'CFTR' used in the: [2000: 4 ] years
+The term 'deltaF508' used in the: [2000: 1 ] years
+The term 'F508' used in the: [2000: 1 ] years
+The term 'PKA-phosphorylation' used in the: [2000: 1 ] years
+The term 'proof-of-concept' used in the: [2000: 1 ] years
+The term 'UVC' used in the: [2000: 13 , 2001: 1 ] years
+The term 'UVC-mediated' used in the: [2000: 1 ] years
+The term 'DNA+ligand' used in the: [2000: 2 ] years
+The term 'GBP' used in the: [2000: 1 ] years
+The term 'S-transferase-AR-DNA' used in the: [2000: 1 ] years
+The term 'CV1' used in the: [2000: 1 ] years
+The term '25-30' used in the: [2000: 1 ] years
+The term 'coexpression' used in the: [2000: 1 ] years
+The term 'coregulator' used in the: [2000: 1 ] years
+The term 'cyt' used in the: [2000: 1 ] years
+The term '3-epimerase' used in the: [2000: 1 ] years
+The term 'non-oxidative' used in the: [2000: 1 ] years
+The term 'homodimer' used in the: [2000: 1 ] years
+The term 'chloroplastic' used in the: [2000: 1 ] years
+The term 'cyt-RPEase-mRNA' used in the: [2000: 1 ] years
+The term 'non-green' used in the: [2000: 1 ] years
+The term 'GATA-binding' used in the: [2000: 1 ] years
+The term '5-10-fold' used in the: [2000: 1 ] years
+The term 'GATA-6-engrailed' used in the: [2000: 1 ] years
+The term 'MLE-15' used in the: [2000: 2 ] years
+The term 'Transactivation' used in the: [2000: 1 ] years
+The term 'TTF-1' used in the: [2000: 3 ] years
+The term 'cotransactivating' used in the: [2000: 1 ] years
+The term 'polyphosphoinositides' used in the: [2000: 1 ] years
+The term 'COOH-terminus' used in the: [2000: 1 ] years
+The term 'PLCs' used in the: [2000: 5 ] years
+The term '50-bp' used in the: [2000: 1 ] years
+The term 'Hoxa13-/-' used in the: [2000: 2 ] years
+The term 'Hoxa13Hd/Hd' used in the: [2000: 2 ] years
+The term 'Hoxa13-' used in the: [2000: 4 ] years
+The term 'arginine-' used in the: [2000: 7 ] years
+The term 'Prx-1' used in the: [2000: 1 ] years
+The term 'ionotropic' used in the: [2001: 1 , 2000: 3 ] years
+The term 'N-methyl-D-aspartate-induced' used in the: [2000: 3 ] years
+The term 'intrastriatal' used in the: [2000: 2 ] years
+The term '900-1800' used in the: [2000: 1 ] years
+The term '100-1800' used in the: [2000: 2 ] years
+The term 'wt' used in the: [2000: 1 ] years
+The term 'N-methyl-D' used in the: [2000: 1 ] years
+The term 'co-administration' used in the: [2000: 1 ] years
+The term '2S' used in the: [2000: 1 ] years
+The term 'IKB-alpha' used in the: [2000: 1 ] years
+The term 'N-methyl-D-aspartate' used in the: [2000: 1 ] years
+The term 'E1B-55' used in the: [2000: 4 ] years
+The term 'Nucleocytoplasmic' used in the: [2000: 1 ] years
+The term 'hNMP' used in the: [2000: 6 ] years
+The term 'Two-dimensional' used in the: [2000: 1 ] years
+The term '-II' used in the: [2000: 2 ] years
+The term 'interleukin-8' used in the: [2000: 1 ] years
+The term 'UPR' used in the: [2000: 6 ] years
+The term 'HAC1' used in the: [2000: 2 ] years
+The term 'kinase/endoribonuclease' used in the: [2000: 1 ] years
+The term 'presenilin-1' used in the: [2000: 2 ] years
+The term 'Meis2' used in the: [2000: 4 ] years
+The term 'Shh/FGF' used in the: [2000: 1 ] years
+The term 'Hoxd' used in the: [2000: 1 ] years
+The term 'distalize' used in the: [2000: 1 ] years
+The term 'IW32' used in the: [2000: 1 ] years
+The term 'Upregulation' used in the: [2000: 1 ] years
+The term 'p53-mediated' used in the: [2000: 1 ] years
