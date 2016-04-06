@@ -7,6 +7,8 @@ import com.esc.common.Modules.ExcelUtil.ClustersToExcel;
 import com.esc.common.Modules.GooglePlaces.models.GooglePlacesResponse;
 import com.esc.common.SimilarityFunctions.*;
 import com.esc.common.util.Beautifier.ForGoogle;
+import com.esc.common.util.Beautifier.IAffilationBeautifier;
+import com.esc.common.util.Beautifier.JustLowercaseWords;
 import com.esc.common.util.Matrices.IMatrice2;
 import com.esc.common.util.Matrices.MatriceType;
 import com.esc.common.util.Pair;
@@ -18,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -25,23 +28,27 @@ import java.util.Map;
  * Created by afirsov on 2/18/2016.
  */
 public class AffiliationsTests {
-    public static void main(String[] args) throws IOException, WriteException, InvalidArgumentException {
+    public static void main(String[] args) throws IOException, WriteException, InvalidArgumentException, InvalidAlgorithmParameterException {
         String fileName = new File("CommonLib/src/main/Files/nsk_company_list_sorted.txt").getAbsolutePath();
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(fileName)));
         ArrayList<String> arr = new ArrayList<>();
         String line = "";
+        IAffilationBeautifier beauty = new JustLowercaseWords();
         while((line = bufferedReader.readLine()) != null) {
-            arr.add(line);
+            arr.add(beauty.Beautify(line));
         }
         bufferedReader.close();
 
         float multiIndex = 1.0f;
         int minPts = 1;
-        float maxEpsilon = 0.2f;
-        float epsilon = (float)Math.pow(0.15,1);
+        float maxEpsilon = 0.4f;
+        float epsilon = (float)Math.pow(0.1,1);
 
-        DoKMeans(arr,62, new Jaccard(),"D:/desktop/ESC","SmithWaterman");
-        /*DoDBSCAN(arr,epsilon,minPts,0.01f,maxEpsilon,multiIndex,
+        DoDBSCAN(arr,epsilon,minPts,0.01f,maxEpsilon,multiIndex,
+                new KMer(10),"D:/desktop/ESC","KMer" + 10);
+
+        /*DoKMeans(arr,62, new Jaccard(),"D:/desktop/ESC","SmithWaterman");
+        DoDBSCAN(arr,epsilon,minPts,0.01f,maxEpsilon,multiIndex,
                 new SmithWatermanCoeff(),"D:/desktop/ESC","SmithWaterman");
         maxEpsilon = (float)Math.pow(0.04,1);
         epsilon = (float)Math.pow(0.004,1);

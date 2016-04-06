@@ -1,5 +1,6 @@
 package com.esc.common.util.Beautifier;
 
+import java.security.InvalidAlgorithmParameterException;
 import java.util.ArrayList;
 
 /**
