@@ -49,6 +49,8 @@ public class PrimitiveTerm implements IPrimitiveTerm
 		mYear = year;
 	}
 
+	public int getId(){ return mId;}
+
 	public String getValue()
 	{
 		return mValue;
@@ -59,6 +61,8 @@ public class PrimitiveTerm implements IPrimitiveTerm
 		this.mTerm=inputTerm;
 	}
 
+	public void setValue(String value){ mValue = value; }
+
 	public String getTermValue(){return mTerm.getValue();}
 
 	public Term getTerm(){ return mTerm; }
@@ -68,9 +72,9 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	public void setYear(int year){ mYear = year; }
 
 	@Override
-	public String getPublication()
+	public Article getPublication()
 	{
-		return null;
+		return mPublication;
 	}
 
 	@Override

@@ -79,7 +79,7 @@ public class PubMedParser extends AbsParserEngine
 					{
 						builder.append(" ").append(currentString.trim());
 					}
-				}
+ 				}
 			}
 			mFileReadingCompleted = true;
 		}
@@ -102,6 +102,7 @@ public class PubMedParser extends AbsParserEngine
 				if (mFileReadingCompleted && mPubmedCards.size() == 0)
 				{
 					mPubmedCardProcessor.addTerms();
+					mPubmedCardProcessor.addTermsYear();
 					getExecutorService().shutdown();
 					return;
 				}

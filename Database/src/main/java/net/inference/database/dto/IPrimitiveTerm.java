@@ -25,7 +25,8 @@ public interface IPrimitiveTerm
 		public static final String term = "term";
 	}
 
-	String getPublication();
+
+	Article getPublication();
 
 	void setPublication(final String publication);
 

@@ -32,6 +32,8 @@ public class PrimitiveTermToPrimitiveTerm implements IPrimitiveTermToPrimitiveTe
 		mArticle = article;
 	}
 
+
+
 	@Override
 	public PrimitiveTerm getFrom(){ return mFrom; }
 

@@ -16,23 +16,26 @@ public class Term implements ITerm
 	private int mId;
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
-	@DatabaseField(columnName = Column.year)
-	private int mYear;
 	@DatabaseField(columnName = Column.counter)
-	private int mCounter=1;
+	private double mCounter = 0.0;
 
 	public Term()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-
 	public Term(int id, PrimitiveTerm termArg)
 	{
 		mId=id;
 		mValue = termArg.getValue();
-		mYear = termArg.getYear();
 	}
+
+	/*public Term(int id, String val, int count)
+	{
+		mId=id;
+		mValue = val;
+		mCounter = count;
+	}*/
 
 	public  int getId(){ return mId; }
 
@@ -43,16 +46,14 @@ public class Term implements ITerm
 		return mValue;
 	}
 
-	public void setYear(final int year){ mYear = year; }
-
-	public int getYear()	{ return mYear; }
-
-	public void incCounter()
+	public void incCount()
 	{
 		mCounter++;
 	}
 
-	public int getCount(){ return  mCounter; };
+	public double getCount(){ return  mCounter; };
+
+	public void addCount(double add){ mCounter = mCounter + add; }
 
 	@Override
 	public boolean equals(Object o)

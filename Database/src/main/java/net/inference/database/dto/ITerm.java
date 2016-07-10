@@ -9,10 +9,9 @@ public interface ITerm
 
 	class Column
 	{
-		public static final String value = "value";
 		public static final String id = "id";
-		public static final String year = "year";
-		public static final String counter = "Number of PT";
+		public static final String value = "value";
+		public static final String counter = "number of PT";
 	}
 
 	int getId();
@@ -21,12 +20,11 @@ public interface ITerm
 
 	String getValue();
 
-	void incCounter();
+	void incCount();
 
-	int getCount();
+	double getCount();
 
-	void setYear(final int year);
+	void addCount(double add);
 
-	int getYear();
 }
 

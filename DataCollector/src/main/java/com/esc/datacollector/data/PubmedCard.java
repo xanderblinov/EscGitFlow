@@ -87,6 +87,13 @@ public class PubmedCard extends AbsPubmedCard
 		return Integer.parseInt(mDA.substring(0, 4));
 	}
 
+	public int getYearDp()
+	{
+		if( TextUtils.isEmpty(mDP) || mDP.length() < 4)
+			return 0;
+		return Integer.parseInt(mDP.substring(0,4));
+	}
+
 	public String getTitle()
 	{
 		return mTitle;

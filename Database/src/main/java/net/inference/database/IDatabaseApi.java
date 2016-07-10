@@ -35,6 +35,8 @@ public interface IDatabaseApi
 
 	ITermToTermApi termToTerm();
 
+	ITermYearApi termYear();
+
 
 	/**
 	 * Init database and table

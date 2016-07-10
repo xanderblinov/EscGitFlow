@@ -25,6 +25,7 @@ import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
 import net.inference.sqlite.dto.TermToTerm;
+import net.inference.sqlite.dto.TermYear;
 
 
 import java.io.File;
@@ -69,7 +70,8 @@ class DbHelper
 			PrimitiveTermToPrimitiveTerm.class,
 			ArticleToTerm.class,
 			Term.class,
-			TermToTerm.class
+			TermToTerm.class,
+			TermYear.class
 
     };
 	/*@formatter:on*/

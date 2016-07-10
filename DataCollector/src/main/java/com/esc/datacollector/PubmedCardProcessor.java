@@ -3,28 +3,22 @@ package com.esc.datacollector;
 import com.esc.common.util.Checks;
 import com.esc.datacollector.app.Application;
 import com.esc.datacollector.data.PubmedCard;
-
+import edu.smu.tspell.wordnet.NounSynset;
+import edu.smu.tspell.wordnet.Synset;
+import edu.smu.tspell.wordnet.SynsetType;
+import edu.smu.tspell.wordnet.WordNetDatabase;
 import net.inference.database.IDatabaseApi;
-import net.inference.sqlite.dto.Article;
-import net.inference.sqlite.dto.ArticleSource;
-import net.inference.sqlite.dto.PrimitiveAuthor;
-import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
-import net.inference.sqlite.dto.PrimitiveTerm;
-import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
-import net.inference.sqlite.dto.Term;
-import net.inference.sqlite.dto.TermToTerm;
+import net.inference.sqlite.dto.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-import edu.smu.tspell.wordnet.NounSynset;
-import edu.smu.tspell.wordnet.Synset;
-import edu.smu.tspell.wordnet.SynsetType;
-import edu.smu.tspell.wordnet.WordNetDatabase;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Date: 13-Sep-15
@@ -35,6 +29,7 @@ import edu.smu.tspell.wordnet.WordNetDatabase;
 public class PubmedCardProcessor implements IPubmedCardProcessor
 {
 	List<Term> terms = new ArrayList<>();
+	List<TermYear> termsYear = new ArrayList<>();
 
 	@Override
 	public boolean execute(PubmedCard pubmedCard)
@@ -52,6 +47,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		final boolean hasKeyMh = !Checks.isEmpty(pubmedCard.getKeyMh());
 		final boolean hasAb = !Checks.isEmpty(pubmedCard.getAB());
 
+		if(!hasAb)
+			return false;
+
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
@@ -60,10 +58,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		List<TermToTerm> termToTerms = new ArrayList<>();
 
 
-		//List<Integer> list = new ArrayList<Integer>();
-		//File file = new File("x./2of12inf.tt");
 
-		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), pubmedCard.getYear(), ArticleSource.PUBMED);
+		final int year = pubmedCard.getYearDp();
+		Article article = new Article(pubmedCard.getTitle(), pubmedCard.getPmid(), year, ArticleSource.PUBMED);
 
 
 
@@ -84,7 +81,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			return false;
 		}
 
-		for (int i = 0; i < pubmedCard.getAU().length; i++)
+		/*for (int i = 0; i < pubmedCard.getFAU().length; i++)
 		{
 			final String au = pubmedCard.getAU()[i];
 			final String fau = pubmedCard.getFAU()[i];
@@ -95,9 +92,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			primitiveAuthors.add(primitiveAuthor);
 
 			//System.out.println(primitiveAuthor.toString());
-		}
+		}*/
 
-		final int year = pubmedCard.getYear();
+
 
 		/*if (hasKeyOt)
 			for (int i = 0; i < pubmedCard.getKeyOt().length ; i++)
@@ -143,6 +140,10 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		Scanner scanner;
 
 
+		int legalDiff;
+		List<String> mirnaList = Arrays.asList("mirna", "mi-rna", "microrna", "micro-rna", "mirnas", "mi-rnas", "micrornas", "micro-rnas");
+
+
 		try{
 			scanner = new Scanner(file);
 			List<String> common_words = new ArrayList<>();
@@ -153,19 +154,52 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 					scanner.next();
 				}
 			}
+
+
+
 			if(hasAb)
 			{
-				String annotation = pubmedCard.getAB();
-				annotation = annotation.replaceAll("\\(|\\)|\\[|\\]|\\.|,|;|\\*|\"|~|:| - |'s|'|=|%|<|>", "");
+				String annotation = pubmedCard.getAB().toLowerCase();
+				annotation = annotation.replaceAll("\\+|#|&|$|\\{|\\}|\\||\\(|\\)|\\[|\\]|\\.|,|;|\\*|\"|~|:| - |'s|'|=|%|<|>|\\?", "");
+				annotation = annotation.replaceAll("/"," ");
 				String [ ] word_array = annotation.split(" ");
 
 				for(int j = 0; j < word_array.length; j++){
-					if(!(word_array[j].length() == 0) && !word_array[j].matches("\\d+")){
-						if(!common_words.contains(word_array[j].toLowerCase()) && !common_words.contains(word_array[j].toLowerCase().replace("-", ""))){
-							PrimitiveTerm abstractTerm = new PrimitiveTerm(word_array[j],"AB",year, article);
-							primitiveTerms.add(abstractTerm);
+					//word_array[j] = word_array[j].toLowerCase();
+					boolean exist = false;
+					String word = word_array[j];
+
+					if((word.length() == 0) || word.matches("-?(\\d+)-?(\\d+)?"))
+					{
+						continue;
+					}
+
+					if (common_words.contains(word) && common_words.contains(word.replace("-", "")))
+					{
+						continue;
+					}
+
+					for (PrimitiveTerm primTerm : primitiveTerms)
+					{
+						if (word.length() <= 2 || primTerm.getValue().length() <= 2)
+							legalDiff = 1;
+						else
+							legalDiff = 2;
+
+						if ((LevenshteinDist(word, primTerm.getValue())) < legalDiff ||
+								mirnaList.contains(word) && mirnaList.contains(primTerm.getValue()) )
+						{
+							if(word.length() < primTerm.getValue().length())
+								primTerm.setValue(word);
+							exist = true;
+							continue;
 						}
 					}
+
+					if (exist)
+						continue;
+					PrimitiveTerm abstractTerm = new PrimitiveTerm(word, "AB", year, article);
+					primitiveTerms.add(abstractTerm);
 				}
 			}
 		}
@@ -174,87 +208,128 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		}
 
 
-		for(int i = 0; i < primitiveTerms.size(); i++)
-		{
-			for(int j = 0 ; j < primitiveTerms.size(); j++){
-				if(i != j){
-					PrimitiveTermToPrimitiveTerm primTermToTerm =
-						new PrimitiveTermToPrimitiveTerm(primitiveTerms.get(i),primitiveTerms.get(j),article);
-					primTermToTerms.add(primTermToTerm);
-				}
-			}
-		}
+		File worldNetDir = new File("DataCollector/src/main/resources/world_net/dict");
+		System.setProperty("wordnet.database.dir", worldNetDir.getAbsolutePath());
 
-		System.setProperty("wordnet.database.dir", "D:\\Programs\\WordNet2.1\\dict\\");
-		fpts: for (int i = 0; i < primitiveTerms.size() ; i++)
+
+
+		fpts:
+		for (final PrimitiveTerm primitiveTerm : primitiveTerms)
 		{
-			final PrimitiveTerm primitiveTerm = primitiveTerms.get(i);
 			final String primitiveTermValue = primitiveTerm.getValue();
-			Synset[] synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
-			//we are getting all synsets from WordNet for our primitive term
-			for (int j = 0; j < terms.size(); j++)
+
+			Synset[] synsets;
+			try
 			{
-				final Term term=terms.get(j);
-				final String termValue=term.getValue();
-
-				if (primitiveTerm.getYear() == term.getYear()){
-					if ( !(primitiveTermValue.intern() == termValue.intern()))
-						for (int k = 0; k < synsets.length; k++)
-						{
-							final NounSynset nounSynset=(NounSynset)synsets[k];
-							for (int l=0; l < nounSynset.getWordForms().length;l++)
-								if (termValue.intern() == nounSynset.getWordForms()[l].intern())
-								//comparing meanings from synset with term
-								{
-									term.incCounter();
-									primitiveTerm.setTerm(term);
-									continue fpts;
-								}
-						}
-					else {
-							term.incCounter();
-							primitiveTerm.setTerm(term);
-							continue fpts;
-						 }
-				}
+				synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
 			}
-			Term newTerm = new Term(terms.size()+1,primitiveTerm);
-			terms.add(newTerm);
-			primitiveTerm.setTerm(newTerm);
-		}
+			catch (Exception e)
+			{
+				synsets = new Synset[0];
+			}
 
-		//module for term to term
-		for(int k = 0; k < primTermToTerms.size(); k++){
-			PrimitiveTerm from = primTermToTerms.get(k).getFrom(), to = primTermToTerms.get(k).getTo();
-			Term A = from.getTerm(), B = to.getTerm();
-			TermToTerm newPair = new TermToTerm(A,B);
-			if(newPair.getFrom() != newPair.getTo())
-				if (!has(termToTerms, newPair))
-					termToTerms.add(newPair);
-		}
+			//we are getting all synsets from WordNet for our primitive term
+			for (final Term term : terms)
+			{
+				final String termValue = term.getValue();
 
 
-		/*alternative way for termToTerm using database, very slow way
 
-		for(int k = 0; k < primTermToTerms.size(); k++){
-			PrimitiveTerm from = primTermToTerms.get(k).getFrom(), to = primTermToTerms.get(k).getTo();
-			Term A = from.getTerm(), B = to.getTerm();
-			TermToTerm newPair = new TermToTerm(A,B);
+				if (primitiveTermValue.length() <= 2 || termValue.length() <= 2)
+					legalDiff = 1;
+				else
+					legalDiff = 2;
 
-			if(newPair.getFrom() != newPair.getTo()){
-				try{
-					if(!databaseApi.termToTerm().exists(newPair))
-						databaseApi.termToTerm().addTerm(newPair);
-					else{
-						TermToTerm elem = databaseApi.termToTerm().findByProperties(TermToTerm.Column.from, A.getId(), TermToTerm.Column.to, B.getId()).get(0);
-						databaseApi.termToTerm().changeProperty(elem.getId(), "count", elem.getCount() + 1);
+				if (LevenshteinDist(primitiveTermValue, termValue) < legalDiff)
+				{
+					if(termValue.length() < primitiveTermValue.length())
+						primitiveTerm.setValue(termValue);
+
+					TermYear termYear = new TermYear(term, primitiveTerm.getYear());
+					boolean ex = false;
+
+					for (TermYear aTermsYear : termsYear)
+					{
+						if (aTermsYear.getYear() == termYear.getYear() && aTermsYear.getTerm().getId() == term.getId())
+						{
+							ex = true;
+							aTermsYear.incCounter();
+							break;
+						}
+					}
+					if (!ex)
+						termsYear.add(termYear);
+
+
+					term.addCount(1.0 / (double)primitiveTerms.size());
+					primitiveTerm.setTerm(term);
+					continue fpts;
+				}
+				else
+				{
+					for (Synset synset : synsets)
+					{
+						final NounSynset nounSynset = (NounSynset) synset;
+						for (int l = 0; l < nounSynset.getWordForms().length; l++)
+							if (termValue.intern().equals(nounSynset.getWordForms()[l]))
+							//comparing meanings from synset with term
+							{
+								TermYear termYear = new TermYear(term, primitiveTerm.getYear());
+								boolean ex = false;
+								for (TermYear aTermsYear : termsYear)
+								{
+									if (aTermsYear.getYear() == termYear.getYear() && aTermsYear.getTerm().getId() == term.getId())
+									{
+										ex = true;
+										aTermsYear.incCounter();
+										break;
+									}
+								}
+								if (!ex)
+									termsYear.add(termYear);
+
+								//вес термина считаем не как количество научных публикаций, а как сумма по всем публикациям чисел, обратных к числу терминов в аннотации статьи
+								term.addCount(1.0 / (double)primitiveTerms.size());
+								primitiveTerm.setTerm(term);
+								continue fpts;
+							}
+
+					}
+					if (mirnaList.contains(termValue) && mirnaList.contains(primitiveTermValue))
+					{
+						if(termValue.length() < primitiveTermValue.length())
+							primitiveTerm.setValue(termValue);
+						TermYear termYear = new TermYear(term, primitiveTerm.getYear());
+						boolean ex = false;
+						for (TermYear aTermsYear : termsYear)
+						{
+							if (aTermsYear.getYear() == termYear.getYear() && aTermsYear.getTerm().getId() == term.getId())
+							{
+								ex = true;
+								aTermsYear.incCounter();
+								break;
+							}
+						}
+						if (!ex)
+							termsYear.add(termYear);
+
+
+						term.addCount(1.0 / (double)primitiveTerms.size());
+						primitiveTerm.setTerm(term);
+						continue fpts;
 					}
 				}
-				catch (SQLException e){
 
-				}
 			}
-		}*/
+			Term newTerm = new Term(terms.size() + 1, primitiveTerm);
+			newTerm.addCount(1.0 / (double)primitiveTerms.size());
+			terms.add(newTerm);
+			primitiveTerm.setTerm(newTerm);
+
+			TermYear termYear = new TermYear(newTerm, primitiveTerm.getYear());
+			termsYear.add(termYear);
+		}
+
 
 
 
@@ -267,12 +342,6 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 			//System.out.println(Arrays.toString(primitiveAuthorToAuthors.toArray(new PrimitiveAuthorToAuthor[primitiveAuthorToAuthors.size()])));
 
 			primitiveTerms = databaseApi.primterm().addTerms(primitiveTerms);
-
-			primTermToTerms = databaseApi.primTermToTerm().addTerms(primTermToTerms);
-
-			termToTerms = databaseApi.termToTerm().addTerms(termToTerms);
-
-
 
 
 		}
@@ -297,7 +366,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		if (Checks.isEmpty(pubmedCard.getOrganizations()))
 		{
 			System.out.println(pubmedCard.getPmid() + " no organization found");
-			return false;
+			//return false;
 		}
 
 		if (Checks.isEmpty(pubmedCard.getAU()))
@@ -327,13 +396,112 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		}
 	}
 
-	public boolean has (List<TermToTerm> pairList, TermToTerm elem){
-		for(int i = 0; i < pairList.size(); i++)
-			if( pairList.get(i).equals(elem) ){//.getFrom().getValue().equals(elem.getFrom().getValue()) && pairList.get(i).getTo().getValue().equals(elem.getTo().getValue()) ){
-				pairList.get(i).incCount();
-				return true;
-			}
-		return false;
+	public void addTermsYear()
+	{
+		final IDatabaseApi databaseApi = Application.getDatabaseApi();
+		try
+		{
+			termsYear = databaseApi.termYear().addTerms(termsYear);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
+
+	//сравнение терминов по расстоянию Левенштейна
+	private static int LevenshteinDist(String S1, String S2)
+	{
+
+		//костыль
+		if(S1.matches("dnas?") && S2.matches("rnas?") || S2.matches("dnas?") && S1.matches("rnas?"))
+			return 10;
+
+		S1 = S1.toLowerCase().replace("-","");
+		S2 = S2.toLowerCase().replace("-","");
+		if(S1.equals(S2))
+			return 0;
+		if(S1.length() <=2 || S2.length() <= 2) //убрать потом
+			return 10;
+
+		int m = S1.length(), n = S2.length();
+		int[] D1;
+		int[] D2 = new int[n + 1];
+		int add=0;
+		for (int i = 0; i <= n; i++)
+			D2[i] = i;
+
+
+		Pattern pat=Pattern.compile("[-]?[0-9]+(.[0-9]+)?");
+
+		Matcher matcher1 = pat.matcher(S1);
+		Matcher matcher2 = pat.matcher(S2);
+
+		if(matcher1.find() && !matcher2.find()  ||  !matcher1.find() && matcher2.find())
+			add = add + 5;
+
+
+		for (int i = 1; i <= m; i++)
+		{
+			D1 = D2;
+			D2 = new int[n + 1];
+			for (int j = 0; j <= n; j++)
+			{
+				if (j == 0) D2[j] = i;
+				else
+				{
+					int cost = (S1.charAt(i - 1) != S2.charAt(j - 1)) ? 1 : 0;
+					if( (S1.charAt(i - 1) > 47  && S1.charAt(i - 1) < 58) && (S2.charAt(j - 1) > 47 && S2.charAt(j - 1) < 58) )
+					{
+						add = add + Fine(S1, i-1, S2, j-1);
+						if(add > 3)
+							return 3;
+					}
+					if (D2[j - 1] < D1[j] && D2[j - 1] < D1[j - 1] + cost)
+						D2[j] = D2[j - 1] + 1;
+					else if (D1[j] < D1[j - 1] + cost)
+						D2[j] = D1[j] + 1;
+					else
+						D2[j] = D1[j - 1] + cost;
+				}
+			}
+		}
+		return D2[n]+add;
+	}
+
+	//штрафная функция: чтобы при различии двух слов в одну цифру, они считались точно разными словами
+	private static int Fine(String s1, int k, String s2, int l){
+		int fine = 0, i;
+
+		if(k > 0 && s1.charAt(k-1) > 47 && s1.charAt(k-1) < 58)
+			return 0;
+		if(l > 0 && s2.charAt(l-1) > 47 && s2.charAt(l-1) < 58)
+			return 0;
+		/*if(s1.charAt(k) < 48 || s1.charAt(k) > 57 || s2.charAt(l) < 48 || s2.charAt(l) > 57)
+			return 0;*/
+
+		int a = Character.getNumericValue(s1.charAt(k));
+		int b = Character.getNumericValue(s2.charAt(l));
+
+
+		for(i = k+1; i < s1.length(); i++)
+		{
+			if(s1.charAt(i) > 47 && s1.charAt(i) < 58)
+				a = a*10 + Character.getNumericValue(s1.charAt(i));
+			else
+				break;
+		}
+		for(i = l+1; i < s2.length(); i++)
+		{
+			if(s2.charAt(i) > 47 && s2.charAt(i) < 58)
+				a = a*10 + Character.getNumericValue(s2.charAt(i));
+			else
+				break;
+		}
+
+		if(a != b)
+			fine = 5;
+		return fine;
 	}
 }

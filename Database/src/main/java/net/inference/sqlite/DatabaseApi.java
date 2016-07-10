@@ -18,6 +18,8 @@ import net.inference.database.IPrimitiveTermApi;
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
 import net.inference.database.ITermApi;
 import net.inference.database.ITermToTermApi;
+import net.inference.database.ITermYearApi;
+import net.inference.database.dto.ITermYear;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
@@ -34,6 +36,7 @@ import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
 import net.inference.sqlite.dto.TermToTerm;
+import net.inference.sqlite.dto.TermYear;
 
 
 import java.sql.SQLException;
@@ -59,6 +62,7 @@ public class DatabaseApi implements IDatabaseApi
 	private IPrimitiveTermToPrimitiveTermApi primtermToTermApi = new PrimitiveTermToPrimitiveTermApi(this);
 	private ITermApi termApi = new TermApi(this);
 	private ITermToTermApi termToTermApi = new TermToTermApi(this);
+	private ITermYearApi termYearApi = new TermYearApi(this);
 
 
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
@@ -78,7 +82,6 @@ public class DatabaseApi implements IDatabaseApi
 	{
 		mDbHelper.onStop();
 	}
-
 
 	@Override
 	public IArticleApi article()
@@ -138,16 +141,16 @@ public class DatabaseApi implements IDatabaseApi
 	}
 
 	@Override
-	public ITermApi term()
-	{
-		return  termApi;
-	}
+	public ITermApi term() { return  termApi; }
 
 	@Override
 	public ITermToTermApi termToTerm()
 	{
 		return termToTermApi;
 	}
+
+	@Override
+	public ITermYearApi termYear() { return termYearApi; }
 
 	public <T> Dao<Article, T> getArticleDao() throws SQLException
 	{
@@ -226,6 +229,10 @@ public class DatabaseApi implements IDatabaseApi
 	<T> Dao<TermToTerm, T> getTermToTermDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), TermToTerm.class);
+	}
+	<T> Dao<TermYear, T> getTermYearDao() throws SQLException
+	{
+		return DaoManager.createDao(mDbHelper.getConnection(), TermYear.class);
 	}
 
 	public ConnectionSource getConnection() {

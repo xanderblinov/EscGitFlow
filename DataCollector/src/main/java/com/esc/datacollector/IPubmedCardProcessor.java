@@ -17,4 +17,5 @@ public interface IPubmedCardProcessor
 	 */
 	boolean execute(PubmedCard pubmedCard);
 	void addTerms();
+	void addTermsYear();
 }
