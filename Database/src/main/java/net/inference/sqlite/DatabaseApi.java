@@ -17,6 +17,7 @@ import net.inference.database.IPrimitiveAuthorApi;
 import net.inference.database.IPrimitiveTermApi;
 import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
 import net.inference.database.ITermApi;
+import net.inference.database.dto.ICompany;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;

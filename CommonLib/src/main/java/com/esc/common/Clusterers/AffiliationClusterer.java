@@ -66,13 +66,13 @@ public class AffiliationClusterer{
         this.set = new Dataset();
         this.initialArray = initialArr;
         for (int i = 1; i < matrice[0].length;i++) {
-            String[] fv = new String[matrice[0].length];
-            for(int j = 0; j<matrice.length;j++)
-            {
-                fv[j] = matrice[j][i];
-            }
-            this.set.add(new FeatureVector(fv,false));
+        String[] fv = new String[matrice[0].length];
+        for(int j = 0; j<matrice.length;j++)
+        {
+            fv[j] = matrice[j][i];
         }
+        this.set.add(new FeatureVector(fv,false));
+    }
         this.clustering = alg;
     }
     public void PerformClustering(){

@@ -5,13 +5,7 @@ import com.esc.datacollector.app.Application;
 import com.esc.datacollector.data.PubmedCard;
 
 import net.inference.database.IDatabaseApi;
-import net.inference.sqlite.dto.Article;
-import net.inference.sqlite.dto.ArticleSource;
-import net.inference.sqlite.dto.PrimitiveAuthor;
-import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
-import net.inference.sqlite.dto.PrimitiveTerm;
-import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
-import net.inference.sqlite.dto.Term;
+import net.inference.sqlite.dto.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -37,6 +31,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 	@Override
 	public boolean execute(PubmedCard pubmedCard)
 	{
+		System.setProperty("wordnet.database.dir", "D:\\ESC\\ESCGitFlow\\External\\dict");
 		if (!check(pubmedCard))
 		{
 			return false;
@@ -52,6 +47,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		final boolean singleOrganyzation = pubmedCard.getAU().length != pubmedCard.getDP().length();
 
 		List<PrimitiveAuthor> primitiveAuthors = new ArrayList<>();
+		List<Company> companies = new ArrayList<>();
 		List<PrimitiveTerm> primitiveTerms = new ArrayList<>();
 
 		List<PrimitiveTermToPrimitiveTerm> primTermToTerms = new ArrayList<>();
@@ -83,6 +79,15 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 
 			System.out.println(primitiveAuthor.toString());
 		}
+
+		for (int i = 0; i < pubmedCard.getOrganizations().length; i++)
+		{
+			final String ad = pubmedCard.getOrganizations()[i];
+			Company company = new Company(ad, article.getId());
+			//todo: ASAP add year to company
+			companies.add(company);
+		}
+
 		if (hasKeyOt)
 		{
 			for (int i = 0; i < pubmedCard.getKeyOt().length; i++)
@@ -170,6 +175,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		try
 		{
 			primitiveAuthors = databaseApi.primitiveAuthor().addAuthors(primitiveAuthors);
+			companies = databaseApi.company().addCompanies(companies);
 
 			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
 

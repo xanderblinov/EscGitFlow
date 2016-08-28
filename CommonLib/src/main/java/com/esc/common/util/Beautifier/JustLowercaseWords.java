@@ -9,9 +9,6 @@ public class JustLowercaseWords extends BaseAffilationBeautifier {
 
     @Override
     String Modify(String str){
-        return str.replace(" ","")
-                .replace(",","")
-                .replace(".","")
-                .replace("&","and").toLowerCase();
+        return str.replace("&","and").toLowerCase();
     }
 }

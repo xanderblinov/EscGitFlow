@@ -17,14 +17,17 @@ public class Company implements ICompany
 	private long mId;
 	@DatabaseField(columnName = Column.name)
 	private String name;
+	@DatabaseField(columnName = Column.articleId)
+	private long articleId;
 
 	public Company()
 	{
 	}
 
-	public Company(final String name)
+	public Company(final String name, final long articleId)
 	{
 		setName(name);
+		setArticleId(articleId);
 	}
 
 	@Override
@@ -35,6 +38,16 @@ public class Company implements ICompany
 	@Override
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public long getArticleId() {
+		return articleId;
+	}
+
+	@Override
+	public void setArticleId(long id) {
+		this.articleId = id;
 	}
 
 	public long getId()
@@ -50,6 +63,7 @@ public class Company implements ICompany
 		Company company = (Company) o;
 
 		if (mId != company.mId) return false;
+		if (articleId != company.articleId) return false;
 		return !(name != null ? !name.equals(company.name) : company.name != null);
 
 	}
@@ -57,7 +71,7 @@ public class Company implements ICompany
 	@Override
 	public int hashCode() {
 		int result = (int) (mId ^ (mId >>> 32));
-		result = 31 * result + (name != null ? name.hashCode() : 0);
+		result = 31 * result + (name != null ? name.hashCode() : 0) + (int)articleId;
 		return result;
 	}
 
@@ -66,6 +80,7 @@ public class Company implements ICompany
 		return "Company{" +
 				"mId=" + mId +
 				", name=" + name +
+				", articleId=" + articleId +
 				'}';
 	}
 }

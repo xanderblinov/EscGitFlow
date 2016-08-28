@@ -41,8 +41,8 @@ public class DataCollector
 		resultString = "PMID- qqwqwdqwd".replaceAll(PUBMED_START_LINE_REGEX, "$2").trim();
 		System.out.println(//sultString);*/
 
-
-		new PubMedParser("./pub_result.htm").parseFile();
+		//todo: ASAP set appropriate file
+		new PubMedParser("./VerySmall/pubmed_result.txt").parseFile();
 
 		//new SimpleDisambiguationResolver().start();
 
