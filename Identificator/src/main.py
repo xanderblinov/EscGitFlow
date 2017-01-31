@@ -90,12 +90,30 @@ def average_name_length(authors):
 
 def calculate_distance(data, distance_func):
     def metric(a, b):
-        return distance_func(data[int(a[0])], data[int(b[0])])
+        a = int(a[0])
+        b = int(b[0])
+        return distance_func(data[a], data[b])
 
     indices = np.arange(len(data)).reshape(-1, 1)
     distance_vector = distance.pdist(indices, metric)
     distance_matrix = distance.squareform(distance_vector)
     return distance_matrix
+
+
+@ex.command
+def test_custom_distance():
+    data = [
+        'sergey demurin', 'sergey ivanov', 'sergey ivonov',
+        'ivanov sergey', 'sergei demurin', 'dmitry medvedev',
+        'sergei ivanof'
+    ]
+    logger.debug('Calculating distance matrix for %d items...' % len(data))
+    tic = time.time()
+    distance_matrix = calculate_distance(data, fuzzy_distance)
+    logger.debug('Calculated distance matrix in %f s'
+                 % (time.time() - tic))
+    clusters = dbscan(data, distance_matrix)
+    print clusters
 
 
 @ex.automain
@@ -109,7 +127,7 @@ def main(db_path):
 
     full_names = [row['surname'] for row in primitive_authors]
 
-    logger.debug('Calculating distance matrix for %d items...' % len(primitive_authors))
+    logger.debug('Calculating distance matrix for %d items...' % len(full_names))
     tic = time.time()
     distance_matrix = calculate_distance(full_names, fuzzy_distance)
     logger.debug('Calculated distance matrix in %f s'

@@ -1,0 +1,7 @@
+fuzzywuzzy
+jupyter
+notebook==4.3.0
+numpy
+sacred
+scipy
+sklearn
