@@ -1,0 +1,9 @@
+elasticsearch>=5.0.0,<6.0.0
+fuzzywuzzy
+# jupyter
+# notebook==4.3.0
+numpy
+python-Levenshtein
+sacred
+scipy
+sklearn

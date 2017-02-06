@@ -1,4 +1,4 @@
-from __future__ import division
+
 
 # import sys
 
@@ -68,7 +68,7 @@ def lcs_distance(string1, string2):
 def name_variants(string):
     variants = [string]
     original_sequence = string.split()
-    r = range(len(original_sequence))
+    r = list(range(len(original_sequence)))
     for indices in itertools.chain(*[itertools.combinations(r, n) for n in r[1:]]):
         s = original_sequence[:]
         for i in indices:
@@ -96,8 +96,8 @@ def fuzzy_distance(string1, string2, partial=False):
 
 
 if __name__ == '__main__':
-    s1 = u'Sergey Kenterbutian Demurin'
-    s2 = u'K D Sergey '
+    s1 = 'Sergey Kenterbutian Demurin'
+    s2 = 'K D Sergey '
 
     # print get_name_variants(s1)
 
@@ -119,4 +119,4 @@ if __name__ == '__main__':
              for (s1, s2)
              in itertools.combinations(variants, 2)]
     table = sorted(table, key=lambda r: r[1])
-    print tabulate(table, headers=['string', 'not partial', 'partial'])
+    print(tabulate(table, headers=['string', 'not partial', 'partial']))

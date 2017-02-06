@@ -1,8 +1,6 @@
-from __future__ import division
-
+import logging
 import random
 import sqlite3
-import logging
 import time
 
 from sklearn.cluster import DBSCAN
@@ -28,7 +26,7 @@ ex.logger = logger
 
 @ex.config
 def base_config():
-    db_path = 'Database/src/main/resources/test3.db'
+    db_path = 'pubmed.db'
     n_of_authors = 5 * 10 ** 2
 
 
@@ -50,7 +48,7 @@ def group_authors_hca(authors, distance=fuzzy_distance):
     max_d = 0.1
     clusters = hierarchy_clustering.fcluster(Z, max_d, criterion='distance')
     np_authors = np.array(authors)
-    clustered = [np_authors[clusters == i] for i in xrange(1, max(clusters) + 1)]
+    clustered = [np_authors[clusters == i] for i in range(1, max(clusters) + 1)]
     return clustered
 
 
@@ -63,7 +61,7 @@ def dbscan(items, distance_matrix, eps=0.1, min_samples=1):
 
     n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
     np_authors = np.array(items)
-    clusters = [np_authors[labels == i] for i in xrange(n_clusters_)]
+    clusters = [np_authors[labels == i] for i in range(n_clusters_)]
     return clusters
 
 
@@ -113,7 +111,7 @@ def test_custom_distance():
     logger.debug('Calculated distance matrix in %f s'
                  % (time.time() - tic))
     clusters = dbscan(data, distance_matrix)
-    print clusters
+    print(clusters)
 
 
 @ex.automain
@@ -122,7 +120,7 @@ def main(db_path):
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
 
-    n_authors = 1024
+    n_authors = 1030
     primitive_authors = get_primitive_authors(cursor, limit=n_authors)
 
     full_names = [row['surname'] for row in primitive_authors]
@@ -133,8 +131,9 @@ def main(db_path):
     logger.debug('Calculated distance matrix in %f s'
                  % (time.time() - tic))
 
-    for n_items in (2**k for k in xrange(12)):
-        items_indices = random.sample(xrange(len(primitive_authors)), n_items)
+    for n_items in (2**k for k in range(1, 10)):
+    # for n_items in [10]:
+        items_indices = random.sample(range(len(primitive_authors)), n_items)
 
         ixgrid = np.ix_(items_indices, items_indices)
         local_distance_matrix = distance_matrix[ixgrid]
