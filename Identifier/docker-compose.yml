@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  identifier:
+    build: .
+    image: local/esc-identifier
+    volumes:
+      - ./src/:/opt/esc-identifier
+
+  elasticsearch:
+    image: elasticsearch:latest
+    ports:
+      - '9200:9200'
