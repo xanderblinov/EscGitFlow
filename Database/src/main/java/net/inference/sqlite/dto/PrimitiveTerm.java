@@ -22,67 +22,96 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
 	@DatabaseField(columnName = Column.type)
-	private String mType;
+	private PrimitiveTermType mType;
 	@DatabaseField(columnName = Column.year)
 	private int mYear;
 	@DatabaseField(columnName = Column.publication, foreign = true)
 	private Article mPublication;
 	@DatabaseField(columnName = Column.term, foreign = true)
 	private Term mTerm;
-
-
-
-
-
+	@DatabaseField
+	private boolean mNoTerm;
 
 	public PrimitiveTerm()
 	{
 		// ORMLite needs a no-arg constructor
 	}
 
-
-	public PrimitiveTerm(String value, String type, int year, Article article)
+	public PrimitiveTerm(String value, PrimitiveTermType type, Article article)
 	{
 		mType = type;
 		mValue = value;
 		mPublication = article;
-		mYear = year;
+		mYear = article.getYear();
+		mNoTerm = true;
 	}
 
-	public int getId(){ return mId;}
+	public int getId()
+	{
+		return mId;
+	}
+
+	public void setId(int id)
+	{
+		mId = id;
+	}
 
 	public String getValue()
 	{
 		return mValue;
 	}
 
-	public void setTerm(Term inputTerm)
+	public void setValue(String value)
 	{
-		this.mTerm=inputTerm;
+		mValue = value;
 	}
 
-	public void setValue(String value){ mValue = value; }
+	public PrimitiveTermType getType()
+	{
+		return mType;
+	}
 
-	public String getTermValue(){return mTerm.getValue();}
+	public void setType(PrimitiveTermType type)
+	{
+		mType = type;
+	}
 
-	public Term getTerm(){ return mTerm; }
+	public String getTermValue()
+	{
+		return mTerm.getValue();
+	}
 
-	public int getYear(){ return mYear; }
+	public Term getTerm()
+	{
+		return mTerm;
+	}
 
-	public void setYear(int year){ mYear = year; }
+	public void setTerm(Term inputTerm)
+	{
+		this.mTerm = inputTerm;
+	}
 
-	@Override
+	public int getYear()
+	{
+		return mYear;
+	}
+
+	public void setYear(int year)
+	{
+		mYear = year;
+	}
+
 	public Article getPublication()
 	{
 		return mPublication;
 	}
 
-	@Override
-	public void setPublication(String publication)
+	public void setPublication(Article publication)
 	{
-
+		mPublication = publication;
 	}
 
+	@Override
 	public ArrayList<String> separatePrimitiveTerms()
 	{
 		ArrayList<String> createdPrimitiveTerms = new ArrayList<>();
@@ -91,8 +120,6 @@ public class PrimitiveTerm implements IPrimitiveTerm
 			createdPrimitiveTerms.add(primitiveTermsArr[i]);
 		return createdPrimitiveTerms;
 	}
-
-
 
 	@Override
 	public boolean equals(Object o)
@@ -123,4 +150,6 @@ public class PrimitiveTerm implements IPrimitiveTerm
 	{
 		return mValue;
 	}
+
+
 }

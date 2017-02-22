@@ -101,8 +101,8 @@ public class PubMedParser extends AbsParserEngine
 			{
 				if (mFileReadingCompleted && mPubmedCards.size() == 0)
 				{
-					mPubmedCardProcessor.addTerms();
-					mPubmedCardProcessor.addTermsYear();
+//					mPubmedCardProcessor.addTerms();
+//					mPubmedCardProcessor.addTermsYear();
 					getExecutorService().shutdown();
 					return;
 				}

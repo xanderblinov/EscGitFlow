@@ -77,7 +77,6 @@ public class PubmedCard extends AbsPubmedCard
 
 	public String[] getKeyMh() {	return mKeyMh; }
 
-
 	public int getYear()
 	{
 		if (TextUtils.isEmpty(mDA) || mDA.length() < 4)

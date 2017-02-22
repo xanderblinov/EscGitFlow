@@ -66,7 +66,7 @@ public class DataCollector
 		//new PubMedParser("./test_pubmed.htm").parseFile();
 
 		//TimeBorder time = new TimeBorder();
-		new PubMedParser("./2001-2014.txt").parseFile();
+		new PubMedParser("./test_pubmed.htm").parseFile();
 		long finish = System.currentTimeMillis();
 		long timeConsumedMillis = finish - start;
 		System.out.println("\nTime is: " + timeConsumedMillis);

@@ -1,7 +1,9 @@
 package net.inference.database.dto;
 
 import java.util.ArrayList;
+
 import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.PrimitiveTermType;
 import net.inference.sqlite.dto.Term;
 
 
@@ -25,16 +27,35 @@ public interface IPrimitiveTerm
 		public static final String term = "term";
 	}
 
-
-	Article getPublication();
-
-	void setPublication(final String publication);
-
 	ArrayList<String> separatePrimitiveTerms();
+
+	int getId();
+
+	void setId(int id);
+
+	String getValue();
+
+	void setValue(String value);
+
+	PrimitiveTermType getType();
+
+	void setType(PrimitiveTermType type);
+
+	String getTermValue();
+
+	Term getTerm();
+
+	void setTerm(Term inputTerm);
+
+	int getYear();
 
 	void setYear(int year);
 
-	int getYear();
+	Article getPublication();
+
+	void setPublication(Article publication);
+
+	String toString();
 
 }
 

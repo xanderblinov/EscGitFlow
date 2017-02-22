@@ -9,13 +9,12 @@ import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 
 import net.inference.database.IPrimitiveTermApi;
-import net.inference.database.dto.IPrimitiveTerm;
-import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 
 /**
  * Created by palen on 23.10.2015.
  */
+
 public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements IPrimitiveTermApi
 {
 	private static Logger logger = LoggerFactory.getLogger(PrimitiveTerm.class);
@@ -37,7 +36,6 @@ public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements
 
 			ArrayList<PrimitiveTerm> createdTerms = new ArrayList<>();
 
-
 			for (PrimitiveTerm term : primitiveTerms)
 			{
 				final PrimitiveTerm primitiveTerm = dao.createIfNotExists(term);
@@ -49,7 +47,6 @@ public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements
 	}
 
 	@Override
-
 	public PrimitiveTerm addTerm(final PrimitiveTerm primitiveTerm)
 	{try
 	{
@@ -60,5 +57,5 @@ public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements
 		logger.error(e, "");
 	}
 		return null;
-	};
+	}
 }

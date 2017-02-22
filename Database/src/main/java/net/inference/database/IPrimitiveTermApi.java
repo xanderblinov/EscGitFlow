@@ -10,6 +10,7 @@ import net.inference.sqlite.dto.PrimitiveTerm;
  */
 public interface IPrimitiveTermApi extends IBaseApi <PrimitiveTerm,Integer>
 {
+
 	// TODO exist
 	List<PrimitiveTerm> addTerms(List<PrimitiveTerm> terms) throws Exception;
 
