@@ -16,6 +16,6 @@ public interface IPubmedCardProcessor
 	 * @return true if processing success
 	 */
 	boolean execute(PubmedCard pubmedCard);
-	void addTerms();
-	void addTermsYear();
+//	void addTerms();
+//	void addTermsYear();
 }

@@ -3,10 +3,7 @@ package com.esc.datacollector;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.esc.datacollector.app.Application;
-
 import net.inference.Config;
-import net.inference.database.IDatabaseApi;
 import net.inference.sqlite.DatabaseApi;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.PrimitiveTerm;
@@ -39,7 +36,7 @@ public class TermCommunication
 
 		List<PrimitiveTermToPrimitiveTerm> newPrToPr = new ArrayList<>();
 		List<Article> articleList = api.article().findAll();
-		List<PrimitiveTerm> primitiveTerms = api.primterm().findAll();
+		List<PrimitiveTerm> primitiveTerms = api.primTerm().findAll();
 		List<Term> terms = api.term().findAll();
 		int were = primitiveTerms.size();
 
@@ -71,7 +68,7 @@ public class TermCommunication
 
 
 		//module for term to term
-		List<PrimitiveTerm> primitiveTermsForTerms = api.primterm().findAll();
+		List<PrimitiveTerm> primitiveTermsForTerms = api.primTerm().findAll();
 		List<TermToTerm> termToTerms = new ArrayList<>();
 		for(k = 0; k < newPrToPr.size(); k++)
 		{

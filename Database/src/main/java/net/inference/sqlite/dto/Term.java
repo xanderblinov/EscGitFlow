@@ -2,6 +2,7 @@ package net.inference.sqlite.dto;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+
 import net.inference.database.dto.ITerm;
 
 /**
@@ -12,7 +13,7 @@ import net.inference.database.dto.ITerm;
 public class Term implements ITerm
 {
 
-	@DatabaseField(columnName = Column.id, id = true)
+	@DatabaseField(columnName = Column.id, generatedId = true)
 	private int mId;
 	@DatabaseField(columnName = Column.value)
 	private String mValue;
@@ -24,10 +25,14 @@ public class Term implements ITerm
 		// ORMLite needs a no-arg constructor
 	}
 
-	public Term(int id, PrimitiveTerm termArg)
+	public Term(PrimitiveTerm termArg)
 	{
-		mId=id;
 		mValue = termArg.getValue();
+	}
+
+	public Term(String termArg)
+	{
+		mValue = termArg;
 	}
 
 	/*public Term(int id, String val, int count)
@@ -37,13 +42,19 @@ public class Term implements ITerm
 		mCounter = count;
 	}*/
 
-	public  int getId(){ return mId; }
-
-	public void setValue(final String value){ mValue = value; }
+	public int getId()
+	{
+		return mId;
+	}
 
 	public String getValue()
 	{
 		return mValue;
+	}
+
+	public void setValue(final String value)
+	{
+		mValue = value;
 	}
 
 	public void incCount()
@@ -51,9 +62,17 @@ public class Term implements ITerm
 		mCounter++;
 	}
 
-	public double getCount(){ return  mCounter; };
+	public double getCount()
+	{
+		return mCounter;
+	}
 
-	public void addCount(double add){ mCounter = mCounter + add; }
+	;
+
+	public void addCount(double add)
+	{
+		mCounter = mCounter + add;
+	}
 
 	@Override
 	public boolean equals(Object o)

@@ -35,7 +35,7 @@ public class TermAn
 		final List<TermYear> termYearList = api.termYear().findAll();
 		final List<Term> termList = api.term().findAll();
 		final List<Article> articleList = api.article().findAll();
-		final List<PrimitiveTerm> primTerms = api.primterm().findAll();
+		final List<PrimitiveTerm> primTerms = api.primTerm().findAll();
 
 		api.onStop();
 

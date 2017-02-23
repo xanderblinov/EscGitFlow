@@ -1,5 +1,7 @@
 package net.inference.sqlite;
 
+import java.sql.SQLException;
+
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.support.ConnectionSource;
@@ -19,14 +21,13 @@ import net.inference.database.IPrimitiveTermToPrimitiveTermApi;
 import net.inference.database.ITermApi;
 import net.inference.database.ITermToTermApi;
 import net.inference.database.ITermYearApi;
-import net.inference.database.dto.ITermYear;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.Author;
 import net.inference.sqlite.dto.AuthorToArticle;
+import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.AuthorToCluster;
 import net.inference.sqlite.dto.AuthorToCompany;
 import net.inference.sqlite.dto.Cluster;
-import net.inference.sqlite.dto.AuthorToAuthor;
 import net.inference.sqlite.dto.Company;
 import net.inference.sqlite.dto.Evolution;
 import net.inference.sqlite.dto.EvolutionSlice;
@@ -37,9 +38,6 @@ import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
 import net.inference.sqlite.dto.Term;
 import net.inference.sqlite.dto.TermToTerm;
 import net.inference.sqlite.dto.TermYear;
-
-
-import java.sql.SQLException;
 
 /**
  * Date: 12/21/2014
@@ -68,7 +66,6 @@ public class DatabaseApi implements IDatabaseApi
 	public DatabaseApi(Config.Database database, boolean recreateDatabase)
 	{
 		mDbHelper = new DbHelper(database, recreateDatabase);
-
 	}
 
 	@Override
@@ -89,18 +86,21 @@ public class DatabaseApi implements IDatabaseApi
 		return mArticleApi;
 	}
 
-    @Override
-    public IAuthorApi author() {
-        return authorApi;
-    }
+	@Override
+	public IAuthorApi author()
+	{
+		return authorApi;
+	}
 
 	@Override
-	public IClusterApi cluster() {
+	public IClusterApi cluster()
+	{
 		return clusterApi;
 	}
 
 	@Override
-	public IEvolutionApi evolution() {
+	public IEvolutionApi evolution()
+	{
 		return evolutionApi;
 	}
 
@@ -129,9 +129,9 @@ public class DatabaseApi implements IDatabaseApi
 	}
 
 	@Override
-	public IPrimitiveTermApi primterm()
+	public IPrimitiveTermApi primTerm()
 	{
-		return  primtermApi;
+		return primtermApi;
 	}
 
 	@Override
@@ -141,7 +141,10 @@ public class DatabaseApi implements IDatabaseApi
 	}
 
 	@Override
-	public ITermApi term() { return  termApi; }
+	public ITermApi term()
+	{
+		return termApi;
+	}
 
 	@Override
 	public ITermToTermApi termToTerm()
@@ -150,7 +153,10 @@ public class DatabaseApi implements IDatabaseApi
 	}
 
 	@Override
-	public ITermYearApi termYear() { return termYearApi; }
+	public ITermYearApi termYear()
+	{
+		return termYearApi;
+	}
 
 	public <T> Dao<Article, T> getArticleDao() throws SQLException
 	{
@@ -167,12 +173,12 @@ public class DatabaseApi implements IDatabaseApi
 		return DaoManager.createDao(mDbHelper.getConnection(), AuthorToAuthor.class);
 	}
 
-    <T> Dao<AuthorToCluster, T> getAuthorToClusterDao() throws SQLException
+	<T> Dao<AuthorToCluster, T> getAuthorToClusterDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), AuthorToCluster.class);
 	}
 
-    <T> Dao<Cluster, T> getClusterDao() throws SQLException
+	<T> Dao<Cluster, T> getClusterDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), Cluster.class);
 	}
@@ -182,7 +188,7 @@ public class DatabaseApi implements IDatabaseApi
 		return DaoManager.createDao(mDbHelper.getConnection(), Evolution.class);
 	}
 
-    <T> Dao<EvolutionSlice, T> getEvolutionSliceDao() throws SQLException
+	<T> Dao<EvolutionSlice, T> getEvolutionSliceDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), EvolutionSlice.class);
 	}
@@ -206,6 +212,7 @@ public class DatabaseApi implements IDatabaseApi
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveAuthorToAuthor.class);
 	}
+
 	<T> Dao<PrimitiveAuthor, T> getPrimitiveAuthorDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), PrimitiveAuthor.class);
@@ -230,15 +237,20 @@ public class DatabaseApi implements IDatabaseApi
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), TermToTerm.class);
 	}
+
 	<T> Dao<TermYear, T> getTermYearDao() throws SQLException
 	{
 		return DaoManager.createDao(mDbHelper.getConnection(), TermYear.class);
 	}
 
-	public ConnectionSource getConnection() {
-		try {
+	public ConnectionSource getConnection()
+	{
+		try
+		{
 			return mDbHelper.getConnection();
-		} catch (SQLException e) {
+		}
+		catch (SQLException e)
+		{
 			SqliteLog.log(e);
 		}
 

@@ -48,14 +48,15 @@ public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements
 
 	@Override
 	public PrimitiveTerm addTerm(final PrimitiveTerm primitiveTerm)
-	{try
 	{
-		return getDao().createIfNotExists((PrimitiveTerm) primitiveTerm);
-	}
-	catch (SQLException e)
-	{
-		logger.error(e, "");
-	}
+		try
+		{
+			return getDao().createIfNotExists((PrimitiveTerm) primitiveTerm);
+		}
+		catch (SQLException e)
+		{
+			logger.error(e, "");
+		}
 		return null;
 	}
 }

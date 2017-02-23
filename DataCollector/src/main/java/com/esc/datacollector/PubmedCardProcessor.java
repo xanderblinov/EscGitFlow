@@ -17,13 +17,10 @@ import com.esc.datacollector.data.PubmedCard;
 import net.inference.database.IDatabaseApi;
 import net.inference.sqlite.dto.Article;
 import net.inference.sqlite.dto.ArticleSource;
-import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 import net.inference.sqlite.dto.PrimitiveTermType;
 import net.inference.sqlite.dto.Term;
 import net.inference.sqlite.dto.TermYear;
-
-import edu.smu.tspell.wordnet.WordNetDatabase;
 
 /**
  * Date: 13-Sep-15
@@ -131,27 +128,6 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		return fine;
 	}
 
-	private void handleAndAddPrTerms(String[] pubMedCardKey, PrimitiveTermType prTermType, List<PrimitiveTerm> resultPrTermsCollection, Article article)
-	{
-		for (int i = 0; i < pubMedCardKey.length; i++)
-		{
-			final String keyWords = pubMedCardKey[i];
-			PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords, prTermType, article);
-			if (primitiveTerm.getValue().contains(","))
-			{
-				ArrayList<String> primitiveTermsArray = primitiveTerm.separatePrimitiveTerms();
-				for (int j = 0; j < primitiveTermsArray.size(); j++)
-				{
-					PrimitiveTerm separatedPrimitiveTerm =
-							new PrimitiveTerm(primitiveTermsArray.get(j).trim(), prTermType, article);
-					resultPrTermsCollection.add(separatedPrimitiveTerm);
-				}
-			}
-			else
-				resultPrTermsCollection.add(primitiveTerm);
-		}
-	}
-
 	@Override
 	public boolean execute(PubmedCard pubmedCard)
 	{
@@ -213,7 +189,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		{
 			File file = new File("DataCollector/src/main/resources/2of12inf.txt");
 			//needs refactor
-			handleAndAddABPrTerms(pubmedCard, primitiveTerms, article, file);
+			handleAndAddABPrTerms(pubmedCard.getAB(), primitiveTerms, article, file);
 		}
 
 		File worldNetDir = new File("DataCollector/src/main/resources/world_net/dict");
@@ -340,7 +316,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 //			primitiveAuthors = databaseApi.primitiveAuthor().addAuthors(primitiveAuthors);
 
 //			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
-			primitiveTerms = databaseApi.primterm().addTerms(primitiveTerms);
+			primitiveTerms = databaseApi.primTerm().addTerms(primitiveTerms);
 		}
 		catch (Exception e)
 		{
@@ -354,7 +330,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 	}
 
 	//TODO AddABTerms refactor
-	private void handleAndAddABPrTerms(PubmedCard pubMedCard, List<PrimitiveTerm> resultPrTermsCollection, Article article, File commonWordsFile)
+	private void handleAndAddABPrTerms(String pubMedCardAB, List<PrimitiveTerm> resultPrTermsCollection, Article article, File commonWordsFile)
 	{
 		int legalDiff;
 		List<String> mirnaList = Arrays.asList("mirna", "mi-rna", "microrna", "micro-rna", "mirnas", "mi-rnas", "micrornas", "micro-rnas");
@@ -372,7 +348,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 					scanner.next();
 				}
 			}
-			String annotation = pubMedCard.getAB().toLowerCase();
+			String annotation = pubMedCardAB.toLowerCase();
 			annotation = annotation.replaceAll("\\+|#|&|$|\\{|\\}|\\||\\(|\\)|\\[|\\]|\\.|,|;|\\*|\"|~|:| - |'s|'|=|%|<|>|\\?", "");
 			annotation = annotation.replaceAll("/", " ");
 			String[] word_array = annotation.split(" ");
@@ -421,6 +397,27 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		}
 	}
 
+	private void handleAndAddPrTerms(String[] pubMedCardKey, PrimitiveTermType prTermType, List<PrimitiveTerm> resultPrTermsCollection, Article article)
+	{
+		for (int i = 0; i < pubMedCardKey.length; i++)
+		{
+			final String keyWords = pubMedCardKey[i].toLowerCase();
+			PrimitiveTerm primitiveTerm = new PrimitiveTerm(keyWords, prTermType, article);
+			if (primitiveTerm.getValue().contains(","))
+			{
+				ArrayList<String> primitiveTermsArray = primitiveTerm.separatePrimitiveTerms();
+				for (int j = 0; j < primitiveTermsArray.size(); j++)
+				{
+					PrimitiveTerm separatedPrimitiveTerm =
+							new PrimitiveTerm(primitiveTermsArray.get(j).trim(), prTermType, article);
+					resultPrTermsCollection.add(separatedPrimitiveTerm);
+				}
+			}
+			else
+				resultPrTermsCollection.add(primitiveTerm);
+		}
+	}
+
 	private boolean check(PubmedCard pubmedCard)
 	{
 		if (Checks.isEmpty(pubmedCard.getPmid()))
@@ -449,29 +446,29 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		return true;
 	}
 
-	public void addTerms()
-	{
-		final IDatabaseApi databaseApi = Application.getDatabaseApi();
-		try
-		{
-			terms = databaseApi.term().addTerms(terms);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
-
-	public void addTermsYear()
-	{
-		final IDatabaseApi databaseApi = Application.getDatabaseApi();
-		try
-		{
-			termsYear = databaseApi.termYear().addTerms(termsYear);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
+//	public void addTerms()
+//	{
+//		final IDatabaseApi databaseApi = Application.getDatabaseApi();
+//		try
+//		{
+//			terms = databaseApi.term().addTerms(terms);
+//		}
+//		catch (Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
+//
+//	public void addTermsYear()
+//	{
+//		final IDatabaseApi databaseApi = Application.getDatabaseApi();
+//		try
+//		{
+//			termsYear = databaseApi.termYear().addTerms(termsYear);
+//		}
+//		catch (Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
 }

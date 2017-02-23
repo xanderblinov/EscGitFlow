@@ -27,7 +27,7 @@ public class PubMedParser extends AbsParserEngine
 	@Override
 	protected ExecutorService newExecutorService()
 	{
-		return Executors.newFixedThreadPool(2);
+		return Executors.newFixedThreadPool(4);
 	}
 
 	public PubMedParser(String filename)
@@ -103,6 +103,7 @@ public class PubMedParser extends AbsParserEngine
 				{
 //					mPubmedCardProcessor.addTerms();
 //					mPubmedCardProcessor.addTermsYear();
+					PrTermToTermBinding.bind();
 					getExecutorService().shutdown();
 					return;
 				}
