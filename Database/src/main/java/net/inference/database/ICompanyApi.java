@@ -1,10 +1,9 @@
 package net.inference.database;
 
-import net.inference.sqlite.dto.Company;
-import net.inference.sqlite.dto.PrimitiveAuthor;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import net.inference.sqlite.dto.Company;
 
 /**
  * Date: 12/23/2014
@@ -15,4 +14,5 @@ import java.util.List;
 public interface ICompanyApi extends IBaseApi<Company,Integer>
 {
     ArrayList<Company> addCompanies(List<Company> companies) throws Exception;
+    Company addCompany(final Company company);
 }

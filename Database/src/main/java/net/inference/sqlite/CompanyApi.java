@@ -1,16 +1,15 @@
 package net.inference.sqlite;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
-import net.inference.database.ICompanyApi;
-import net.inference.database.IDatabaseApi;
-import net.inference.sqlite.dto.Article;
-import net.inference.sqlite.dto.Company;
-import net.inference.sqlite.dto.PrimitiveAuthor;
 
-import java.util.ArrayList;
-import java.util.List;
+import net.inference.database.ICompanyApi;
+import net.inference.sqlite.dto.Company;
 
 /**
  * Date: 4/25/2015
@@ -30,10 +29,12 @@ public class CompanyApi extends BaseApi<Company, Integer> implements ICompanyApi
 	}
 
 	@Override
-	public ArrayList<Company> addCompanies(List<Company> companies) throws Exception {
+	public ArrayList<Company> addCompanies(List<Company> companies) throws Exception
+	{
 		final Dao<Company, Integer> dao = getDao();
 
-		final ArrayList<Company> comps = dao.callBatchTasks(() -> {
+		final ArrayList<Company> comps = dao.callBatchTasks(() ->
+		{
 
 			ArrayList<Company> createdCompanies = new ArrayList<>();
 
@@ -46,5 +47,19 @@ public class CompanyApi extends BaseApi<Company, Integer> implements ICompanyApi
 			return createdCompanies;
 		});
 		return comps;
+	}
+
+	@Override
+	public Company addCompany(final Company company)
+	{
+		try
+		{
+			return getDao().createIfNotExists((Company) company);
+		}
+		catch (SQLException e)
+		{
+			logger.error(e, "");
+		}
+		return null;
 	}
 }

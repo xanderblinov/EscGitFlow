@@ -26,6 +26,8 @@ public class AffiliationDistance implements IAffiliationDistance {
 
         AffiliationDistance dist = new AffiliationDistance(arr, new Levenshtein(), MatriceType.LabeledMatrice2Float);
         IMatrice2 matrix = dist.GetDistanceMatrix(1.0f);
+
+
     }
 
     private GooglePlacesAPI api;
@@ -36,7 +38,7 @@ public class AffiliationDistance implements IAffiliationDistance {
     public AffiliationDistance(String[] affilis, IGetCoefficient method, MatriceType type) {
         api = new GooglePlacesAPI();
         this.method = method;
-        affiliations = affilis.clone();
+        affiliations = affilis;
         switch (type){
             case Matrice2Float:
                 this.resultMatrix = new Matrice2Float(affilis.length, affilis.length);

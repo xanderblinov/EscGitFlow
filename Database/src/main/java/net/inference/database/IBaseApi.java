@@ -1,5 +1,6 @@
 package net.inference.database;
 
+import java.util.Iterator;
 import java.util.List;
 
 import com.j256.ormlite.dao.Dao;
@@ -12,6 +13,8 @@ public interface IBaseApi<T, ID> {
     List<T> findAll();
 
     T findById(ID id);
+
+    Iterator<T> getIterator();
 
     List<T> findByProperty(String propertyName, String propertyValue);
 

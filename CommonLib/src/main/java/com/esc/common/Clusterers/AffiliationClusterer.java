@@ -1,32 +1,18 @@
 package com.esc.common.Clusterers;
 
-import algorithms.ClusteringAlgorithm;
-import algorithms.DBSCAN;
-import algorithms.KMeans;
-import com.esc.common.Modules.AffiliationResolver.AffiliationDistance;
-import com.esc.common.Modules.ExcelUtil.ClustersToExcel;
-import com.esc.common.Modules.ExcelUtil.Excel;
-import com.esc.common.Modules.GooglePlaces.models.GooglePlacesResponse;
-import com.esc.common.SimilarityFunctions.*;
-import com.esc.common.Web.Method;
-import com.esc.common.util.Beautifier.ForGoogle;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Map;
+
 import com.esc.common.util.Matrices.IMatrice2;
-import com.esc.common.util.Matrices.MatriceType;
 import com.esc.common.util.Pair;
 import com.sun.javaws.exceptions.InvalidArgumentException;
-import distance.EuclideanDistance;
+
+import algorithms.ClusteringAlgorithm;
 import input.Dataset;
 import input.FeatureVector;
-import jxl.Workbook;
 import jxl.write.WriteException;
 import output.Cluster;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created by afirsov on 1/28/2016.
@@ -70,7 +56,8 @@ public class AffiliationClusterer{
         for(int j = 0; j<matrice.length;j++)
         {
             fv[j] = matrice[j][i];
-        }
+
+                   }
         this.set.add(new FeatureVector(fv,false));
     }
         this.clustering = alg;

@@ -1,16 +1,23 @@
 package com.esc.datacollector;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import com.esc.common.util.Checks;
 import com.esc.datacollector.app.Application;
 import com.esc.datacollector.data.PubmedCard;
 
 import net.inference.database.IDatabaseApi;
-import net.inference.sqlite.dto.*;
-
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import net.inference.sqlite.dto.Article;
+import net.inference.sqlite.dto.ArticleSource;
+import net.inference.sqlite.dto.Company;
+import net.inference.sqlite.dto.PrimitiveAuthor;
+import net.inference.sqlite.dto.PrimitiveAuthorToAuthor;
+import net.inference.sqlite.dto.PrimitiveTerm;
+import net.inference.sqlite.dto.PrimitiveTermToPrimitiveTerm;
+import net.inference.sqlite.dto.Term;
 
 import edu.smu.tspell.wordnet.NounSynset;
 import edu.smu.tspell.wordnet.Synset;
@@ -31,7 +38,7 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 	@Override
 	public boolean execute(PubmedCard pubmedCard)
 	{
-		System.setProperty("wordnet.database.dir", "D:\\ESC\\ESCGitFlow\\External\\dict");
+		System.setProperty("wordnet.database.dir", "C:\\ESC\\External\\dict");
 		if (!check(pubmedCard))
 		{
 			return false;
@@ -83,9 +90,9 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		for (int i = 0; i < pubmedCard.getOrganizations().length; i++)
 		{
 			final String ad = pubmedCard.getOrganizations()[i];
-			Company company = new Company(ad, article.getId());
+			Company company = new Company(ad, article.getId(),article.getYear());
 			//todo: ASAP add year to company
-			companies.add(company);
+			databaseApi.company().addCompany(company);
 		}
 
 		if (hasKeyOt)
@@ -143,7 +150,13 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		{
 			final PrimitiveTerm primitiveTerm = primitiveTerms.get(i);
 			final String primitiveTermValue = primitiveTerm.getValue();
-			Synset[] synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
+			Synset[] synsets = new Synset[0];
+
+try {
+
+	synsets = database.getSynsets(primitiveTermValue, SynsetType.NOUN);
+}
+catch (NumberFormatException e){ continue;}
 
 			for (int j = 0; j < terms.size(); j++)
 			{
@@ -175,7 +188,6 @@ public class PubmedCardProcessor implements IPubmedCardProcessor
 		try
 		{
 			primitiveAuthors = databaseApi.primitiveAuthor().addAuthors(primitiveAuthors);
-			companies = databaseApi.company().addCompanies(companies);
 
 			final List<PrimitiveAuthorToAuthor> primitiveAuthorToAuthors = databaseApi.primitiveAuthor().addCoauthors(primitiveAuthors);
 

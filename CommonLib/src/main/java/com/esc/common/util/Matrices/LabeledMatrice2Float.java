@@ -5,53 +5,49 @@ import java.util.Arrays;
 /**
  * Created by afirsov on 1/29/2016.
  */
-public class LabeledMatrice2Float implements IMatrice2<String,Float>{
+public class LabeledMatrice2Float implements IMatrice2<String,Float>
+{
+
+    private String[][] data;
+    private String[][] initialData;
+
     public static void main(String[] args)
     {
-        LabeledMatrice2Float mat = new LabeledMatrice2Float(2,2);
+        LabeledMatrice2Float mat = new LabeledMatrice2Float(2, 2);
 
-        mat.Add(0,0,1.0f);
-        mat.Add(0,1,1.0f);
-        mat.Add(1,0,1.0f);
-        mat.Add(1,1,1.0f);
+        mat.Add(0, 0, 1.0f);
+        mat.Add(0, 1, 1.0f);
+        mat.Add(1, 0, 1.0f);
+        mat.Add(1, 1, 1.0f);
 
         mat.NormalizeColumns();
     }
 
-    public LabeledMatrice2Float(int column, int row){
-        Initialize(column,row);
+    public LabeledMatrice2Float(int column, int row)
+    {
+        Initialize(column, row);
     }
 
-    private void Initialize(int column, int row){
+    private void Initialize(int column, int row)
+    {
         data = new String[row + 1][column + 1];
         initialData = new String[row + 1][column + 1];
+        for (int i = 0; i < data.length; i++)
+        {
+            for (int j = 1; j < data[i].length; j++)
+            {
+                data[0][j] = Integer.toString(j);
+                initialData[0][j] = Integer.toString(j);
+            }
 
-        for (int i = 0; i< data.length;i++){
-            if(i == 0){
-                for (int j = 1; j< data[i].length;j++){
-                    data[i][j] = Integer.toString(j);
-                    initialData[i][j] = Integer.toString(j);
-                }
-            }
-            else{
-                data[i][0] = Integer.toString(i);
-                initialData[i][0] = Integer.toString(i);
-            }
-        }
-    }
-    public LabeledMatrice2Float(Matrice2Float matrice){
-        Float[][] data = matrice.GetMatrice();
-        Initialize(data.length, data[0].length);
 
-        for(int i = 0; i<data[0].length;i++){
-            for(int j = 0; j<data.length;j++){
-                Add(i,j,data[j][i]);
-            }
+            data[i][0] = Integer.toString(i);
+            initialData[i][0] = Integer.toString(i);
         }
     }
 
-    private String[][] data;
-    private String[][] initialData;
+
+
 
     @Override
     public void Add(int column, int row, Float value) {

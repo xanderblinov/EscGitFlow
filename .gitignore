@@ -21,3 +21,14 @@ Evolution/Evolution.iml
 DataCollector/src/main/resources/TheVeryBig/pubmed_result.txt
 classes/production/DataCollector/TheVeryBig/pubmed_result.txt
 DataCollector/src/main/resources/TheAverage/pubmed_result.txt
+CommonLib/src/main/Files/nsk_company_list_real1.txt
+CommonLib/src/main/Files/nsk_company_list_real2.txt
+CommonLib/src/main/Files/nsk_company_list_real3.txt
+CommonLib/src/main/Files/nsk_company_list_sorted — копия.txt
+CommonLib/src/main/Files/nsk_company_list_sorted1.txt
+CommonLib/src/main/Files/nsk_company_list_sorted3.txt
+DataCollector/src/main/resources/Year/2005.txt
+DataCollector/src/main/resources/Year/2006.txt
+DataCollector/src/main/resources/Year/2007.txt
+DataCollector/src/main/resources/Year/pubmed_result.txt
+DataCollector/src/main/resources/pubmed_result.txt

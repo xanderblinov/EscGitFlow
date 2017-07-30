@@ -10,11 +10,14 @@ public interface ICompany extends IEntity
 {
 	public static final String TABLE_NAME = "company";
 
+
+
 	public static class Column
 	{
 		public static final String id = "_id";
 		public static final String name = "name";
 		public static final String articleId = "articleId";
+		public static final String year = "year";
 	}
 
 	public String getName();
@@ -24,4 +27,6 @@ public interface ICompany extends IEntity
 	public long getArticleId();
 
 	public void setArticleId(final long id);
-}
+
+	public void setYear(final int year);
+	}

@@ -1,15 +1,15 @@
 package com.esc.datacollector;
 
-import com.esc.datacollector.data.PubmedCard;
-import com.esc.datacollector.medline.MedlineSource;
-import com.esc.datacollector.medline.Medliner;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
+
+import com.esc.datacollector.data.PubmedCard;
+import com.esc.datacollector.medline.MedlineSource;
+import com.esc.datacollector.medline.Medliner;
 
 public class PubMedParser extends AbsParserEngine
 {
@@ -27,7 +27,7 @@ public class PubMedParser extends AbsParserEngine
 	@Override
 	protected ExecutorService newExecutorService()
 	{
-		return Executors.newFixedThreadPool(2);
+		return Executors.newFixedThreadPool(8);
 	}
 
 	public PubMedParser(String filename)
@@ -49,7 +49,7 @@ public class PubMedParser extends AbsParserEngine
 		String currentField = null;
 		try
 		{
-			while ((currentString = reader.readLine()) != null)
+			while ((currentString = reader.readLine()) != null) //reading in string
 			{
 				if (currentString.isEmpty())
 				{

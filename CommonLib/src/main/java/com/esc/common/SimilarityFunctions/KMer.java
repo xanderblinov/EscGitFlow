@@ -1,9 +1,8 @@
 package com.esc.common.SimilarityFunctions;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+import com.sun.javaws.exceptions.InvalidArgumentException;
 
 /**
  * Created by afirsov on 4/6/2016.
@@ -15,6 +14,15 @@ public class KMer implements IGetCoefficient {
     }
 
     private int MerLength;
+
+    public static void main(String[] args)
+    {
+        String s1 = "institute of cytology and genetics  siberian division  russian academy of sciences  novosibirsk  russia.\n";
+        String s2 = "institute of cytology and genetics  siberian division  russian academy of sciences  novosibirsk  russia  siberian division  russian academy of sciences  novosibirsk russia.\n";
+
+       double coef = new KMer(7).GetCoefficient(s1,s2,true);
+        System.out.println(coef);
+    }
 
     @Override
     public float GetCoefficient(String whatToCheck, String withWhatToCheck, boolean ignoreCase) {

@@ -8,7 +8,7 @@ public class LevenshteinWorded implements IGetCoefficient{
     {
         //distance should == 1 if ignoreCase
         String[] s1 = "Hello, world!".split("[ ,!]",-1);
-        String[] s2 = "Hello,World!".split("[ ,!]",-1);
+        String[] s2 = "Hello, world!".split("[ ,!]",-1);
 
         int differencies = new LevenshteinWorded().GetDistance(s1,s2, true);
 

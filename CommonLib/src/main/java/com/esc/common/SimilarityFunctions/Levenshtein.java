@@ -7,10 +7,11 @@ public class Levenshtein implements IGetCoefficient{
     public static void main(String[] args)
     {
         //distance should == 1 if ignoreCase
-        String s1 = "Hello, world!";
-        String s2 = "Hello,World!";
+        String s1 = "Novosibirsk Institute of Bioorganic Chemistry, Siberian Division of Russian Academy of Sciences, Russia.";
+        String s2 = "Novosibirsk Institute of Bioorganic Chemistry, SiberianDivision of Russian Academy of Sciences, Russia.";
 
         int differencies = new Levenshtein().GetDistance(s1,s2, true);
+        System.out.println(differencies);
 
         System.out.println("Test " + (differencies == 1 ? "succeeded":"failed"));
     }

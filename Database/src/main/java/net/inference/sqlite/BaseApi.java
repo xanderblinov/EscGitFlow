@@ -2,6 +2,7 @@ package net.inference.sqlite;
 
 import java.sql.SQLException;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import com.j256.ormlite.dao.Dao;
@@ -59,6 +60,11 @@ public class BaseApi<T,ID> implements IBaseApi<T,ID>
         }
 
         return Collections.emptyList();
+    }
+
+    @Override
+    public Iterator<T> getIterator(){
+        return getDao().iterator();
     }
 
     @Override

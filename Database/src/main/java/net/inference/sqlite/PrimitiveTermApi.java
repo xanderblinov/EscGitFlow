@@ -9,8 +9,6 @@ import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 
 import net.inference.database.IPrimitiveTermApi;
-import net.inference.database.dto.IPrimitiveTerm;
-import net.inference.sqlite.dto.PrimitiveAuthor;
 import net.inference.sqlite.dto.PrimitiveTerm;
 
 /**
@@ -60,5 +58,5 @@ public class PrimitiveTermApi extends BaseApi<PrimitiveTerm, Integer> implements
 		logger.error(e, "");
 	}
 		return null;
-	};
+	}
 }

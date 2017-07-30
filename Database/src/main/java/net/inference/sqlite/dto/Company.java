@@ -19,16 +19,20 @@ public class Company implements ICompany
 	private String name;
 	@DatabaseField(columnName = Column.articleId)
 	private long articleId;
+	@DatabaseField(columnName = Column.year)
+	private long year;
 
 	public Company()
 	{
 	}
 
-	public Company(final String name, final long articleId)
+	public Company(final String name, final long articleId, int year)
 	{
 		setName(name);
 		setArticleId(articleId);
+		setYear(year);
 	}
+
 
 	@Override
 	public String getName() {
@@ -74,13 +78,15 @@ public class Company implements ICompany
 		result = 31 * result + (name != null ? name.hashCode() : 0) + (int)articleId;
 		return result;
 	}
-
+	@Override
+    public void setYear(int year){this.year=year;}
 	@Override
 	public String toString() {
 		return "Company{" +
 				"mId=" + mId +
 				", name=" + name +
 				", articleId=" + articleId +
+				", year=" + year +
 				'}';
 	}
 }

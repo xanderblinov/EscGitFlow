@@ -15,7 +15,7 @@ public class Excel implements IExcel{
     private WritableWorkbook workbook;
     private int lastSheetNumber;
 
-    public Excel(String path) throws IOException, WriteException {
+    public Excel(String path) throws  IOException, WriteException {
         workbook = Workbook.createWorkbook(new File(path));
     }
 
